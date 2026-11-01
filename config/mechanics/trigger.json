@@ -114,7 +114,7 @@
     {
       "id": "other-enters",
       "text": {
-        "fr": "Quand une carte {filter} arrive en jeu de votre côté"
+        "fr": "Quand {subject} arrive en jeu de votre côté"
       },
       "types": [
         "place",
@@ -134,7 +134,7 @@
     {
       "id": "other-destroyed",
       "text": {
-        "fr": "Quand une carte {filter} est détruite"
+        "fr": "Quand {subject} est détruit{e}"
       },
       "types": [
         "place",
@@ -190,7 +190,7 @@
     {
       "id": "opponent-plays",
       "text": {
-        "fr": "Quand l'adversaire joue une carte {filter}"
+        "fr": "Quand l'adversaire joue {subject}"
       },
       "types": [
         "place",

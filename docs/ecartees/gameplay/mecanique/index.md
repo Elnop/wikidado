@@ -227,3 +227,9 @@ Chaque brique avait un champ `status`, `accepted` ou `proposed`. Variantes : la 
 Écartée le 01/11/2026 : toutes les cartes en jeu peuvent avoir des capacités activées, avec un facteur 4 - n (minimum 1) pour tous les effets.
 
 Le déclencheur activé ne servait qu'à équiper, ou les capacités activées étaient réservées aux Objets.
+
+## Texte des capacités sans accord, ou toujours en "carte"
+
+Écartées le 01/11/2026 : chaque effet a une forme au singulier et une au pluriel, la cible nomme les types visés, et la famille s'écrit comme un nom invariable.
+
+Tournures sans accord, où la cible est toujours complément : "donnez +1/+1 à vos autres Créatures", "+1 en attaque pour la Créature équipée". Cible toujours nommée "carte" ("une carte adverse"), la restriction de type restant implicite. Famille accordée ("vos Créatures Militaires", avec un singulier et un pluriel par famille), ou en complément ("vos Créatures de la famille Militaire").

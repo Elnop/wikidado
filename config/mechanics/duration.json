@@ -4,14 +4,20 @@
     {
       "id": "turn",
       "text": {
-        "fr": "jusqu'à la fin du tour"
+        "fr": {
+          "singular": "jusqu'à la fin du tour",
+          "plural": "jusqu'à la fin du tour"
+        }
       },
       "factor": 1
     },
     {
       "id": "permanent",
       "text": {
-        "fr": ""
+        "fr": {
+          "singular": "",
+          "plural": ""
+        }
       },
       "factor": 3
     }

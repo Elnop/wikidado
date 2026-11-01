@@ -4,7 +4,7 @@
     {
       "id": "controls-type",
       "text": {
-        "fr": "tant que vous contrôlez un {filter}"
+        "fr": "{conj} vous contrôlez {subject}"
       },
       "factor": 0.75,
       "filled_by": "model",
@@ -15,7 +15,7 @@
     {
       "id": "birthplace",
       "text": {
-        "fr": "tant que vous contrôlez {card}"
+        "fr": "{conj} vous contrôlez {card}"
       },
       "factor": 0.5,
       "filled_by": "code",
@@ -28,7 +28,7 @@
     {
       "id": "kin",
       "text": {
-        "fr": "tant que vous contrôlez {card}"
+        "fr": "{conj} vous contrôlez {card}"
       },
       "factor": 0.5,
       "filled_by": "code",
@@ -44,7 +44,7 @@
     {
       "id": "mentor",
       "text": {
-        "fr": "tant que vous contrôlez {card}"
+        "fr": "{conj} vous contrôlez {card}"
       },
       "factor": 0.5,
       "filled_by": "code",
@@ -58,7 +58,7 @@
     {
       "id": "reference",
       "text": {
-        "fr": "tant que vous contrôlez {card}"
+        "fr": "{conj} vous contrôlez {card}"
       },
       "factor": 0.5,
       "filled_by": "code",
@@ -71,7 +71,7 @@
     {
       "id": "alliance",
       "text": {
-        "fr": "tant que vous contrôlez {card}"
+        "fr": "{conj} vous contrôlez {card}"
       },
       "factor": 0.75,
       "filled_by": "code",
@@ -84,7 +84,7 @@
     {
       "id": "contemporary",
       "text": {
-        "fr": "tant que vous contrôlez une carte de la même époque"
+        "fr": "{conj} vous contrôlez une carte de la même époque"
       },
       "factor": 0.75,
       "filled_by": "code",
@@ -101,7 +101,7 @@
     {
       "id": "low-life",
       "text": {
-        "fr": "si vous avez {n} points de vie ou moins"
+        "fr": "{conj} vous avez {n} points de vie ou moins"
       },
       "factor": 0.5,
       "filled_by": "model",
@@ -115,7 +115,7 @@
     {
       "id": "discard-size",
       "text": {
-        "fr": "si votre défausse contient {n} cartes ou plus"
+        "fr": "{conj} votre défausse contient {n} cartes ou plus"
       },
       "factor": 0.75,
       "filled_by": "model",

@@ -3,80 +3,130 @@
   "targets": [
     {
       "id": "self",
+      "number": "singular",
       "text": {
-        "fr": "cette carte"
+        "fr": {
+          "prefix": "",
+          "each": "{this} {noun}",
+          "suffix": ""
+        }
       },
       "factor": 1,
       "is_player": false
     },
     {
       "id": "one",
+      "number": "singular",
       "text": {
-        "fr": "une carte"
+        "fr": {
+          "prefix": "",
+          "each": "{a} {noun}",
+          "suffix": ""
+        }
       },
       "factor": 1,
       "is_player": false
     },
     {
       "id": "one-opponent",
+      "number": "singular",
       "text": {
-        "fr": "une carte adverse"
+        "fr": {
+          "prefix": "",
+          "each": "{a} {noun}",
+          "suffix": " adverse"
+        }
       },
       "factor": 1,
       "is_player": false
     },
     {
       "id": "one-yours",
+      "number": "singular",
       "text": {
-        "fr": "une de vos cartes"
+        "fr": {
+          "prefix": "",
+          "each": "{a} de vos {nouns}",
+          "suffix": ""
+        }
       },
       "factor": 1,
       "is_player": false
     },
     {
       "id": "equipped",
+      "number": "singular",
       "text": {
-        "fr": "la Créature équipée"
+        "fr": {
+          "prefix": "",
+          "each": "la Créature équipée",
+          "suffix": ""
+        }
       },
       "factor": 1,
       "is_player": false
     },
     {
       "id": "you",
+      "number": "singular",
       "text": {
-        "fr": "vous"
+        "fr": {
+          "prefix": "",
+          "each": "vous",
+          "suffix": ""
+        }
       },
       "factor": 1,
       "is_player": true
     },
     {
       "id": "opponent",
+      "number": "singular",
       "text": {
-        "fr": "l'adversaire"
+        "fr": {
+          "prefix": "",
+          "each": "l'adversaire",
+          "suffix": ""
+        }
       },
       "factor": 1,
       "is_player": true
     },
     {
       "id": "your-others",
+      "number": "plural",
       "text": {
-        "fr": "vos autres cartes"
+        "fr": {
+          "prefix": "vos {other}",
+          "each": "{nouns}",
+          "suffix": ""
+        }
       },
       "factor": 3,
       "is_player": false
     },
     {
       "id": "all-opponents",
+      "number": "plural",
       "text": {
-        "fr": "toutes les cartes adverses"
+        "fr": {
+          "prefix": "",
+          "each": "{all} {nouns}",
+          "suffix": " adverses"
+        }
       },
       "factor": 3,
       "is_player": false
     },
     {
       "id": "all",
+      "number": "plural",
       "text": {
-        "fr": "toutes les cartes"
+        "fr": {
+          "prefix": "",
+          "each": "{all} {nouns}",
+          "suffix": ""
+        }
       },
       "factor": 2,
       "is_player": false

@@ -75,6 +75,24 @@
           },
           "trigger_n": {
             "type": "integer"
+          },
+          "trigger_filter": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "$ref": "common.schema.json#/$defs/card_type"
+              },
+              "family": {
+                "type": "string"
+              },
+              "card": {
+                "type": "string",
+                "pattern": "^Q[0-9]+$"
+              }
+            },
+            "minProperties": 1,
+            "maxProperties": 1,
+            "additionalProperties": false
           }
         },
         "oneOf": [

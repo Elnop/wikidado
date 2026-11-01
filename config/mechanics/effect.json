@@ -13,7 +13,10 @@
         "faction"
       ],
       "text": {
-        "fr": "infligez {n} dégâts à {target}"
+        "fr": {
+          "singular": "infligez {n} dégât{s} à {target}",
+          "plural": "infligez {n} dégât{s} à {target}"
+        }
       },
       "n": {
         "min": 1,
@@ -53,7 +56,10 @@
         "faction"
       ],
       "text": {
-        "fr": "gagnez {n} points de vie"
+        "fr": {
+          "singular": "gagnez {n} points de vie",
+          "plural": "gagnez {n} points de vie"
+        }
       },
       "n": {
         "min": 2,
@@ -86,7 +92,10 @@
         "faction"
       ],
       "text": {
-        "fr": "piochez {n} cartes"
+        "fr": {
+          "singular": "piochez {n} carte{s}",
+          "plural": "piochez {n} carte{s}"
+        }
       },
       "n": {
         "min": 1,
@@ -119,7 +128,10 @@
         "faction"
       ],
       "text": {
-        "fr": "l'adversaire défausse {n} cartes au hasard"
+        "fr": {
+          "singular": "l'adversaire défausse {n} carte{s} au hasard",
+          "plural": "l'adversaire défausse {n} carte{s} au hasard"
+        }
       },
       "n": {
         "min": 1,
@@ -152,7 +164,10 @@
         "faction"
       ],
       "text": {
-        "fr": "reprenez en main {target} de votre défausse"
+        "fr": {
+          "singular": "reprenez en main {target} de votre défausse",
+          "plural": "reprenez en main {target} de votre défausse"
+        }
       },
       "n": null,
       "cost": {
@@ -163,7 +178,7 @@
       },
       "has_duration": false,
       "targets": [
-        "one-yours"
+        "one"
       ],
       "affected_types": [
         "place",
@@ -189,7 +204,10 @@
         "faction"
       ],
       "text": {
-        "fr": "détruisez {target} de coût {n} ou moins"
+        "fr": {
+          "singular": "détruisez {target} de coût {n} ou moins",
+          "plural": "détruisez {target} de coût {n} ou moins"
+        }
       },
       "n": {
         "min": 1,
@@ -231,7 +249,10 @@
         "faction"
       ],
       "text": {
-        "fr": "renvoyez {target} dans la main de son propriétaire"
+        "fr": {
+          "singular": "renvoyez {target} dans la main de son propriétaire",
+          "plural": "renvoyez {target} dans la main de leur propriétaire"
+        }
       },
       "n": null,
       "cost": {
@@ -271,7 +292,10 @@
         "faction"
       ],
       "text": {
-        "fr": "{target} perd toutes ses mécaniques"
+        "fr": {
+          "singular": "{target} perd toutes ses mécaniques",
+          "plural": "{target} perdent toutes leurs mécaniques"
+        }
       },
       "n": null,
       "cost": {
@@ -310,7 +334,10 @@
         "faction"
       ],
       "text": {
-        "fr": "{target} ne peut ni attaquer ni bloquer"
+        "fr": {
+          "singular": "{target} ne peut ni attaquer ni bloquer",
+          "plural": "{target} ne peuvent ni attaquer ni bloquer"
+        }
       },
       "n": null,
       "cost": {
@@ -322,7 +349,10 @@
       "has_duration": true,
       "duration_text": {
         "turn": {
-          "fr": "à son prochain tour"
+          "fr": {
+            "singular": "à son prochain tour",
+            "plural": "à leur prochain tour"
+          }
         }
       },
       "targets": [
@@ -349,7 +379,10 @@
         "faction"
       ],
       "text": {
-        "fr": "{target} perd {n} en attaque"
+        "fr": {
+          "singular": "{target} perd {n} en attaque",
+          "plural": "{target} perdent {n} en attaque"
+        }
       },
       "n": {
         "min": 1,
@@ -386,7 +419,10 @@
         "faction"
       ],
       "text": {
-        "fr": "{target} gagne +{n}/+{n}"
+        "fr": {
+          "singular": "{target} gagne +{n}/+{n}",
+          "plural": "{target} gagnent +{n}/+{n}"
+        }
       },
       "n": {
         "min": 1,
@@ -425,7 +461,10 @@
         "faction"
       ],
       "text": {
-        "fr": "{target} gagne {keyword}"
+        "fr": {
+          "singular": "{target} gagne {keyword}",
+          "plural": "{target} gagnent {keyword}"
+        }
       },
       "n": null,
       "cost": {
@@ -462,7 +501,10 @@
         "faction"
       ],
       "text": {
-        "fr": "gagnez {n} électricité ce tour-ci"
+        "fr": {
+          "singular": "gagnez {n} électricité ce tour-ci",
+          "plural": "gagnez {n} électricité ce tour-ci"
+        }
       },
       "n": {
         "min": 1,
@@ -495,7 +537,10 @@
         "faction"
       ],
       "text": {
-        "fr": "l'adversaire a {n} électricité de moins à son prochain tour"
+        "fr": {
+          "singular": "l'adversaire a {n} électricité de moins à son prochain tour",
+          "plural": "l'adversaire a {n} électricité de moins à son prochain tour"
+        }
       },
       "n": {
         "min": 1,
@@ -528,7 +573,10 @@
         "faction"
       ],
       "text": {
-        "fr": "prenez le contrôle de {target} de coût {n} ou moins"
+        "fr": {
+          "singular": "prenez le contrôle de {target} de coût {n} ou moins",
+          "plural": "prenez le contrôle de {target} de coût {n} ou moins"
+        }
       },
       "n": {
         "min": 1,
@@ -558,7 +606,10 @@
         "object"
       ],
       "text": {
-        "fr": "attachez cet Objet à {target}"
+        "fr": {
+          "singular": "attachez cet Objet à {target}",
+          "plural": "attachez cet Objet à {target}"
+        }
       },
       "n": null,
       "cost": {
@@ -589,7 +640,10 @@
         "faction"
       ],
       "text": {
-        "fr": "{target} gagne +{n} en attaque"
+        "fr": {
+          "singular": "{target} gagne +{n} en attaque",
+          "plural": "{target} gagnent +{n} en attaque"
+        }
       },
       "n": {
         "min": 1,
@@ -625,7 +679,10 @@
         "faction"
       ],
       "text": {
-        "fr": "{target} gagne +{n} en défense"
+        "fr": {
+          "singular": "{target} gagne +{n} en défense",
+          "plural": "{target} gagnent +{n} en défense"
+        }
       },
       "n": {
         "min": 1,
@@ -662,7 +719,10 @@
         "faction"
       ],
       "text": {
-        "fr": "{target} a {keyword}"
+        "fr": {
+          "singular": "{target} a {keyword}",
+          "plural": "{target} ont {keyword}"
+        }
       },
       "n": null,
       "cost": {
@@ -695,7 +755,10 @@
         "faction"
       ],
       "text": {
-        "fr": "{target} coûte 1 électricité de moins (minimum 1)"
+        "fr": {
+          "singular": "{target} coûte 1 électricité de moins (minimum 1)",
+          "plural": "{target} coûtent 1 électricité de moins (minimum 1)"
+        }
       },
       "n": null,
       "cost": {
@@ -731,7 +794,10 @@
         "faction"
       ],
       "text": {
-        "fr": "{target} coûte 1 électricité de plus"
+        "fr": {
+          "singular": "{target} coûte 1 électricité de plus",
+          "plural": "{target} coûtent 1 électricité de plus"
+        }
       },
       "n": null,
       "cost": {
@@ -767,7 +833,10 @@
         "faction"
       ],
       "text": {
-        "fr": "{target} ne peut pas être ciblée par les mécaniques adverses"
+        "fr": {
+          "singular": "{target} ne peut pas être ciblé{e} par les mécaniques adverses",
+          "plural": "{target} ne peuvent pas être ciblé{e}s par les mécaniques adverses"
+        }
       },
       "n": null,
       "cost": {
@@ -804,7 +873,10 @@
         "faction"
       ],
       "text": {
-        "fr": "les mécaniques adverses qui ciblent {target} coûtent 2 électricité de plus"
+        "fr": {
+          "singular": "les mécaniques adverses qui ciblent {target} coûtent 2 électricité de plus",
+          "plural": "les mécaniques adverses qui ciblent {target} coûtent 2 électricité de plus"
+        }
       },
       "n": null,
       "cost": {
@@ -841,7 +913,10 @@
         "faction"
       ],
       "text": {
-        "fr": "{target} ne peut pas être détruite par une mécanique, seulement au combat"
+        "fr": {
+          "singular": "{target} ne peut être détruit{e} qu'au combat",
+          "plural": "{target} ne peuvent être détruit{e}s qu'au combat"
+        }
       },
       "n": null,
       "cost": {

@@ -58,6 +58,26 @@ Le résultat vaut au moins 1. Les capacités passives n'ont pas de facteur de d�
 
 Un mot-clé a un prix fixe, donné dans `config/mechanics/keyword.json`.
 
+## Texte des capacités
+
+Le texte d'une capacité est assemblé par le code à partir de ses briques, jamais écrit par le modèle. `generation/mechanic_text.py` fait l'assemblage, et `uv run check_mechanics.py --text cartes.jsonl` affiche le texte et le prix de chaque capacité.
+
+- Chaque effet a deux formes, au singulier et au pluriel, choisies selon la cible : "une Créature gagne +1/+1", "vos autres Créatures gagnent +1/+1".
+- La cible nomme les types visés, pris dans `config/card/type.json` : "un Lieu ou une Créature adverse" pour des dégâts, "une Créature adverse" avec un filtre de type. Quand l'effet vise tous les types, on écrit "carte". Pour un mot-clé donné, seuls les types qui peuvent l'avoir sont nommés.
+- La famille d'un filtre s'écrit comme un nom invariable, après le type : "vos Créatures Militaire", comme les sous-types de Magic.
+- "Vos autres" ne s'écrit que si la carte elle-même fait partie des cartes visées : un Événement écrit "vos Créatures".
+- Les participes s'accordent avec le genre du type ("ce Lieu ne peut pas être ciblé", "vos autres cartes ne peuvent être détruites qu'au combat"), et le code fait les élisions ("d'une Créature").
+- Sur la face de la carte, un mot-clé s'affiche par son nom. La vue détaillée ajoute son texte : "Initiative : inflige ses dégâts de combat avant les autres Créatures."
+
+Exemples :
+
+```
+À la une : infligez 2 dégâts à toutes les Créatures adverses.
+Tant que vous contrôlez Ajaccio, cette Créature gagne +2 en attaque.
+2 électricité : attachez cet Objet à une de vos Créatures.
+Quand l'adversaire joue une carte Sport : si vous contrôlez une Faction, piochez 2 cartes.
+```
+
 ## Application selon le type
 
 La plupart des briques vont à tous les types de carte. Quelques-unes sont réservées à cause de leur nature, et chaque fichier le précise : un bonus de stats sur la carte elle-même ne va qu'aux Créatures et aux Lieux, le déclencheur "quand elle attaque" ne va qu'aux Créatures.

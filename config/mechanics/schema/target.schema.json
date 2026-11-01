@@ -14,20 +14,27 @@
             "$ref": "common.schema.json#/$defs/id"
           },
           "text": {
-            "$ref": "common.schema.json#/$defs/text"
+            "$ref": "common.schema.json#/$defs/target_text"
           },
           "factor": {
             "$ref": "common.schema.json#/$defs/factor"
           },
           "is_player": {
             "type": "boolean"
+          },
+          "number": {
+            "enum": [
+              "singular",
+              "plural"
+            ]
           }
         },
         "required": [
           "id",
           "text",
           "factor",
-          "is_player"
+          "is_player",
+          "number"
         ],
         "additionalProperties": false
       }

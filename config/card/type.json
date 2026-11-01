@@ -4,37 +4,61 @@
     {
       "id": "place",
       "name": {
-        "fr": "Lieu"
+        "fr": {
+          "singular": "Lieu",
+          "plural": "Lieux",
+          "gender": "m"
+        }
       }
     },
     {
       "id": "creature",
       "name": {
-        "fr": "Créature"
+        "fr": {
+          "singular": "Créature",
+          "plural": "Créatures",
+          "gender": "f"
+        }
       }
     },
     {
       "id": "event",
       "name": {
-        "fr": "Événement"
+        "fr": {
+          "singular": "Événement",
+          "plural": "Événements",
+          "gender": "m"
+        }
       }
     },
     {
       "id": "object",
       "name": {
-        "fr": "Objet"
+        "fr": {
+          "singular": "Objet",
+          "plural": "Objets",
+          "gender": "m"
+        }
       }
     },
     {
       "id": "knowledge",
       "name": {
-        "fr": "Savoir"
+        "fr": {
+          "singular": "Savoir",
+          "plural": "Savoirs",
+          "gender": "m"
+        }
       }
     },
     {
       "id": "faction",
       "name": {
-        "fr": "Faction"
+        "fr": {
+          "singular": "Faction",
+          "plural": "Factions",
+          "gender": "f"
+        }
       }
     }
   ]

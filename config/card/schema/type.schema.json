@@ -18,6 +18,29 @@
         "$ref": "#/$defs/card_type"
       },
       "uniqueItems": true
+    },
+    "noun": {
+      "type": "object",
+      "properties": {
+        "singular": {
+          "type": "string"
+        },
+        "plural": {
+          "type": "string"
+        },
+        "gender": {
+          "enum": [
+            "m",
+            "f"
+          ]
+        }
+      },
+      "required": [
+        "singular",
+        "plural",
+        "gender"
+      ],
+      "additionalProperties": false
     }
   },
   "type": "object",
@@ -37,14 +60,14 @@
             "type": "object",
             "properties": {
               "fr": {
-                "type": "string"
+                "$ref": "#/$defs/noun"
               }
             },
             "required": [
               "fr"
             ],
             "additionalProperties": {
-              "type": "string"
+              "$ref": "#/$defs/noun"
             }
           }
         },

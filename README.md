@@ -16,7 +16,8 @@ config/
     schema/                    JSON Schema de chaque fichier, et des mécaniques d'une carte
 generation/                    projet Python de génération des cartes, géré par uv (uv run ...)
   pyproject.toml               dépendances
-  check_mechanics.py           valide la config des mécaniques et les mécaniques des cartes
+  check_mechanics.py           valide la config des mécaniques et les mécaniques des cartes (--text : texte et prix)
+  mechanic_text.py             assemble le texte français d'une capacité à partir de ses briques
 echantillon/
   echantillon-fr.jsonl         premier lot, articles FR les plus lus d'octobre 2026, à annoter
 scripts/

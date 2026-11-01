@@ -20,7 +20,7 @@
             ]
           },
           "text": {
-            "$ref": "common.schema.json#/$defs/text"
+            "$ref": "common.schema.json#/$defs/numbered_text"
           },
           "n": {
             "$ref": "common.schema.json#/$defs/range"
@@ -56,7 +56,7 @@
           "duration_text": {
             "type": "object",
             "additionalProperties": {
-              "$ref": "common.schema.json#/$defs/text"
+              "$ref": "common.schema.json#/$defs/numbered_text"
             }
           },
           "targets": {

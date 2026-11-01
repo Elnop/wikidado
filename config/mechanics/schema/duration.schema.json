@@ -14,7 +14,7 @@
             "$ref": "common.schema.json#/$defs/id"
           },
           "text": {
-            "$ref": "common.schema.json#/$defs/text"
+            "$ref": "common.schema.json#/$defs/numbered_text"
           },
           "factor": {
             "$ref": "common.schema.json#/$defs/factor"

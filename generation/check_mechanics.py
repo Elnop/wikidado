@@ -8,6 +8,8 @@ import sys
 import jsonschema
 from referencing import Registry, Resource
 
+import mechanic_text
+
 CONFIG_ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "config"))
 CONFIG_DIR = os.path.join(CONFIG_ROOT, "mechanics")
 CARD_TYPE_FILE = os.path.join(CONFIG_ROOT, "card", "type.json")
@@ -120,6 +122,8 @@ def check_mechanic(mechanic, card_type, catalogue):
     if effect["takes_keyword"] and mechanic.get("granted_keyword") not in catalogue["keyword"]:
         problems.append(f"missing or unknown granted_keyword for {effect['id']}")
     trigger = catalogue["trigger"].get(mechanic.get("trigger"))
+    if "trigger_filter" in mechanic and not (trigger and trigger["takes_filter"]):
+        problems.append("trigger_filter given to a trigger that takes no filter")
     if trigger and trigger["n"]:
         trigger_n = mechanic.get("trigger_n")
         if trigger_n is None or not trigger["n"]["min"] <= trigger_n <= trigger["n"]["max"]:
@@ -202,8 +206,20 @@ DOCUMENTED_EXAMPLES = [
 ]
 
 
-def check_documented_examples(catalogue, errors):
+def load_card_types():
+    return {t["id"]: t for t in load_json(CARD_TYPE_FILE)["types"]}
+
+
+def check_text(mechanic, card_type, catalogue, card_types, label, errors):
+    text = mechanic_text.render(mechanic, card_type, catalogue, card_types, detailed=True)
+    if "{" in text or "}" in text:
+        errors.append(f"{label}: unfilled placeholder in {text!r}")
+    return text
+
+
+def check_documented_examples(catalogue, card_types, errors):
     for mechanic, expected in DOCUMENTED_EXAMPLES:
+        check_text(mechanic, None, catalogue, card_types, f"example {mechanic}", errors)
         for problem in check_mechanic(mechanic, None, catalogue):
             errors.append(f"example {mechanic}: {problem}")
         cost = mechanic_cost(mechanic, catalogue)
@@ -211,7 +227,7 @@ def check_documented_examples(catalogue, errors):
             errors.append(f"example {mechanic}: cost {cost}, expected {expected}")
 
 
-def check_cards(path, catalogue, card_validator, errors):
+def check_cards(path, catalogue, card_types, card_validator, errors, show_text):
     with open(path, encoding="utf-8") as f:
         for line_number, line in enumerate(f, 1):
             card = json.loads(line)
@@ -219,9 +235,16 @@ def check_cards(path, catalogue, card_validator, errors):
             for error in card_validator.iter_errors({"article": card["article"], "mechanics": card.get("mechanics", [])}):
                 errors.append(f"{label}: {error.message}")
             mechanics = card.get("mechanics", [])
+            card_problems = []
             for mechanic in mechanics:
-                for problem in check_mechanic(mechanic, card.get("type"), catalogue):
+                problems = check_mechanic(mechanic, card.get("type"), catalogue)
+                card_problems += problems
+                for problem in problems:
                     errors.append(f"{label}: {problem}")
+            if show_text and not card_problems:
+                print(label)
+                for mechanic in mechanics:
+                    print(f"  {check_text(mechanic, card.get('type'), catalogue, card_types, label, errors)}  [{mechanic_cost(mechanic, catalogue)}]")
             for problem in check_card(mechanics):
                 errors.append(f"{label}: {problem}")
 
@@ -229,17 +252,19 @@ def check_cards(path, catalogue, card_validator, errors):
 def main():
     parser = argparse.ArgumentParser(description="Check the mechanics config and, optionally, cards in JSON Lines.")
     parser.add_argument("cards", nargs="*", help="JSON Lines files of cards with a mechanics list")
+    parser.add_argument("--text", action="store_true", help="print the rendered text and cost of each mechanic")
     args = parser.parse_args()
     errors = []
     registry = schema_registry()
     validate_config(registry, errors)
     catalogue = load_catalogue()
     check_references(catalogue, errors)
-    check_documented_examples(catalogue, errors)
+    card_types = load_card_types()
+    check_documented_examples(catalogue, card_types, errors)
     check_card_types(errors)
     card_validator = validator_for(os.path.join(CONFIG_DIR, "schema", "card-mechanics.schema.json"), registry)
     for path in args.cards:
-        check_cards(path, catalogue, card_validator, errors)
+        check_cards(path, catalogue, card_types, card_validator, errors, args.text)
     for error in errors:
         print(error)
     print(f"{len(errors)} error(s)")
