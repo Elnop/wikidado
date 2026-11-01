@@ -68,6 +68,7 @@ docs/
       mecanique/index.md
       mecanique/creature.md
       mecanique/transversal.md
+      mecanique/effet.md
       synergie/index.md
       synergie/liens.md
       collection.md

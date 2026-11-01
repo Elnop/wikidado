@@ -4,25 +4,38 @@ L'effet dit ce que fait la capacité. Son prix est donné pour la cible de réf�
 
 ## Effets ponctuels
 
-Pour les capacités déclenchées.
+Pour les capacités déclenchées. Tous sont retenus, avec leur texte et leur prix.
 
-| id | texte | N | cout_effet | cibles possibles | indice |
-|---|---|---|---|---|---|
-| degats | "infligez {N} dégâts à {cible}" | 1 à 6 | N | Créatures, Lieux, adversaire | conflits, scandales, attaques, catastrophes, armes, critiques, pamphlets |
-| soin | "gagnez {N} points de vie" | 2 à 8 | N / 2 | vous | personnalités aimées, fêtes, médecine |
-| reparation | "effacez les dégâts de {cible}" | aucun | 1 | vos Créatures, vos Lieux | soins, reconstruction, maintenance |
-| pioche | "piochez {N} cartes" | 1 à 3 | N × 2 | vous | savoir, encyclopédies, recherche, presse, bibliothèques |
-| defausse | "l'adversaire défausse {N} cartes au hasard" | 1 à 2 | N × 3 | adversaire | censure, interdictions, autodafés, propagande |
-| restauration | "reprenez en main {cible} de votre défausse" | aucun | 3 | une carte de votre défausse | restaurations, renaissances, retours |
-| destruction | "détruisez {cible} de coût {N} ou moins" | 1 à 10 | N + 2 | toute carte en jeu | destructions, démolitions, assassinats, interdictions |
-| renvoi | "renvoyez {cible} dans la main de son propriétaire" | aucun | 2 | toute carte en jeu | retraites, exils, rappels, annulations |
-| ebauche | "{cible} perd toutes ses mécaniques" | aucun | 3 | toute carte en jeu | réformes, oublis, purges, réécritures |
-| panne | "{cible} ne peut ni attaquer ni bloquer à son prochain tour" | aucun | 1 | Créatures | grèves, blocages, sièges, pannes |
-| affaiblissement | "{cible} perd {N} en attaque jusqu'à la fin du tour" | 1 à 4 | N / 2 | Créatures | scandales, rumeurs, caricatures, désinformation |
-| renfort | "{cible} gagne +{N}/+{N} jusqu'à la fin du tour" | 1 à 3 | N | Créatures | entraînements, renforts, harangues |
-| surtension | "gagnez {N} électricité ce tour-ci" | 1 à 4 | N | vous | production d'énergie, inventions, révolutions industrielles |
-| delestage | "l'adversaire a {N} électricité de moins à son prochain tour" | 1 à 3 | N × 2 | adversaire | coupures, sabotages, blocus, sanctions |
-| annexion | "prenez le contrôle de {cible} de coût {N} ou moins" | 1 à 8 | N + 4 | Créatures adverses | annexions, conquêtes, débauchages, transferts |
+| id | texte | N | cout_effet | durée | cibles possibles | indice |
+|---|---|---|---|---|---|---|
+| degats | "infligez {N} dégâts à {cible}" | 1 à 6 | N | non | Créatures, Lieux, adversaire | conflits, scandales, attaques, catastrophes, armes, critiques, pamphlets |
+| soin | "gagnez {N} points de vie" | 2 à 8 | N / 2 | non | vous | personnalités aimées, fêtes, médecine |
+| pioche | "piochez {N} cartes" | 1 à 3 | N × 2 | non | vous | savoir, encyclopédies, recherche, presse, bibliothèques |
+| defausse | "l'adversaire défausse {N} cartes au hasard" | 1 à 2 | N × 3 | non | adversaire | censure, interdictions, autodafés, propagande |
+| restauration | "reprenez en main {cible} de votre défausse" | aucun | 3 | non | une carte de votre défausse | restaurations, renaissances, retours |
+| destruction | "détruisez {cible} de coût {N} ou moins" | 1 à 10 | N + 2 | non | toute carte en jeu | destructions, démolitions, assassinats, interdictions |
+| renvoi | "renvoyez {cible} dans la main de son propriétaire" | aucun | 2 | non | toute carte en jeu | retraites, exils, rappels, annulations |
+| ebauche | "{cible} perd toutes ses mécaniques" | aucun | 1 | oui | toute carte en jeu | réformes, oublis, purges, réécritures |
+| panne | "{cible} ne peut ni attaquer ni bloquer" | aucun | 1 | oui | Créatures | grèves, blocages, sièges, pannes |
+| affaiblissement | "{cible} perd {N} en attaque" | 1 à 4 | N / 2 | oui | Créatures | scandales, rumeurs, caricatures, désinformation |
+| renfort | "{cible} gagne +{N}/+{N}" | 1 à 3 | N | oui | Créatures | entraînements, renforts, harangues |
+| gain-mot-cle | "{cible} gagne {mot-clé}" | aucun | prix du mot-clé / 3 | oui | Créatures, et Lieux pour Bouc émissaire | équipements, ruses, inspirations passagères |
+| surtension | "gagnez {N} électricité ce tour-ci" | 1 à 4 | N | non | vous | production d'énergie, inventions, révolutions industrielles |
+| delestage | "l'adversaire a {N} électricité de moins à son prochain tour" | 1 à 3 | N × 2 | non | adversaire | coupures, sabotages, blocus, sanctions |
+| annexion | "prenez le contrôle de {cible} de coût {N} ou moins" | 1 à 8 | (N + 4) / 3 | oui | Créatures adverses | annexions, conquêtes, débauchages, transferts |
+
+gain-mot-cle est une proposition.
+
+## Durée
+
+Les effets marqués "oui" dans la colonne durée prennent une durée :
+
+| id | texte | facteur |
+|---|---|---|
+| tour | "jusqu'à la fin du tour" ; pour panne, "à son prochain tour" | × 1 |
+| permanent | rien n'est ajouté au texte, l'effet reste tant que la carte est en jeu | × 3 |
+
+Le prix de la colonne cout_effet est celui de la version pour le tour. Exemples : renfort +1/+1 coûte 1 pour le tour et 3 pour toujours, ebauche coûte 1 pour le tour et 3 pour toujours, annexion d'une carte de coût 4 ou moins coûte 3 pour le tour et 8 pour toujours.
 
 "Au début de votre tour : gagnez 1 électricité" remplace l'ancienne centrale, au prix 1 × 3 = 3.
 
