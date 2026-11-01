@@ -14,13 +14,6 @@ Pistes :
 - mesurer la répartition des coûts sur un pool généré, puis ajuster la formule du budget de base et `points_par_electricite`
 - imposer des quotas par coût à la validation, et régénérer les cartes d'un coût trop représenté
 
-## Œuvres comme cartes
-
-- Différé le 01/11/2026, jusqu'à ce que les 6 types soient vérifiés
-- Specs : `gameplay/carte/type.md`, `generation/article/selection.md`
-
-Les films, albums, livres, singles et jeux vidéo sont exclus pour la première version. Il faudra décider s'ils deviennent des cartes, et dans quel type. Il y a du volume : 29 427 albums et 10 664 singles sur la Wikipédia française, sans compter les films et les livres.
-
 ## Garde-fou sur les rares en construction de deck
 
 - Différé le 01/11/2026, à voir en partie de test

@@ -101,3 +101,9 @@ Ils étaient exclus en attendant de décider. Autres variantes : des Savoirs com
 
 Les distinctions restaient hors du jeu pour la première version, ou devenaient des Savoirs, des notions abstraites qui agissent sur les autres cartes.
 
+
+## Œuvres exclues de la première version
+
+Écartée le 01/11/2026 : les œuvres sont des Objets.
+
+Les films, albums, livres, singles et jeux vidéo n'étaient pas des cartes en première version, en attendant de vérifier les 6 types. Il y a du volume : 29 427 albums et 10 664 singles sur la Wikipédia française, sans compter les films et les livres.

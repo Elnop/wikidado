@@ -4,7 +4,7 @@ On ne garde que certaines natures d'articles, et chaque nature retenue donne un 
 
 Le découpage en 6 est à vérifier sur ce que Wikipédia et Wikidata proposent : chaque type doit couvrir assez d'articles intéressants (voir les volumes dans `generation/article/selection.md`). Le choix des articles est décrit dans `generation/article/selection.md`.
 
-Les œuvres (films, albums, livres, jeux vidéo) ne sont pas des cartes.
+Les œuvres (films, séries, albums, chansons, livres, jeux vidéo, peintures) sont des Objets.
 
 Les règles de la partie sont dans `gameplay/duel.md`.
 
@@ -13,7 +13,7 @@ Les règles de la partie sont dans `gameplay/duel.md`.
 | Lieu | lieux avec coordonnées : villes, montagnes, rivières, bâtiments. Aussi les lieux virtuels : sites web, plateformes en ligne, réseaux sociaux | a une défense et peut être attaqué à la place du joueur, ne bloque pas |
 | Créature | personnes, espèces animales et végétales | se bat, a une attaque et une défense |
 | Événement | batailles, opérations militaires, catastrophes | effet ponctuel joué à son tour, comme un rituel |
-| Objet | outils, armes, véhicules, machines, instruments, vêtements, trophées et distinctions (Ballon d'or, Oscar, prix Nobel) | reste en jeu avec ses propres mécaniques, peut s'attacher à une Créature, comme un artefact |
+| Objet | outils, armes, véhicules, machines, instruments, vêtements, trophées et distinctions (Ballon d'or, Oscar, prix Nobel), œuvres (films, séries, albums, livres, jeux vidéo, peintures, statues) | reste en jeu avec ses propres mécaniques, peut s'attacher à une Créature, comme un artefact |
 | Savoir | disciplines, sciences, théories, technologies, logiciels, langages, idéologies, mouvements artistiques | reste en jeu sans capacité propre, agit sur les autres cartes et sur les règles, comme un enchantement |
 | Faction | organisations : partis politiques, entreprises, clubs de sport, groupes de musique, groupes d'humains | reste en jeu sans capacité propre, ses effets ne touchent que les Créatures qu'on lui affecte |
 

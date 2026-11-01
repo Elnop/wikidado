@@ -83,7 +83,6 @@ Retirés par les filtres transverses :
 Absents de la liste blanche, donc jamais retenus :
 
 - années ("2008 en archéologie") et saisons sportives
-- œuvres (films, albums, livres, singles, jeux vidéo), voir `gameplay/carte/type.md`
 
 Les personnes vivantes sont gardées, sans exclusion spécifique.
 
