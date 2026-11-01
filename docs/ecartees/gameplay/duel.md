@@ -123,3 +123,33 @@ Une électricité bonus utilisable une fois, comme la pièce de Hearthstone, ou 
 Écartée le 01/11/2026 : la défausse est visible et des mécaniques peuvent s'en servir.
 
 Comme Hearthstone, une carte détruite était perdue pour la partie.
+
+## Faction Créature collective, ou Faction Lieu
+
+Écartée le 01/11/2026 : la Faction agit comme un Savoir, limité aux Créatures qui lui sont affectées.
+
+La Faction se battait comme une Créature avec attaque et défense, ou avait une défense et pouvait être attaquée comme un Lieu.
+
+## Affectation réservée aux membres Wikidata, ou moins chère pour eux
+
+Écartée le 01/11/2026 : toute Créature du joueur peut être affectée, au même prix.
+
+Seules les Créatures reliées à la Faction dans Wikidata (parti `P102`, club `P54`, membre de `P463`, employeur `P108`) pouvaient lui être affectées. Variante : toutes pouvaient l'être, mais les vrais membres payaient moins cher.
+
+## Coût d'affectation fixe, ou payé autrement qu'en électricité
+
+Écartée le 01/11/2026 : le coût est en électricité et chaque Faction a le sien.
+
+Le même prix pour toutes les Factions, ou un coût payé en sacrifiant une carte, en défaussant une carte de la main ou en engageant la Créature.
+
+## Affecter des Lieux, Objets et Savoirs
+
+Écartée le 01/11/2026 : seules les Créatures peuvent être affectées.
+
+Une entreprise aurait pu avoir ses usines (Lieux) et ses machines (Objets).
+
+## Plusieurs Factions par carte, ou cartes détruites avec leur Faction
+
+Écartée le 01/11/2026 : une seule Faction par Créature, qui reste en jeu si la Faction part.
+
+Une Créature cumulait les effets de plusieurs Factions, ou partait à la défausse avec sa Faction.

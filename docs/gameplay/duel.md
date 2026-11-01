@@ -36,6 +36,17 @@ Les Événements joués et les cartes détruites vont dans la défausse de leur 
 - Événement : son effet s'applique quand il est joué, puis la carte part à la défausse.
 - Objet : reste en jeu avec ses propres mécaniques, comme produire de l'électricité ou une capacité à activer. Certaines mécaniques l'attachent à une Créature, comme un équipement.
 - Savoir : reste en jeu et agit sur le reste du jeu, sans capacité propre. Il donne des capacités aux autres cartes en jeu, renforce les cartes de son joueur, ou change les règles pour un joueur ou pour l'adversaire.
+- Faction : reste en jeu et agit comme un Savoir, mais ses effets ne touchent que les Créatures qui lui sont affectées.
+
+## Affectation à une Faction
+
+Pendant son tour, avant d'attaquer, un joueur peut affecter une de ses Créatures en jeu à une de ses Factions en jeu. Il paie le coût d'affectation de la Faction en électricité. Ce coût est écrit sur la Faction.
+
+- N'importe quelle Créature du joueur peut être affectée, au même prix, qu'elle soit liée ou non à la Faction dans Wikidata.
+- Une Créature n'a qu'une Faction à la fois.
+- Si la Faction quitte le jeu, ses Créatures restent en jeu sans affectation. On peut les affecter à une autre Faction en payant à nouveau.
+
+Le calcul du coût d'affectation à partir de l'article reste à définir.
 
 ## Combat
 

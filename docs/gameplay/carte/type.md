@@ -15,7 +15,7 @@ Les règles de la partie sont dans `gameplay/duel.md`.
 | Événement | batailles, opérations militaires, catastrophes | effet ponctuel joué à son tour, comme un rituel |
 | Objet | outils, armes, véhicules, machines, instruments, vêtements | reste en jeu avec ses propres mécaniques, peut s'attacher à une Créature, comme un artefact |
 | Savoir | disciplines, sciences, théories, technologies, logiciels, langages, idéologies, mouvements artistiques | reste en jeu sans capacité propre, agit sur les autres cartes et sur les règles, comme un enchantement |
-| Faction | organisations : partis politiques, entreprises, clubs de sport, groupes de musique, groupes d'humains | à définir |
+| Faction | organisations : partis politiques, entreprises, clubs de sport, groupes de musique, groupes d'humains | reste en jeu sans capacité propre, ses effets ne touchent que les Créatures qu'on lui affecte |
 
 ## Sous-types
 
@@ -40,7 +40,7 @@ Wikidata dit ce qu'est l'article (`P31`). Ça colle bien aux types de Magic :
 | bataille, événement, catastrophe | Éphémère ou rituel | Bataille d'Austerlitz |
 | outil, arme, véhicule, machine, objet fabriqué | Artefact (type Objet) | une machine |
 | discipline, théorie, technologie, idéologie, courant artistique | Enchantement (type Savoir) | Romantisme |
-| parti, entreprise, club, groupe de musique | à définir (type Faction) | Parti socialiste, FC Barcelone |
+| parti, entreprise, club, groupe de musique | proche d'un enchantement, limité à ses membres (type Faction) | Parti socialiste, FC Barcelone |
 
 Un deck Paris joue des Lieux parisiens.
 

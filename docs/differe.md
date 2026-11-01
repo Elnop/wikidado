@@ -63,9 +63,9 @@ La première version ne prend que des articles de la Wikipédia française. Ensu
 
 Le script `scripts/tirer_echantillon.py` accepte déjà `--langue en`.
 
-## Comportement du type Faction
+## Famille des cartes Faction
 
 - Différé le 01/11/2026, à décider
-- Spec : `gameplay/carte/type.md`
+- Specs : `gameplay/carte/famille.md`, `gameplay/carte/type.md`
 
-Les organisations (partis politiques, entreprises, clubs de sport, groupes de musique) forment un type de carte Faction. On ne sait pas encore comment il agit en jeu : rôle, stats ou non, effets. Les mécaniques assignables, la rareté et la famille de ces cartes restent à définir.
+Les organisations (partis politiques, entreprises, clubs de sport, groupes de musique) forment le type Faction. Leur rôle en jeu est fixé dans `gameplay/duel.md`, mais pas encore leur grande famille, ni la façon de calculer leur coût d'affectation.

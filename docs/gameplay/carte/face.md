@@ -7,6 +7,7 @@ Une carte peut avoir un nombre illimité de mécaniques, donc leur texte ne tien
 - le nom de l'article
 - le type principal : Lieu, Créature, Événement, Objet, Savoir ou Faction (voir `gameplay/carte/type.md`). Les sous-types n'y sont pas.
 - le coût en électricité (voir `gameplay/carte/cout.md`)
+- pour une Faction, le coût d'affectation en électricité (voir `gameplay/duel.md`)
 - les stats : attaque et défense pour une Créature, défense pour un Lieu (voir `gameplay/carte/stats.md`)
 - l'illustration (voir `gameplay/carte/illustration.md`), en grand
 - un court texte de lore : la première phrase du résumé de l'article Wikipédia. Le code retire les transcriptions phonétiques entre crochets et les parenthèses de prononciation ("La tour Eiffel [tuʁɛfɛl] est..." devient "La tour Eiffel est..."), le reste de la phrase est gardé tel quel.
