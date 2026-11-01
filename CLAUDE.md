@@ -26,6 +26,10 @@ On garde toutes les idées, y compris celles qui ont été écartées.
 - Quand une idée est abandonnée, déplacer son texte hors du document principal vers `docs/ecartees/`, au même chemin que le document d'origine (voir la règle de rangement ci-dessus). Chaque idée y commence par "Écartée le JJ/MM/AAAA : raison".
 - Une idée n'est décidée ou écartée que si Leon ou Dani l'ont tranché. Une recommandation de Claude reste une proposition.
 
+## Questions
+
+Claude pose toutes ses questions à Leon avec l'outil de questions interactif de Claude Code (AskUserQuestion), jamais en texte libre dans sa réponse. Chaque réponse obtenue est reportée dans les specs concernées : la spec décrit le choix fait, et les options rejetées vont dans `docs/ecartees/`.
+
 ## Git
 
 Après chaque lot de modifications : commit en français et push sur `origin main`, sans redemander.
