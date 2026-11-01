@@ -32,6 +32,7 @@ docs/
   ecartees/                    idées écartées, rangées comme le reste de docs/
     gameplay/
       carte/cout.md
+      carte/famille.md
       carte/rarete.md
       carte/stats.md
       carte/type.md
@@ -40,4 +41,5 @@ docs/
       duel.md
     generation/
       pipeline.md
+      article/selection.md
 ```

@@ -12,7 +12,7 @@ Le code s'occupe de :
 - fixer le type de carte à partir de la classe Wikidata (voir `gameplay/carte/type.md`)
 - calculer la rareté (voir `gameplay/carte/rarete.md`)
 - après l'assignation, calculer le coût à partir des mécaniques choisies (voir `gameplay/carte/cout.md`), puis le budget et les stats (voir `gameplay/carte/stats.md`)
-- calculer la famille à partir des portails
+- calculer la famille à partir des classes Wikidata (voir `gameplay/carte/famille.md`)
 - trouver les cibles des synergies : liens réciproques, relations Wikidata, époque, lieu de naissance
 
 Le modèle s'occupe uniquement de ce qui demande de comprendre le sujet :
@@ -23,7 +23,7 @@ Le modèle s'occupe uniquement de ce qui demande de comprendre le sujet :
 
 ## Pipeline
 
-1. Extraction : depuis les dumps, on construit une fiche par article retenu (titre, résumé, classe Wikidata, propriétés utiles, portails, lectures, langues, taille, contributeurs, liens du résumé).
+1. Extraction : depuis les dumps, on construit une fiche par article retenu (titre, résumé, classe Wikidata, propriétés utiles, lectures, taille, contributeurs, liens du résumé).
 2. Calcul : le code ajoute le type, la rareté, la famille et la liste des synergies possibles.
 3. Assignation : le modèle reçoit la fiche et le catalogue des mécaniques autorisées pour ce type. Il répond en JSON contraint, avec uniquement des identifiants du catalogue.
 4. Validation : le code vérifie que les mécaniques existent, que les paramètres sont valides et que le coût obtenu reste dans la plage autorisée. Une carte qui ne passe pas est régénérée ou reçoit une mécanique par défaut.

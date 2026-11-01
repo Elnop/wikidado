@@ -8,12 +8,9 @@ Wikidata donne la nature d'un élément avec la propriété `P31` ("nature de l'
 
 Attention : `P31` pointe vers la classe la plus précise. Une église est `P31` église, et pas `P31` bâtiment. Pour récupérer tous les bâtiments, il faut remonter la hiérarchie des sous-classes (`P31/P279*` en SPARQL). Sinon on rate une grosse partie des articles. Exemples mesurés : seulement 90 articles fr sont directement `P31` maladie, 409 directement `P31` événement, 37 directement `P31` outil et 156 directement `P31` lieu géographique. Ces classes générales sont presque toujours atteintes par sous-classe.
 
-On a deux façons de faire :
+## Liste des classes retenues
 
-- une liste de classes Wikidata choisies à la main par type de carte (église, château, musée, tour... pour Terrain). On contrôle bien ce qui entre, mais il faut maintenir la liste.
-- une remontée automatique vers quelques classes racines (lieu géographique, être humain, événement, artefact). C'est plus large, mais il y aura des intrus.
-
-Je partirais sur la liste à la main : c'est plus facile à équilibrer et on sait ce qu'on met dans le jeu.
+Les classes Wikidata qui donnent des cartes sont choisies à la main, avec pour chacune le type de carte qu'elle donne (église, château, musée, tour... pour Terrain). On contrôle ce qui entre dans le jeu, et la liste sert aussi à fixer la famille de chaque classe (voir `gameplay/carte/famille.md`). Il faut la maintenir quand on ajoute des types d'articles.
 
 ## Volumes sur la Wikipédia française
 
@@ -57,10 +54,11 @@ On peut fixer un seuil (nombre de langues, taille, lectures) pour ne garder que 
 
 - listes, homonymies, années ("2008 en archéologie"), saisons sportives
 - œuvres (films, albums, livres, singles), pour la première version (voir `gameplay/carte/type.md`)
-- articles sensibles : crimes, violences sexuelles, attentats, personnes vivantes peu connues. À filtrer par catégories et par classes Wikidata.
+- articles sensibles : crimes, violences sexuelles, attentats. À filtrer par catégories et par classes Wikidata.
+
+Les personnes vivantes sont gardées, sans exclusion spécifique.
 - articles sans image libre, si on décide que chaque carte doit avoir une illustration
 
 ## Questions ouvertes
 
-- Les personnes vivantes posent un problème d'image et de droit de la personnalité. On les garde ?
 - Que faire des articles à 0 langue et 0 lecture (des milliers d'espèces et de communes) : communes, ou on les exclut ?

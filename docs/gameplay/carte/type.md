@@ -9,7 +9,7 @@ Les œuvres (films, albums, livres) ne sont pas des cartes pour la première ver
 | Type (provisoire) | Ce que ça couvre | Rôle en jeu (à définir) |
 |---|---|---|
 | Terrain | lieux avec coordonnées : villes, montagnes, rivières, bâtiments | produit des ressources |
-| Créature | personnes, animaux | se bat sur le terrain |
+| Créature | personnes, espèces animales et végétales | se bat sur le terrain |
 | Événement | batailles, opérations militaires, catastrophes | effet ponctuel, comme un éphémère ou un rituel |
 | Technique | inventions, outils, logiciels, disciplines | effet permanent, comme un artefact ou un enchantement |
 
@@ -26,7 +26,3 @@ Wikidata dit ce qu'est l'article (`P31`). Ça colle bien aux types de Magic :
 | mouvement, idéologie, courant artistique | Enchantement | Romantisme |
 
 Les lieux comme terrains me plaisent beaucoup : un deck Paris joue des terrains parisiens, et on ne sort pas les terrains d'un chapeau.
-
-## Questions ouvertes
-
-- Les espèces sont-elles des Créatures, comme les humains, ou un type à part ?
