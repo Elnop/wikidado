@@ -10,7 +10,7 @@ Le code s'occupe de :
 
 - sélectionner les articles (classes Wikidata, seuils, exclusions, voir `Gameplay/types-de-cartes.md`)
 - fixer le type de carte à partir de la classe Wikidata
-- calculer le coût, le budget et les stats (voir `Gameplay/cardcost.md`)
+- calculer le coût (voir `Gameplay/cardcost.md`), le budget et les stats (voir `Gameplay/cardstats.md`)
 - calculer la famille à partir des portails
 - trouver les cibles des synergies : liens réciproques, relations Wikidata, époque, lieu de naissance
 

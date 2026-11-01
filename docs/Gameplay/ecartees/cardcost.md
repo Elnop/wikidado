@@ -1,12 +1,6 @@
-# Idées écartées : coût et stats
+# Idées écartées : coût
 
 Idées écartées liées à `../cardcost.md`. On les garde pour savoir ce qui a déjà été envisagé et pourquoi on l'a abandonné.
-
-## Stats qui montent avec la notoriété, sans lien avec le coût
-
-Écartée le 01/11/2026 : la carte la plus célèbre gagne toujours, il n'y a aucun intérêt tactique.
-
-C'est le système de WikiMasters (voir `../../Wikimaster/analyse.md`) : l'attaque suit la taille de l'article, la défense le nombre de langues, et rien ne compense une carte forte. À distinguer de l'idée retenue, où la puissance suit la popularité mais rapportée au coût.
 
 ## Coût fixé par la notoriété
 
@@ -33,10 +27,10 @@ cout = clamp(round(notoriete * 0.75), 1, 7)
 | Irène Jacob | 18 353 | 37 | 6,9 | 5 |
 | Napoléon Ier | ~76 000 | 221 | 8,8 | 7 |
 
-La formule de notoriété peut resservir pour la rareté (voir `../cardcost.md`).
+La formule de notoriété peut resservir pour la rareté (voir `../cardstats.md`).
 
 ## Coûts figés pour une saison
 
-Écartée le 01/11/2026 : sans objet depuis que le coût ne dépend plus des lectures. Remplacée par "rareté figée pour une saison", dans `../cardcost.md`.
+Écartée le 01/11/2026 : sans objet depuis que le coût ne dépend plus des lectures. Remplacée par "rareté figée pour une saison", dans `../cardstats.md`.
 
 L'idée était de prendre un instantané des lectures au début de chaque saison pour calculer les coûts, pour éviter que les decks changent tout seuls d'un jour à l'autre.
