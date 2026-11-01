@@ -26,6 +26,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import sys
 import time
 import urllib.error
@@ -41,11 +42,14 @@ TYPES = ["creature", "lieu", "evenement", "objet", "savoir", "faction"]
 # À distance égale, l'ordre de TYPES départage.
 RACINES = {
     "creature": ["Q5", "Q16521"],  # être humain, taxon
-    "lieu": ["Q2221906", "Q41176", "Q811979"],  # lieu, bâtiment, structure architecturale
+    "lieu": [
+        "Q2221906", "Q41176", "Q811979",  # lieu, bâtiment, structure architecturale
+        "Q6256", "Q3624078", "Q56061", "Q486972",  # pays, État souverain, entité territoriale, établissement humain
+    ],
     "evenement": ["Q1190554", "Q178561", "Q645883"],  # occurrence, bataille, opération militaire
     "objet": [
         "Q39546", "Q728", "Q42889", "Q11019", "Q34379", "Q11460", "Q1183543",
-        "Q8205328",  # outil, arme, véhicule, machine, instrument de musique, vêtement, dispositif, objet artificiel
+        "Q8205328", "Q618779",  # outil, arme, véhicule, machine, instrument de musique, vêtement, dispositif, objet artificiel, distinction
     ],
     "savoir": [
         "Q11862829", "Q336", "Q17737", "Q151885", "Q11016", "Q9143", "Q7397", "Q246672",
@@ -75,9 +79,14 @@ EXCLUSIONS = {
     "Q134556",     # single
     "Q5398426",    # série télévisée
     "Q3464665",    # saison de série télévisée
+    "Q15416",      # programme télévisé (émissions, jeux télévisés)
     "Q4167410",    # page d'homonymie
     "Q13406463",   # liste (article de liste Wikimédia)
 }
+
+# "Wikipédia:Accueil" est une page de service ; "Star Wars: Episode I" est un article.
+ESPACE_DE_NOM = re.compile(r"^[^_:]+:")
+PREFIXES_LISTES = ("Liste de", "Liste des", "Liste d'", "List of")
 
 TAILLE_LOT = 50
 PROFONDEUR_MAX = 12
@@ -117,18 +126,27 @@ def http_json(url, params=None, contact=CONTACT, essais=4):
             time.sleep(2 ** essai)
 
 
+TITRES = {}  # (langue, QID) -> titre de l'article, lu dans les liens de site Wikidata
+
+
 def classes_liees(qids, propriete, contact):
-    """QID -> ensemble des QID liés par la propriété (P31 ou P279), par lots de 50."""
+    """QID -> ensemble des QID liés par la propriété (P31 ou P279), par lots de 50.
+
+    Au passage, retient le titre de l'article de chaque langue (liens de site).
+    """
     res = {}
     qids = list(qids)
     for i in range(0, len(qids), TAILLE_LOT):
         lot = qids[i:i + TAILLE_LOT]
         rep = http_json(API_WIKIDATA, params={
-            "action": "wbgetentities", "format": "json", "props": "claims",
+            "action": "wbgetentities", "format": "json", "props": "claims|sitelinks",
             "ids": "|".join(lot),
         }, contact=contact)
         entites = (rep or {}).get("entities", {})
         for q in lot:
+            for cle, lien in entites.get(q, {}).get("sitelinks", {}).items():
+                if cle.endswith("wiki") and len(cle) == 6:
+                    TITRES[(cle[:2], q)] = lien["title"]
             valeurs = set()
             for decl in entites.get(q, {}).get("claims", {}).get(propriete, []):
                 if decl.get("rank") == "deprecated":
@@ -225,7 +243,10 @@ def main():
         types, p31 = classer_lot([q for _, q, _ in lot], a.contact)
         for n, q, titre in lot:
             t = types[q]
-            if t is None or q in vus or compte[t] >= a.par_type:
+            titre = TITRES.get((a.langue, q))  # titre officiel, celui du dump peut venir d'une redirection
+            if (t is None or q in vus or compte[t] >= a.par_type or titre is None
+                    or ESPACE_DE_NOM.match(titre.replace(" ", "_"))
+                    or titre.startswith(PREFIXES_LISTES)):
                 continue
             compte[t] += 1
             sortie.append({
@@ -237,8 +258,6 @@ def main():
         print(f"  {examines} examinés : {compte}", file=sys.stderr)
 
     for n, qid, titre in lire_classement(a.classement):
-        if titre.startswith(("Liste de", "Liste des", "Liste d'", "List of")):
-            continue
         lot.append((n, qid, titre))
         examines += 1
         if len(lot) == TAILLE_LOT:

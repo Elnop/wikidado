@@ -44,6 +44,7 @@ def lire_lectures(chemin, projet):
     """page_id -> (titre, lectures du mois)"""
     vues = collections.Counter()
     titres = {}
+    meilleure_ligne = {}  # plusieurs redirections partagent un page_id : on garde le titre le plus lu
     prefixe = projet + " "
     with bz2.open(chemin, "rt", encoding="utf-8", errors="replace") as f:
         for ligne in f:
@@ -53,8 +54,11 @@ def lire_lectures(chemin, projet):
             if len(champs) < 5 or not champs[2].isdigit():
                 continue
             page_id = int(champs[2])
-            titres[page_id] = champs[1]
-            vues[page_id] += int(champs[4])
+            n = int(champs[4])
+            if n > meilleure_ligne.get(page_id, -1):
+                meilleure_ligne[page_id] = n
+                titres[page_id] = champs[1]
+            vues[page_id] += n
     return titres, vues
 
 

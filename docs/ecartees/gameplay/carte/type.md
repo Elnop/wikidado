@@ -94,3 +94,10 @@ Les partis, entreprises, clubs et groupes de musique devenaient des Créatures (
 Écartée le 01/11/2026 : les sites web, plateformes et réseaux sociaux sont des Lieux virtuels.
 
 Ils étaient exclus en attendant de décider. Autres variantes : des Savoirs comme les logiciels, ou des Factions parce qu'une plateforme rassemble des gens.
+
+## Prix et distinctions exclus, ou rangés dans Savoir
+
+Écartée le 01/11/2026 : les trophées et distinctions (Ballon d'or, Oscar, prix Nobel) sont des Objets.
+
+Les distinctions restaient hors du jeu pour la première version, ou devenaient des Savoirs, des notions abstraites qui agissent sur les autres cartes.
+
