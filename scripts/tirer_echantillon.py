@@ -36,48 +36,15 @@ import urllib.request
 CONTACT = "https://github.com/Elnop/wikidado"
 TYPES = ["creature", "lieu", "evenement", "objet", "savoir", "faction"]
 
-# Classes racines par type de carte. Provisoire : voir gameplay/carte/type.md et
-# generation/article/selection.md. Le type d'un article est celui de la racine la
-# plus proche de ses classes P31, en comptant les liens "sous-classe de" (P279).
-# À distance égale, l'ordre de TYPES départage.
-RACINES = {
-    "creature": ["Q5", "Q16521"],  # être humain, taxon
-    "lieu": [
-        "Q2221906", "Q41176", "Q811979",  # lieu, bâtiment, structure architecturale
-        "Q6256", "Q3624078", "Q56061", "Q486972",  # pays, État souverain, entité territoriale, établissement humain
-        "Q35127", "Q19967801", "Q118140435", "Q3220391", "Q122759350", "Q4182287", "Q33120876",
-        # lieux virtuels : site web, service en ligne, grande plateforme, réseau social,
-        # plateforme de contenu, moteur de recherche, projet Wikimedia
-    ],
-    "evenement": ["Q1190554", "Q178561", "Q645883"],  # occurrence, bataille, opération militaire
-    "objet": [
-        "Q39546", "Q728", "Q42889", "Q11019", "Q34379", "Q11460", "Q1183543",
-        "Q8205328", "Q618779",  # outil, arme, véhicule, machine, instrument de musique, vêtement, dispositif, objet artificiel, distinction
-    ],
-    "savoir": [
-        "Q11862829", "Q336", "Q17737", "Q151885", "Q11016", "Q9143", "Q7397", "Q246672",
-        "Q7257", "Q968159",  # discipline, science, théorie, concept, technologie, langage de programmation,
-                             # logiciel, objet mathématique, idéologie, mouvement artistique
-    ],
-    "faction": ["Q43229", "Q16334295"],  # organisation (parti, entreprise, club, groupe de musique), groupe d'humains
-}
-
-# Classes exclues (voir generation/article/selection.md) : œuvres, éléments de fiction,
-# pages qui ne sont pas des articles. Les sites web sont des Lieux virtuels.
-EXCLUSIONS = {
-    "Q14897293",   # entité fictionnelle (armes, lieux, personnages inventés)
-    "Q7889",       # jeu vidéo
-    "Q11424",      # film
-    "Q24856",      # série de films
-    "Q7725634",    # œuvre littéraire
-    "Q482994",     # album
-    "Q134556",     # single
-    "Q5398426",    # série télévisée
-    "Q3464665",    # saison de série télévisée
-    "Q15416",      # programme télévisé (émissions, jeux télévisés)
-    "Q4167410",    # page d'homonymie
-    "Q13406463",   # liste (article de liste Wikimédia)
-}
+# Classes racines par type de carte et classes exclues : voir scripts/racines.json
+# (provisoire, voir gameplay/carte/type.md et generation/article/selection.md).
+# Le type d'un article est celui de la racine la plus proche de ses classes P31, en
+# comptant les liens "sous-classe de" (P279). À distance égale, l'ordre de TYPES
+# départage. scripts/couverture.py aide à trouver les racines qui manquent.
+with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "racines.json"), encoding="utf-8") as _f:
+    _racines = json.load(_f)
+RACINES = {t: [r["id"] for r in rs] for t, rs in _racines["types"].items()}
+EXCLUSIONS = {r["id"] for r in _racines["exclusions"]}
 
 # "Wikipédia:Accueil" est une page de service ; "Star Wars: Episode I" est un article.
 ESPACE_DE_NOM = re.compile(r"^[^_:]+:")
@@ -155,10 +122,11 @@ def classes_liees(qids, propriete, contact):
 
 
 PARENTS = {}  # classe -> classes parentes (P279), mémoire du processus
+RACINE_TROUVEE = {}  # QID -> racine qui a décidé du type (pour scripts/couverture.py)
 
 
 def classer_lot(qids, contact):
-    """-> ({QID: type de carte ou None si exclu ou sans type}, {QID: P31})"""
+    """-> ({QID: type de carte, "exclu" ou None si sans type}, {QID: P31}, {QID: ancêtres})"""
     racine_type = {r: t for t, rs in RACINES.items() for r in rs}
     ordre = {t: i for i, t in enumerate(TYPES)}
     p31 = classes_liees(qids, "P31", contact)
@@ -171,9 +139,11 @@ def classer_lot(qids, contact):
             if front[q] & EXCLUSIONS:
                 exclu[q] = True
             if type_de[q] is None:
-                trouves = [racine_type[c] for c in front[q] if c in racine_type]
+                trouves = [c for c in front[q] if c in racine_type]
                 if trouves:
-                    type_de[q] = min(trouves, key=ordre.get)
+                    racine = min(trouves, key=lambda c: (ordre[racine_type[c]], c))
+                    type_de[q] = racine_type[racine]
+                    RACINE_TROUVEE[q] = racine
         actifs = [q for q in qids if front[q] and not exclu[q]]
         if not actifs:
             break
@@ -183,7 +153,7 @@ def classer_lot(qids, contact):
             suivants = set().union(*(PARENTS[c] for c in front[q])) - vus[q]
             vus[q] |= suivants
             front[q] = suivants
-    return {q: (None if exclu[q] else type_de[q]) for q in qids}, p31
+    return {q: ("exclu" if exclu[q] else type_de[q]) for q in qids}, p31, vus
 
 
 def resume(langue, titre, contact):
@@ -235,11 +205,11 @@ def main():
     lot = []
 
     def traiter(lot):
-        types, p31 = classer_lot([q for _, q, _ in lot], a.contact)
+        types, p31, _ = classer_lot([q for _, q, _ in lot], a.contact)
         for n, q, titre in lot:
             t = types[q]
             titre = TITRES.get((a.langue, q))  # titre officiel, celui du dump peut venir d'une redirection
-            if (t is None or q in vus or compte[t] >= a.par_type or titre is None
+            if (t not in TYPES or q in vus or compte[t] >= a.par_type or titre is None
                     or ESPACE_DE_NOM.match(titre.replace(" ", "_"))
                     or titre.startswith(PREFIXES_LISTES)):
                 continue

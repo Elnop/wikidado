@@ -1,0 +1,226 @@
+{
+ "types": {
+  "creature": [
+   {
+    "id": "Q5",
+    "nom": "être humain"
+   },
+   {
+    "id": "Q16521",
+    "nom": "taxon"
+   }
+  ],
+  "lieu": [
+   {
+    "id": "Q2221906",
+    "nom": "position géographique"
+   },
+   {
+    "id": "Q41176",
+    "nom": "bâtiment"
+   },
+   {
+    "id": "Q811979",
+    "nom": "structure architecturale"
+   },
+   {
+    "id": "Q6256",
+    "nom": "pays"
+   },
+   {
+    "id": "Q3624078",
+    "nom": "État souverain"
+   },
+   {
+    "id": "Q56061",
+    "nom": "entité territoriale administrative"
+   },
+   {
+    "id": "Q486972",
+    "nom": "établissement humain"
+   },
+   {
+    "id": "Q35127",
+    "nom": "site web"
+   },
+   {
+    "id": "Q19967801",
+    "nom": "service en ligne"
+   },
+   {
+    "id": "Q118140435",
+    "nom": "très grande plateforme"
+   },
+   {
+    "id": "Q3220391",
+    "nom": "service de réseau social"
+   },
+   {
+    "id": "Q122759350",
+    "nom": "plateforme de contenu généré par les utilisateurs"
+   },
+   {
+    "id": "Q4182287",
+    "nom": "moteur de recherche"
+   },
+   {
+    "id": "Q33120876",
+    "nom": "projet Wikimedia de contenu"
+   }
+  ],
+  "evenement": [
+   {
+    "id": "Q1190554",
+    "nom": "occurrence"
+   },
+   {
+    "id": "Q178561",
+    "nom": "bataille"
+   },
+   {
+    "id": "Q645883",
+    "nom": "opération militaire"
+   }
+  ],
+  "objet": [
+   {
+    "id": "Q39546",
+    "nom": "outil"
+   },
+   {
+    "id": "Q728",
+    "nom": "arme"
+   },
+   {
+    "id": "Q42889",
+    "nom": "véhicule"
+   },
+   {
+    "id": "Q11019",
+    "nom": "machine"
+   },
+   {
+    "id": "Q34379",
+    "nom": "instrument de musique"
+   },
+   {
+    "id": "Q11460",
+    "nom": "vêtement"
+   },
+   {
+    "id": "Q1183543",
+    "nom": "dispositif"
+   },
+   {
+    "id": "Q8205328",
+    "nom": "objet artificiel physique"
+   },
+   {
+    "id": "Q618779",
+    "nom": "distinction"
+   }
+  ],
+  "savoir": [
+   {
+    "id": "Q11862829",
+    "nom": "discipline académique"
+   },
+   {
+    "id": "Q336",
+    "nom": "science"
+   },
+   {
+    "id": "Q17737",
+    "nom": "théorie"
+   },
+   {
+    "id": "Q151885",
+    "nom": "concept"
+   },
+   {
+    "id": "Q11016",
+    "nom": "technologie"
+   },
+   {
+    "id": "Q9143",
+    "nom": "langage de programmation"
+   },
+   {
+    "id": "Q7397",
+    "nom": "logiciel"
+   },
+   {
+    "id": "Q246672",
+    "nom": "objet mathématique"
+   },
+   {
+    "id": "Q7257",
+    "nom": "idéologie"
+   },
+   {
+    "id": "Q968159",
+    "nom": "mouvement artistique"
+   }
+  ],
+  "faction": [
+   {
+    "id": "Q43229",
+    "nom": "organisation"
+   },
+   {
+    "id": "Q16334295",
+    "nom": "groupe d'humains"
+   }
+  ]
+ },
+ "exclusions": [
+  {
+   "id": "Q11424",
+   "nom": "film"
+  },
+  {
+   "id": "Q13406463",
+   "nom": "page de liste de Wikimédia"
+  },
+  {
+   "id": "Q134556",
+   "nom": "single"
+  },
+  {
+   "id": "Q14897293",
+   "nom": "entité fictionnelle"
+  },
+  {
+   "id": "Q15416",
+   "nom": "programme télévisé"
+  },
+  {
+   "id": "Q24856",
+   "nom": "série cinématographique"
+  },
+  {
+   "id": "Q3464665",
+   "nom": "saison de série télévisée"
+  },
+  {
+   "id": "Q4167410",
+   "nom": "page d'homonymie de Wikimédia"
+  },
+  {
+   "id": "Q482994",
+   "nom": "album"
+  },
+  {
+   "id": "Q5398426",
+   "nom": "série télévisée"
+  },
+  {
+   "id": "Q7725634",
+   "nom": "œuvre littéraire"
+  },
+  {
+   "id": "Q7889",
+   "nom": "jeu vidéo"
+  }
+ ]
+}

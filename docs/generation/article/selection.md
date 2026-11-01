@@ -57,6 +57,7 @@ Un article sans image libre reste une carte, avec une illustration par défaut (
 - listes, homonymies, années ("2008 en archéologie"), saisons sportives
 - œuvres (films, albums, livres, singles, jeux vidéo), voir `gameplay/carte/type.md`
 - éléments de fiction (armes, lieux, personnages inventés : l'Étoile de la mort)
-- articles sensibles : crimes, violences sexuelles, attentats, sites pornographiques. À filtrer par catégories et par classes Wikidata.
 
 Les personnes vivantes sont gardées, sans exclusion spécifique.
+
+Les articles sensibles (crimes, meurtriers, attentats, violences, sexualité, sites pornographiques) sont gardés comme les autres.

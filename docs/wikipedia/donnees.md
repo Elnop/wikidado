@@ -75,4 +75,4 @@ API : mettre un User-Agent identifiable avec un contact, et rester raisonnable s
 
 Pour construire une base de plusieurs dizaines de milliers de cartes, il vaut mieux partir des dumps (https://dumps.wikimedia.org/ : wikitexte, liens, catégories, Wikidata en JSON, pageviews) que d'appeler l'API article par article.
 
-Contenu sensible : certains articles portent sur des crimes, de la violence ou de la sexualité. Il faudra filtrer, au moins par catégories.
+Contenu sensible : certains articles portent sur des crimes, de la violence ou de la sexualité. Ils sont gardés dans le jeu (voir `generation/article/selection.md`).

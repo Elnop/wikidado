@@ -37,3 +37,10 @@ On excluait les articles sous un seuil (nombre de langues, taille, lectures) pou
 Écartée le 01/11/2026 : un article sans image libre reçoit une illustration par défaut.
 
 Un article sans image libre n'était pas une carte. Moins de cartes, mais toutes illustrées. Variante : image obligatoire sauf pour les communes.
+
+## Filtre des articles sensibles
+
+Écartée le 01/11/2026 : les articles sensibles font partie du jeu.
+
+Les articles sur des crimes, des violences sexuelles, des attentats ou des sites pornographiques étaient retirés de la sélection, par catégories Wikipédia et par classes Wikidata.
+

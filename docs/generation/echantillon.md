@@ -59,7 +59,7 @@ Le type d'un article suit la règle de `gameplay/carte/type.md` (racine la plus 
 
 Limites connues :
 
-- les plus lus sont dominés par l'actualité (personnalités politiques, sport, élections) et contiennent des articles sensibles (crimes, meurtriers). Le filtre des articles sensibles de `generation/article/selection.md` n'est pas encore appliqué
+- les plus lus sont dominés par l'actualité (personnalités politiques, sport, élections) et contiennent des articles sensibles (crimes, meurtriers), gardés comme les autres
 - les racines de classes par type sont provisoires
 - les types rares dans les plus lus (Objet) demandent d'examiner beaucoup d'articles : `--max-examines` fixe la limite
 
