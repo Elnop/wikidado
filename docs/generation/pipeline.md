@@ -25,7 +25,7 @@ Le modèle s'occupe uniquement de ce qui demande de comprendre le sujet :
 
 ## Pipeline
 
-1. Extraction : depuis les dumps, on construit une fiche par article retenu (titre, résumé, classe Wikidata, propriétés utiles, lectures, taille, contributeurs, liens du résumé).
+1. Extraction : depuis les dumps, on construit une fiche par article retenu (titre, résumé, classe Wikidata, propriétés utiles, lectures, taille, contributeurs, liens de l'article).
 2. Calcul : le code ajoute le type, les sous-types, les familles, la rareté, le budget de base, le coût, le budget effectif et la liste des synergies possibles.
 3. Assignation : le modèle reçoit la fiche, le budget effectif et le catalogue des mécaniques autorisées pour ce type. Il répond en JSON contraint, avec uniquement des identifiants du catalogue.
 4. Validation : le code vérifie que les mécaniques existent, que les paramètres sont valides et que la somme des `cout_budget` ne dépasse pas le budget effectif. Une carte qui ne passe pas est régénérée.
