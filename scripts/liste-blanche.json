@@ -1635,11 +1635,91 @@
    "le": "2026-11-01"
   },
   {
+   "qid": "Q5398426",
+   "nom": "série télévisée",
+   "type": "objet",
+   "articles_echantillon": 58,
+   "par": "claude",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q482994",
+   "nom": "album",
+   "type": "objet",
+   "articles_echantillon": 16,
+   "par": "claude",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q7725634",
+   "nom": "œuvre littéraire",
+   "type": "objet",
+   "articles_echantillon": 16,
+   "par": "claude",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q105543609",
+   "nom": "œuvre ou composition musicale",
+   "type": "objet",
+   "articles_echantillon": 8,
+   "par": "claude",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q24862",
+   "nom": "court métrage",
+   "type": "objet",
+   "articles_echantillon": 6,
+   "par": "claude",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q1259759",
+   "nom": "mini-série",
+   "type": "objet",
+   "articles_echantillon": 6,
+   "par": "claude",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q506240",
+   "nom": "téléfilm",
+   "type": "objet",
+   "articles_echantillon": 6,
+   "par": "claude",
+   "le": "2026-11-01"
+  },
+  {
    "qid": "Q4164871",
    "nom": "fonction",
    "type": "objet",
    "articles_echantillon": 5,
    "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q7889",
+   "nom": "jeu vidéo",
+   "type": "objet",
+   "articles_echantillon": 5,
+   "par": "claude",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q3305213",
+   "nom": "peinture",
+   "type": "objet",
+   "articles_echantillon": 5,
+   "par": "claude",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q134556",
+   "nom": "single",
+   "type": "objet",
+   "articles_echantillon": 5,
+   "par": "claude",
    "le": "2026-11-01"
   },
   {
@@ -1803,6 +1883,14 @@
    "le": "2026-11-01"
   },
   {
+   "qid": "Q21198342",
+   "nom": "série de manga",
+   "type": "objet",
+   "articles_echantillon": 2,
+   "par": "claude",
+   "le": "2026-11-01"
+  },
+  {
    "qid": "Q15056995",
    "nom": "type d'avion",
    "type": "objet",
@@ -1816,6 +1904,14 @@
    "type": "objet",
    "articles_echantillon": 2,
    "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q7366",
+   "nom": "chanson",
+   "type": "objet",
+   "articles_echantillon": 1,
+   "par": "claude",
    "le": "2026-11-01"
   },
   {
@@ -1983,14 +2079,6 @@
    "nom": "club de football",
    "type": "faction",
    "articles_echantillon": 12,
-   "par": "dani",
-   "le": "2026-11-01"
-  },
-  {
-   "qid": "Q43229",
-   "nom": "organisation",
-   "type": "faction",
-   "articles_echantillon": 10,
    "par": "dani",
    "le": "2026-11-01"
   },
@@ -2315,14 +2403,6 @@
    "le": "2026-11-01"
   },
   {
-   "qid": "Q5398426",
-   "nom": "série télévisée",
-   "type": "dehors",
-   "articles_echantillon": 58,
-   "par": "dani",
-   "le": "2026-11-01"
-  },
-  {
    "qid": "Q27020041",
    "nom": "saison sportive",
    "type": "dehors",
@@ -2331,50 +2411,10 @@
    "le": "2026-11-01"
   },
   {
-   "qid": "Q482994",
-   "nom": "album",
-   "type": "dehors",
-   "articles_echantillon": 16,
-   "par": "dani",
-   "le": "2026-11-01"
-  },
-  {
-   "qid": "Q7725634",
-   "nom": "œuvre littéraire",
-   "type": "dehors",
-   "articles_echantillon": 16,
-   "par": "dani",
-   "le": "2026-11-01"
-  },
-  {
-   "qid": "Q105543609",
-   "nom": "œuvre ou composition musicale",
-   "type": "dehors",
-   "articles_echantillon": 8,
-   "par": "dani",
-   "le": "2026-11-01"
-  },
-  {
    "qid": "Q24856",
    "nom": "série cinématographique",
    "type": "dehors",
    "articles_echantillon": 7,
-   "par": "dani",
-   "le": "2026-11-01"
-  },
-  {
-   "qid": "Q24862",
-   "nom": "court métrage",
-   "type": "dehors",
-   "articles_echantillon": 6,
-   "par": "dani",
-   "le": "2026-11-01"
-  },
-  {
-   "qid": "Q1259759",
-   "nom": "mini-série",
-   "type": "dehors",
-   "articles_echantillon": 6,
    "par": "dani",
    "le": "2026-11-01"
   },
@@ -2391,38 +2431,6 @@
    "nom": "saison de série télévisée",
    "type": "dehors",
    "articles_echantillon": 6,
-   "par": "dani",
-   "le": "2026-11-01"
-  },
-  {
-   "qid": "Q506240",
-   "nom": "téléfilm",
-   "type": "dehors",
-   "articles_echantillon": 6,
-   "par": "dani",
-   "le": "2026-11-01"
-  },
-  {
-   "qid": "Q7889",
-   "nom": "jeu vidéo",
-   "type": "dehors",
-   "articles_echantillon": 5,
-   "par": "dani",
-   "le": "2026-11-01"
-  },
-  {
-   "qid": "Q3305213",
-   "nom": "peinture",
-   "type": "dehors",
-   "articles_echantillon": 5,
-   "par": "dani",
-   "le": "2026-11-01"
-  },
-  {
-   "qid": "Q134556",
-   "nom": "single",
-   "type": "dehors",
-   "articles_echantillon": 5,
    "par": "dani",
    "le": "2026-11-01"
   },
@@ -2539,14 +2547,6 @@
    "le": "2026-11-01"
   },
   {
-   "qid": "Q21198342",
-   "nom": "série de manga",
-   "type": "dehors",
-   "articles_echantillon": 2,
-   "par": "dani",
-   "le": "2026-11-01"
-  },
-  {
    "qid": "Q20667921",
    "nom": "type de division administrative en France",
    "type": "dehors",
@@ -2581,14 +2581,6 @@
   {
    "qid": "Q102440913",
    "nom": "bien public numérique",
-   "type": "dehors",
-   "articles_echantillon": 1,
-   "par": "dani",
-   "le": "2026-11-01"
-  },
-  {
-   "qid": "Q7366",
-   "nom": "chanson",
    "type": "dehors",
    "articles_echantillon": 1,
    "par": "dani",
