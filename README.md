@@ -39,8 +39,8 @@ docs/
     collection.md              cartes disponibles et boosters
     mecanique/
       index.md                 catalogue fermé des mécaniques : format, construction, noms
-      creature.md              mécaniques des Créatures
-      transversal.md           mécaniques ouvertes à plusieurs types (électricité)
+      creature.md              mécaniques réservées aux Créatures : mots-clés de combat, stats
+      transversal.md           mécaniques ouvertes à tous les types : moments, dégâts, pioche, électricité...
     electricite.md             ressource du jeu
   produit/
     plateforme.md              site web, ordinateur et téléphone

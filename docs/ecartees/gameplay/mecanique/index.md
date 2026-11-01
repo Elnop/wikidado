@@ -85,3 +85,21 @@ Célérité, Piétinement, Provocation... Les joueurs de Magic comprenaient tout
 Écartée le 01/11/2026 : un dossier `gameplay/mecanique/`, avec un fichier par type de carte.
 
 On gardait `gameplay/mecanique.md` avec une section par type.
+
+## Catalogue réparti surtout par type
+
+Écartée le 01/11/2026 : la plupart des mécaniques sont ouvertes à tous les types, seules quelques-unes sont réservées à cause de leur nature.
+
+Les 80 mécaniques étaient réparties par type : Créature environ 22, Événement 14, Savoir 12, Lieu 10, Objet 10, Faction 8, et 6 transversales. Deux variantes : environ 12 par type, ou une vingtaine de synergies transversales au détriment des types.
+
+## Commencer le catalogue par les Créatures ou par les Événements
+
+Écartée le 01/11/2026 : on commence par les mécaniques ouvertes à tous les types.
+
+Les Créatures étaient le type le plus courant, et leurs mots-clés auraient servi de base aux autres. Les Événements avaient des effets simples à chiffrer. Autre option : un premier jet grossier de tous les types en même temps.
+
+## Effets à l'arrivée seulement, ou aucun déclencheur
+
+Écartée le 01/11/2026 : il y a des effets à l'arrivée en jeu (À la une) et à la destruction (Postérité).
+
+Seulement l'arrivée, plus simple à lire et à calculer pour l'IA. Ou aucun déclencheur, uniquement des effets permanents et des mots-clés.

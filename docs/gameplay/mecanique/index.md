@@ -2,16 +2,24 @@
 
 Liste fermée des mécaniques que le modèle peut assigner aux cartes (voir `generation/pipeline.md`). Aucune mécanique n'est validée pour l'instant.
 
-La première version vise environ 80 mécaniques. Elles sont rangées par type de carte :
+La première version vise environ 80 mécaniques. La plupart sont ouvertes à tous les types de carte. Quelques-unes sont réservées à certains types à cause de leur nature : une mécanique qui modifie les stats de la carte ne va qu'aux types qui ont des stats, un équipement ne va qu'aux Objets.
 
-- `gameplay/mecanique/creature.md`
-- `gameplay/mecanique/transversal.md` : mécaniques ouvertes à plusieurs types, comme la production d'électricité
+- `gameplay/mecanique/transversal.md` : mécaniques ouvertes à tous les types
+- `gameplay/mecanique/creature.md` : mécaniques réservées aux Créatures, dont les mots-clés de combat
 
-Les fichiers `lieu.md`, `evenement.md`, `objet.md`, `savoir.md` et `faction.md` seront ajoutés dans le même dossier au fur et à mesure.
+D'autres fichiers par type (`lieu.md`, `objet.md`, `faction.md`...) seront ajoutés dans le même dossier si des mécaniques leur sont réservées.
+
+## Moments
+
+Une mécanique peut agir à trois moments : quand la carte est jouée (À la une), quand elle est détruite (Postérité), ou en continu tant qu'elle est en jeu. Un Événement n'a que le premier. Le détail est dans `gameplay/mecanique/transversal.md`.
+
+## Application selon le type
+
+Une mécanique ouverte à tous les types garde le même texte partout. Les règles du type s'appliquent par-dessus : sur une Faction, un effet qui touche vos Créatures ne touche que les Créatures affectées à cette Faction (voir `gameplay/duel.md`).
 
 ## Construction du catalogue
 
-On part des actions de base du jeu (dégâts, pioche, bonus de stats, destruction, protection, électricité, défausse, affectation aux Factions) pour poser un squelette par type. On le teste ensuite sur les articles de l'échantillon (voir `generation/echantillon.md`) : pour chaque article, on cherche les mécaniques qu'on lui donnerait. Un article qui ne trouve rien de juste montre un trou dans le catalogue, une mécanique que personne ne prend est à revoir.
+On commence par les mécaniques ouvertes à tous les types, puis les mécaniques réservées. On part des actions de base du jeu (dégâts, pioche, bonus de stats, destruction, protection, électricité, défausse, affectation aux Factions) pour poser un squelette. On le teste ensuite sur les articles de l'échantillon (voir `generation/echantillon.md`) : pour chaque article, on cherche les mécaniques qu'on lui donnerait. Un article qui ne trouve rien de juste montre un trou dans le catalogue, une mécanique que personne ne prend est à revoir.
 
 ## Noms
 
