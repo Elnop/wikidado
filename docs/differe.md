@@ -74,3 +74,38 @@ Pistes :
 - Spec : `gameplay/carte/cout.md`, `gameplay/mecanique/index.md` (planche liée dans le `README.md`)
 
 La planche montre encore l'ancien système : 2 points par électricité (Napoléon Ier à 7) et des mécaniques en liste fixe. Il faudra recalculer les cinq cartes avec le budget de base minimum 1, 1,5 point par électricité, la défense minimum 1 et des capacités en briques, puis republier au même lien.
+
+## Définition de « même époque »
+
+- Différé le 01/11/2026, à trancher avant la génération des synergies
+- Specs : `gameplay/synergie/epoques.md`, `gameplay/mecanique/condition.md`
+
+La condition contemporain ("tant que vous contrôlez une carte de la même époque") n'a pas de définition précise. Pistes : même siècle, vies ou périodes qui se chevauchent (`P569`/`P570`, `P580`/`P582`, `P585`), dates à moins de N ans.
+
+## Familles dans la config
+
+- Différé le 01/11/2026, jusqu'à ce que Dani ait stabilisé les groupes de familles
+- Specs : `gameplay/carte/famille.md`, `gameplay/mecanique/cible.md`
+
+Le filtre `family` des mécaniques n'a pas de liste de valeurs dans la config. Il faudra une `config/card/family.json`, avec un schéma qui définit l'énumération des familles comme pour les types.
+
+## Effets propres aux Savoirs et aux Factions
+
+- Différé le 01/11/2026, à voir avec le test du catalogue sur l'échantillon
+- Specs : `gameplay/mecanique/effet.md`, `gameplay/duel.md`
+
+Un Savoir "change les règles pour un joueur ou pour l'adversaire", mais en dehors des coûts augmentés ou réduits, aucun effet ne le fait. Une Faction n'a que le déclencheur d'affectation. Il faudra des effets qui changent les règles (pioche, limite de main, combat) et des effets propres aux Créatures affectées.
+
+## Règles de la carte dans la config
+
+- Différé le 01/11/2026, avant d'écrire le pipeline de génération
+- Specs : `gameplay/carte/budget.md`, `gameplay/carte/cout.md`, `gameplay/carte/rarete.md`, `gameplay/carte/stats.md`
+
+La formule du budget de base, les multiplicateurs de rareté, `points_par_electricite`, l'arrondi du coût et la défense minimum ne sont que dans la doc. Le pipeline en aura besoin dans `config/card/`, avec un schéma, comme pour les mécaniques.
+
+## Noms des cartes liées dans le texte des capacités
+
+- Différé le 01/11/2026, avant d'écrire le pipeline de génération
+- Spec : `gameplay/mecanique/index.md` (texte des capacités)
+
+`generation/mechanic_text.py` reçoit les titres des cartes liées (filtres `card`, conditions terre natale, lignée, maître...) dans un dictionnaire de libellés. Sans ce dictionnaire, il affiche le QID ("Tant que vous contrôlez Q6697"). Le pipeline devra fournir le titre de l'article de chaque carte liée.
