@@ -13,6 +13,17 @@ Les œuvres (films, albums, livres) ne sont pas des cartes pour la première ver
 | Événement | batailles, opérations militaires, catastrophes | effet ponctuel, comme un éphémère ou un rituel |
 | Technique | inventions, outils, logiciels, disciplines | effet permanent, comme un artefact ou un enchantement |
 
+## Sous-types
+
+Comme dans Magic, chaque carte a un type (un des 4) et des sous-types, en nombre illimité. Les sous-types sont calculés par le code à partir de Wikidata :
+
+- la nature de l'élément (`P31`) : Église, Château, Bataille, Cheval
+- pour les personnes, les occupations (`P106`) : Militaire, Homme politique, Peintre
+
+Napoléon serait une Créature avec les sous-types Humain, Homme politique, Militaire, Monarque. Il y a autant de sous-types possibles que de classes et d'occupations dans Wikidata.
+
+Les familles sont des groupes de sous-types (voir `gameplay/carte/famille.md`).
+
 ## Correspondance avec Magic
 
 Wikidata dit ce qu'est l'article (`P31`). Ça colle bien aux types de Magic :

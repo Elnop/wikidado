@@ -25,3 +25,15 @@ Une mécanique avait un seul cout_budget. Plus simple, mais "+1 aux créatures H
 Écartée le 01/11/2026 : le cout_budget dépend de la valeur des paramètres, dans une seule mécanique.
 
 Chaque version devenait une mécanique à part dans le catalogue (inspiration-famille, inspiration-globale), chacune avec son coût.
+
+## Nombre maximum de mécaniques selon la rareté
+
+Écartée le 01/11/2026 : pas de maximum, seul le budget limite.
+
+Par exemple commune 2, peu commune 3, rare 4, mythique 5.
+
+## Nombre maximum de mécaniques fixe
+
+Écartée le 01/11/2026 : pas de maximum, seul le budget limite.
+
+Même limite pour toutes les cartes, par exemple 3.

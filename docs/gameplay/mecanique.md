@@ -9,14 +9,14 @@ Chaque mécanique doit préciser :
 - `id` : identifiant stable, utilisé dans le JSON du modèle
 - `texte` : gabarit du texte affiché sur la carte, avec ses paramètres entre accolades
 - `types` : types de cartes qui peuvent la recevoir
-- `cout_budget` : points de budget qu'elle consomme. La somme de ces points fixe le coût de la carte (voir `gameplay/carte/cout.md`). Quand la mécanique a des paramètres, le coût est donné pour chaque valeur.
+- `cout_budget` : points de budget qu'elle consomme dans le budget effectif de la carte (voir `gameplay/carte/budget.md`). Quand la mécanique a des paramètres, le coût est donné pour chaque valeur : "+1 aux créatures Histoire" coûte moins que "+1 à toutes vos créatures".
 - `params` : paramètres possibles et leurs valeurs autorisées
 - `condition` : données nécessaires dans la fiche de l'article (par exemple, la mécanique n'est proposée que si l'article a un lieu de naissance)
 - `indice` : une phrase pour aider le modèle à choisir (à quel genre d'article elle va bien)
 
 ## Mécaniques de stats
 
-Le catalogue contient des mécaniques qui ne font qu'ajouter des stats. Ce sont elles qui permettent les grosses cartes sans capacité, puisque le coût d'une carte vient uniquement de ses mécaniques.
+Le catalogue contient des mécaniques qui ne font qu'ajouter des stats.
 
 ### robuste
 
@@ -70,3 +70,7 @@ Les mécaniques dont les paramètres viennent des données (terre-natale, partic
 
 - lister les mécaniques par type de carte
 - fixer le coût en budget de chacune après des parties de test
+
+## Questions ouvertes
+
+- Le reste du budget va déjà aux stats (voir `gameplay/carte/stats.md`), donc une carte sans capacité a des stats sans mécanique de stats. Les mécaniques de stats servent-elles encore ?

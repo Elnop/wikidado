@@ -1,22 +1,17 @@
 # Familles
 
-Chaque carte appartient à une ou deux familles. Le mana est générique (voir `gameplay/carte/cout.md`), donc les familles ne servent pas à payer les cartes : elles servent aux synergies, avec des effets tribaux ("vos cartes Histoire gagnent +1 en attaque").
+Une famille est un groupe de sous-types (voir `gameplay/carte/type.md`). Le mana est générique (voir `gameplay/carte/cout.md`), donc les familles ne servent pas à payer les cartes : elles servent aux synergies, avec des effets tribaux ("vos Animaux gagnent +1 en attaque", "vos cartes Histoire et politique gagnent +1 en défense").
 
-## Calcul à partir de Wikidata
+## Deux niveaux
 
-La famille d'une carte se déduit des données Wikidata de son article :
+Les familles ont deux niveaux :
 
-- la nature de l'élément (`P31`) : une église, un château, une bataille, une espèce
-- pour les personnes, l'occupation (`P106`) : homme politique, militaire, peintre, physicien
-- quand elle existe, le domaine (`P101`) ou le champ de travail
+- des groupes fins, définis à la main, qui réunissent des sous-types proches : Animaux (Cheval, Loup, Aigle...), Militaires (Général, Soldat, Artilleur...), Religieux, Monuments...
+- 6 grandes familles, qui réunissent les groupes fins
 
-On range une fois pour toutes ces classes et ces occupations dans les familles. La liste de classes est déjà tenue à la main pour la sélection des articles (voir `generation/article/selection.md`), on peut y ajouter la famille de chaque classe.
+Les synergies peuvent viser l'un ou l'autre niveau.
 
-Napoléon (être humain, occupations homme politique, militaire, monarque) serait Histoire et politique. La Tour Eiffel (tour) serait Géographie et lieux, et Arts et culture si on range les monuments dans les deux.
-
-## Familles
-
-Première idée de découpage :
+Première idée de grandes familles :
 
 - Histoire et politique
 - Sciences et techniques
@@ -25,7 +20,12 @@ Première idée de découpage :
 - Nature et vivant
 - Sport et loisirs
 
-## Questions ouvertes
+## Familles d'une carte
 
-- Comment éviter que la famille fasse doublon avec le type de carte ? Avec Wikidata, beaucoup de lieux tomberaient dans Géographie et lieux, et toutes les espèces dans Nature et vivant.
-- Quand une personne a plusieurs occupations dans des familles différentes, laquelle prendre ? Les deux, ou la première ?
+Les sous-types d'une carte viennent de Wikidata, donc ses familles aussi. Quand les sous-types d'une carte tombent dans plusieurs familles, on compte les sous-types par famille et on garde les deux familles les plus représentées.
+
+Napoléon a les sous-types Homme politique, Militaire et Monarque (occupations Wikidata). Militaire va dans le groupe Militaires, les deux autres dans un groupe Dirigeants. Les deux groupes sont dans la grande famille Histoire et politique.
+
+## Travail à faire
+
+Lister les sous-types (classes `P31` retenues et occupations `P106`) et les ranger dans les groupes fins, puis les groupes fins dans les grandes familles. La liste des classes est déjà tenue à la main pour la sélection des articles (voir `generation/article/selection.md`).

@@ -11,6 +11,7 @@ docs/
   gameplay/
     carte/
       type.md                  types de cartes
+      budget.md                budget : source, bonus de rareté, dépense
       cout.md                  coût
       rarete.md                rareté
       stats.md                 budget de stats, attaque et défense
@@ -32,6 +33,7 @@ docs/
       selection.md             quels articles deviennent des cartes
   ecartees/                    idées écartées, rangées comme le reste de docs/
     gameplay/
+      carte/budget.md
       carte/cout.md
       carte/famille.md
       carte/rarete.md

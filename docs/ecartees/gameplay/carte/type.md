@@ -37,3 +37,15 @@ Pas d'espèces dans le jeu, ce qui retirait environ 150 000 articles, surtout de
 Écartée le 01/11/2026 : les espèces sont des Créatures, et il y a 4 types.
 
 Un 5e type pour le vivant non humain.
+
+## Sous-types depuis P31 seul
+
+Écartée le 01/11/2026 : les sous-types viennent de P31 et de P106.
+
+Seulement la nature de l'élément, et les personnes étaient toutes Humain.
+
+## Sous-types choisis par le modèle
+
+Écartée le 01/11/2026 : les sous-types sont calculés par le code depuis Wikidata.
+
+Le modèle choisissait des sous-types dans une liste fermée, comme il choisit les mécaniques.

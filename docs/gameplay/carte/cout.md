@@ -2,9 +2,9 @@
 
 ## Principe
 
-Le coût d'une carte découle des mécaniques qui lui sont assignées. Le modèle choisit les mécaniques (voir `generation/pipeline.md`), puis le code calcule le coût à partir de ce choix. C'est la façon dont on conçoit une carte Magic : on part de ce que fait la carte et on en déduit ce qu'elle coûte.
+Le coût d'une carte se déduit de son budget de base (voir `gameplay/carte/budget.md`). Le budget vient de données de l'article sans lien avec sa popularité, donc le coût ne dépend pas de la popularité non plus. La popularité fixe la rareté (voir `gameplay/carte/rarete.md`), qui ajoute du budget sans changer le coût.
 
-Le coût ne dépend pas de la popularité de l'article. La popularité fixe la rareté (voir `gameplay/carte/rarete.md`) et, à travers elle, la puissance par rapport au coût (voir `gameplay/carte/stats.md`).
+Comme dans Magic, une carte puissante coûte cher et une carte à 1 mana a sa place dans un deck.
 
 ## Mana
 
@@ -12,26 +12,16 @@ Un seul mana, générique. Toutes les cartes se paient avec le même mana, quell
 
 ## Calcul
 
-Chaque mécanique du catalogue consomme des points de budget (`cout_budget`, voir `gameplay/mecanique.md`). Le coût de la carte est la somme de ces points, convertie en mana :
-
 ```
-cout = arrondi(somme(cout_budget des mécaniques) / points_par_mana)
+cout = arrondi(budget_base / points_par_mana)
 ```
 
 `points_par_mana` vaut 2 pour commencer, à régler en partie de test.
 
-Il n'y a pas de coût de base selon le type. Le coût minimum est 0 : une carte sans mécanique est gratuite. Il n'y a pas de coût maximum.
+Le coût se calcule sur le budget de base, avant le bonus de rareté. Deux cartes de même budget de base ont le même coût, même si l'une est mythique et l'autre commune.
 
-Les grosses cartes sans capacité (un Napoléon 5/5 sans effet) passent par des mécaniques de stats, qui ne font qu'ajouter de l'attaque ou de la défense (voir `gameplay/mecanique.md`). Tout le coût d'une carte passe ainsi par le même calcul.
-
-Le `cout_budget` d'une mécanique dépend de la valeur de ses paramètres : "+1 aux créatures Histoire" coûte moins que "+1 à toutes vos créatures".
-
-Les stats prennent ensuite le budget du coût, multiplié par la rareté, moins ce que les mécaniques ont consommé (voir `gameplay/carte/stats.md`).
-
-## Questions ouvertes
-
-- Sans coût maximum, faut-il limiter le nombre de mécaniques par carte pour éviter des cartes injouables ?
+Il n'y a pas de coût de base selon le type. Le coût minimum est 0. Il n'y a pas de coût maximum.
 
 ## Après la première version
 
-- Comment garder une courbe de mana équilibrée si le coût n'est pas choisi directement ? Pistes : mesurer la répartition des coûts puis ajuster les `cout_budget` et `points_par_mana`, donner au modèle un coût cible tiré selon la courbe voulue, ou imposer des quotas par coût à la validation.
+- Comment garder une courbe de mana équilibrée ? Pistes : mesurer la répartition des coûts puis ajuster la formule du budget de base et `points_par_mana`, ou imposer des quotas par coût à la validation.

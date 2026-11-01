@@ -35,12 +35,6 @@ La formule de notoriété peut resservir pour la rareté (voir `gameplay/carte/r
 
 L'idée était de prendre un instantané des lectures au début de chaque saison pour calculer les coûts, pour éviter que les decks changent tout seuls d'un jour à l'autre.
 
-## Coût tiré d'une donnée de l'article
-
-Écartée le 01/11/2026 : le coût découle des mécaniques assignées.
-
-Le coût venait d'une donnée de l'article sans lien avec la popularité, par exemple la taille de l'article (un sujet "lourd" coûte cher) ou le nombre de liens sortants. Si la taille de l'article fixait le coût, elle ne pouvait plus servir pour l'attaque.
-
 ## Coût selon le type et la nature Wikidata
 
 Écartée le 01/11/2026 : le coût découle des mécaniques assignées.
@@ -100,3 +94,15 @@ Le code fixait des stats à partir de l'article (taille, contributeurs), et ces 
 Écartée le 01/11/2026 : les cartes sans capacité passent par des mécaniques de stats.
 
 Toutes les cartes avaient au moins une capacité. Une carte sans mécanique n'était pas générée.
+
+## Coût qui découle des mécaniques assignées
+
+Écartée le 01/11/2026 : le budget, calculé à partir de l'article, définit le coût et les mécaniques.
+
+Le modèle choisissait les mécaniques, puis le code en déduisait le coût, comme quand on conçoit une carte Magic en partant de ce qu'elle fait.
+
+## Coût égal à la somme convertie des cout_budget
+
+Écartée le 01/11/2026 : le budget, calculé à partir de l'article, définit le coût et les mécaniques.
+
+Le coût était la somme des cout_budget des mécaniques convertie en mana (2 points = 1 mana). Les stats prenaient ensuite le budget du coût multiplié par la rareté, moins ce que les mécaniques avaient consommé. Une carte sans mécanique coûtait 0.

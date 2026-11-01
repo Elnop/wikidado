@@ -10,6 +10,4 @@ Une synergie est un effet qui se déclenche selon les autres cartes en jeu. Les 
 - `gameplay/synergie/categories.md` : catégories Wikipédia
 - `gameplay/carte/famille.md` : effets tribaux par famille
 
-## Questions ouvertes
-
-- Combien de synergies par carte avant que ce soit illisible ?
+Il n'y a pas de nombre maximum de synergies par carte, seul le budget limite (voir `gameplay/carte/budget.md`).
