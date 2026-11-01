@@ -2,6 +2,10 @@
 
 Jeu de cartes construit à partir des articles Wikipédia, avec un gameplay de duel inspiré de Magic: The Gathering. Projet de Leon et Dani.
 
+## Planche d'exemples
+
+Cinq cartes construites à partir de vrais articles, avec le détail de chaque valeur : https://claude.ai/artifact/AEf324h7RW7noueAbwEfX3 (privée, à partager depuis le menu Share de la page).
+
 ## Organisation
 
 ```
