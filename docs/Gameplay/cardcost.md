@@ -1,19 +1,10 @@
 # Coût des cartes
 
-## Décision du 01/11/2026
+## Principe
 
-La popularité de l'article ne fixe pas le coût de la carte. Elle fixe deux choses :
+La popularité de l'article fixe la rareté de la carte et sa puissance par rapport à son coût : à coût égal, une carte populaire est plus forte qu'une carte obscure. Elle ne fixe pas le coût (voir plus bas).
 
-- la rareté de la carte
-- sa puissance par rapport à son coût : à coût égal, une carte populaire est plus forte qu'une carte obscure
-
-Le coût vient donc d'ailleurs, et ce qui le fixe reste à décider (voir plus bas). Les idées écartées sur le coût sont dans `ecartees/cardcost.md`.
-
-## Le problème à éviter
-
-Chez WikiMasters, les stats montent avec la notoriété, donc la carte la plus célèbre gagne. Dans Magic, une carte puissante coûte cher et une carte à 1 mana a sa place dans un deck. On veut garder ça.
-
-Avec la décision ci-dessus, on se rapproche de Magic tel qu'il est vraiment : les rares et les mythiques y sont souvent plus efficaces que les communes au même coût. Une Napoléon à 4 mana sera meilleure qu'une araignée inconnue à 4 mana, mais elle reste une carte à 4 mana qu'on ne joue pas au tour 1.
+C'est le fonctionnement de Magic : une carte puissante coûte cher, une carte à 1 mana a sa place dans un deck, et les rares et mythiques sont souvent plus efficaces que les communes au même coût. Une Napoléon à 4 mana sera meilleure qu'une araignée inconnue à 4 mana, mais elle reste une carte à 4 mana qu'on ne joue pas au tour 1.
 
 ## Budget de stats
 
