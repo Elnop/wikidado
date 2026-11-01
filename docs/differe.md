@@ -22,3 +22,10 @@ Pistes :
 L'illustration par défaut dépend du type et de la grande famille, mais une carte peut avoir deux grandes familles (voir `gameplay/carte/famille.md`). Il faut choisir laquelle sert pour l'illustration.
 
 Proposition : prendre la famille la plus représentée parmi les sous-types de la carte.
+
+## Œuvres comme cartes
+
+- Différé le 01/11/2026, jusqu'à ce que les 4 types soient vérifiés
+- Specs : `gameplay/carte/type.md`, `generation/article/selection.md`
+
+Les films, albums, livres et singles sont exclus pour la première version. Il faudra décider s'ils deviennent des cartes, et dans quel type. Il y a du volume : 29 427 albums et 10 664 singles sur la Wikipédia française, sans compter les films et les livres.
