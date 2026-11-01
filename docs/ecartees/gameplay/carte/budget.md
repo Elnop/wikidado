@@ -19,3 +19,15 @@ Le modèle estimait l'envergure du sujet (une bataille décisive contre une esca
 Écartée le 01/11/2026 : la rareté ajoute du budget sans changer le coût.
 
 La rareté multipliait le budget avant tout calcul, coût compris. Une carte populaire coûtait plus cher et faisait plus.
+
+## Budget de base depuis la taille seule
+
+Écartée le 01/11/2026 : le budget de base utilise la taille et le nombre de contributeurs.
+
+Plus simple, mais un article long écrit par une seule personne valait autant qu'un article très travaillé.
+
+## Budget de base avec les liens sortants
+
+Écartée le 01/11/2026 : le budget de base utilise la taille et le nombre de contributeurs.
+
+On ajoutait le nombre de liens sortants, pour la place du sujet dans le graphe des articles. Plus complet, mais une donnée de plus à extraire.

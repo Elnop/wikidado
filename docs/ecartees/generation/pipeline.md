@@ -19,3 +19,9 @@ Tout le pool était généré et validé avant la saison, sans génération à l
 Écartée le 01/11/2026 : génération mixte.
 
 Une carte était générée la première fois qu'un joueur la tirait, puis gardée. Moins de calcul au départ, mais aucun contrôle global de l'équilibre.
+
+## Pas de trace des versions
+
+Écartée le 01/11/2026 : chaque carte garde la version du catalogue, du modèle et des formules.
+
+On régénérait tout le pool à chaque changement.

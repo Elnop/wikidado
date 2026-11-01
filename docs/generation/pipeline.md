@@ -20,6 +20,7 @@ Le modèle s'occupe uniquement de ce qui demande de comprendre le sujet :
 
 - choisir des mécaniques dans le catalogue qui collent à l'article, dans la limite du budget effectif (une bataille éclair aura plutôt "Rapidité", un château plutôt "Fortification")
 - choisir les paramètres d'une mécanique quand il y en a ("+1 aux créatures de famille X")
+- choisir la répartition des stats entre attaque et défense, à partir de la répartition par défaut du code (voir `gameplay/carte/stats.md`)
 - éventuellement, choisir la phrase du résumé à afficher comme texte d'ambiance
 
 ## Pipeline
@@ -28,7 +29,7 @@ Le modèle s'occupe uniquement de ce qui demande de comprendre le sujet :
 2. Calcul : le code ajoute le type, les sous-types, les familles, la rareté, le budget de base, le coût, le budget effectif et la liste des synergies possibles.
 3. Assignation : le modèle reçoit la fiche, le budget effectif et le catalogue des mécaniques autorisées pour ce type. Il répond en JSON contraint, avec uniquement des identifiants du catalogue.
 4. Validation : le code vérifie que les mécaniques existent, que les paramètres sont valides et que la somme des `cout_budget` ne dépasse pas le budget effectif. Une carte qui ne passe pas est régénérée.
-5. Stats : le code met le reste du budget effectif dans les stats.
+5. Stats : le code met le reste du budget effectif dans les stats, avec la répartition choisie par le modèle.
 6. Rendu : le texte de la carte est produit à partir des gabarits du catalogue, jamais par le modèle.
 
 Exemple de sortie attendue du modèle :
@@ -43,6 +44,10 @@ Exemple de sortie attendue du modèle :
 }
 ```
 
+## Traçabilité
+
+Chaque carte garde la version du catalogue de mécaniques, du modèle et des formules (budget, coût, rareté) qui l'ont produite. Quand on change l'un des trois, on ne régénère que les cartes concernées.
+
 ## Moment de la génération
 
 Génération mixte. Un pool de base est généré et validé avant chaque saison, ce qui permet de vérifier l'équilibre avant de publier. Les articles hors de ce pool sont générés à la demande, la première fois qu'un joueur tire la carte, puis gardés.
@@ -54,7 +59,3 @@ Avec un catalogue fermé, le modèle ne peut pas inventer une capacité cassée.
 ## Choix du modèle
 
 À tester sur un échantillon de 200 à 300 articles qu'on annote nous-mêmes. On compare plusieurs modèles sur le taux d'accord avec nos choix et le coût par carte. Pour 50 000 cartes, même un modèle léger appelé une fois par carte reste peu cher. On pourra aussi regrouper plusieurs fiches par appel.
-
-## Questions ouvertes
-
-- On garde une trace de quelle version du catalogue et du modèle a produit chaque carte, pour pouvoir régénérer proprement ?

@@ -4,21 +4,18 @@ Le budget est la quantité de puissance d'une carte. Il fixe le coût de la cart
 
 ## Budget de base
 
-Le budget de base se calcule à partir de données de l'article qui n'ont rien à voir avec sa popularité :
-
-- taille de l'article (Napoléon : 260 796 octets)
-- nombre de contributeurs (Napoléon : 1 944)
-- nombre de liens sortants vers d'autres articles
-
-Les lectures et le nombre de langues n'y entrent pas.
-
-Proposition de départ, à régler sur un vrai échantillon :
+Le budget de base se calcule à partir de deux données de l'article qui n'ont rien à voir avec sa popularité : sa taille et son nombre de contributeurs. Les lectures et le nombre de langues n'y entrent pas.
 
 ```
 budget_base = arrondi(log2(taille_ko) + log2(contributeurs + 1) / 2)
 ```
 
-Le logarithme évite qu'un article énorme donne une carte démesurée. Les données disponibles et leurs ordres de grandeur sont dans `wikipedia/donnees.md`.
+Le logarithme évite qu'un article énorme donne une carte démesurée. Les coefficients sont à régler sur un vrai échantillon.
+
+| Article | Taille | Contributeurs | Budget de base | Coût |
+|---|---|---|---|---|
+| Napoléon Ier | 260 Ko | 1 944 | 13 | 7 |
+| Article moyen | 5 Ko | 10 | 4 | 2 | Les données disponibles et leurs ordres de grandeur sont dans `wikipedia/donnees.md`.
 
 ## Bonus de rareté
 
@@ -43,8 +40,3 @@ budget_effectif = budget_base * multiplicateur_rarete
 2. Ce qui reste du budget effectif va aux stats.
 
 Il n'y a pas de nombre maximum de mécaniques par carte, ni de synergies : seul le budget limite.
-
-## Questions ouvertes
-
-- Quelles données de l'article et quelle formule pour le budget de base ?
-- La taille et le nombre de contributeurs servent aussi à répartir les stats entre attaque et défense (voir `gameplay/carte/stats.md`). On garde les mêmes données pour les deux usages ?

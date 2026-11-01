@@ -16,7 +16,7 @@ Chaque mécanique doit préciser :
 
 ## Mécaniques de stats
 
-Le catalogue contient des mécaniques qui ne font qu'ajouter des stats.
+Le catalogue contient des mécaniques qui ne font qu'ajouter des stats. Le reste du budget va déjà aux stats (voir `gameplay/carte/stats.md`), donc elles ne sont pas nécessaires pour faire une grosse carte sans capacité : elles servent au modèle à orienter une carte vers l'attaque ou la défense.
 
 ### robuste
 
@@ -70,7 +70,3 @@ Les mécaniques dont les paramètres viennent des données (terre-natale, partic
 
 - lister les mécaniques par type de carte
 - fixer le coût en budget de chacune après des parties de test
-
-## Questions ouvertes
-
-- Le reste du budget va déjà aux stats (voir `gameplay/carte/stats.md`), donc une carte sans capacité a des stats sans mécanique de stats. Les mécaniques de stats servent-elles encore ?

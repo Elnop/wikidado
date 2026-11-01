@@ -14,9 +14,9 @@ Le budget effectif inclut le bonus de rareté, pas le coût. C'est le fonctionne
 
 ## Répartition attaque / défense
 
-Les données de l'article décident de la répartition du budget de stats :
+La répartition du budget de stats entre attaque et défense se décide en deux temps :
 
-- attaque : taille de l'article (ce que le sujet "a à dire")
-- défense : nombre de contributeurs (un article défendu par beaucoup de monde est solide)
+1. Le code applique une répartition par défaut selon le type et les sous-types de la carte (voir `gameplay/carte/type.md`) : un Militaire penche vers l'attaque, un Monument vers la défense. Ces règles sont définies par sous-type ou par groupe de sous-types.
+2. Le modèle choisit la répartition finale à partir de ce point de départ, selon ce qu'il comprend du sujet. Il peut aussi assigner des mécaniques de stats pour orienter la carte (voir `gameplay/mecanique.md`).
 
-On compare l'article à la médiane des articles de même coût. Un article plus long que la médiane penche vers l'attaque, un article avec plus de contributeurs penche vers la défense. Pour Napoléon, 260 Ko et 1 944 contributeurs : les deux sont très hauts, donc carte équilibrée. Un article court mais très contributé donnerait un mur défensif.
+Napoléon (Militaire, Homme politique, Monarque) partirait d'une répartition orientée attaque, que le modèle pourrait garder ou équilibrer.

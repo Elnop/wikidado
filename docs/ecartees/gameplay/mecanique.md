@@ -37,3 +37,9 @@ Par exemple commune 2, peu commune 3, rare 4, mythique 5.
 Écartée le 01/11/2026 : pas de maximum, seul le budget limite.
 
 Même limite pour toutes les cartes, par exemple 3.
+
+## Retirer les mécaniques de stats
+
+Écartée le 01/11/2026 : elles restent, pour orienter une carte vers l'attaque ou la défense.
+
+Elles ne servaient qu'à permettre les grosses cartes sans capacité, ce que le budget fait maintenant tout seul.
