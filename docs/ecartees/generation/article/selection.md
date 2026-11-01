@@ -58,7 +58,6 @@ Une quarantaine de racines par type, dont des classes larges : occurrence pour �
 
 Erreurs relevées : le Pape classé Objet (titre honorifique, puis distinction), le procès de Nuremberg classé Savoir (concept), Mai 68 classé Faction (mouvement social, puis groupe d'humains), le STEN et Harry Potter classés Savoir (objet mathématique), la Ligue des champions classée Faction (ligue, puis organisation). La racine concept ramenait des séries télévisées, des pages de liste et un mème. Exclure « œuvre créative » aurait retiré la tour Eiffel, Big Ben et la Joconde.
 
-
 ## « Dehors » sans effet sur l'héritage
 
 Écartée le 01/11/2026 : la classe choisie la plus proche gagne, même si elle est marquée dehors.
