@@ -44,3 +44,11 @@ Un article sans image libre n'était pas une carte. Moins de cartes, mais toutes
 
 Les articles sur des crimes, des violences sexuelles, des attentats ou des sites pornographiques étaient retirés de la sélection, par catégories Wikipédia et par classes Wikidata.
 
+## Racines larges et liste d'exclusions
+
+Écartée le 01/11/2026 : remplacée par une liste blanche de classes fines. Avec des racines larges, tout ce qu'on n'a pas prévu entre dans le jeu, et les exclusions ne voient que les intrus déjà croisés dans l'échantillon, alors que le pool est surtout fait de longue traîne.
+
+Une quarantaine de racines par type, dont des classes larges : occurrence pour Événement, organisation pour Faction, concept pour Savoir, objet artificiel physique pour Objet, position géographique pour Lieu. Chaque article remontait les liens « sous-classe de » jusqu'à 12 sauts, et prenait le type de la racine la plus proche. Douze classes étaient exclues : entité fictionnelle, jeu vidéo, film, série de films, œuvre littéraire, album, single, série télévisée, saison de série télévisée, programme télévisé, page d'homonymie, page de liste.
+
+Erreurs relevées : le Pape classé Objet (titre honorifique, puis distinction), le procès de Nuremberg classé Savoir (concept), Mai 68 classé Faction (mouvement social, puis groupe d'humains), le STEN et Harry Potter classés Savoir (objet mathématique), la Ligue des champions classée Faction (ligue, puis organisation). La racine concept ramenait des séries télévisées, des pages de liste et un mème. Exclure « œuvre créative » aurait retiré la tour Eiffel, Big Ben et la Joconde.
+

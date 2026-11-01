@@ -14,6 +14,8 @@ echantillon/
 scripts/
   preparer_dumps.py            classe les articles par lectures à partir des dumps
   tirer_echantillon.py         tire les articles les plus lus pour l'échantillon annoté
+  couverture.py                rapport de couverture des classes Wikidata
+  racines.json                 classes racines par type et exclusions lues par les scripts
 docs/
   differe.md                   travaux différés, à ne pas oublier
   wikimaster/analyse.md        analyse de WikiMasters, le jeu existant le plus proche

@@ -6,11 +6,29 @@ Quels articles Wikipédia deviennent des cartes. Le type de carte que donne chaq
 
 Wikidata donne la nature d'un élément avec la propriété `P31` ("nature de l'élément"). La Tour Eiffel est une tour, Napoléon est un être humain (Q5).
 
-Attention : `P31` pointe vers la classe la plus précise. Une église est `P31` église, et pas `P31` bâtiment. Pour récupérer tous les bâtiments, il faut remonter la hiérarchie des sous-classes (`P31/P279*` en SPARQL). Sinon on rate une grosse partie des articles. Exemples mesurés : seulement 90 articles fr sont directement `P31` maladie, 409 directement `P31` événement, 37 directement `P31` outil et 156 directement `P31` lieu géographique. Ces classes générales sont presque toujours atteintes par sous-classe.
+Attention : `P31` pointe vers la classe la plus précise. Une église est `P31` église, et pas `P31` bâtiment. Exemples mesurés : seulement 90 articles fr sont directement `P31` maladie, 409 directement `P31` événement, 37 directement `P31` outil et 156 directement `P31` lieu géographique. Les classes générales sont presque toujours atteintes par sous-classe (`P279`), mais la hiérarchie de Wikidata est trop emmêlée pour s'y fier sur une longue distance : la tour Eiffel descend d'« œuvre créative », le pistolet-mitrailleur STEN d'« objet mathématique ».
 
-## Liste des classes retenues
+## Liste blanche des classes retenues
 
-Les classes Wikidata qui donnent des cartes sont choisies à la main, avec pour chacune le type de carte qu'elle donne (église, château, musée, tour... pour Lieu). On contrôle ce qui entre dans le jeu, et la liste sert aussi à fixer la famille de chaque classe (voir `gameplay/carte/famille.md`). Il faut la maintenir quand on ajoute des types d'articles.
+Les classes Wikidata qui donnent des cartes sont choisies à la main, une par une, avec pour chacune le type de carte qu'elle donne. Ce sont des classes fines : église, château, musée, tour pour Lieu ; parti politique, club de football pour Faction ; discipline, théorie, idéologie pour Savoir. Les classes larges et abstraites (concept, occurrence, organisation, objet artificiel physique) n'y figurent pas.
+
+- Un article est retenu si une de ses classes `P31` est dans la liste, ou en descend par une remontée courte : quelques liens « sous-classe de » (`P279`) au plus. Le nombre de sauts reste à fixer (piste : 3).
+- Tout ce que la liste n'atteint pas reste dehors. Une classe oubliée coûte quelques cartes, un intrus ne passe pas.
+- Le type de l'article vient de la classe retenue la plus proche (voir `gameplay/carte/type.md`).
+- La liste sert aussi à fixer la famille de chaque classe (voir `gameplay/carte/famille.md`).
+- Elle compte sans doute plusieurs centaines de classes, et se maintient quand on ajoute des types d'articles.
+
+### Filtres transverses
+
+Quelques filtres coupent à travers tous les types et s'appliquent quelle que soit la classe retenue, avec une remontée complète :
+
+- la fiction : tout élément qui descend d'« entité fictionnelle » (`Q14897293`). Un château fictif est un château, mais n'est pas une carte ;
+- les pages de liste (`Q13406463`) ;
+- les pages d'homonymie (`Q4167410`).
+
+### Rapport de couverture
+
+Un outil liste les classes `P31` des articles non retenus, triées par nombre d'articles, sur un échantillon qui mélange les plus lus et un tirage au hasard dans la longue traîne. On parcourt ce rapport de haut en bas et on décide, classe par classe : l'ajouter à la liste avec un type, ou la laisser dehors. On relance pour voir la couverture monter.
 
 ## Volumes sur la Wikipédia française
 
@@ -52,11 +70,17 @@ Tout article d'une classe retenue devient une carte, même sans aucune lecture. 
 
 Un article sans image libre reste une carte, avec une illustration par défaut (voir `gameplay/carte/illustration.md`).
 
-## Articles à exclure d'office
+## Articles qui ne sont pas des cartes
 
-- listes, homonymies, années ("2008 en archéologie"), saisons sportives
-- œuvres (films, albums, livres, singles, jeux vidéo), voir `gameplay/carte/type.md`
+Retirés par les filtres transverses :
+
+- listes et homonymies
 - éléments de fiction (armes, lieux, personnages inventés : l'Étoile de la mort)
+
+Absents de la liste blanche, donc jamais retenus :
+
+- années ("2008 en archéologie") et saisons sportives
+- œuvres (films, albums, livres, singles, jeux vidéo), voir `gameplay/carte/type.md`
 
 Les personnes vivantes sont gardées, sans exclusion spécifique.
 

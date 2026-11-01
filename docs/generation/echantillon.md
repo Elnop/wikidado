@@ -55,12 +55,14 @@ python3 scripts/tirer_echantillon.py --classement .dumps/fr-2026-10.tsv \
 - `tirer_echantillon.py` parcourt ce classement du plus lu au moins lu, classe les articles par lots de 50 avec l'API `wbgetentities` de Wikidata (classes `P31`, puis `P279`), et s'arrête quand chaque type a `--par-type` articles. Il garde les réponses dans `.cache-echantillon/`, donc une relance est quasi instantanée.
 - Les dumps vont dans `.dumps/`, que git ignore.
 
-Le type d'un article suit la règle de `gameplay/carte/type.md` (racine la plus proche). Sont écartés : les œuvres (films, albums, livres, séries, jeux vidéo), les sites web et plateformes, les éléments de fiction, les pages d'homonymie et les listes.
+Le type d'un article suit la règle de `gameplay/carte/type.md` (classe retenue la plus proche). Sont écartés : les éléments de fiction, les pages d'homonymie et les listes.
+
+`scripts/couverture.py` produit le rapport de couverture de `generation/article/selection.md` : il classe 1 500 articles parmi les plus lus et 1 500 tirés au hasard dans le reste, et liste les classes des articles sans type.
 
 Limites connues :
 
 - les plus lus sont dominés par l'actualité (personnalités politiques, sport, élections) et contiennent des articles sensibles (crimes, meurtriers), gardés comme les autres
-- les racines de classes par type sont provisoires
+- les scripts lisent encore `scripts/racines.json`, qui contient des racines larges (concept, occurrence, organisation) remontées jusqu'à 12 sauts et une liste d'exclusions, et pas encore la liste blanche
 - les types rares dans les plus lus (Objet) demandent d'examiner beaucoup d'articles : `--max-examines` fixe la limite
 
 ## Mesures
