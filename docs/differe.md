@@ -67,3 +67,10 @@ Pistes :
 
 - facteur × 4 pour la pioche avec ces déclencheurs, soit 8 pour 1 carte par tour
 - facteur × 4 pour tous les effets avec ces déclencheurs
+
+## Mise à jour de la planche d'exemples
+
+- Différé le 01/11/2026, échéance non fixée
+- Spec : `gameplay/carte/cout.md`, `gameplay/mecanique/index.md` (planche liée dans le `README.md`)
+
+La planche montre encore l'ancien système : 2 points par électricité (Napoléon Ier à 7) et des mécaniques en liste fixe. Il faudra recalculer les cinq cartes avec le budget de base minimum 1, 1,5 point par électricité, la défense minimum 1 et des capacités en briques, puis republier au même lien.
