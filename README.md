@@ -5,6 +5,8 @@ Jeu de cartes construit à partir des articles Wikipédia, avec un gameplay de d
 ## Organisation
 
 ```
+scripts/
+  tirer_echantillon.py         tire les articles les plus lus pour l'échantillon annoté
 docs/
   differe.md                   travaux différés, à ne pas oublier
   wikimaster/analyse.md        analyse de WikiMasters, le jeu existant le plus proche
