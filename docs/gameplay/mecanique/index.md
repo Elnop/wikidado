@@ -84,11 +84,13 @@ La plupart des briques vont à tous les types de carte. Quelques-unes sont rése
 
 Un Lieu reçoit toujours au moins une capacité (voir `gameplay/carte/budget.md`).
 
+Une carte ne reçoit jamais deux fois la même capacité (mêmes briques, mêmes paramètres) ni deux fois le même mot-clé. Deux capacités proches restent permises, par exemple "À la une : piochez 1 carte" et "Postérité : piochez 1 carte".
+
 Une capacité garde le même texte quel que soit le type. Les règles du type s'appliquent par-dessus : sur une Faction, un effet qui touche vos Créatures ne touche que les Créatures affectées à cette Faction (voir `gameplay/duel.md`).
 
 ## Assignation par le modèle
 
-Le modèle répond par une suite de questions enchaînées (voir `generation/pipeline.md`) : quel effet convient à l'article, puis sur quelle cible, puis avec quel déclencheur. Chaque brique a un indice (`hint`) qui l'aide à choisir. Les briques remplies par le code (cartes liées, époques) n'ont pas besoin du modèle.
+Le modèle répond par une suite de questions enchaînées (voir `generation/pipeline.md`) : quel effet convient à l'article, puis sur quelle cible, puis avec quel déclencheur. Chaque brique que le modèle choisit a un indice (`hint`) qui l'aide : mots-clés, déclencheurs, effets, cibles, durées, et conditions remplies par le modèle. Les briques remplies par le code (cartes liées, époques) n'ont pas besoin du modèle.
 
 Exemple de sortie pour Napoléon Ier :
 

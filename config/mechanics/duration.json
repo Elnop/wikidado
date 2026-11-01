@@ -9,7 +9,8 @@
           "plural": "jusqu'à la fin du tour"
         }
       },
-      "factor": 1
+      "factor": 1,
+      "hint": "effet passager : coups d'éclat, élans, sabotages, événements brefs"
     },
     {
       "id": "permanent",
@@ -19,7 +20,8 @@
           "plural": ""
         }
       },
-      "factor": 3
+      "factor": 3,
+      "hint": "changement durable : conquêtes, réformes, transformations, héritages"
     }
   ]
 }

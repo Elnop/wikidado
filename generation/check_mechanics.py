@@ -79,6 +79,12 @@ def load_catalogue():
     return catalogue
 
 
+def check_hints(catalogue, errors):
+    for condition in catalogue["condition"].values():
+        if condition["filled_by"] == "model" and not condition.get("hint"):
+            errors.append(f"condition {condition['id']}: filled by the model but has no hint")
+
+
 def check_references(catalogue, errors):
     for effect in catalogue["effect"].values():
         for target in effect["targets"]:
@@ -163,6 +169,12 @@ def check_card(mechanics):
         problems.append("attach on play without an equip cost (activated attach)")
     if any(m.get("target") == "equipped" for m in mechanics) and not any(is_attach(m, "activated") for m in mechanics):
         problems.append("targets the equipped creature but cannot be equipped")
+    seen = set()
+    for m in mechanics:
+        key = json.dumps(m, sort_keys=True)
+        if key in seen:
+            problems.append(f"duplicate mechanic {key}")
+        seen.add(key)
     return problems
 
 
@@ -259,6 +271,7 @@ def main():
     validate_config(registry, errors)
     catalogue = load_catalogue()
     check_references(catalogue, errors)
+    check_hints(catalogue, errors)
     card_types = load_card_types()
     check_documented_examples(catalogue, card_types, errors)
     check_card_types(errors)

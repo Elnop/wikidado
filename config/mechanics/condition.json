@@ -10,7 +10,8 @@
       "filled_by": "model",
       "data": [],
       "n": null,
-      "symmetric": false
+      "symmetric": false,
+      "hint": "sujets qui dépendent d'un milieu ou d'alliés précis : un club pour un sportif, une Faction pour un militant"
     },
     {
       "id": "birthplace",
@@ -110,7 +111,8 @@
         "min": 5,
         "max": 15
       },
-      "symmetric": false
+      "symmetric": false,
+      "hint": "sujets de dernier recours, de résistance ou de désespoir : sièges, insurrections, retours inattendus"
     },
     {
       "id": "discard-size",
@@ -124,7 +126,8 @@
         "min": 3,
         "max": 10
       },
-      "symmetric": false
+      "symmetric": false,
+      "hint": "sujets liés à la mémoire et à l'héritage : commémorations, histoire, archéologie, deuil"
     }
   ]
 }

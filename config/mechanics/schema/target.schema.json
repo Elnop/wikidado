@@ -27,6 +27,9 @@
               "singular",
               "plural"
             ]
+          },
+          "hint": {
+            "$ref": "common.schema.json#/$defs/hint"
           }
         },
         "required": [
@@ -34,7 +37,8 @@
           "text",
           "factor",
           "is_player",
-          "number"
+          "number",
+          "hint"
         ],
         "additionalProperties": false
       }

@@ -12,7 +12,8 @@
         }
       },
       "factor": 1,
-      "is_player": false
+      "is_player": false,
+      "hint": "effet sur la carte elle-même : sujets qui se renforcent ou se protègent seuls"
     },
     {
       "id": "one",
@@ -25,7 +26,8 @@
         }
       },
       "factor": 1,
-      "is_player": false
+      "is_player": false,
+      "hint": "effet sur une seule carte, utile aux deux camps : déplacements, réformes, influences ponctuelles"
     },
     {
       "id": "one-opponent",
@@ -38,7 +40,8 @@
         }
       },
       "factor": 1,
-      "is_player": false
+      "is_player": false,
+      "hint": "effet hostile sur une seule cible : attaques ciblées, assassinats, scandales visant quelqu'un"
     },
     {
       "id": "one-yours",
@@ -51,7 +54,8 @@
         }
       },
       "factor": 1,
-      "is_player": false
+      "is_player": false,
+      "hint": "aide à une seule carte alliée : mentors, soutiens, équipements"
     },
     {
       "id": "equipped",
@@ -64,7 +68,8 @@
         }
       },
       "factor": 1,
-      "is_player": false
+      "is_player": false,
+      "hint": "effet d'un Équipement sur la Créature qui le porte : armes, vêtements, titres"
     },
     {
       "id": "you",
@@ -77,7 +82,8 @@
         }
       },
       "factor": 1,
-      "is_player": true
+      "is_player": true,
+      "hint": "effet pour le joueur : richesse, savoir, énergie, popularité"
     },
     {
       "id": "opponent",
@@ -90,7 +96,8 @@
         }
       },
       "factor": 1,
-      "is_player": true
+      "is_player": true,
+      "hint": "effet contre le joueur adverse : critiques, sanctions, blocus"
     },
     {
       "id": "your-others",
@@ -103,7 +110,8 @@
         }
       },
       "factor": 3,
-      "is_player": false
+      "is_player": false,
+      "hint": "effet sur tout son camp : chefs, institutions, doctrines, sujets qui rassemblent"
     },
     {
       "id": "all-opponents",
@@ -116,7 +124,8 @@
         }
       },
       "factor": 3,
-      "is_player": false
+      "is_player": false,
+      "hint": "effet de masse contre l'adversaire : guerres, épidémies, bombardements, embargos"
     },
     {
       "id": "all",
@@ -129,7 +138,8 @@
         }
       },
       "factor": 2,
-      "is_player": false
+      "is_player": false,
+      "hint": "effet sur tout le monde, des deux côtés : catastrophes naturelles, révolutions, crises mondiales"
     }
   ]
 }

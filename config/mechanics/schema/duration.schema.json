@@ -18,12 +18,16 @@
           },
           "factor": {
             "$ref": "common.schema.json#/$defs/factor"
+          },
+          "hint": {
+            "$ref": "common.schema.json#/$defs/hint"
           }
         },
         "required": [
           "id",
           "text",
-          "factor"
+          "factor",
+          "hint"
         ],
         "additionalProperties": false
       }

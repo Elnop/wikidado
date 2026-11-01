@@ -233,3 +233,9 @@ Le déclencheur activé ne servait qu'à équiper, ou les capacités activées �
 Écartées le 01/11/2026 : chaque effet a une forme au singulier et une au pluriel, la cible nomme les types visés, et la famille s'écrit comme un nom invariable.
 
 Tournures sans accord, où la cible est toujours complément : "donnez +1/+1 à vos autres Créatures", "+1 en attaque pour la Créature équipée". Cible toujours nommée "carte" ("une carte adverse"), la restriction de type restant implicite. Famille accordée ("vos Créatures Militaires", avec un singulier et un pluriel par famille), ou en complément ("vos Créatures de la famille Militaire").
+
+## Doublons autorisés, ou un seul exemplaire de chaque effet
+
+Écartées le 01/11/2026 : une carte ne reçoit jamais deux fois la même capacité ni deux fois le même mot-clé.
+
+Doublons autorisés : deux capacités identiques s'additionnaient. Plus strict : un même effet n'apparaissait qu'une fois par carte, quel que soit le déclencheur, ce qui interdisait "À la une : piochez 1 carte" avec "Postérité : piochez 1 carte".
