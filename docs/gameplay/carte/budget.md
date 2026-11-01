@@ -24,8 +24,10 @@ Les données disponibles et leurs ordres de grandeur sont dans `wikipedia/donnee
 La rareté (voir `gameplay/carte/rarete.md`) multiplie le budget sans changer le coût :
 
 ```
-budget_effectif = budget_base * multiplicateur_rarete
+budget_effectif = arrondi(budget_base * multiplicateur_rarete)
 ```
+
+L'arrondi se fait au plus proche : 13 × 1,25 = 16,25 donne 16, et 2 × 1,25 = 2,5 donne 3.
 
 | Rareté | Multiplicateur |
 |---|---|

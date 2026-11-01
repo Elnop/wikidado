@@ -24,8 +24,6 @@ docs/
       relations.md             relations typées de Wikidata
       epoques.md               dates de vie et d'événements
       categories.md            catégories Wikipédia
-    deck/
-      construction.md          construction de deck
     mecanique.md               catalogue fermé des mécaniques assignables
     electricite.md             ressource du jeu
   generation/
@@ -41,6 +39,7 @@ docs/
       carte/rarete.md
       carte/stats.md
       carte/type.md
+      electricite.md
       mecanique.md
       synergie/index.md
       synergie/liens.md

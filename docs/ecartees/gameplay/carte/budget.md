@@ -31,3 +31,15 @@ Plus simple, mais un article long écrit par une seule personne valait autant qu
 Écartée le 01/11/2026 : le budget de base utilise la taille et le nombre de contributeurs.
 
 On ajoutait le nombre de liens sortants, pour la place du sujet dans le graphe des articles. Plus complet, mais une donnée de plus à extraire.
+
+## Arrondi du budget effectif à l'inférieur
+
+Écartée le 01/11/2026 : arrondi au plus proche.
+
+13 × 1,25 = 16,25 donnait 16, et les petits budgets ne gagnaient parfois rien de la rareté (2 × 1,1 = 2,2 donnait 2).
+
+## Arrondi avec bonus minimum de 1
+
+Écartée le 01/11/2026 : arrondi au plus proche, sans bonus minimum.
+
+Arrondi au plus proche, mais une carte au-dessus de commune gagnait toujours au moins 1 point de budget.

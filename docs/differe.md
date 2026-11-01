@@ -29,3 +29,16 @@ Proposition : prendre la famille la plus représentée parmi les sous-types de l
 - Specs : `gameplay/carte/type.md`, `generation/article/selection.md`
 
 Les films, albums, livres et singles sont exclus pour la première version. Il faudra décider s'ils deviennent des cartes, et dans quel type. Il y a du volume : 29 427 albums et 10 664 singles sur la Wikipédia française, sans compter les films et les livres.
+
+## Garde-fou sur les rares en construction de deck
+
+- Différé le 01/11/2026, à voir en partie de test
+- Spec : aucune pour l'instant (pas de règle de construction de deck)
+
+Les rares sont plus fortes à coût égal (voir `gameplay/carte/budget.md`), donc un deck rempli de mythiques pourrait écraser tout le reste. On verra en partie de test si c'est un vrai problème.
+
+Pistes :
+
+- limite d'exemplaires par rareté dans un deck (Hearthstone autorise une seule copie d'une légendaire)
+- limite du nombre total de rares et mythiques par deck
+- formats de jeu par rareté, comme le Pauper de Magic où seules les communes sont autorisées
