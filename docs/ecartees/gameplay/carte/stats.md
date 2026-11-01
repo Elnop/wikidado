@@ -25,3 +25,9 @@ Une Technique ou un Événement avait une valeur de puissance (dégâts, bonus) 
 Écartée le 01/11/2026 : le budget restant va aux stats pour les Créatures et les Lieux, et doit être dépensé en mécaniques pour les autres types.
 
 Le budget non dépensé était perdu, et les cartes sans stats étaient simplement moins efficaces.
+
+## Point de défense offert
+
+Écartée le 01/11/2026 : le point de défense minimum est pris sur le budget.
+
+Toute Créature et tout Lieu recevait +1 en défense en plus de son budget. Une ébauche à budget 1 devenait 1/1 au lieu de 0/1.

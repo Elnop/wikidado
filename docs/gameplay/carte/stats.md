@@ -13,7 +13,9 @@ Seuls deux types ont des stats :
 - les Créatures ont une attaque et une défense
 - les Lieux ont seulement une défense : ils peuvent être attaqués à la place du joueur
 
-Une Créature ou un Lieu sans mécanique met tout son budget dans ses stats. Les Événements, les Objets, les Savoirs et les Factions n'ont pas de stats : tout leur budget va dans les mécaniques.
+Une Créature ou un Lieu sans mécanique met tout son budget dans ses stats.
+
+Une Créature ou un Lieu a toujours au moins 1 en défense. Ce point est pris sur le budget : le code le réserve à la défense avant tout le reste, donc les mécaniques ne peuvent dépenser que `budget_effectif - 1`. Une Créature à budget 1 sort en 0/1. Les Événements, les Objets, les Savoirs et les Factions n'ont pas de stats : tout leur budget va dans les mécaniques.
 
 Le budget effectif inclut le bonus de rareté, pas le coût. C'est le fonctionnement de Magic : les rares et mythiques y sont souvent plus efficaces que les communes au même coût. Une carte mythique à 4 électricité sera meilleure qu'une commune à 4 électricité, mais elle reste une carte qu'on ne joue pas au tour 1.
 

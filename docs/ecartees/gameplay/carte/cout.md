@@ -112,3 +112,9 @@ Le coût était la somme des cout_budget des mécaniques convertie en mana (2 po
 Écartée le 01/11/2026 : la ressource est l'électricité, reçue à chaque tour comme le mana de Hearthstone.
 
 Un seul mana générique, produit à la manière de Magic par des Terrains.
+
+## Électricité plafonnée à 8, ou rien à changer
+
+Écartée le 01/11/2026 : `points_par_electricite` passe de 2 à 1,5 pour que les coûts aillent jusqu'à 10.
+
+Avec 2 points par électricité, le coût ne dépassait jamais 8 alors que la réserve monte à 10. Une option plafonnait la réserve d'électricité à 8. Une autre ne changeait rien avant les parties de test.

@@ -46,3 +46,12 @@ Le script `scripts/tirer_echantillon.py` accepte déjà `--langue en`.
 - Spec : `gameplay/collection.md`
 
 En première version, tout le monde a toutes les cartes et les boosters ne sont pas enregistrés. Ensuite, il faudra décider si les joueurs gagnent et gardent leurs cartes, et comment : paquets gratuits à intervalle fixe comme WikiMasters (voir `wikimaster/analyse.md`), paquets gagnés en jouant, échanges entre joueurs.
+
+## Prix des mots-clés selon l'attaque
+
+- Différé le 01/11/2026, à voir en partie de test
+- Spec : `gameplay/mecanique/mot-cle.md`
+
+Les mots-clés ont un prix fixe, alors qu'Imblocable, Pillage et Débordement valent plus sur une Créature qui a une grosse attaque (Imblocable sur une 9/9, c'est 9 dégâts garantis par tour). Toxique fait l'inverse : il vaut plus sur une petite attaque.
+
+Piste : prix = prix de base + attaque / 3, arrondi au supérieur. Imblocable sur une 9/9 coûterait 6, sur une 2/2 coûterait 4.

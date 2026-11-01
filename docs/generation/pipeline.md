@@ -28,7 +28,7 @@ Le modèle s'occupe uniquement de ce qui demande de comprendre le sujet :
 1. Extraction : depuis les dumps, on construit une fiche par article retenu (titre, résumé, classe Wikidata, propriétés utiles, lectures, taille, contributeurs, liens de l'article).
 2. Calcul : le code ajoute le type, les sous-types, les familles, la rareté, le budget de base, le coût, le budget effectif et la liste des synergies possibles.
 3. Assignation : le modèle reçoit la fiche, le budget effectif et le catalogue des mécaniques autorisées pour ce type. Il répond en JSON contraint, avec uniquement des identifiants du catalogue : mots-clés et briques des capacités (voir `gameplay/mecanique/index.md`). La réponse suit le schéma `config/mechanics/schema/card-mechanics.schema.json`.
-4. Validation : le code vérifie que les briques existent et vont ensemble, que les paramètres sont valides, calcule le prix de chaque capacité et vérifie que la somme ne dépasse pas le budget effectif. Une carte qui ne passe pas est régénérée.
+4. Validation : le code vérifie que les briques existent et vont ensemble, que les paramètres sont valides, calcule le prix de chaque capacité et vérifie que la somme ne dépasse pas le budget effectif (moins 1 pour une Créature ou un Lieu, qui garde 1 point de défense), et qu'un Lieu a au moins une capacité. Une carte qui ne passe pas est régénérée.
 5. Stats : le code met le reste du budget effectif dans les stats, avec la répartition choisie par le modèle.
 6. Rendu : le texte des mécaniques, affiché dans la vue détaillée, est produit à partir des gabarits du catalogue, jamais par le modèle.
 

@@ -12,7 +12,7 @@ Le coût se paie en électricité (voir `gameplay/electricite.md`). Une carte pu
 cout = arrondi(budget_base / points_par_electricite)
 ```
 
-`points_par_electricite` vaut 2 pour commencer, à régler en partie de test.
+`points_par_electricite` vaut 1,5 pour commencer, à régler en partie de test. Avec cette valeur, les coûts vont de 0 à 10 : un article médian (budget 4) coûte 3, Napoléon Ier (budget 13) coûte 9, les plus gros articles de la Wikipédia française (budget 15) coûtent 10. Les coûts couvrent ainsi toute la réserve d'électricité, qui monte jusqu'à 10 (voir `gameplay/electricite.md`).
 
 Le coût se calcule sur le budget de base, avant le bonus de rareté. Deux cartes de même budget de base ont le même coût, même si l'une est mythique et l'autre commune.
 

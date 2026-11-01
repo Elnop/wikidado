@@ -43,3 +43,9 @@ On ajoutait le nombre de liens sortants, pour la place du sujet dans le graphe d
 Écartée le 01/11/2026 : arrondi au plus proche, sans bonus minimum.
 
 Arrondi au plus proche, mais une carte au-dessus de commune gagnait toujours au moins 1 point de budget.
+
+## Lieux qui bloquent, ou Bouc émissaire par défaut
+
+Écartée le 01/11/2026 : un Lieu doit avoir au moins une capacité.
+
+Un Lieu sans capacité n'avait pas de rôle. Une option lui permettait de bloquer comme une Créature, sans infliger de dégâts. Une autre lui donnait Bouc émissaire gratuitement quand il n'avait aucune capacité.

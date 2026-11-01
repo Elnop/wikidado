@@ -62,6 +62,8 @@ Un mot-clé a un prix fixe, donné dans `config/mechanics/keyword.json`.
 
 La plupart des briques vont à tous les types de carte. Quelques-unes sont réservées à cause de leur nature, et chaque fichier le précise : un bonus de stats sur la carte elle-même ne va qu'aux Créatures et aux Lieux, le déclencheur "quand elle attaque" ne va qu'aux Créatures.
 
+Un Lieu reçoit toujours au moins une capacité (voir `gameplay/carte/budget.md`).
+
 Une capacité garde le même texte quel que soit le type. Les règles du type s'appliquent par-dessus : sur une Faction, un effet qui touche vos Créatures ne touche que les Créatures affectées à cette Faction (voir `gameplay/duel.md`).
 
 ## Assignation par le modèle
