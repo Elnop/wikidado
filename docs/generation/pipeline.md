@@ -8,9 +8,9 @@ Tout ce qui se calcule à partir des données doit être fait par du code, pas p
 
 Le code s'occupe de :
 
-- sélectionner les articles (classes Wikidata, seuils, exclusions, voir `selection-articles.md`)
-- fixer le type de carte à partir de la classe Wikidata (voir `Gameplay/cardtype.md`)
-- calculer le coût (voir `Gameplay/cardcost.md`), la rareté (voir `Gameplay/cardrarete.md`), le budget et les stats (voir `Gameplay/cardstats.md`)
+- sélectionner les articles (classes Wikidata, seuils, exclusions, voir `article-selection.md`)
+- fixer le type de carte à partir de la classe Wikidata (voir `gameplay/carte-type.md`)
+- calculer le coût (voir `gameplay/carte-cout.md`), la rareté (voir `gameplay/carte-rarete.md`), le budget et les stats (voir `gameplay/carte-stats.md`)
 - calculer la famille à partir des portails
 - trouver les cibles des synergies : liens réciproques, relations Wikidata, époque, lieu de naissance
 

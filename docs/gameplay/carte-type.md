@@ -1,6 +1,6 @@
 # Types de cartes
 
-On ne garde que certaines natures d'articles, et chaque nature retenue donne un type de carte. Les noms des types ne sont pas encore choisis, ceux ci-dessous sont des exemples. Le choix des articles est décrit dans `Generation/selection-articles.md`.
+On ne garde que certaines natures d'articles, et chaque nature retenue donne un type de carte. Les noms des types ne sont pas encore choisis, ceux ci-dessous sont des exemples. Le choix des articles est décrit dans `generation/article-selection.md`.
 
 | Type (provisoire) | Ce que ça couvre | Rôle en jeu (à définir) |
 |---|---|---|

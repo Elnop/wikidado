@@ -2,7 +2,7 @@
 
 ## Principe
 
-À coût égal, une carte populaire est plus forte qu'une carte obscure. La popularité passe par la rareté (voir `cardrarete.md`), qui multiplie le budget de stats. Le coût lui-même est décrit dans `cardcost.md`.
+À coût égal, une carte populaire est plus forte qu'une carte obscure. La popularité passe par la rareté (voir `carte-rarete.md`), qui multiplie le budget de stats. Le coût lui-même est décrit dans `carte-cout.md`.
 
 C'est le fonctionnement de Magic : les rares et mythiques y sont souvent plus efficaces que les communes au même coût. Une Napoléon à 4 mana sera meilleure qu'une araignée inconnue à 4 mana, mais elle reste une carte à 4 mana qu'on ne joue pas au tour 1.
 
@@ -23,7 +23,7 @@ Multiplicateurs de départ, à régler en partie de test :
 | Rare | 1,25 |
 | Mythique | 1,4 |
 
-Une commune à 3 a 7 points à répartir, une mythique à 3 en a environ 10. Une capacité coûte des points de budget (voir `mecaniques.md`).
+Une commune à 3 a 7 points à répartir, une mythique à 3 en a environ 10. Une capacité coûte des points de budget (voir `mecanique.md`).
 
 ## Répartition attaque / défense
 

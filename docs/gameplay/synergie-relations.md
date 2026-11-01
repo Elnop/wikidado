@@ -7,4 +7,4 @@ Plus propres que les liens bruts (voir `synergie-liens.md`), parce que typées :
 - `P737` influencé par, `P1066` élève de : "Maître et élève", l'un donne un bonus à l'autre
 - `P19` lieu de naissance : une créature est plus forte si son lieu de naissance est un de vos terrains
 
-Les mécaniques correspondantes sont dans `mecaniques.md` (terre-natale, participant).
+Les mécaniques correspondantes sont dans `mecanique.md` (terre-natale, participant).

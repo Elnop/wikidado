@@ -1,6 +1,6 @@
 # Rareté des cartes
 
-La rareté d'une carte vient de la popularité de son article. Elle détermine la puissance de la carte par rapport à son coût (multiplicateur de budget, voir `cardstats.md`).
+La rareté d'une carte vient de la popularité de son article. Elle détermine la puissance de la carte par rapport à son coût (multiplicateur de budget, voir `carte-stats.md`).
 
 ## Mesure de la popularité
 
@@ -8,7 +8,7 @@ On mesure la popularité avec les lectures sur 30 jours, en échelle log, évent
 
 ## Paliers
 
-Paliers de départ pour la Wikipédia française, calés sur l'échantillon de `Wikipedia/donnees-disponibles.md` :
+Paliers de départ pour la Wikipédia française, calés sur l'échantillon de `wikipedia/donnees.md` :
 
 | Rareté | Lectures sur 30 jours | Exemples mesurés |
 |---|---|---|

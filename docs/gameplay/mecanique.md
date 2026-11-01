@@ -1,6 +1,6 @@
 # Catalogue des mécaniques
 
-Liste fermée des mécaniques que le modèle peut assigner aux cartes (voir `Generation/pipeline.md`). Les exemples ci-dessous servent à fixer le format. Aucune mécanique n'est validée.
+Liste fermée des mécaniques que le modèle peut assigner aux cartes (voir `generation/pipeline.md`). Les exemples ci-dessous servent à fixer le format. Aucune mécanique n'est validée.
 
 ## Format d'une mécanique
 
@@ -49,7 +49,7 @@ Les mécaniques dont les paramètres viennent des données (terre-natale, partic
 
 - label "Article de qualité" ou "Bon article" : mot-clé de rareté ou capacité bonus (6 600 articles sur fr, assez rare pour être spécial)
 - âge de l'article (création en 2003 pour Napoléon) : mot-clé "Ancien" ?
-- coordonnées GPS : l'article est un lieu, voir `cardtype.md` pour les terrains
+- coordonnées GPS : l'article est un lieu, voir `carte-type.md` pour les terrains
 - importance "maximum" dans un projet : carte iconique de sa famille
 
 ## À faire

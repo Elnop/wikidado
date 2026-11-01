@@ -1,6 +1,6 @@
 # Sélection des articles
 
-Quels articles Wikipédia deviennent des cartes. Le type de carte que donne chaque nature d'article est décrit dans `Gameplay/cardtype.md`.
+Quels articles Wikipédia deviennent des cartes. Le type de carte que donne chaque nature d'article est décrit dans `gameplay/carte-type.md`.
 
 ## Reconnaître la nature d'un article
 

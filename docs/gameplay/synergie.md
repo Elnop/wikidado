@@ -8,7 +8,7 @@ Une synergie est un effet qui se déclenche selon les autres cartes en jeu. Les 
 - `synergie-relations.md` : relations typées de Wikidata (famille, maître et élève, participation, lieu de naissance)
 - `synergie-epoques.md` : dates de vie et d'événements
 - `synergie-categories.md` : catégories Wikipédia
-- `cardfamille.md` : effets tribaux par famille
+- `carte-famille.md` : effets tribaux par famille
 
 ## Questions ouvertes
 
