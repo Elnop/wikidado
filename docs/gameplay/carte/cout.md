@@ -30,5 +30,8 @@ Les stats prennent ensuite le budget du coût, multiplié par la rareté, moins 
 
 ## Questions ouvertes
 
-- Comment garder une courbe de mana équilibrée si le coût n'est pas choisi directement ?
 - Sans coût maximum, faut-il limiter le nombre de mécaniques par carte pour éviter des cartes injouables ?
+
+## Après la première version
+
+- Comment garder une courbe de mana équilibrée si le coût n'est pas choisi directement ? Pistes : mesurer la répartition des coûts puis ajuster les `cout_budget` et `points_par_mana`, donner au modèle un coût cible tiré selon la courbe voulue, ou imposer des quotas par coût à la validation.

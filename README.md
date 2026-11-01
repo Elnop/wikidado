@@ -15,6 +15,7 @@ docs/
       rarete.md                rareté
       stats.md                 budget de stats, attaque et défense
       famille.md               familles, utilisées pour les synergies
+      illustration.md          image de la carte
     synergie/
       index.md                 ce qu'est une synergie, questions générales
       liens.md                 les articles se citent entre eux

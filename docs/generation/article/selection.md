@@ -44,11 +44,13 @@ Nombre d'articles fr dont l'élément Wikidata a directement cette classe en `P3
 
 Les très grosses classes (être humain, film, commune de France, œuvre littéraire) ont dépassé le délai du service de requête. Il faudra les compter à partir du dump Wikidata. Pour les humains, on parle de plusieurs centaines de milliers d'articles.
 
-Il y a largement assez d'articles pour chaque type. Le problème sera de réduire. Les taxons à eux seuls pèsent 150 000 articles, dont la plupart sont des ébauches sur des insectes ou des araignées.
+Il y a largement assez d'articles pour chaque type. Les taxons à eux seuls pèsent 150 000 articles, dont la plupart sont des ébauches sur des insectes ou des araignées.
 
-## Seuil minimal
+## Pas de seuil minimal
 
-On peut fixer un seuil (nombre de langues, taille, lectures) pour ne garder que les articles qui ont assez de matière pour faire une carte intéressante.
+Tout article d'une classe retenue devient une carte, même sans aucune lecture. Les articles peu lus deviennent des communes (voir `gameplay/carte/rarete.md`). Le pool de communes sera énorme, avec beaucoup d'articles pauvres en données.
+
+Un article sans image libre reste une carte, avec une illustration par défaut (voir `gameplay/carte/illustration.md`).
 
 ## Articles à exclure d'office
 
@@ -57,8 +59,3 @@ On peut fixer un seuil (nombre de langues, taille, lectures) pour ne garder que 
 - articles sensibles : crimes, violences sexuelles, attentats. À filtrer par catégories et par classes Wikidata.
 
 Les personnes vivantes sont gardées, sans exclusion spécifique.
-- articles sans image libre, si on décide que chaque carte doit avoir une illustration
-
-## Questions ouvertes
-
-- Que faire des articles à 0 langue et 0 lecture (des milliers d'espèces et de communes) : communes, ou on les exclut ?

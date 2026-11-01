@@ -42,6 +42,10 @@ Exemple de sortie attendue du modèle :
 }
 ```
 
+## Moment de la génération
+
+Génération mixte. Un pool de base est généré et validé avant chaque saison, ce qui permet de vérifier l'équilibre avant de publier. Les articles hors de ce pool sont générés à la demande, la première fois qu'un joueur tire la carte, puis gardés.
+
 ## Pourquoi un catalogue fermé
 
 Avec un catalogue fermé, le modèle ne peut pas inventer une capacité cassée. Il peut seulement mal choisir, et une mauvaise assignation se repère et se corrige. Le texte de règles reste homogène sur des dizaines de milliers de cartes, et chaque mécanique a un coût en mana et en budget défini une fois pour toutes. Un petit modèle suffit aussi, parce que choisir dans une liste est beaucoup plus simple que rédiger.
@@ -54,4 +58,3 @@ Avec un catalogue fermé, le modèle ne peut pas inventer une capacité cassée.
 
 - Nombre maximum de mécaniques par carte selon le coût ?
 - On garde une trace de quelle version du catalogue et du modèle a produit chaque carte, pour pouvoir régénérer proprement ?
-- Les cartes sont générées une fois par saison, ou à la demande quand un joueur ouvre un paquet ?
