@@ -9,6 +9,7 @@ docs/
   differe.md                   travaux différés, à ne pas oublier
   wikimaster/analyse.md        analyse de WikiMasters, le jeu existant le plus proche
   wikipedia/donnees.md         ce que Wikipédia et Wikidata mettent à disposition, mesuré sur de vrais articles
+  wikipedia/api.md             comment récupérer ces données : API Action, REST, Wikidata, SPARQL, pageviews, dumps
   gameplay/
     carte/
       type.md                  types de cartes
