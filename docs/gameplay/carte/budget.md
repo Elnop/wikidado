@@ -15,7 +15,9 @@ Le logarithme évite qu'un article énorme donne une carte démesurée. Les coef
 | Article | Taille | Contributeurs | Budget de base | Coût |
 |---|---|---|---|---|
 | Napoléon Ier | 260 Ko | 1 944 | 13 | 7 |
-| Article moyen | 5 Ko | 10 | 4 | 2 | Les données disponibles et leurs ordres de grandeur sont dans `wikipedia/donnees.md`.
+| Article moyen | 5 Ko | 10 | 4 | 2 |
+
+Les données disponibles et leurs ordres de grandeur sont dans `wikipedia/donnees.md`.
 
 ## Bonus de rareté
 
