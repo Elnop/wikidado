@@ -36,6 +36,7 @@ docs/
       carte/budget.md
       carte/cout.md
       carte/famille.md
+      carte/illustration.md
       carte/rarete.md
       carte/stats.md
       carte/type.md
