@@ -11,7 +11,7 @@ Toute la documentation est dans `docs/`. Le `README.md` à la racine sert d'inde
 - Dossiers et fichiers en minuscules, mots séparés par des tirets, sans accent : `rarete.md`, pas `Rareté.md` ni `rarete_detail.md`.
 - Noms en français, au singulier : `mecanique.md`, pas `mecaniques.md`.
 - Un dossier par domaine directement sous `docs/` : `gameplay/`, `generation/`, `wikipedia/`, `wikimaster/`.
-- Dans un domaine, un dossier par objet du jeu (`carte/`, `synergie/`, `deck/`, `article/`), et un fichier par concept de cet objet : `gameplay/carte/cout.md`, `gameplay/carte/stats.md`. Le nom du fichier ne répète pas celui du dossier.
+- Dans un domaine, un dossier par objet du jeu (`carte/`, `synergie/`, `article/`), et un fichier par concept de cet objet : `gameplay/carte/cout.md`, `gameplay/carte/stats.md`. Le nom du fichier ne répète pas celui du dossier.
 - Le fichier général d'un dossier, quand il en faut un, s'appelle `index.md` (`gameplay/synergie/index.md`).
 - Un concept qui ne se rattache à aucun objet reste à la racine du domaine, avec un nom simple : `gameplay/electricite.md`, `generation/pipeline.md`.
 - Les idées écartées vont dans `docs/ecartees/`, qui reproduit l'arborescence de `docs/` : `gameplay/carte/cout.md` a ses idées écartées dans `ecartees/gameplay/carte/cout.md`.

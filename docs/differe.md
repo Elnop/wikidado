@@ -14,14 +14,14 @@ Pistes :
 - mesurer la répartition des coûts sur un pool généré, puis ajuster la formule du budget de base et `points_par_electricite`
 - imposer des quotas par coût à la validation, et régénérer les cartes d'un coût trop représenté
 
-## Illustration par défaut d'une carte à deux grandes familles
+## Illustration par défaut d'une carte à plusieurs grandes familles
 
 - Différé le 01/11/2026, à décider
 - Spec : `gameplay/carte/illustration.md`
 
-L'illustration par défaut dépend du type et de la grande famille, mais une carte peut avoir deux grandes familles (voir `gameplay/carte/famille.md`). Il faut choisir laquelle sert pour l'illustration.
+L'illustration par défaut dépend du type et de la grande famille, mais une carte appartient à toutes les grandes familles de ses sous-types, sans limite (voir `gameplay/carte/famille.md`). Il faut choisir laquelle sert pour l'illustration.
 
-Proposition : prendre la famille la plus représentée parmi les sous-types de la carte.
+Proposition : prendre la grande famille qui regroupe le plus de sous-types de la carte.
 
 ## Œuvres comme cartes
 

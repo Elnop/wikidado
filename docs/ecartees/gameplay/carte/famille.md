@@ -67,3 +67,21 @@ La première occupation listée sur Wikidata, souvent la principale, donnait une
 Écartée le 01/11/2026 : on garde les deux familles les plus représentées, calculées par le code.
 
 Le modèle choisissait la ou les familles qui collaient le mieux à l'article.
+
+## Familles sur deux niveaux
+
+Écartée le 01/11/2026 : chaque sous-type est aussi une famille, ce qui fait trois niveaux.
+
+Seulement des groupes fins définis à la main, rangés dans 6 grandes familles. Les sous-types n'étaient pas des familles eux-mêmes.
+
+## Les deux familles les plus représentées
+
+Écartée le 01/11/2026 : une carte appartient à toutes les familles de ses sous-types, sans limite.
+
+On comptait les sous-types par famille et on gardait les deux familles les plus représentées, comme une carte bicolore. Variantes : la limite ne s'appliquait qu'aux grandes familles, ou aux groupes fins et aux grandes familles.
+
+## Humain hors des familles
+
+Écartée le 01/11/2026 : tous les sous-types sont des familles, Humain compris.
+
+Humain restait un sous-type mais n'entrait dans aucune famille, pour éviter que toutes les personnes aient la même famille.
