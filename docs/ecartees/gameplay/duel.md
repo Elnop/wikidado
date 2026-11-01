@@ -77,3 +77,49 @@ Comme dans Hearthstone, deux exemplaires pour des decks plus réguliers.
 Écartée le 01/11/2026 : piocher dans un deck vide fait perdre la partie.
 
 La fatigue de Hearthstone : 1 dégât la première fois, puis 2, puis 3.
+
+## Un seul bloqueur par attaquant
+
+Écartée le 01/11/2026 : plusieurs bloqueurs peuvent arrêter le même attaquant, qui répartit ses dégâts.
+
+Plus simple à lire, mais une grosse Créature ne pouvait être arrêtée qu'en un contre un.
+
+## Piétinement par défaut
+
+Écartée le 01/11/2026 : le surplus de dégâts n'atteint la cible qu'avec une mécanique.
+
+Une Créature bloquée infligeait toujours le surplus à sa cible. Bloquer avec une petite Créature ne servait presque plus.
+
+## Jouer des cartes après l'attaque
+
+Écartée le 01/11/2026 : l'attaque termine la phase de jeu.
+
+Comme les deux phases principales de Magic : on attaquait, on voyait le résultat, puis on posait des cartes.
+
+## Limite de cartes en jeu
+
+Écartée le 01/11/2026 : pas de limite.
+
+7 cartes en jeu par joueur comme les serviteurs de Hearthstone, ou 10 pour laisser de la place aux Lieux, Objets et Savoirs.
+
+## Mulligan de toute la main avec une carte de moins
+
+Écartée le 01/11/2026 : mulligan unique, cartes au choix, sans pénalité.
+
+Façon Magic : on remettait toute la main dans le deck et on repiochait une carte de moins à chaque fois. Autre variante écartée : pas de mulligan du tout.
+
+## Compensation pour le second joueur
+
+Écartée le 01/11/2026 : la pioche dont le premier joueur est privé au tour 1 suffit.
+
+Une électricité bonus utilisable une fois, comme la pièce de Hearthstone, ou une sixième carte en main de départ.
+
+## Un bloqueur contre plusieurs attaquants
+
+Écartée le 01/11/2026 : chaque bloqueur arrête un seul attaquant, bloquer plusieurs est une mécanique.
+
+## Défausse sans usage
+
+Écartée le 01/11/2026 : la défausse est visible et des mécaniques peuvent s'en servir.
+
+Comme Hearthstone, une carte détruite était perdue pour la partie.

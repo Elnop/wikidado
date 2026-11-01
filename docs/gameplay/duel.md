@@ -7,6 +7,8 @@ Une partie oppose deux joueurs, chacun avec son deck. Le combat suit Magic (l'at
 - Un deck contient 30 cartes, avec un seul exemplaire de chaque carte.
 - Chaque joueur commence à 30 points de vie.
 - Le premier joueur est tiré au sort. Les deux joueurs piochent 5 cartes.
+- Chaque joueur peut ensuite, une seule fois, remettre dans son deck les cartes de sa main qu'il ne veut pas, et en repiocher autant.
+- Le second joueur n'a pas d'autre compensation que la pioche dont le premier joueur est privé au tour 1.
 
 ## Victoire
 
@@ -15,10 +17,17 @@ Un joueur perd quand ses points de vie tombent à 0, ou quand il doit piocher al
 ## Déroulé d'un tour
 
 1. Début : la réserve d'électricité monte de 1 (jusqu'à 10) et se recharge entièrement. Le joueur pioche une carte, sauf le premier joueur à son premier tour.
-2. Le joueur joue des cartes en payant leur coût en électricité, et peut attaquer une fois.
-3. Fin : les dégâts subis par les Créatures et les Lieux s'effacent.
+2. Le joueur joue des cartes en payant leur coût en électricité.
+3. Il peut ensuite attaquer. L'attaque termine sa phase de jeu : il ne pose plus de carte après.
+4. Fin : les dégâts subis par les Créatures et les Lieux s'effacent.
 
 Le joueur dont ce n'est pas le tour ne joue aucune carte. Il ne décide que de ses blocages.
+
+Il n'y a pas de limite au nombre de cartes en jeu.
+
+## Défausse
+
+Les Événements joués et les cartes détruites vont dans la défausse de leur propriétaire. Elle est visible des deux joueurs. Des mécaniques peuvent s'en servir, par exemple pour ramener une carte ou compter les cartes détruites.
 
 ## Les cartes en jeu
 
@@ -31,15 +40,8 @@ Le joueur dont ce n'est pas le tour ne joue aucune carte. Il ne décide que de s
 ## Combat
 
 1. L'attaquant déclare ses Créatures attaquantes, et pour chacune sa cible : le joueur adverse ou un de ses Lieux.
-2. Le défenseur choisit ses bloqueurs parmi ses Créatures. Une Créature qui a attaqué à son propre tour peut bloquer au tour adverse suivant.
-3. Les dégâts sont simultanés. Une Créature bloquée et son bloqueur s'infligent chacun leur attaque. Une Créature non bloquée inflige son attaque à sa cible.
+2. Le défenseur choisit ses bloqueurs parmi ses Créatures. Chaque bloqueur arrête un seul attaquant, mais plusieurs bloqueurs peuvent arrêter le même. Une Créature qui a attaqué à son propre tour peut bloquer au tour adverse suivant.
+3. Les dégâts sont simultanés. Chaque bloqueur inflige son attaque à l'attaquant qu'il bloque. Un attaquant bloqué répartit son attaque entre ses bloqueurs comme il veut, et n'atteint pas sa cible même s'il lui reste des dégâts, sauf mécanique de piétinement. Une Créature non bloquée inflige son attaque à sa cible.
 4. Une Créature ou un Lieu dont les dégâts subis atteignent sa défense est détruit. Comme les dégâts s'effacent en fin de tour, il faut détruire un Lieu en un seul tour.
 
-## Questions ouvertes
-
-- Plusieurs Créatures peuvent-elles bloquer le même attaquant, et qui répartit alors les dégâts ?
-- Une Créature bloquée par un adversaire plus faible inflige-t-elle le surplus de dégâts à sa cible (piétinement), ou seulement avec une mécanique ?
-- Peut-on rejouer des cartes après l'attaque, ou l'attaque termine-t-elle le tour ?
-- Faut-il une limite de cartes en jeu par joueur ?
-- Un joueur peut-il repiocher une main de départ qui ne lui convient pas (mulligan) ?
-- Le second joueur reçoit-il une compensation en plus de la pioche du tour 1 ?
+Exemple : Napoléon (6/4) attaque, bloqué par Wellington (3/3) et Blücher (2/2). Napoléon prend 5 dégâts et meurt. Il répartit ses 6 dégâts, 3 sur chacun, et détruit les deux.
