@@ -10,6 +10,8 @@ Cinq cartes construites à partir de vrais articles, avec le détail de chaque v
 
 ```
 config/
+  card/
+    type.json                  les 6 types de cartes, identifiants et noms ; leur schéma sert à tous les autres
   mechanics/                   briques des capacités en JSON, lues par la génération et le jeu ; fait foi sur la doc
     schema/                    JSON Schema de chaque fichier, et des mécaniques d'une carte
 generation/                    projet Python de génération des cartes, géré par uv (uv run ...)

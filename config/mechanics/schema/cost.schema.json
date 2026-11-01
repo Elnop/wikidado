@@ -13,15 +13,11 @@
     "minimum": {
       "type": "integer",
       "minimum": 0
-    },
-    "card_types": {
-      "$ref": "common.schema.json#/$defs/card_types"
     }
   },
   "required": [
     "rounding",
-    "minimum",
-    "card_types"
+    "minimum"
   ],
   "additionalProperties": false
 }

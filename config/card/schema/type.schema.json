@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Card types",
+  "$defs": {
+    "card_type": {
+      "enum": [
+        "place",
+        "creature",
+        "event",
+        "object",
+        "knowledge",
+        "faction"
+      ]
+    },
+    "card_types": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/card_type"
+      },
+      "uniqueItems": true
+    }
+  },
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "types": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/$defs/card_type"
+          },
+          "name": {
+            "type": "object",
+            "properties": {
+              "fr": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "fr"
+            ],
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "name"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "types"
+  ],
+  "additionalProperties": false
+}

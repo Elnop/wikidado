@@ -15,7 +15,9 @@ Une mécanique est soit un mot-clé, soit une capacité composée de briques. Le
 La liste des briques, leurs textes, leurs prix et leurs facteurs sont dans `config/mechanics/`, en JSON. C'est la config qui fait foi : la doc explique les règles, la config donne les valeurs. Le pipeline de génération et le jeu lisent les mêmes fichiers.
 
 - un fichier par brique : `keyword.json`, `trigger.json`, `effect.json`, `duration.json`, `target.json`, `filter.json`, `condition.json`
-- `cost.json` : arrondi, minimum, liste des types de cartes
+- `cost.json` : arrondi et minimum du prix d'une capacité
+
+La liste des types de cartes est dans `config/card/type.json`. Son schéma définit l'énumération des types, que tous les autres schémas réutilisent.
 - `schema/` : un JSON Schema par fichier, plus `card-mechanics.schema.json` pour les mécaniques assignées à une carte (sortie du modèle, annotations de l'échantillon)
 
 Les textes sont rangés par langue (`"text": { "fr": "..." }`). Chaque brique a un statut, `accepted` ou `proposed`. Tout ce qui est propre au code (noms de fichiers, clés, identifiants des briques) est en anglais ; les textes affichés au joueur et les indices pour le modèle sont en français.

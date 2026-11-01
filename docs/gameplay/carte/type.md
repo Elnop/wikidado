@@ -6,7 +6,7 @@ Le découpage en 6 est à vérifier sur ce que Wikipédia et Wikidata proposent 
 
 Les œuvres (films, séries, albums, chansons, livres, jeux vidéo, peintures) sont des Objets.
 
-Les règles de la partie sont dans `gameplay/duel.md`.
+Les règles de la partie sont dans `gameplay/duel.md`. Les identifiants des types dans le code et la config sont dans `config/card/type.json`.
 
 | Type | Ce que ça couvre | Rôle en jeu |
 |---|---|---|

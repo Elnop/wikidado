@@ -7,21 +7,10 @@
       "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
     },
     "card_type": {
-      "enum": [
-        "place",
-        "creature",
-        "event",
-        "object",
-        "knowledge",
-        "faction"
-      ]
+      "$ref": "../../card/schema/type.schema.json#/$defs/card_type"
     },
     "card_types": {
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/card_type"
-      },
-      "uniqueItems": true
+      "$ref": "../../card/schema/type.schema.json#/$defs/card_types"
     },
     "text": {
       "type": "object",

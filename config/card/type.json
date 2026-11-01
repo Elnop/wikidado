@@ -1,0 +1,41 @@
+{
+  "$schema": "./schema/type.schema.json",
+  "types": [
+    {
+      "id": "place",
+      "name": {
+        "fr": "Lieu"
+      }
+    },
+    {
+      "id": "creature",
+      "name": {
+        "fr": "Créature"
+      }
+    },
+    {
+      "id": "event",
+      "name": {
+        "fr": "Événement"
+      }
+    },
+    {
+      "id": "object",
+      "name": {
+        "fr": "Objet"
+      }
+    },
+    {
+      "id": "knowledge",
+      "name": {
+        "fr": "Savoir"
+      }
+    },
+    {
+      "id": "faction",
+      "name": {
+        "fr": "Faction"
+      }
+    }
+  ]
+}

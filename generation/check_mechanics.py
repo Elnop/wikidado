@@ -2,12 +2,15 @@ import argparse
 import json
 import math
 import os
+import pathlib
 import sys
 
 import jsonschema
 from referencing import Registry, Resource
 
-CONFIG_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "config", "mechanics")
+CONFIG_ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "config"))
+CONFIG_DIR = os.path.join(CONFIG_ROOT, "mechanics")
+CARD_TYPE_FILE = os.path.join(CONFIG_ROOT, "card", "type.json")
 CATALOGUE_FILES = {
     "keyword": "keywords",
     "trigger": "triggers",
@@ -24,21 +27,45 @@ def load_json(path):
         return json.load(f)
 
 
+def schema_uri(path):
+    return pathlib.Path(path).resolve().as_uri()
+
+
+def load_schema(path):
+    return {**load_json(path), "$id": schema_uri(path)}
+
+
 def schema_registry():
-    schema_dir = os.path.join(CONFIG_DIR, "schema")
-    resources = [(name, Resource.from_contents(load_json(os.path.join(schema_dir, name)))) for name in os.listdir(schema_dir)]
+    resources = []
+    for directory, _, names in os.walk(CONFIG_ROOT):
+        for name in names:
+            if name.endswith(".schema.json"):
+                path = os.path.join(directory, name)
+                resources.append((schema_uri(path), Resource.from_contents(load_schema(path))))
     return Registry().with_resources(resources)
 
 
-def validator_for(name, registry):
-    schema = load_json(os.path.join(CONFIG_DIR, "schema", f"{name}.schema.json"))
-    return jsonschema.Draft202012Validator(schema, registry=registry)
+def validator_for(schema_path, registry):
+    return jsonschema.Draft202012Validator(load_schema(schema_path), registry=registry)
+
+
+def schema_path_for(config_path):
+    directory, name = os.path.split(config_path)
+    return os.path.join(directory, "schema", name.replace(".json", ".schema.json"))
 
 
 def validate_config(registry, errors):
-    for name in list(CATALOGUE_FILES) + ["cost"]:
-        for error in validator_for(name, registry).iter_errors(load_json(os.path.join(CONFIG_DIR, f"{name}.json"))):
-            errors.append(f"{name}.json: {error.message}")
+    paths = [os.path.join(CONFIG_DIR, f"{name}.json") for name in list(CATALOGUE_FILES) + ["cost"]] + [CARD_TYPE_FILE]
+    for path in paths:
+        for error in validator_for(schema_path_for(path), registry).iter_errors(load_json(path)):
+            errors.append(f"{os.path.relpath(path, CONFIG_ROOT)}: {error.message}")
+
+
+def check_card_types(errors):
+    listed = [t["id"] for t in load_json(CARD_TYPE_FILE)["types"]]
+    allowed = load_json(schema_path_for(CARD_TYPE_FILE))["$defs"]["card_type"]["enum"]
+    if sorted(listed) != sorted(allowed):
+        errors.append(f"card/type.json lists {listed}, schema allows {allowed}")
 
 
 def load_catalogue():
@@ -177,7 +204,8 @@ def main():
     catalogue = load_catalogue()
     check_references(catalogue, errors)
     check_documented_examples(catalogue, errors)
-    card_validator = validator_for("card-mechanics", registry)
+    check_card_types(errors)
+    card_validator = validator_for(os.path.join(CONFIG_DIR, "schema", "card-mechanics.schema.json"), registry)
     for path in args.cards:
         check_cards(path, catalogue, card_validator, errors)
     for error in errors:
