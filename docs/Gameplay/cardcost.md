@@ -7,7 +7,7 @@ La popularité de l'article ne fixe pas le coût de la carte. Elle fixe deux cho
 - la rareté de la carte
 - sa puissance par rapport à son coût : à coût égal, une carte populaire est plus forte qu'une carte obscure
 
-Le coût vient donc d'ailleurs, et ce qui le fixe reste à décider (voir plus bas).
+Le coût vient donc d'ailleurs, et ce qui le fixe reste à décider (voir plus bas). Les idées écartées sur le coût sont dans `ecartees/cardcost.md`.
 
 ## Le problème à éviter
 
@@ -89,33 +89,6 @@ Si les rares sont plus fortes à coût égal, un deck rempli de mythiques écras
 ## Bonus d'actualité
 
 Les lectures quotidiennes permettent un effet "Tendance" : si l'article d'une carte est dans le top des plus lus de la semaine, la carte gagne un bonus en jeu (+1/+1, ou coût réduit de 1). La méta bouge avec l'actualité sans toucher à la rareté figée pour la saison.
-
-## Coût fixé par la notoriété
-
-Écartée le 01/11/2026 : le coût ne doit pas dépendre de la popularité. La popularité fixe la rareté et la puissance par rapport au coût.
-
-Proposition d'origine, gardée pour mémoire. On mesurait la notoriété avec les lectures et le nombre de langues :
-
-```
-notoriete = log10(lectures_30j + 1) + 0.5 * log2(langues + 1)
-cout = clamp(round(notoriete * 0.75), 1, 7)
-```
-
-| Article | Lectures 30 j | Langues | Notoriété | Coût |
-|---|---|---|---|---|
-| Linothele molleturo | 0 | 0 | 0 | 1 |
-| District de Koraput | 3 | 33 | 3,1 | 2 |
-| NGC 4266 | 7 | 24 | 3,2 | 2 |
-| Musaraigne sombre | 13 | 27 | 3,5 | 3 |
-| William Empson | 63 | 17 | 3,9 | 3 |
-| Caribou (musicien) | 180 | 13 | 4,2 | 3 |
-| Nabih Berri | 678 | 21 | 5,1 | 4 |
-| Marcel Ophuls | 897 | 26 | 5,3 | 4 |
-| Michèle Laroque | 31 205 | 24 | 6,8 | 5 |
-| Irène Jacob | 18 353 | 37 | 6,9 | 5 |
-| Napoléon Ier | ~76 000 | 221 | 8,8 | 7 |
-
-La formule de notoriété peut resservir pour la rareté.
 
 ## Questions ouvertes
 

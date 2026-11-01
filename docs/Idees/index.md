@@ -8,7 +8,7 @@ Statuts :
 - retenue : décidée par Leon et Dani
 - écartée : abandonnée, avec la raison
 
-Quand une idée est détaillée dans un autre document, la colonne "Détail" pointe vers lui. Les chemins partent de `docs/`.
+Quand une idée est détaillée dans un autre document, la colonne "Détail" pointe vers lui. Les chemins partent de `docs/`. Le détail d'une idée écartée se trouve dans le dossier `ecartees/` de son domaine.
 
 ## Génération des cartes
 
@@ -16,7 +16,7 @@ Quand une idée est détaillée dans un autre document, la colonne "Détail" poi
 |---|---|---|---|
 | Définir un catalogue fermé de mécaniques, puis un petit modèle qui ne fait que les assigner aux articles | retenue (1/11/2026) | `Generation/pipeline.md`, `Gameplay/mecaniques.md` | |
 | Le code calcule tout ce qui se déduit des données (type, coût, stats, famille, cibles de synergie), le modèle ne fait que le choix des mécaniques | à discuter | `Generation/pipeline.md` | |
-| Le modèle rédige lui-même le texte des capacités | écartée (1/11/2026) | | Contraire au principe du catalogue fermé : risque de capacités cassées et de texte de règles incohérent |
+| Le modèle rédige lui-même le texte des capacités | écartée (1/11/2026) | `Generation/ecartees/pipeline.md` | Contraire au principe du catalogue fermé : risque de capacités cassées et de texte de règles incohérent |
 | Construire la base à partir des dumps plutôt que de l'API | à discuter | `Wikipedia/donnees-disponibles.md` | |
 
 ## Types de cartes
@@ -34,8 +34,8 @@ Quand une idée est détaillée dans un autre document, la colonne "Détail" poi
 
 | Idée | Statut | Détail | Notes |
 |---|---|---|---|
-| Stats qui montent avec la notoriété, sans lien avec le coût, comme WikiMasters | écartée (1/11/2026) | `Wikimaster/analyse.md` | La carte la plus célèbre gagne toujours, aucun intérêt tactique. À distinguer de la puissance par rapport au coût, qui elle suit la popularité |
-| Coût fixé par la notoriété (lectures + langues) | écartée (1/11/2026) | `Gameplay/cardcost.md` | Le coût ne doit pas dépendre de la popularité |
+| Stats qui montent avec la notoriété, sans lien avec le coût, comme WikiMasters | écartée (1/11/2026) | `Gameplay/ecartees/cardcost.md` | La carte la plus célèbre gagne toujours, aucun intérêt tactique. À distinguer de la puissance par rapport au coût, qui elle suit la popularité |
+| Coût fixé par la notoriété (lectures + langues) | écartée (1/11/2026) | `Gameplay/ecartees/cardcost.md` | Le coût ne doit pas dépendre de la popularité |
 | La popularité fixe la rareté et la puissance par rapport au coût | retenue (1/11/2026) | `Gameplay/cardcost.md` | |
 | Budget de stats = (2 × coût + 1) × multiplicateur de rareté | à discuter | `Gameplay/cardcost.md` | |
 | Paliers de rareté sur les lectures à 30 jours (100 / 5 000 / 50 000 sur fr) | à discuter | `Gameplay/cardcost.md` | |
@@ -46,7 +46,7 @@ Quand une idée est détaillée dans un autre document, la colonne "Détail" poi
 | Limite d'exemplaires ou de rares par deck | à discuter | `Gameplay/cardcost.md` | |
 | Format réservé aux communes, comme le Pauper de Magic | à discuter | `Gameplay/cardcost.md` | |
 | Attaque selon la taille, défense selon le nombre de contributeurs, en relatif à coût égal | à discuter | `Gameplay/cardcost.md` | |
-| Coûts figés pour une saison | écartée (1/11/2026) | `Gameplay/cardcost.md` | Sans objet depuis que le coût ne dépend plus des lectures. Remplacée par "rareté figée pour une saison" |
+| Coûts figés pour une saison | écartée (1/11/2026) | `Gameplay/ecartees/cardcost.md` | Sans objet depuis que le coût ne dépend plus des lectures. Remplacée par "rareté figée pour une saison" |
 | Rareté figée pour une saison | à discuter | `Gameplay/cardcost.md` | |
 | Bonus "Tendance" quand l'article est dans les plus lus de la semaine | à discuter | `Gameplay/cardcost.md` | |
 | Rareté séparée du coût, basée sur les lectures | retenue (1/11/2026) | `Gameplay/cardcost.md` | Inclus dans la décision sur la popularité |
@@ -65,4 +65,4 @@ Quand une idée est détaillée dans un autre document, la colonne "Détail" poi
 
 | Idée | Statut | Détail | Notes |
 |---|---|---|---|
-| Duel sous forme de quiz, comme WikiMasters | écartée (1/11/2026) | `Wikimaster/analyse.md` | Le projet veut un vrai gameplay de cartes à la Magic |
+| Duel sous forme de quiz, comme WikiMasters | écartée (1/11/2026) | `Gameplay/ecartees/duel.md` | Le projet veut un vrai gameplay de cartes à la Magic |
