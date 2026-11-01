@@ -13,7 +13,7 @@ Seuls deux types ont des stats :
 - les Créatures ont une attaque et une défense
 - les Lieux ont seulement une défense : ils peuvent être attaqués à la place du joueur
 
-Une Créature ou un Lieu sans mécanique met tout son budget dans ses stats. Les Événements et les Techniques n'ont pas de stats : tout leur budget va dans les mécaniques.
+Une Créature ou un Lieu sans mécanique met tout son budget dans ses stats. Les Événements, les Objets et les Savoirs n'ont pas de stats : tout leur budget va dans les mécaniques.
 
 Le budget effectif inclut le bonus de rareté, pas le coût. C'est le fonctionnement de Magic : les rares et mythiques y sont souvent plus efficaces que les communes au même coût. Une carte mythique à 4 électricité sera meilleure qu'une commune à 4 électricité, mais elle reste une carte qu'on ne joue pas au tour 1.
 

@@ -55,8 +55,8 @@ Limites connues :
 
 - le top mensuel est limité à 1000 articles, et un type peut rester incomplet
 - les plus lus sont dominés par l'actualité (personnalités politiques, sport, élections) et contiennent des articles sensibles (crimes, meurtriers). Le filtre des articles sensibles de `generation/article/selection.md` n'est pas encore appliqué
-- les racines de classes par type sont provisoires (un pays est classé Terrain)
-- Créature et Terrain, trop gros pour le SPARQL de Wikidata, viennent du top mensuel. Événement, Objet et Savoir viennent des classes, puis sont triés par lectures du mois
+- les racines de classes par type sont provisoires (un pays est classé Lieu)
+- Créature et Lieu, trop gros pour le SPARQL de Wikidata, viennent du top mensuel. Événement, Objet et Savoir viennent des classes, puis sont triés par lectures du mois
 
 ## Mesures
 

@@ -13,7 +13,7 @@ Sources de candidats (--source) :
   auto (défaut) : Événement, Objet et Savoir viennent des classes Wikidata (les plus
                   présentes dans les langues, puis lectures du mois), ce qui donne
                   --par-type articles même si le type est rare dans le top. Créature et
-                  Terrain, trop gros pour le SPARQL, viennent du top mensuel. Un type en
+                  Lieu, trop gros pour le SPARQL, viennent du top mensuel. Un type en
                   échec retombe sur le top mensuel.
   top           : tout vient du top mensuel de l'API Pageviews (1000 articles au plus).
 
@@ -42,7 +42,7 @@ import urllib.request
 from datetime import date
 
 CONTACT = "https://github.com/Elnop/wikidado"
-TYPES = ["creature", "terrain", "evenement", "objet", "savoir"]
+TYPES = ["creature", "lieu", "evenement", "objet", "savoir"]
 
 # Classes racines par type de carte. Provisoire : voir gameplay/carte/type.md et
 # generation/article/selection.md. Le type d'un article est celui de la racine la
@@ -50,7 +50,7 @@ TYPES = ["creature", "terrain", "evenement", "objet", "savoir"]
 # À distance égale, l'ordre de TYPES départage.
 RACINES = {
     "creature": ["Q5", "Q16521"],  # être humain, taxon
-    "terrain": ["Q2221906", "Q41176", "Q811979"],  # lieu, bâtiment, structure architecturale
+    "lieu": ["Q2221906", "Q41176", "Q811979"],  # lieu, bâtiment, structure architecturale
     "evenement": ["Q1190554", "Q178561", "Q645883"],  # occurrence, bataille, opération militaire
     "objet": [
         "Q39546", "Q728", "Q42889", "Q11019", "Q34379", "Q11460", "Q1183543",
@@ -71,7 +71,7 @@ RACINES_CANDIDATS = {
     "savoir": ["Q11862829", "Q336", "Q17737", "Q11016", "Q9143", "Q7397", "Q246672", "Q7257", "Q968159"],
 }
 
-# Types dont on cherche les candidats par classe. Créature et Terrain passent par le top mensuel.
+# Types dont on cherche les candidats par classe. Créature et Lieu passent par le top mensuel.
 TYPES_PAR_CLASSES = tuple(RACINES_CANDIDATS)
 
 DOSSIER_CACHE = ".cache-echantillon"

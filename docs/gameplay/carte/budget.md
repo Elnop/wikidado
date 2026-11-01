@@ -41,6 +41,6 @@ L'arrondi se fait au plus proche : 13 × 1,25 = 16,25 donne 16, et 2 × 1,25 = 2
 ## Dépense du budget
 
 1. Le modèle choisit des mécaniques dans le catalogue. Chacune consomme son `cout_budget`. La somme ne peut pas dépasser le budget effectif.
-2. Ce qui reste du budget effectif va aux stats, pour les Créatures et les Lieux (voir `gameplay/carte/stats.md`). Pour les Événements et les Techniques, qui n'ont pas de stats, tout le budget doit être dépensé en mécaniques.
+2. Ce qui reste du budget effectif va aux stats, pour les Créatures et les Lieux (voir `gameplay/carte/stats.md`). Pour les Événements, les Objets et les Savoirs, qui n'ont pas de stats, tout le budget doit être dépensé en mécaniques.
 
 Il n'y a pas de nombre maximum de mécaniques par carte, ni de synergies : seul le budget limite.
