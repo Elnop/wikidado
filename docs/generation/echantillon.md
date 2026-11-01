@@ -54,8 +54,9 @@ Il prend le top mensuel de l'API Pageviews, déduit le type de carte de la class
 Limites connues :
 
 - le top mensuel est limité à 1000 articles, et un type peut rester incomplet
-- les plus lus sont dominés par l'actualité (personnalités politiques, sport, élections) et contiennent des articles sensibles (site pour adultes). Le filtre des articles sensibles de `generation/article/selection.md` n'est pas encore appliqué
-- les racines de classes par type sont provisoires : un pays est classé Terrain, et un réseau social ou un site Web, Technique
+- les plus lus sont dominés par l'actualité (personnalités politiques, sport, élections) et contiennent des articles sensibles (crimes, meurtriers). Le filtre des articles sensibles de `generation/article/selection.md` n'est pas encore appliqué
+- les racines de classes par type sont provisoires : un pays est classé Terrain, et une discipline comme les mathématiques, Technique
+- les sites web, plateformes et jeux vidéo sont exclus du tirage, ce qui laisse très peu d'articles Technique parmi les plus lus (1 en FR, 3 en EN sur 10 visés)
 
 ## Mesures
 
