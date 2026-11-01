@@ -71,6 +71,7 @@ docs/
       mecanique/transversal.md
       mecanique/effet.md
       mecanique/cible.md
+      mecanique/condition.md
       synergie/index.md
       synergie/liens.md
       collection.md
