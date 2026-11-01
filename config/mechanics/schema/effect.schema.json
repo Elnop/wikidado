@@ -82,6 +82,9 @@
           },
           "hint": {
             "$ref": "common.schema.json#/$defs/hint"
+          },
+          "types": {
+            "$ref": "common.schema.json#/$defs/card_types"
           }
         },
         "required": [
@@ -95,7 +98,8 @@
           "affected_types",
           "zone",
           "takes_keyword",
-          "hint"
+          "hint",
+          "types"
         ],
         "additionalProperties": false
       }

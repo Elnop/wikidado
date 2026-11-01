@@ -120,6 +120,10 @@ def check_mechanic(mechanic, card_type, catalogue):
     if effect["takes_keyword"] and mechanic.get("granted_keyword") not in catalogue["keyword"]:
         problems.append(f"missing or unknown granted_keyword for {effect['id']}")
     trigger = catalogue["trigger"].get(mechanic.get("trigger"))
+    if trigger and trigger["n"]:
+        trigger_n = mechanic.get("trigger_n")
+        if trigger_n is None or not trigger["n"]["min"] <= trigger_n <= trigger["n"]["max"]:
+            problems.append(f"trigger_n out of range for {trigger['id']}")
     if effect["kind"] == "triggered" and trigger is None:
         problems.append(f"triggered effect {effect['id']} without a known trigger")
     if effect["kind"] == "static" and "trigger" in mechanic:
@@ -127,6 +131,8 @@ def check_mechanic(mechanic, card_type, catalogue):
     if "duration" in mechanic and not effect["has_duration"]:
         problems.append(f"effect {effect['id']} takes no duration")
     if card_type:
+        if card_type not in effect["types"]:
+            problems.append(f"effect {effect['id']} not allowed on {card_type}")
         if trigger and card_type not in trigger["types"]:
             problems.append(f"trigger {trigger['id']} not allowed on {card_type}")
         if effect["kind"] == "static" and card_type == "event":
@@ -136,6 +142,23 @@ def check_mechanic(mechanic, card_type, catalogue):
     condition = mechanic.get("condition")
     if condition and condition["id"] not in catalogue["condition"]:
         problems.append(f"unknown condition {condition['id']}")
+    return problems
+
+
+def trigger_factor(trigger, mechanic):
+    return max(trigger["factor_minimum"], trigger["factor"] + trigger["factor_per_n"] * mechanic.get("trigger_n", 0))
+
+
+def is_attach(mechanic, trigger_id):
+    return mechanic.get("effect") == "attach" and mechanic.get("trigger") == trigger_id
+
+
+def check_card(mechanics):
+    problems = []
+    if any(is_attach(m, "on-play") for m in mechanics) and not any(is_attach(m, "activated") for m in mechanics):
+        problems.append("attach on play without an equip cost (activated attach)")
+    if any(m.get("target") == "equipped" for m in mechanics) and not any(is_attach(m, "activated") for m in mechanics):
+        problems.append("targets the equipped creature but cannot be equipped")
     return problems
 
 
@@ -151,7 +174,7 @@ def mechanic_cost(mechanic, catalogue):
     offset = 0
     if "trigger" in mechanic:
         trigger = catalogue["trigger"][mechanic["trigger"]]
-        value *= trigger["factor"]
+        value *= trigger_factor(trigger, mechanic)
         offset = trigger["offset"]
     if "condition" in mechanic:
         value *= catalogue["condition"][mechanic["condition"]["id"]]["factor"]
@@ -162,14 +185,20 @@ DOCUMENTED_EXAMPLES = [
     ({"trigger": "on-play", "effect": "pump", "n": 1, "target": "one"}, 1),
     ({"trigger": "on-play", "effect": "pump", "n": 1, "target": "one", "duration": "permanent"}, 3),
     ({"trigger": "on-play", "effect": "stub", "target": "one", "duration": "permanent"}, 3),
-    ({"trigger": "on-play", "effect": "steal", "n": 4, "target": "one"}, 3),
-    ({"trigger": "on-play", "effect": "steal", "n": 4, "target": "one", "duration": "permanent"}, 8),
+    ({"trigger": "on-play", "effect": "steal", "n": 4, "target": "one-opponent"}, 3),
+    ({"trigger": "on-play", "effect": "steal", "n": 4, "target": "one-opponent", "duration": "permanent"}, 8),
     ({"effect": "attack-bonus", "n": 1, "target": "your-others", "filter": {"type": "creature"}}, 3),
     ({"effect": "attack-bonus", "n": 2, "target": "self", "condition": {"id": "birthplace", "card": "Q6697"}}, 1),
     ({"trigger": "turn-start", "effect": "surge", "n": 1, "target": "you"}, 3),
     ({"effect": "keyword-aura", "granted_keyword": "first-strike", "target": "your-others", "filter": {"family": "militaire"}}, 3),
     ({"trigger": "on-play", "effect": "grant-keyword", "granted_keyword": "unblockable", "target": "one"}, 1),
     ({"trigger": "on-death", "effect": "damage", "n": 2, "target": "one"}, 1),
+    ({"trigger": "activated", "trigger_n": 1, "effect": "attach", "target": "one-yours"}, 3),
+    ({"trigger": "activated", "trigger_n": 2, "effect": "attach", "target": "one-yours"}, 2),
+    ({"trigger": "activated", "trigger_n": 3, "effect": "attach", "target": "one-yours"}, 1),
+    ({"trigger": "activated", "trigger_n": 1, "effect": "damage", "n": 1, "target": "one-opponent"}, 3),
+    ({"trigger": "activated", "trigger_n": 2, "effect": "draw", "n": 1, "target": "you"}, 4),
+    ({"effect": "attack-bonus", "n": 2, "target": "equipped"}, 2),
 ]
 
 
@@ -189,9 +218,12 @@ def check_cards(path, catalogue, card_validator, errors):
             label = f"{path}:{line_number} {card.get('title', card.get('article'))}"
             for error in card_validator.iter_errors({"article": card["article"], "mechanics": card.get("mechanics", [])}):
                 errors.append(f"{label}: {error.message}")
-            for mechanic in card.get("mechanics", []):
+            mechanics = card.get("mechanics", [])
+            for mechanic in mechanics:
                 for problem in check_mechanic(mechanic, card.get("type"), catalogue):
                     errors.append(f"{label}: {problem}")
+            for problem in check_card(mechanics):
+                errors.append(f"{label}: {problem}")
 
 
 def main():

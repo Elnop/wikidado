@@ -18,6 +18,30 @@
       "is_player": false
     },
     {
+      "id": "one-opponent",
+      "text": {
+        "fr": "une carte adverse"
+      },
+      "factor": 1,
+      "is_player": false
+    },
+    {
+      "id": "one-yours",
+      "text": {
+        "fr": "une de vos cartes"
+      },
+      "factor": 1,
+      "is_player": false
+    },
+    {
+      "id": "equipped",
+      "text": {
+        "fr": "la Créature équipée"
+      },
+      "factor": 1,
+      "is_player": false
+    },
+    {
       "id": "you",
       "text": {
         "fr": "vous"

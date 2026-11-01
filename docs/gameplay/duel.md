@@ -44,7 +44,7 @@ Les Événements joués et les cartes détruites vont dans la défausse de leur 
 - Créature : reste en jeu, attaque et bloque. Elle ne peut pas attaquer le tour où elle est jouée, sauf mécanique qui le permet.
 - Lieu : reste en jeu, a une défense et peut être attaqué à la place du joueur. Il n'attaque pas et ne bloque pas.
 - Événement : son effet s'applique quand il est joué, puis la carte part à la défausse.
-- Objet : reste en jeu avec ses propres mécaniques, comme produire de l'électricité ou une capacité à activer. Certaines mécaniques l'attachent à une Créature, comme un équipement.
+- Objet : reste en jeu avec ses propres mécaniques, comme produire de l'électricité ou une capacité à activer. Un Objet Équipement peut s'attacher à une Créature (voir plus bas).
 - Savoir : reste en jeu et agit sur le reste du jeu, sans capacité propre. Il donne des capacités aux autres cartes en jeu, renforce les cartes de son joueur, ou change les règles pour un joueur ou pour l'adversaire.
 - Faction : reste en jeu et agit comme un Savoir, mais ses effets ne touchent que les Créatures qui lui sont affectées.
 
@@ -66,3 +66,16 @@ Le coût d'affectation se paie sur le budget de la Faction (voir `gameplay/carte
 4. Une Créature ou un Lieu dont les dégâts subis atteignent sa défense est détruit. Comme les dégâts s'effacent en fin de tour, il faut détruire un Lieu en un seul tour.
 
 Exemple : Napoléon (6/4) attaque, bloqué par Wellington (3/3) et Blücher (2/2). Napoléon prend 5 dégâts et meurt. Il répartit ses 6 dégâts, 3 sur chacun, et détruit les deux.
+
+## Capacités activées
+
+Une carte en jeu peut avoir des capacités activées, de la forme "{n} électricité : effet" (voir `gameplay/mecanique/declencheur.md`). Pendant son tour, avant d'attaquer, le joueur paie le coût pour que l'effet ait lieu. Chaque capacité activée ne s'utilise qu'une fois par tour.
+
+## Équipement
+
+Un Objet Équipement s'attache à une Créature de son joueur (voir `gameplay/mecanique/effet.md`) :
+
+- en payant son coût d'équipement, une capacité activée. On peut ainsi le déplacer d'une Créature à une autre, une fois par tour.
+- ou dès son arrivée, s'il a la capacité "À la une : attachez cet Objet à une de vos Créatures".
+
+Un Équipement n'est attaché qu'à une Créature à la fois. Si sa Créature quitte le jeu, l'Équipement reste en jeu, détaché : ses effets sur la Créature équipée ne s'appliquent plus, et on peut le rattacher en payant son coût d'équipement.

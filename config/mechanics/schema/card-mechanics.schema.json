@@ -72,6 +72,9 @@
               "id"
             ],
             "additionalProperties": false
+          },
+          "trigger_n": {
+            "type": "integer"
           }
         },
         "oneOf": [
@@ -101,5 +104,6 @@
     "article",
     "mechanics"
   ],
-  "additionalProperties": false
+  "additionalProperties": false,
+  "$defs": {}
 }

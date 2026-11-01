@@ -5,3 +5,7 @@ La condition dit ce qu'il faut pour que la capacité marche : une carte en jeu, 
 La liste des conditions est dans `config/mechanics/condition.json`, avec leur texte, leur facteur, ce qui les remplit (le modèle ou le code) et les données Wikidata utilisées. Les conditions remplies par le code viennent des relations de l'article : lieu de naissance (`P19`), famille (`P26`, `P40`, `P22`, `P25`), maître (`P1066`, `P737`), liens entre articles, liens réciproques (alliance, la capacité va aussi à l'autre carte), dates (contemporain).
 
 Exemple, Napoléon Ier né à Ajaccio : "Tant que vous contrôlez Ajaccio, cette Créature gagne +2 en attaque." Effet bonus-attaque 2, cible cette-carte, condition terre-natale : 2 × 1 × 0,5 = 1.
+
+## Pistes
+
+- Titre porté par la bonne personne : un Objet Titre (Président de la République) attaché à une Créature qui a vraiment occupé la fonction (Emmanuel Macron, `P39` fonction occupée) gagnerait un bonus. Ce serait une condition remplie par le code, par exemple "si la Créature équipée a occupé cette fonction", avec un facteur × 0,5 comme les autres cartes liées. À envisager plus tard.

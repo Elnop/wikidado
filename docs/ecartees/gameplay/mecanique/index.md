@@ -221,3 +221,9 @@ Bouc émissaire à 1, parce qu'il expose surtout la carte, ou à 3, parce qu'il 
 Écartée le 01/11/2026 : tout ce qui est dans la config est retenu, une brique pas encore tranchée reste dans la doc comme piste.
 
 Chaque brique avait un champ `status`, `accepted` ou `proposed`. Variantes : la génération ignorait les briques `proposed`, ou le champ restait un simple marqueur sans effet sur les programmes.
+
+## Capacités activées limitées
+
+Écartée le 01/11/2026 : toutes les cartes en jeu peuvent avoir des capacités activées, avec un facteur 4 - n (minimum 1) pour tous les effets.
+
+Le déclencheur activé ne servait qu'à équiper, ou les capacités activées étaient réservées aux Objets.

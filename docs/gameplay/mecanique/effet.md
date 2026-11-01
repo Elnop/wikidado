@@ -14,6 +14,18 @@ Le prix d'un effet dans la config est celui de la version pour le tour. Exemples
 
 "Au début de votre tour : gagnez 1 électricité" remplace l'ancienne centrale, au prix 1 × 3 = 3.
 
+## Équipement
+
+L'effet `attach` ("attachez cet Objet à une de vos Créatures") est réservé aux Objets. Un Objet qui l'a est un Équipement :
+
+- il a toujours un coût d'équipement, sous la forme d'une capacité activée : "{n} électricité : attachez cet Objet à une de vos Créatures". Son prix en budget est 4 - n, minimum 1 : Équipement 1 coûte 3, Équipement 2 coûte 2, Équipement 3 et plus coûte 1 (voir `gameplay/mecanique/declencheur.md`).
+- certains s'équipent aussi en arrivant : "À la une : attachez cet Objet à une de vos Créatures", pour 1 de budget. Ils gardent quand même leur coût d'équipement, qui sert à les déplacer.
+- ses effets visent la Créature équipée (cible `equipped`, voir `gameplay/mecanique/cible.md`).
+
+Les règles de jeu de l'Équipement sont dans `gameplay/duel.md`.
+
+Chaque effet indique aussi les types de cartes qui peuvent le porter (`types`). Un effet continu ne va jamais à un Événement.
+
 ## Stats de la carte elle-même
 
 Sur la carte elle-même, `attack-bonus` et `defense-bonus` ne vont qu'aux types qui ont ces stats : Créature pour l'attaque, Créature et Lieu pour la défense. Ils remplacent les anciennes mécaniques robuste et offensif.

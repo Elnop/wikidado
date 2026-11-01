@@ -13,3 +13,9 @@ Idées écartées liées à `gameplay/mecanique/cible.md`.
 Écartées le 01/11/2026 : les filtres restent type, famille et carte liée.
 
 Sous-type ("vos Créatures Peintre"), facteur × 0,25, très thématique mais rarement actif. Époque ("vos cartes du XIXe siècle"), facteur × 0,5, rempli par le code avec les dates.
+
+## Plus de cible "une carte" neutre
+
+Écartée le 01/11/2026 : on garde "une carte" (des deux camps) à côté d'"une carte adverse" et d'"une de vos cartes".
+
+Toute cible unique aurait été soit adverse, soit à vous.

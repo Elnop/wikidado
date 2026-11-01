@@ -4,6 +4,14 @@
     {
       "id": "damage",
       "kind": "triggered",
+      "types": [
+        "place",
+        "creature",
+        "event",
+        "object",
+        "knowledge",
+        "faction"
+      ],
       "text": {
         "fr": "infligez {n} dégâts à {target}"
       },
@@ -20,6 +28,7 @@
       "has_duration": false,
       "targets": [
         "one",
+        "one-opponent",
         "all-opponents",
         "all",
         "opponent"
@@ -35,6 +44,14 @@
     {
       "id": "heal",
       "kind": "triggered",
+      "types": [
+        "place",
+        "creature",
+        "event",
+        "object",
+        "knowledge",
+        "faction"
+      ],
       "text": {
         "fr": "gagnez {n} points de vie"
       },
@@ -60,6 +77,14 @@
     {
       "id": "draw",
       "kind": "triggered",
+      "types": [
+        "place",
+        "creature",
+        "event",
+        "object",
+        "knowledge",
+        "faction"
+      ],
       "text": {
         "fr": "piochez {n} cartes"
       },
@@ -85,6 +110,14 @@
     {
       "id": "discard",
       "kind": "triggered",
+      "types": [
+        "place",
+        "creature",
+        "event",
+        "object",
+        "knowledge",
+        "faction"
+      ],
       "text": {
         "fr": "l'adversaire défausse {n} cartes au hasard"
       },
@@ -110,6 +143,14 @@
     {
       "id": "restore",
       "kind": "triggered",
+      "types": [
+        "place",
+        "creature",
+        "event",
+        "object",
+        "knowledge",
+        "faction"
+      ],
       "text": {
         "fr": "reprenez en main {target} de votre défausse"
       },
@@ -122,7 +163,7 @@
       },
       "has_duration": false,
       "targets": [
-        "one"
+        "one-yours"
       ],
       "affected_types": [
         "place",
@@ -139,6 +180,14 @@
     {
       "id": "destroy",
       "kind": "triggered",
+      "types": [
+        "place",
+        "creature",
+        "event",
+        "object",
+        "knowledge",
+        "faction"
+      ],
       "text": {
         "fr": "détruisez {target} de coût {n} ou moins"
       },
@@ -155,6 +204,7 @@
       "has_duration": false,
       "targets": [
         "one",
+        "one-opponent",
         "all-opponents",
         "all"
       ],
@@ -172,6 +222,14 @@
     {
       "id": "bounce",
       "kind": "triggered",
+      "types": [
+        "place",
+        "creature",
+        "event",
+        "object",
+        "knowledge",
+        "faction"
+      ],
       "text": {
         "fr": "renvoyez {target} dans la main de son propriétaire"
       },
@@ -185,6 +243,8 @@
       "has_duration": false,
       "targets": [
         "one",
+        "one-opponent",
+        "one-yours",
         "all-opponents",
         "all"
       ],
@@ -202,6 +262,14 @@
     {
       "id": "stub",
       "kind": "triggered",
+      "types": [
+        "place",
+        "creature",
+        "event",
+        "object",
+        "knowledge",
+        "faction"
+      ],
       "text": {
         "fr": "{target} perd toutes ses mécaniques"
       },
@@ -215,6 +283,7 @@
       "has_duration": true,
       "targets": [
         "one",
+        "one-opponent",
         "all-opponents",
         "all"
       ],
@@ -232,6 +301,14 @@
     {
       "id": "disable",
       "kind": "triggered",
+      "types": [
+        "place",
+        "creature",
+        "event",
+        "object",
+        "knowledge",
+        "faction"
+      ],
       "text": {
         "fr": "{target} ne peut ni attaquer ni bloquer"
       },
@@ -250,6 +327,7 @@
       },
       "targets": [
         "one",
+        "one-opponent",
         "all-opponents"
       ],
       "affected_types": [
@@ -262,6 +340,14 @@
     {
       "id": "weaken",
       "kind": "triggered",
+      "types": [
+        "place",
+        "creature",
+        "event",
+        "object",
+        "knowledge",
+        "faction"
+      ],
       "text": {
         "fr": "{target} perd {n} en attaque"
       },
@@ -278,6 +364,7 @@
       "has_duration": true,
       "targets": [
         "one",
+        "one-opponent",
         "all-opponents"
       ],
       "affected_types": [
@@ -290,6 +377,14 @@
     {
       "id": "pump",
       "kind": "triggered",
+      "types": [
+        "place",
+        "creature",
+        "event",
+        "object",
+        "knowledge",
+        "faction"
+      ],
       "text": {
         "fr": "{target} gagne +{n}/+{n}"
       },
@@ -307,7 +402,9 @@
       "targets": [
         "self",
         "one",
-        "your-others"
+        "one-yours",
+        "your-others",
+        "equipped"
       ],
       "affected_types": [
         "creature"
@@ -319,6 +416,14 @@
     {
       "id": "grant-keyword",
       "kind": "triggered",
+      "types": [
+        "place",
+        "creature",
+        "event",
+        "object",
+        "knowledge",
+        "faction"
+      ],
       "text": {
         "fr": "{target} gagne {keyword}"
       },
@@ -333,7 +438,9 @@
       "targets": [
         "self",
         "one",
-        "your-others"
+        "one-yours",
+        "your-others",
+        "equipped"
       ],
       "affected_types": [
         "creature",
@@ -346,6 +453,14 @@
     {
       "id": "surge",
       "kind": "triggered",
+      "types": [
+        "place",
+        "creature",
+        "event",
+        "object",
+        "knowledge",
+        "faction"
+      ],
       "text": {
         "fr": "gagnez {n} électricité ce tour-ci"
       },
@@ -371,6 +486,14 @@
     {
       "id": "blackout",
       "kind": "triggered",
+      "types": [
+        "place",
+        "creature",
+        "event",
+        "object",
+        "knowledge",
+        "faction"
+      ],
       "text": {
         "fr": "l'adversaire a {n} électricité de moins à son prochain tour"
       },
@@ -396,6 +519,14 @@
     {
       "id": "steal",
       "kind": "triggered",
+      "types": [
+        "place",
+        "creature",
+        "event",
+        "object",
+        "knowledge",
+        "faction"
+      ],
       "text": {
         "fr": "prenez le contrôle de {target} de coût {n} ou moins"
       },
@@ -411,7 +542,7 @@
       },
       "has_duration": true,
       "targets": [
-        "one"
+        "one-opponent"
       ],
       "affected_types": [
         "creature"
@@ -421,8 +552,42 @@
       "hint": "annexions, conquêtes, débauchages, transferts"
     },
     {
+      "id": "attach",
+      "kind": "triggered",
+      "types": [
+        "object"
+      ],
+      "text": {
+        "fr": "attachez cet Objet à {target}"
+      },
+      "n": null,
+      "cost": {
+        "per_n": 0,
+        "flat": 1,
+        "per_keyword_cost": 0,
+        "divisor": 1
+      },
+      "has_duration": false,
+      "targets": [
+        "one-yours"
+      ],
+      "affected_types": [
+        "creature"
+      ],
+      "zone": "board",
+      "takes_keyword": false,
+      "hint": "armes, vêtements, outils portés, instruments, titres et fonctions"
+    },
+    {
       "id": "attack-bonus",
       "kind": "static",
+      "types": [
+        "place",
+        "creature",
+        "object",
+        "knowledge",
+        "faction"
+      ],
       "text": {
         "fr": "{target} gagne +{n} en attaque"
       },
@@ -439,7 +604,8 @@
       "has_duration": false,
       "targets": [
         "self",
-        "your-others"
+        "your-others",
+        "equipped"
       ],
       "affected_types": [
         "creature"
@@ -451,6 +617,13 @@
     {
       "id": "defense-bonus",
       "kind": "static",
+      "types": [
+        "place",
+        "creature",
+        "object",
+        "knowledge",
+        "faction"
+      ],
       "text": {
         "fr": "{target} gagne +{n} en défense"
       },
@@ -467,7 +640,8 @@
       "has_duration": false,
       "targets": [
         "self",
-        "your-others"
+        "your-others",
+        "equipped"
       ],
       "affected_types": [
         "creature",
@@ -480,6 +654,13 @@
     {
       "id": "keyword-aura",
       "kind": "static",
+      "types": [
+        "place",
+        "creature",
+        "object",
+        "knowledge",
+        "faction"
+      ],
       "text": {
         "fr": "{target} a {keyword}"
       },
@@ -492,7 +673,8 @@
       },
       "has_duration": false,
       "targets": [
-        "your-others"
+        "your-others",
+        "equipped"
       ],
       "affected_types": [
         "creature",
@@ -505,6 +687,13 @@
     {
       "id": "cost-reduction",
       "kind": "static",
+      "types": [
+        "place",
+        "creature",
+        "object",
+        "knowledge",
+        "faction"
+      ],
       "text": {
         "fr": "{target} coûte 1 électricité de moins (minimum 1)"
       },
@@ -534,6 +723,13 @@
     {
       "id": "cost-increase",
       "kind": "static",
+      "types": [
+        "place",
+        "creature",
+        "object",
+        "knowledge",
+        "faction"
+      ],
       "text": {
         "fr": "{target} coûte 1 électricité de plus"
       },
@@ -563,6 +759,13 @@
     {
       "id": "protection",
       "kind": "static",
+      "types": [
+        "place",
+        "creature",
+        "object",
+        "knowledge",
+        "faction"
+      ],
       "text": {
         "fr": "{target} ne peut pas être ciblée par les mécaniques adverses"
       },
@@ -576,7 +779,8 @@
       "has_duration": false,
       "targets": [
         "self",
-        "your-others"
+        "your-others",
+        "equipped"
       ],
       "affected_types": [
         "place",
@@ -592,6 +796,13 @@
     {
       "id": "semi-protection",
       "kind": "static",
+      "types": [
+        "place",
+        "creature",
+        "object",
+        "knowledge",
+        "faction"
+      ],
       "text": {
         "fr": "les mécaniques adverses qui ciblent {target} coûtent 2 électricité de plus"
       },
@@ -605,7 +816,8 @@
       "has_duration": false,
       "targets": [
         "self",
-        "your-others"
+        "your-others",
+        "equipped"
       ],
       "affected_types": [
         "place",
@@ -621,6 +833,13 @@
     {
       "id": "heritage",
       "kind": "static",
+      "types": [
+        "place",
+        "creature",
+        "object",
+        "knowledge",
+        "faction"
+      ],
       "text": {
         "fr": "{target} ne peut pas être détruite par une mécanique, seulement au combat"
       },
@@ -634,7 +853,8 @@
       "has_duration": false,
       "targets": [
         "self",
-        "your-others"
+        "your-others",
+        "equipped"
       ],
       "affected_types": [
         "place",

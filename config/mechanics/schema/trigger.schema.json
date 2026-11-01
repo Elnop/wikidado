@@ -30,6 +30,15 @@
           },
           "hint": {
             "$ref": "common.schema.json#/$defs/hint"
+          },
+          "n": {
+            "$ref": "common.schema.json#/$defs/range"
+          },
+          "factor_per_n": {
+            "type": "number"
+          },
+          "factor_minimum": {
+            "$ref": "common.schema.json#/$defs/factor"
           }
         },
         "required": [
@@ -39,7 +48,10 @@
           "factor",
           "offset",
           "takes_filter",
-          "hint"
+          "hint",
+          "n",
+          "factor_per_n",
+          "factor_minimum"
         ],
         "additionalProperties": false
       }
