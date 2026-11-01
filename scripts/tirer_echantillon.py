@@ -6,7 +6,7 @@ Voir docs/generation/echantillon.md pour le format de sortie (JSON Lines).
 Étapes :
   1. API Pageviews : top des articles les plus lus du mois (1000 maximum).
   2. API Wikipédia : identifiant Wikidata (QID) de chaque article.
-  3. SPARQL Wikidata : type de carte déduit de la classe (P31/P279*).
+  3. SPARQL Wikidata : type de carte déduit de la classe (P31/P279*), classes exclues écartées.
   4. REST summary : résumé de l'article.
 
 On garde les articles dans l'ordre de lecture, jusqu'à avoir --par-type
@@ -41,6 +41,20 @@ RACINES = {
 }
 
 TAILLE_LOT = 25  # petits lots : le SPARQL Wikidata coupe les requêtes longues
+
+# Classes exclues pour l'instant (voir generation/article/selection.md) : sites web,
+# plateformes, réseaux sociaux (type de carte pas encore décidé) et jeux vidéo (œuvres).
+EXCLUSIONS = [
+    "Q35127",      # site web
+    "Q19967801",   # service en ligne
+    "Q118140435",  # très grande plateforme en ligne
+    "Q3220391",    # réseau social
+    "Q122759350",  # plateforme de contenu généré par les utilisateurs
+    "Q6576792",    # communauté en ligne
+    "Q4182287",    # moteur de recherche
+    "Q33120876",   # projet de contenu Wikimedia
+    "Q7889",       # jeu vidéo
+]
 
 EXCLUS_PREFIXES = ("Liste_", "List_of_", "Liste_des_")
 
@@ -126,6 +140,15 @@ SELECT ?item ?p31 WHERE {{
   VALUES ?item {{ {items} }}
   ?item wdt:P31 ?p31
 }}"""
+        req_exclus = f"""
+SELECT DISTINCT ?item WHERE {{
+  VALUES ?item {{ {items} }}
+  VALUES ?exclu {{ {" ".join("wd:" + e for e in EXCLUSIONS)} }}
+  ?item wdt:P31/wdt:P279* ?exclu
+}}"""
+        exclus = http_json("https://query.wikidata.org/sparql",
+                           params={"format": "json", "query": req_exclus}, contact=contact)
+        a_exclure = {b["item"]["value"].rsplit("/", 1)[1] for b in exclus["results"]["bindings"]}
         liens = http_json("https://query.wikidata.org/sparql",
                           params={"format": "json", "query": req_racines}, contact=contact)
         natures = http_json("https://query.wikidata.org/sparql",
@@ -138,7 +161,7 @@ SELECT ?item ?p31 WHERE {{
             q = b["item"]["value"].rsplit("/", 1)[1]
             p31.setdefault(q, set()).add(b["p31"]["value"].rsplit("/", 1)[1])
         for q in lot:
-            type_carte = next((t for t in TYPES if t in trouves.get(q, ())), None)
+            type_carte = None if q in a_exclure else next((t for t in TYPES if t in trouves.get(q, ())), None)
             res[q] = (type_carte, sorted(p31.get(q, ())))
         time.sleep(1)
     return res
