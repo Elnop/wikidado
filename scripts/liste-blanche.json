@@ -1,0 +1,2750 @@
+{
+ "source": "https://claude.ai/artifact/QMRMjTfwfJW4nZ9LTfqTMH",
+ "exporte_le": "2026-11-01",
+ "classes": [
+  {
+   "qid": "Q5",
+   "nom": "être humain",
+   "type": "creature",
+   "articles_echantillon": 1418,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q16521",
+   "nom": "taxon",
+   "type": "creature",
+   "articles_echantillon": 69,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q15632617",
+   "nom": "être humain de fiction",
+   "type": "creature",
+   "articles_echantillon": 5,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q23038290",
+   "nom": "taxon fossile",
+   "type": "creature",
+   "articles_echantillon": 4,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q125258836",
+   "nom": "duo de frères",
+   "type": "creature",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q9212979",
+   "nom": "duo musical",
+   "type": "creature",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q15773317",
+   "nom": "personnage de série télévisée",
+   "type": "creature",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q3658341",
+   "nom": "personnage littéraire",
+   "type": "creature",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q133284163",
+   "nom": "chatbot d'intelligence artificielle générative",
+   "type": "creature",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q726",
+   "nom": "cheval",
+   "type": "creature",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q870780",
+   "nom": "dialogueur",
+   "type": "creature",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q109288825",
+   "nom": "duo masculin",
+   "type": "creature",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q15773347",
+   "nom": "personnage de cinéma",
+   "type": "creature",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q22988604",
+   "nom": "personnage de la mythologie grecque",
+   "type": "creature",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q1160573",
+   "nom": "race de chevaux",
+   "type": "creature",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q811534",
+   "nom": "arbre remarquable",
+   "type": "creature",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q132776456",
+   "nom": "duo de frères jumeaux",
+   "type": "creature",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q115305900",
+   "nom": "grand modèle de langage",
+   "type": "creature",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q117246174",
+   "nom": "intelligence artificielle générative",
+   "type": "creature",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q116777014",
+   "nom": "transformateur génératif pré-formé",
+   "type": "creature",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q3624078",
+   "nom": "État souverain",
+   "type": "lieu",
+   "articles_echantillon": 33,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q6256",
+   "nom": "pays",
+   "type": "lieu",
+   "articles_echantillon": 32,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q3863",
+   "nom": "astéroïde",
+   "type": "lieu",
+   "articles_echantillon": 28,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q484170",
+   "nom": "commune française",
+   "type": "lieu",
+   "articles_echantillon": 28,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q3558970",
+   "nom": "village de Pologne",
+   "type": "lieu",
+   "articles_echantillon": 20,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q532",
+   "nom": "village",
+   "type": "lieu",
+   "articles_echantillon": 16,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q4022",
+   "nom": "fleuve ou rivière",
+   "type": "lieu",
+   "articles_echantillon": 13,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q16970",
+   "nom": "église",
+   "type": "lieu",
+   "articles_echantillon": 13,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q486972",
+   "nom": "établissement humain",
+   "type": "lieu",
+   "articles_echantillon": 11,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q51576574",
+   "nom": "pays méditerranéen",
+   "type": "lieu",
+   "articles_echantillon": 10,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q35127",
+   "nom": "site web",
+   "type": "lieu",
+   "articles_echantillon": 10,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q118140435",
+   "nom": "très grande plateforme",
+   "type": "lieu",
+   "articles_echantillon": 9,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q116457956",
+   "nom": "commune non-urbaine d'Allemagne",
+   "type": "lieu",
+   "articles_echantillon": 8,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q7270",
+   "nom": "république",
+   "type": "lieu",
+   "articles_echantillon": 7,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q751876",
+   "nom": "château",
+   "type": "lieu",
+   "articles_echantillon": 6,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q6576792",
+   "nom": "communauté en ligne",
+   "type": "lieu",
+   "articles_echantillon": 6,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q1549591",
+   "nom": "grande ville",
+   "type": "lieu",
+   "articles_echantillon": 6,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q8502",
+   "nom": "montagne",
+   "type": "lieu",
+   "articles_echantillon": 6,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q15127012",
+   "nom": "town",
+   "type": "lieu",
+   "articles_echantillon": 6,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q23442",
+   "nom": "île",
+   "type": "lieu",
+   "articles_echantillon": 6,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q1093829",
+   "nom": "cité aux États-Unis",
+   "type": "lieu",
+   "articles_echantillon": 5,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q3192808",
+   "nom": "commune de Madagascar",
+   "type": "lieu",
+   "articles_echantillon": 5,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q2074737",
+   "nom": "municipalité d'Espagne",
+   "type": "lieu",
+   "articles_echantillon": 5,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q3957",
+   "nom": "petite ville",
+   "type": "lieu",
+   "articles_echantillon": 5,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q34442",
+   "nom": "route",
+   "type": "lieu",
+   "articles_echantillon": 5,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q19967801",
+   "nom": "service en ligne",
+   "type": "lieu",
+   "articles_echantillon": 5,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q3024240",
+   "nom": "État historique",
+   "type": "lieu",
+   "articles_echantillon": 5,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q112099",
+   "nom": "État insulaire",
+   "type": "lieu",
+   "articles_echantillon": 5,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q561068",
+   "nom": "chaîne de télévision thématique",
+   "type": "lieu",
+   "articles_echantillon": 4,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q747074",
+   "nom": "commune d'Italie",
+   "type": "lieu",
+   "articles_echantillon": 4,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q55488",
+   "nom": "gare ferroviaire",
+   "type": "lieu",
+   "articles_echantillon": 4,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q498162",
+   "nom": "localité de recensement aux États-Unis",
+   "type": "lieu",
+   "articles_echantillon": 4,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q3184121",
+   "nom": "municipalité du Brésil",
+   "type": "lieu",
+   "articles_echantillon": 4,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q33506",
+   "nom": "musée",
+   "type": "lieu",
+   "articles_echantillon": 4,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q20181813",
+   "nom": "puissance coloniale",
+   "type": "lieu",
+   "articles_echantillon": 4,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q3220391",
+   "nom": "service de réseau social",
+   "type": "lieu",
+   "articles_echantillon": 4,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q161243",
+   "nom": "territoire dépendant",
+   "type": "lieu",
+   "articles_echantillon": 4,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q23012917",
+   "nom": "village",
+   "type": "lieu",
+   "articles_echantillon": 4,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q515",
+   "nom": "ville",
+   "type": "lieu",
+   "articles_echantillon": 4,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q10711424",
+   "nom": "État avec reconnaissance limitée",
+   "type": "lieu",
+   "articles_echantillon": 4,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q619610",
+   "nom": "État social",
+   "type": "lieu",
+   "articles_echantillon": 4,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q127693126",
+   "nom": "État successeur",
+   "type": "lieu",
+   "articles_echantillon": 4,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q859563",
+   "nom": "État séculier",
+   "type": "lieu",
+   "articles_echantillon": 4,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q179164",
+   "nom": "État unitaire",
+   "type": "lieu",
+   "articles_echantillon": 4,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q1144661",
+   "nom": "attraction",
+   "type": "lieu",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q120560",
+   "nom": "basilique mineure",
+   "type": "lieu",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q28822032",
+   "nom": "cadastral municipality of Serbia",
+   "type": "lieu",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q667509",
+   "nom": "commune d'Autriche",
+   "type": "lieu",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q6784672",
+   "nom": "commune de Slovaquie",
+   "type": "lieu",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q3504085",
+   "nom": "commune rurale de Pologne",
+   "type": "lieu",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q43702",
+   "nom": "fédération",
+   "type": "lieu",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q1365179",
+   "nom": "hôtel particulier",
+   "type": "lieu",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q23397",
+   "nom": "lac",
+   "type": "lieu",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q15284",
+   "nom": "municipalité",
+   "type": "lieu",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q200250",
+   "nom": "métropole",
+   "type": "lieu",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q618123",
+   "nom": "objet géographique",
+   "type": "lieu",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q1115575",
+   "nom": "paroisse civile",
+   "type": "lieu",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q123480",
+   "nom": "pays sans littoral",
+   "type": "lieu",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q39715",
+   "nom": "phare",
+   "type": "lieu",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q174782",
+   "nom": "place",
+   "type": "lieu",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q122759350",
+   "nom": "plateforme de contenu généré par les utilisateurs",
+   "type": "lieu",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q1250464",
+   "nom": "royaume",
+   "type": "lieu",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q79007",
+   "nom": "rue",
+   "type": "lieu",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q559856",
+   "nom": "site d'hébergement de vidéos",
+   "type": "lieu",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q928830",
+   "nom": "station de métro",
+   "type": "lieu",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q208511",
+   "nom": "ville mondiale",
+   "type": "lieu",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q4209223",
+   "nom": "État de droit",
+   "type": "lieu",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q1323642",
+   "nom": "État transcontinental",
+   "type": "lieu",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q162602",
+   "nom": "île fluviale",
+   "type": "lieu",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q2557101",
+   "nom": "LINER",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q685309",
+   "nom": "ancienne commune de Suisse",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q7543083",
+   "nom": "avenue",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q188509",
+   "nom": "banlieue",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q90404711",
+   "nom": "base de données d'acteurs ou actrices pornographiques ou mannequins de charme",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q56242215",
+   "nom": "cathédrale catholique",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q23413",
+   "nom": "château fort",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q133442",
+   "nom": "cité-État",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q2462003",
+   "nom": "client de messagerie instantanée",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q133056",
+   "nom": "col routier",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q17343829",
+   "nom": "communauté non incorporée",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q2590631",
+   "nom": "commune de Hongrie",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q70208",
+   "nom": "commune de Suisse",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q659103",
+   "nom": "commune roumaine",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q355304",
+   "nom": "cours d'eau",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q3146899",
+   "nom": "diocèse catholique",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q2582669",
+   "nom": "district du Vietnam",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q223832",
+   "nom": "dominion",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q202216",
+   "nom": "département d'outre-mer français",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q48349",
+   "nom": "empire",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q56061",
+   "nom": "entité territoriale administrative",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q22808403",
+   "nom": "gare ou arrêt de transport en commun souterrain",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q2080521",
+   "nom": "halle",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q41795373",
+   "nom": "marché de l'occasion",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q5153359",
+   "nom": "municipalité tchèque",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q6592",
+   "nom": "objet transneptunien",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q63791824",
+   "nom": "pays de la mer Baltique",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q140892892",
+   "nom": "pays pouvant être considéré comme intercontinental",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q123705",
+   "nom": "quartier",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q202686",
+   "nom": "royaume du Commonwealth",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q36784",
+   "nom": "région de France",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q1520223",
+   "nom": "république constitutionnelle",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q465613",
+   "nom": "république populaire",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q2785216",
+   "nom": "section de commune",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q839954",
+   "nom": "site archéologique",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q125265855",
+   "nom": "site web de petites annonces",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q62049",
+   "nom": "siège de comté",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q67206785",
+   "nom": "source d'infrarouge proche",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q811979",
+   "nom": "structure architecturale",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q104782082",
+   "nom": "territoire hors MRC au Québec",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q3918",
+   "nom": "université",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q126723715",
+   "nom": "village du Cameroun",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q27676416",
+   "nom": "ville du Québec",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q1852859",
+   "nom": "ville ou village des Pays-Bas",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q2264924",
+   "nom": "ville portuaire",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q83620",
+   "nom": "voie de communication",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q82794",
+   "nom": "zone géographique",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q6270791",
+   "nom": "« township » du Missouri",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q7275",
+   "nom": "État",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q849866",
+   "nom": "État communiste",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q842112",
+   "nom": "État socialiste",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q6617741",
+   "nom": "écorégion du Fonds mondial pour la nature",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q523",
+   "nom": "étoile",
+   "type": "lieu",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q1309121",
+   "nom": "Royaume ermite",
+   "type": "lieu",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q110643339",
+   "nom": "adult tube site",
+   "type": "lieu",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q21040941",
+   "nom": "bibliothèque clandestine",
+   "type": "lieu",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q131621892",
+   "nom": "commune insurrectionnelle",
+   "type": "lieu",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q1273203",
+   "nom": "fournisseur de messagerie électronique",
+   "type": "lieu",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q15020931",
+   "nom": "hôtel de ville",
+   "type": "lieu",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q327618",
+   "nom": "messagerie web",
+   "type": "lieu",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q202833",
+   "nom": "média social",
+   "type": "lieu",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q114106",
+   "nom": "métamoteur de recherche",
+   "type": "lieu",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q28017710",
+   "nom": "plateforme numérique",
+   "type": "lieu",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q339834",
+   "nom": "puissance régionale",
+   "type": "lieu",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q102336293",
+   "nom": "service de diffusion en direct",
+   "type": "lieu",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q59152282",
+   "nom": "service de diffusion vidéo en continu",
+   "type": "lieu",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q1489259",
+   "nom": "superpuissance",
+   "type": "lieu",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q28601953",
+   "nom": "système de courrier électronique",
+   "type": "lieu",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q5035794",
+   "nom": "État capitaliste",
+   "type": "lieu",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q99541706",
+   "nom": "État historique avec reconnaissance limitée",
+   "type": "lieu",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q3303230",
+   "nom": "État paria",
+   "type": "lieu",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q179671",
+   "nom": "État-nation",
+   "type": "lieu",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q178561",
+   "nom": "bataille",
+   "type": "evenement",
+   "articles_echantillon": 7,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q890055",
+   "nom": "élection présidentielle en France",
+   "type": "evenement",
+   "articles_echantillon": 6,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q3199915",
+   "nom": "massacre",
+   "type": "evenement",
+   "articles_echantillon": 4,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q112193867",
+   "nom": "type de maladie",
+   "type": "evenement",
+   "articles_echantillon": 4,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q40231",
+   "nom": "élection",
+   "type": "evenement",
+   "articles_echantillon": 4,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q16738832",
+   "nom": "affaire criminelle",
+   "type": "evenement",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q4504495",
+   "nom": "cérémonie de récompenses",
+   "type": "evenement",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q149086",
+   "nom": "homicide",
+   "type": "evenement",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q1445650",
+   "nom": "jour férié ou jour de célébration",
+   "type": "evenement",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q47345468",
+   "nom": "édition d'un tournoi de tennis",
+   "type": "evenement",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q18608583",
+   "nom": "événement sportif récurrent",
+   "type": "evenement",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q6813020",
+   "nom": "attaque terroriste au couteau",
+   "type": "evenement",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q25917186",
+   "nom": "attaque terroriste coordonnée",
+   "type": "evenement",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q1261499",
+   "nom": "bataille navale",
+   "type": "evenement",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q13406554",
+   "nom": "compétition sportive",
+   "type": "evenement",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q3001412",
+   "nom": "course de chevaux",
+   "type": "evenement",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q868557",
+   "nom": "festival de musique",
+   "type": "evenement",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q103495",
+   "nom": "guerre mondiale",
+   "type": "evenement",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q175331",
+   "nom": "manifestation",
+   "type": "evenement",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q2001676",
+   "nom": "offensive militaire",
+   "type": "evenement",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q10931",
+   "nom": "révolution",
+   "type": "evenement",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q188055",
+   "nom": "siège militaire",
+   "type": "evenement",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q750215",
+   "nom": "tuerie de masse",
+   "type": "evenement",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q123724352",
+   "nom": "édition de la Ligue des champions de l'UEFA",
+   "type": "evenement",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q669262",
+   "nom": "élection primaire",
+   "type": "evenement",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q20053795",
+   "nom": "élection présidentielle au Brésil",
+   "type": "evenement",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q3326830",
+   "nom": "Mouvement social en France",
+   "type": "evenement",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q2629720",
+   "nom": "Problème global",
+   "type": "evenement",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q2223653",
+   "nom": "attaque terroriste",
+   "type": "evenement",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q49775",
+   "nom": "grève générale",
+   "type": "evenement",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q1679887",
+   "nom": "grève étudiante",
+   "type": "evenement",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q42750320",
+   "nom": "incident de frontière",
+   "type": "evenement",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q18033451",
+   "nom": "mois commémoratif",
+   "type": "evenement",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q4",
+   "nom": "mort",
+   "type": "evenement",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q49773",
+   "nom": "mouvement social",
+   "type": "evenement",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q1265353",
+   "nom": "procès pour crimes de guerre",
+   "type": "evenement",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q476807",
+   "nom": "raid militaire",
+   "type": "evenement",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q1238731",
+   "nom": "veillée",
+   "type": "evenement",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q114775014",
+   "nom": "élection future",
+   "type": "evenement",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q1076105",
+   "nom": "élection générale",
+   "type": "evenement",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q24659965",
+   "nom": "élections législatives israéliennes",
+   "type": "evenement",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q124757",
+   "nom": "émeute",
+   "type": "evenement",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q11424",
+   "nom": "film",
+   "type": "objet",
+   "articles_echantillon": 116,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q4164871",
+   "nom": "fonction",
+   "type": "objet",
+   "articles_echantillon": 5,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q113145171",
+   "nom": "type d'entité chimique",
+   "type": "objet",
+   "articles_echantillon": 5,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q124078422",
+   "nom": "classe fonctionnelle d'armes",
+   "type": "objet",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q15056993",
+   "nom": "famille d'aéronefs",
+   "type": "objet",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q15229207",
+   "nom": "prix sportif",
+   "type": "objet",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q47461344",
+   "nom": "œuvre écrite",
+   "type": "objet",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q428661",
+   "nom": "U-Boot",
+   "type": "objet",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q620615",
+   "nom": "application mobile",
+   "type": "objet",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q11436",
+   "nom": "aéronef",
+   "type": "objet",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q112826905",
+   "nom": "classe d'entité anatomique",
+   "type": "objet",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q811704",
+   "nom": "classe de matériel roulant ferroviaire",
+   "type": "objet",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q294414",
+   "nom": "fonction publique",
+   "type": "objet",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q107655869",
+   "nom": "groupe de récompenses",
+   "type": "objet",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q59199015",
+   "nom": "groupe de stréréoisomères",
+   "type": "objet",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q18487055",
+   "nom": "modèle de missile",
+   "type": "objet",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q8142",
+   "nom": "monnaie",
+   "type": "objet",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q139550381",
+   "nom": "métaclasse des entités anatomiques humaines",
+   "type": "objet",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q28640",
+   "nom": "profession",
+   "type": "objet",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q860861",
+   "nom": "sculpture",
+   "type": "objet",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q179700",
+   "nom": "statue",
+   "type": "objet",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q1779653",
+   "nom": "statue colossale",
+   "type": "objet",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q15056995",
+   "nom": "type d'avion",
+   "type": "objet",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q282",
+   "nom": "vin",
+   "type": "objet",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q12909644",
+   "nom": "idéologie politique",
+   "type": "savoir",
+   "articles_echantillon": 5,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q34770",
+   "nom": "langue",
+   "type": "savoir",
+   "articles_echantillon": 4,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q19776628",
+   "nom": "lettre latine",
+   "type": "savoir",
+   "articles_echantillon": 4,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q74817647",
+   "nom": "aspect dans une région géographique",
+   "type": "savoir",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q1288568",
+   "nom": "langue vivante",
+   "type": "savoir",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q47018478",
+   "nom": "mois calendaire d'une année donnée",
+   "type": "savoir",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q608",
+   "nom": "comportement sexuel humain",
+   "type": "savoir",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q11862829",
+   "nom": "discipline académique",
+   "type": "savoir",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q2927074",
+   "nom": "mème internet",
+   "type": "savoir",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q8394",
+   "nom": "position sexuelle",
+   "type": "savoir",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q30515",
+   "nom": "slogan",
+   "type": "savoir",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q123370638",
+   "nom": "branche de l'informatique",
+   "type": "savoir",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q732744",
+   "nom": "classification chimique",
+   "type": "savoir",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q56055944",
+   "nom": "forme d'art",
+   "type": "savoir",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q28108",
+   "nom": "système politique",
+   "type": "savoir",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q2000344",
+   "nom": "tactique",
+   "type": "savoir",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q112057532",
+   "nom": "type de technologie",
+   "type": "savoir",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q7278",
+   "nom": "parti politique",
+   "type": "faction",
+   "articles_echantillon": 20,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q215380",
+   "nom": "groupe de musique",
+   "type": "faction",
+   "articles_echantillon": 19,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q4830453",
+   "nom": "entreprise",
+   "type": "faction",
+   "articles_echantillon": 15,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q476028",
+   "nom": "club de football",
+   "type": "faction",
+   "articles_echantillon": 12,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q43229",
+   "nom": "organisation",
+   "type": "faction",
+   "articles_echantillon": 10,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q891723",
+   "nom": "société anonyme avec appel public à l'épargne",
+   "type": "faction",
+   "articles_echantillon": 8,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q11032",
+   "nom": "journal",
+   "type": "faction",
+   "articles_echantillon": 5,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q163740",
+   "nom": "organisation à but non lucratif",
+   "type": "faction",
+   "articles_echantillon": 5,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q1616075",
+   "nom": "station de télévision",
+   "type": "faction",
+   "articles_echantillon": 5,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q2738074",
+   "nom": "mouvement politique",
+   "type": "faction",
+   "articles_echantillon": 4,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q6881511",
+   "nom": "entreprise",
+   "type": "faction",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q41710",
+   "nom": "ethnie",
+   "type": "faction",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q8436",
+   "nom": "famille",
+   "type": "faction",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q18127",
+   "nom": "label discographique",
+   "type": "faction",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q623109",
+   "nom": "ligue",
+   "type": "faction",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q2085381",
+   "nom": "maison d'édition",
+   "type": "faction",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q13417114",
+   "nom": "maison noble",
+   "type": "faction",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q1110794",
+   "nom": "quotidien",
+   "type": "faction",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q14350",
+   "nom": "station de radio",
+   "type": "faction",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q327333",
+   "nom": "agence publique",
+   "type": "faction",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q1752346",
+   "nom": "assemblée délibérante",
+   "type": "faction",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q847017",
+   "nom": "club sportif",
+   "type": "faction",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q1303415",
+   "nom": "cohorte",
+   "type": "faction",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q783794",
+   "nom": "compagnie",
+   "type": "faction",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q46970",
+   "nom": "compagnie aérienne",
+   "type": "faction",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q270791",
+   "nom": "entreprise d'État",
+   "type": "faction",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q18388277",
+   "nom": "entreprise technologique",
+   "type": "faction",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q15925549",
+   "nom": "génération sociologique de la société occidentale",
+   "type": "faction",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q1153191",
+   "nom": "journal en ligne",
+   "type": "faction",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q431289",
+   "nom": "marque",
+   "type": "faction",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q95155801",
+   "nom": "organisation de vérification des faits",
+   "type": "faction",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q3356049",
+   "nom": "organisation lycéenne",
+   "type": "faction",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q5633421",
+   "nom": "revue scientifique",
+   "type": "faction",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q1335818",
+   "nom": "union supranationale",
+   "type": "faction",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q12973014",
+   "nom": "équipe sportive",
+   "type": "faction",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q61974339",
+   "nom": "club esportif",
+   "type": "faction",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q5466628",
+   "nom": "corporation à but lucratif",
+   "type": "faction",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q1641122",
+   "nom": "fournisseur de service en ligne",
+   "type": "faction",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q877998",
+   "nom": "organisation de représentation étudiante",
+   "type": "faction",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q1825410",
+   "nom": "police antiémeute",
+   "type": "faction",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q10651067",
+   "nom": "representation team",
+   "type": "faction",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q116979266",
+   "nom": "state broadcaster",
+   "type": "faction",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q28648855",
+   "nom": "unité de police",
+   "type": "faction",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q103229495",
+   "nom": "équipe de football masculine",
+   "type": "faction",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q20639856",
+   "nom": "équipe sportive professionnelle",
+   "type": "faction",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q5398426",
+   "nom": "série télévisée",
+   "type": "dehors",
+   "articles_echantillon": 58,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q27020041",
+   "nom": "saison sportive",
+   "type": "dehors",
+   "articles_echantillon": 21,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q482994",
+   "nom": "album",
+   "type": "dehors",
+   "articles_echantillon": 16,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q7725634",
+   "nom": "œuvre littéraire",
+   "type": "dehors",
+   "articles_echantillon": 16,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q105543609",
+   "nom": "œuvre ou composition musicale",
+   "type": "dehors",
+   "articles_echantillon": 8,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q24856",
+   "nom": "série cinématographique",
+   "type": "dehors",
+   "articles_echantillon": 7,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q24862",
+   "nom": "court métrage",
+   "type": "dehors",
+   "articles_echantillon": 6,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q1259759",
+   "nom": "mini-série",
+   "type": "dehors",
+   "articles_echantillon": 6,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q15416",
+   "nom": "programme télévisé",
+   "type": "dehors",
+   "articles_echantillon": 6,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q3464665",
+   "nom": "saison de série télévisée",
+   "type": "dehors",
+   "articles_echantillon": 6,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q506240",
+   "nom": "téléfilm",
+   "type": "dehors",
+   "articles_echantillon": 6,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q7889",
+   "nom": "jeu vidéo",
+   "type": "dehors",
+   "articles_echantillon": 5,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q3305213",
+   "nom": "peinture",
+   "type": "dehors",
+   "articles_echantillon": 5,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q134556",
+   "nom": "single",
+   "type": "dehors",
+   "articles_echantillon": 5,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q167270",
+   "nom": "marque commerciale",
+   "type": "dehors",
+   "articles_echantillon": 4,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q130371093",
+   "nom": "franchise cinématographique",
+   "type": "dehors",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q196600",
+   "nom": "franchise médiatique",
+   "type": "dehors",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q4663903",
+   "nom": "portail Wikimédia",
+   "type": "dehors",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q11514315",
+   "nom": "période historique",
+   "type": "dehors",
+   "articles_echantillon": 3,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q102786",
+   "nom": "abréviation",
+   "type": "dehors",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q11042",
+   "nom": "culture",
+   "type": "dehors",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q26213387",
+   "nom": "délégation olympique",
+   "type": "dehors",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q15238777",
+   "nom": "législature",
+   "type": "dehors",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q66010119",
+   "nom": "mois commençant un lundi",
+   "type": "dehors",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q101352",
+   "nom": "nom de famille",
+   "type": "dehors",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q30941437",
+   "nom": "pornographic film studio",
+   "type": "dehors",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q18011172",
+   "nom": "projet de film",
+   "type": "dehors",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q15221623",
+   "nom": "relation bilatérale",
+   "type": "dehors",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q21198342",
+   "nom": "série de manga",
+   "type": "dehors",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q20667921",
+   "nom": "type de division administrative en France",
+   "type": "dehors",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q114609228",
+   "nom": "édition d'un événement sportif récurrent",
+   "type": "dehors",
+   "articles_echantillon": 2,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q101244",
+   "nom": "acronyme",
+   "type": "dehors",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q3533467",
+   "nom": "action de groupe",
+   "type": "dehors",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q102440913",
+   "nom": "bien public numérique",
+   "type": "dehors",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q7366",
+   "nom": "chanson",
+   "type": "dehors",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q1293664",
+   "nom": "contenu ouvert",
+   "type": "dehors",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q34542757",
+   "nom": "coupe des clubs de football d'une association internationale",
+   "type": "dehors",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q115471117",
+   "nom": "entité auto-définie",
+   "type": "dehors",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q17442446",
+   "nom": "entité de Wikimédia ou d'un projet Wikimédia",
+   "type": "dehors",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q1388421",
+   "nom": "expérience sociale",
+   "type": "dehors",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q5988403",
+   "nom": "fournisseur d'identité",
+   "type": "dehors",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q574376",
+   "nom": "impact humain sur l'environnement",
+   "type": "dehors",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q1323212",
+   "nom": "insurrection",
+   "type": "dehors",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q15633587",
+   "nom": "page dans l'espace principal sous MediaWiki",
+   "type": "dehors",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q14204246",
+   "nom": "page interne d'un projet Wikimédia",
+   "type": "dehors",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q2617970",
+   "nom": "pentalogie",
+   "type": "dehors",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q170584",
+   "nom": "projet",
+   "type": "dehors",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q33120876",
+   "nom": "projet Wikimedia de contenu",
+   "type": "dehors",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q114955954",
+   "nom": "projet participatif",
+   "type": "dehors",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q1322494",
+   "nom": "sociotope",
+   "type": "dehors",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q11541386",
+   "nom": "type d'entreprise",
+   "type": "dehors",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q125161275",
+   "nom": "type d'intelligence",
+   "type": "dehors",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q3275581",
+   "nom": "univers partagé",
+   "type": "dehors",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  },
+  {
+   "qid": "Q10273457",
+   "nom": "équipement",
+   "type": "dehors",
+   "articles_echantillon": 1,
+   "par": "dani",
+   "le": "2026-11-01"
+  }
+ ]
+}

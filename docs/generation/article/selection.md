@@ -19,6 +19,7 @@ Une classe n'entre dans la liste que si elle est reliée à « entité » (`Q351
 - Le type de l'article vient de la classe retenue la plus proche (voir `gameplay/carte/type.md`).
 - La liste sert aussi à fixer la famille de chaque classe (voir `gameplay/carte/famille.md`).
 - Elle compte sans doute plusieurs centaines de classes, et se maintient quand on ajoute des types d'articles.
+- Elle se remplit sur une page de validation partagée (https://claude.ai/artifact/QMRMjTfwfJW4nZ9LTfqTMH), puis est exportée dans `scripts/liste-blanche.json`, avec pour chaque classe son type ou « dehors », qui l'a choisie et quand.
 
 ### Filtres transverses
 
