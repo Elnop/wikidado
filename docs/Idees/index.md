@@ -46,7 +46,8 @@ Quand une idée est détaillée dans un autre document, la colonne "Détail" poi
 | Limite d'exemplaires ou de rares par deck | à discuter | `Gameplay/cardcost.md` | |
 | Format réservé aux communes, comme le Pauper de Magic | à discuter | `Gameplay/cardcost.md` | |
 | Attaque selon la taille, défense selon le nombre de contributeurs, en relatif à coût égal | à discuter | `Gameplay/cardcost.md` | |
-| Rareté figée pour une saison | à discuter | `Gameplay/cardcost.md` | Remplace "coûts figés pour une saison", devenu sans objet quand le coût a cessé de dépendre des lectures |
+| Coûts figés pour une saison | écartée (1/11/2026) | `Gameplay/cardcost.md` | Sans objet depuis que le coût ne dépend plus des lectures. Remplacée par "rareté figée pour une saison" |
+| Rareté figée pour une saison | à discuter | `Gameplay/cardcost.md` | |
 | Bonus "Tendance" quand l'article est dans les plus lus de la semaine | à discuter | `Gameplay/cardcost.md` | |
 | Rareté séparée du coût, basée sur les lectures | retenue (1/11/2026) | `Gameplay/cardcost.md` | Inclus dans la décision sur la popularité |
 | Label "Article de qualité" / "Bon article" comme mot-clé ou capacité | à discuter | `Gameplay/cardcost.md` | |
