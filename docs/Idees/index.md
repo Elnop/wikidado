@@ -34,12 +34,21 @@ Quand une idée est détaillée dans un autre document, la colonne "Détail" poi
 
 | Idée | Statut | Détail | Notes |
 |---|---|---|---|
-| Stats qui montent avec la notoriété, comme WikiMasters | écartée (1/11/2026) | `Wikimaster/analyse.md` | La carte la plus célèbre gagne toujours, aucun intérêt tactique |
-| Coût fixé par la notoriété (lectures + langues), stats réparties dans un budget lié au coût | à discuter | `Gameplay/cardcost.md` | |
+| Stats qui montent avec la notoriété, sans lien avec le coût, comme WikiMasters | écartée (1/11/2026) | `Wikimaster/analyse.md` | La carte la plus célèbre gagne toujours, aucun intérêt tactique. À distinguer de la puissance par rapport au coût, qui elle suit la popularité |
+| Coût fixé par la notoriété (lectures + langues) | écartée (1/11/2026) | `Gameplay/cardcost.md` | Le coût ne doit pas dépendre de la popularité |
+| La popularité fixe la rareté et la puissance par rapport au coût | retenue (1/11/2026) | `Gameplay/cardcost.md` | |
+| Budget de stats = (2 × coût + 1) × multiplicateur de rareté | à discuter | `Gameplay/cardcost.md` | |
+| Paliers de rareté sur les lectures à 30 jours (100 / 5 000 / 50 000 sur fr) | à discuter | `Gameplay/cardcost.md` | |
+| Coût calculé à partir des mécaniques et des stats assignées | à discuter | `Gameplay/cardcost.md` | |
+| Coût tiré de la taille de l'article ou du nombre de liens | à discuter | `Gameplay/cardcost.md` | |
+| Coût selon le type et la nature Wikidata | à discuter | `Gameplay/cardcost.md` | |
+| Coût tiré pour équilibrer la courbe de mana de chaque famille | à discuter | `Gameplay/cardcost.md` | |
+| Limite d'exemplaires ou de rares par deck | à discuter | `Gameplay/cardcost.md` | |
+| Format réservé aux communes, comme le Pauper de Magic | à discuter | `Gameplay/cardcost.md` | |
 | Attaque selon la taille, défense selon le nombre de contributeurs, en relatif à coût égal | à discuter | `Gameplay/cardcost.md` | |
-| Coûts figés pour une saison | à discuter | `Gameplay/cardcost.md` | |
+| Rareté figée pour une saison | à discuter | `Gameplay/cardcost.md` | Remplace "coûts figés pour une saison", devenu sans objet quand le coût a cessé de dépendre des lectures |
 | Bonus "Tendance" quand l'article est dans les plus lus de la semaine | à discuter | `Gameplay/cardcost.md` | |
-| Rareté séparée du coût, basée sur les lectures | à discuter | `Gameplay/cardcost.md` | |
+| Rareté séparée du coût, basée sur les lectures | retenue (1/11/2026) | `Gameplay/cardcost.md` | Inclus dans la décision sur la popularité |
 | Label "Article de qualité" / "Bon article" comme mot-clé ou capacité | à discuter | `Gameplay/cardcost.md` | |
 
 ## Synergies
