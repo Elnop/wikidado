@@ -56,6 +56,7 @@ On peut fixer un seuil (nombre de langues, taille, lectures) pour ne garder que 
 ## Articles à exclure d'office
 
 - listes, homonymies, années ("2008 en archéologie"), saisons sportives
+- œuvres (films, albums, livres, singles), pour la première version (voir `gameplay/carte/type.md`)
 - articles sensibles : crimes, violences sexuelles, attentats, personnes vivantes peu connues. À filtrer par catégories et par classes Wikidata.
 - articles sans image libre, si on décide que chaque carte doit avoir une illustration
 

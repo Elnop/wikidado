@@ -88,3 +88,15 @@ Le code fixait d'abord les stats voulues à partir de l'article, ajoutait le cou
 Écartée le 01/11/2026 : le coût est la somme des cout_budget convertie en mana.
 
 Le coût était la somme des cout_budget des mécaniques sans conversion, et les stats venaient d'un budget séparé.
+
+## Stats tirées de l'article et comptées dans le coût
+
+Écartée le 01/11/2026 : les cartes sans capacité passent par des mécaniques de stats.
+
+Le code fixait des stats à partir de l'article (taille, contributeurs), et ces stats comptaient dans le budget qui fixe le coût, comme les mécaniques.
+
+## Pas de carte sans capacité
+
+Écartée le 01/11/2026 : les cartes sans capacité passent par des mécaniques de stats.
+
+Toutes les cartes avaient au moins une capacité. Une carte sans mécanique n'était pas générée.

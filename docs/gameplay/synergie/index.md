@@ -2,7 +2,7 @@
 
 WikiMasters n'a aucune synergie, c'est la partie où on peut le plus se démarquer.
 
-Une synergie est un effet qui se déclenche selon les autres cartes en jeu. Les sources de synergie sont décrites chacune dans leur fichier :
+Une synergie est un effet qui se déclenche selon les autres cartes en jeu. Les synergies sont calculées automatiquement pour toutes les cartes : le code trouve les cibles possibles (liens, relations Wikidata, époques), puis le modèle assigne les mécaniques correspondantes (voir `generation/pipeline.md`). Les sources de synergie sont décrites chacune dans leur fichier :
 
 - `gameplay/synergie/liens.md` : les articles se citent entre eux
 - `gameplay/synergie/relations.md` : relations typées de Wikidata (famille, maître et élève, participation, lieu de naissance)
@@ -12,5 +12,4 @@ Une synergie est un effet qui se déclenche selon les autres cartes en jeu. Les 
 
 ## Questions ouvertes
 
-- Les synergies se calculent automatiquement pour toutes les cartes, ou on rédige des capacités à la main pour une sélection (comme un set Magic) ? Le calcul automatique donne des dizaines de milliers de cartes jouables. La rédaction manuelle donne des cartes plus intéressantes mais beaucoup moins nombreuses.
 - Combien de synergies par carte avant que ce soit illisible ?

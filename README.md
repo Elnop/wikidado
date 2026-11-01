@@ -36,6 +36,7 @@ docs/
       carte/stats.md
       carte/type.md
       mecanique.md
+      synergie/index.md
       duel.md
     generation/
       pipeline.md

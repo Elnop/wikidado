@@ -9,19 +9,33 @@ Chaque mécanique doit préciser :
 - `id` : identifiant stable, utilisé dans le JSON du modèle
 - `texte` : gabarit du texte affiché sur la carte, avec ses paramètres entre accolades
 - `types` : types de cartes qui peuvent la recevoir
-- `cout_budget` : points de budget qu'elle consomme. La somme de ces points fixe le coût de la carte (voir `gameplay/carte/cout.md`)
+- `cout_budget` : points de budget qu'elle consomme. La somme de ces points fixe le coût de la carte (voir `gameplay/carte/cout.md`). Quand la mécanique a des paramètres, le coût est donné pour chaque valeur.
 - `params` : paramètres possibles et leurs valeurs autorisées
 - `condition` : données nécessaires dans la fiche de l'article (par exemple, la mécanique n'est proposée que si l'article a un lieu de naissance)
 - `indice` : une phrase pour aider le modèle à choisir (à quel genre d'article elle va bien)
+
+## Mécaniques de stats
+
+Le catalogue contient des mécaniques qui ne font qu'ajouter des stats. Ce sont elles qui permettent les grosses cartes sans capacité, puisque le coût d'une carte vient uniquement de ses mécaniques.
+
+### robuste
+
+- texte : aucun, la mécanique s'affiche seulement dans les stats de la carte
+- types : Créature
+- cout_budget : 2
+- params : aucun
+- effet : +2 en défense
+- condition : aucune
+- indice : sujets solides, durables, difficiles à abattre
 
 ## Exemples
 
 ### inspiration
 
-- texte : "Les autres créatures {famille} que vous contrôlez gagnent +1 en attaque."
+- texte : "Les autres créatures {cible} que vous contrôlez gagnent +1 en attaque."
 - types : Créature
-- cout_budget : 2
-- params : famille parmi les familles du jeu
+- cout_budget : 2 si la cible est une famille, 4 si c'est toutes vos créatures
+- params : cible parmi les familles du jeu, ou toutes
 - condition : aucune
 - indice : figures qui ont mené ou influencé d'autres personnes de leur domaine
 

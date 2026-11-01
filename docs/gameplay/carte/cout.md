@@ -22,11 +22,13 @@ cout = arrondi(somme(cout_budget des mécaniques) / points_par_mana)
 
 Il n'y a pas de coût de base selon le type. Le coût minimum est 0 : une carte sans mécanique est gratuite. Il n'y a pas de coût maximum.
 
+Les grosses cartes sans capacité (un Napoléon 5/5 sans effet) passent par des mécaniques de stats, qui ne font qu'ajouter de l'attaque ou de la défense (voir `gameplay/mecanique.md`). Tout le coût d'une carte passe ainsi par le même calcul.
+
+Le `cout_budget` d'une mécanique dépend de la valeur de ses paramètres : "+1 aux créatures Histoire" coûte moins que "+1 à toutes vos créatures".
+
 Les stats prennent ensuite le budget du coût, multiplié par la rareté, moins ce que les mécaniques ont consommé (voir `gameplay/carte/stats.md`).
 
 ## Questions ouvertes
 
-- Une carte sans mécanique coûte 0 et n'a qu'un point de stats (avant rareté). Les grosses créatures sans capacité n'existent donc pas. Faut-il des mécaniques qui ne font qu'ajouter des stats, pour permettre ces cartes ?
-- Les paramètres d'une mécanique changent-ils son coût ? "+1 aux créatures Histoire" et "+1 à toutes vos créatures" ne valent pas la même chose.
 - Comment garder une courbe de mana équilibrée si le coût n'est pas choisi directement ?
 - Sans coût maximum, faut-il limiter le nombre de mécaniques par carte pour éviter des cartes injouables ?
