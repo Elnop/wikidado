@@ -55,7 +55,8 @@ Un article sans image libre reste une carte, avec une illustration par défaut (
 ## Articles à exclure d'office
 
 - listes, homonymies, années ("2008 en archéologie"), saisons sportives
-- œuvres (films, albums, livres, singles), voir `gameplay/carte/type.md`
+- œuvres (films, albums, livres, singles, jeux vidéo), voir `gameplay/carte/type.md`
+- sites web, plateformes en ligne et réseaux sociaux (Facebook, ChatGPT, Google, XNXX)
 - articles sensibles : crimes, violences sexuelles, attentats. À filtrer par catégories et par classes Wikidata.
 
 Les personnes vivantes sont gardées, sans exclusion spécifique.

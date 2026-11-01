@@ -28,7 +28,7 @@ Proposition : prendre la grande famille qui regroupe le plus de sous-types de la
 - Différé le 01/11/2026, jusqu'à ce que les 4 types soient vérifiés
 - Specs : `gameplay/carte/type.md`, `generation/article/selection.md`
 
-Les films, albums, livres et singles sont exclus pour la première version. Il faudra décider s'ils deviennent des cartes, et dans quel type. Il y a du volume : 29 427 albums et 10 664 singles sur la Wikipédia française, sans compter les films et les livres.
+Les films, albums, livres, singles et jeux vidéo sont exclus pour la première version. Il faudra décider s'ils deviennent des cartes, et dans quel type. Il y a du volume : 29 427 albums et 10 664 singles sur la Wikipédia française, sans compter les films et les livres.
 
 ## Garde-fou sur les rares en construction de deck
 
@@ -42,3 +42,10 @@ Pistes :
 - limite d'exemplaires par rareté dans un deck (Hearthstone autorise une seule copie d'une légendaire)
 - limite du nombre total de rares et mythiques par deck
 - formats de jeu par rareté, comme le Pauper de Magic où seules les communes sont autorisées
+
+## Sites web, plateformes et réseaux sociaux
+
+- Différé le 01/11/2026, à décider
+- Specs : `gameplay/carte/type.md`, `generation/article/selection.md`
+
+Facebook, ChatGPT, Google, Wikipédia ou XNXX ne rentrent proprement dans aucun des 4 types : classés en Technique par la hiérarchie des logiciels de Wikidata, ils n'y ont pas leur place. Ils sont exclus pour l'instant. Il faudra décider s'ils forment un type de carte à part, ce qui demanderait aussi de filtrer les contenus sensibles.

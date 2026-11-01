@@ -4,7 +4,7 @@ On ne garde que certaines natures d'articles, et chaque nature retenue donne un 
 
 Le découpage en 4 est à vérifier sur ce que Wikipédia et Wikidata proposent : chaque type doit couvrir assez d'articles intéressants (voir les volumes dans `generation/article/selection.md`). Le choix des articles est décrit dans `generation/article/selection.md`.
 
-Les œuvres (films, albums, livres) ne sont pas des cartes.
+Les œuvres (films, albums, livres, jeux vidéo) ne sont pas des cartes. Les sites web, plateformes en ligne et réseaux sociaux non plus.
 
 | Type | Ce que ça couvre | Rôle en jeu |
 |---|---|---|
