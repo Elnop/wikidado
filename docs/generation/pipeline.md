@@ -58,7 +58,7 @@ Avec un catalogue fermé, le modèle ne peut pas inventer une capacité cassée.
 
 ## Choix du modèle
 
-Contrainte : pas de budget, tout doit tourner gratuitement et sur CPU (pas de GPU). Le modèle est donc local, petit, et appelé en lot.
+Contraintes : pas de budget, tout doit tourner gratuitement et sur CPU (pas de GPU). Le modèle est donc local, petit, et appelé en lot. Les cartes viennent de Wikipédia FR et EN, donc le modèle doit être multilingue et licencié pour un usage commercial (MIT ou Apache 2.0, pas de CC BY-NC).
 
 L'assignation se pose comme des questions typées sur la fiche de l'article, dans le style des modèles de décision (Jev, OpenJev) :
 
@@ -70,6 +70,7 @@ Chaque réponse garde sa probabilité. Une réponse peu confiante part en relect
 
 Moteurs possibles, à comparer sur un échantillon de 200 à 300 articles qu'on annote nous-mêmes (taux d'accord avec nos choix) :
 
-- embeddings sur CPU : similarité entre la fiche et la description de chaque mécanique, plus kNN sur des cartes annotées
+- embeddings sur CPU : similarité entre la fiche et la description de chaque mécanique, plus kNN sur des cartes annotées. Candidats multilingues : `intfloat/multilingual-e5-small` (MIT, léger, point de départ), `intfloat/multilingual-e5-base`, `Alibaba-NLP/gte-multilingual-base` (Apache 2.0, contexte long)
+- classifieur zero-shot (NLI) qui donne une probabilité par label, au plus près du format de questions ci-dessus. Candidats multilingues : `MoritzLaurer/bge-m3-zeroshot-v2.0` (MIT, contexte long), `MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7` (MIT)
 - petit LLM quantifié sur CPU (llama.cpp) avec sortie JSON contrainte, en lot
-- modèle de décision ouvert type OpenJev, trop lourd pour du CPU seul (27 milliards de paramètres, licence non commerciale)
+- modèle de décision ouvert type OpenJev (`openjev/openjev`), trop lourd pour du CPU seul (27 milliards de paramètres, licence non commerciale)
