@@ -1,6 +1,10 @@
 # Génération des cartes
 
-Principe : on définit nous-mêmes un catalogue fermé de mécaniques, puis un petit modèle choisit lesquelles donner à chaque article. Le modèle ne fait que de l'assignation, il n'invente ni règle ni texte de capacité.
+## Décision du 01/11/2026
+
+On définit nous-mêmes un catalogue fermé de mécaniques, puis un petit modèle choisit lesquelles donner à chaque article. Le modèle ne fait que de l'assignation, il n'invente ni règle ni texte de capacité.
+
+Les idées écartées sur la génération sont dans `ecartees/pipeline.md`.
 
 ## Partage du travail entre code et modèle
 

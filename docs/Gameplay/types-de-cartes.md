@@ -1,6 +1,10 @@
 # Types de cartes
 
-On ne garde que certaines natures d'articles, et chaque nature retenue donne un type de carte. Les noms ci-dessous sont provisoires.
+## Décision du 01/11/2026
+
+On ne garde que certaines natures d'articles, et chaque nature retenue donne un type de carte. Les noms des types ne sont pas encore choisis, ceux ci-dessous sont des exemples.
+
+## Types envisagés
 
 | Type (provisoire) | Ce que ça couvre | Rôle en jeu (à définir) |
 |---|---|---|
