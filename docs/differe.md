@@ -69,3 +69,10 @@ Le script `scripts/tirer_echantillon.py` accepte déjà `--langue en`.
 - Specs : `gameplay/carte/famille.md`, `gameplay/carte/type.md`
 
 Les organisations (partis politiques, entreprises, clubs de sport, groupes de musique) forment le type Faction. Leur rôle en jeu est fixé dans `gameplay/duel.md`, mais pas encore leur grande famille, ni la façon de calculer leur coût d'affectation.
+
+## Collection persistante
+
+- Différé le 01/11/2026, jusqu'après la première version
+- Spec : `gameplay/collection.md`
+
+En première version, tout le monde a toutes les cartes et les boosters ne sont pas enregistrés. Ensuite, il faudra décider si les joueurs gagnent et gardent leurs cartes, et comment : paquets gratuits à intervalle fixe comme WikiMasters (voir `wikimaster/analyse.md`), paquets gagnés en jouant, échanges entre joueurs.

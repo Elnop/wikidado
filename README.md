@@ -36,6 +36,7 @@ docs/
       epoques.md               dates de vie et d'événements
       categories.md            catégories Wikipédia
     duel.md                    règles d'une partie : deck, tour, combat, victoire
+    collection.md              cartes disponibles et boosters
     mecanique.md               catalogue fermé des mécaniques assignables
     electricite.md             ressource du jeu
   generation/
@@ -57,6 +58,7 @@ docs/
       mecanique.md
       synergie/index.md
       synergie/liens.md
+      collection.md
       duel.md
       tendance.md
     generation/

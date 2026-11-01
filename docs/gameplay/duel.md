@@ -1,10 +1,10 @@
 # Duel
 
-Une partie oppose deux joueurs, chacun avec son deck. Le combat suit Magic (l'attaquant déclare, le défenseur bloque), le reste du tour suit plutôt Hearthstone : électricité automatique (voir `gameplay/electricite.md`) et aucune carte jouée pendant le tour adverse.
+Une partie oppose deux joueurs, chacun avec son deck. On joue contre un autre joueur en ligne, ou contre une IA. Le combat suit Magic (l'attaquant déclare, le défenseur bloque), le reste du tour suit plutôt Hearthstone : électricité automatique (voir `gameplay/electricite.md`) et aucune carte jouée pendant le tour adverse.
 
 ## Deck et début de partie
 
-- Un deck contient 30 cartes, avec un seul exemplaire de chaque carte.
+- Un deck contient 30 cartes, avec un seul exemplaire de chaque carte. Il n'y a pas d'autre contrainte : on mélange librement les types et les familles. Les cartes disponibles sont décrites dans `gameplay/collection.md`.
 - Chaque joueur commence à 30 points de vie.
 - Le premier joueur est tiré au sort. Les deux joueurs piochent 5 cartes.
 - Chaque joueur peut ensuite, une seule fois, remettre dans son deck les cartes de sa main qu'il ne veut pas, et en repiocher autant.

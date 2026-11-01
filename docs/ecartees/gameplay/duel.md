@@ -153,3 +153,15 @@ Une entreprise aurait pu avoir ses usines (Lieux) et ses machines (Objets).
 Écartée le 01/11/2026 : une seule Faction par Créature, qui reste en jeu si la Faction part.
 
 Une Créature cumulait les effets de plusieurs Factions, ou partait à la défausse avec sa Faction.
+
+## Contraintes de construction de deck
+
+Écartée le 01/11/2026 : aucune contrainte en dehors des 30 cartes en un seul exemplaire.
+
+Un minimum de Créatures (10 par exemple) pour qu'un deck puisse toujours attaquer et bloquer, ou un thème obligatoire d'une ou deux grandes familles.
+
+## Joueurs seulement, ou IA seulement
+
+Écartée le 01/11/2026 : en première version, on joue contre des joueurs en ligne et contre une IA.
+
+Sans IA, il faut des joueurs connectés. Sans multijoueur, pas de serveur de match, comme WikiMasters.
