@@ -1,8 +1,8 @@
 # Types de cartes
 
-On ne garde que certaines natures d'articles, et chaque nature retenue donne un type de carte. Il y a 5 types : Lieu, Créature, Événement, Objet et Savoir.
+On ne garde que certaines natures d'articles, et chaque nature retenue donne un type de carte. Il y a 6 types : Lieu, Créature, Événement, Objet, Savoir et Faction.
 
-Le découpage en 5 est à vérifier sur ce que Wikipédia et Wikidata proposent : chaque type doit couvrir assez d'articles intéressants (voir les volumes dans `generation/article/selection.md`). Le choix des articles est décrit dans `generation/article/selection.md`.
+Le découpage en 6 est à vérifier sur ce que Wikipédia et Wikidata proposent : chaque type doit couvrir assez d'articles intéressants (voir les volumes dans `generation/article/selection.md`). Le choix des articles est décrit dans `generation/article/selection.md`.
 
 Les œuvres (films, albums, livres, jeux vidéo) ne sont pas des cartes. Les sites web, plateformes en ligne et réseaux sociaux non plus.
 
@@ -15,10 +15,11 @@ Les règles de la partie sont dans `gameplay/duel.md`.
 | Événement | batailles, opérations militaires, catastrophes | effet ponctuel joué à son tour, comme un rituel |
 | Objet | outils, armes, véhicules, machines, instruments, vêtements | reste en jeu avec ses propres mécaniques, peut s'attacher à une Créature, comme un artefact |
 | Savoir | disciplines, sciences, théories, technologies, logiciels, langages, idéologies, mouvements artistiques | reste en jeu sans capacité propre, agit sur les autres cartes et sur les règles, comme un enchantement |
+| Faction | organisations : partis politiques, entreprises, clubs de sport, groupes de musique, groupes d'humains | à définir |
 
 ## Sous-types
 
-Comme dans Magic, chaque carte a un type (un des 5) et des sous-types, en nombre illimité. Les sous-types sont calculés par le code à partir de Wikidata :
+Comme dans Magic, chaque carte a un type (un des 6) et des sous-types, en nombre illimité. Les sous-types sont calculés par le code à partir de Wikidata :
 
 - la nature de l'élément (`P31`) : Église, Château, Bataille, Cheval
 - pour les personnes, les occupations (`P106`) : Militaire, Homme politique, Peintre
@@ -39,9 +40,10 @@ Wikidata dit ce qu'est l'article (`P31`). Ça colle bien aux types de Magic :
 | bataille, événement, catastrophe | Éphémère ou rituel | Bataille d'Austerlitz |
 | outil, arme, véhicule, machine, objet fabriqué | Artefact (type Objet) | une machine |
 | discipline, théorie, technologie, idéologie, courant artistique | Enchantement (type Savoir) | Romantisme |
+| parti, entreprise, club, groupe de musique | à définir (type Faction) | Parti socialiste, FC Barcelone |
 
 Un deck Paris joue des Lieux parisiens.
 
 ## Choix du type d'un article
 
-Un article a plusieurs classes Wikidata (`P31`). Son type est celui de la classe racine la plus proche d'une de ses classes, en comptant les liens « sous-classe de » (`P279`). À distance égale, l'ordre Créature, Lieu, Événement, Objet, Savoir départage. Les éléments de fiction (armes, lieux, personnages inventés) ne sont pas des cartes.
+Un article a plusieurs classes Wikidata (`P31`). Son type est celui de la classe racine la plus proche d'une de ses classes, en comptant les liens « sous-classe de » (`P279`). À distance égale, l'ordre Créature, Lieu, Événement, Objet, Savoir, Faction départage. Les éléments de fiction (armes, lieux, personnages inventés) ne sont pas des cartes.

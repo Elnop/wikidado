@@ -5,7 +5,7 @@ Une carte peut avoir un nombre illimité de mécaniques, donc leur texte ne tien
 ## Ce qui est sur la face
 
 - le nom de l'article
-- le type principal : Lieu, Créature, Événement, Objet ou Savoir (voir `gameplay/carte/type.md`). Les sous-types n'y sont pas.
+- le type principal : Lieu, Créature, Événement, Objet, Savoir ou Faction (voir `gameplay/carte/type.md`). Les sous-types n'y sont pas.
 - le coût en électricité (voir `gameplay/carte/cout.md`)
 - les stats : attaque et défense pour une Créature, défense pour un Lieu (voir `gameplay/carte/stats.md`)
 - l'illustration (voir `gameplay/carte/illustration.md`), en grand

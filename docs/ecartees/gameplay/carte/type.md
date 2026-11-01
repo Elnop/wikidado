@@ -81,3 +81,10 @@ Garder 4 types en retirant des cartes soit les objets, soit les connaissances et
 Écartée le 01/11/2026 : le type d'un article est celui de la classe racine la plus proche.
 
 Une liste ordonnée de types où le premier qui correspond gagne, ou le test des seules classes `P31` directes avant de remonter la hiérarchie.
+
+## Organisations rangées dans Créature, ou exclues
+
+Écartée le 01/11/2026 : les organisations forment un type Faction.
+
+Les partis, entreprises, clubs et groupes de musique devenaient des Créatures (acteurs collectifs qui se battent) ou restaient hors du jeu pour la première version.
+

@@ -11,8 +11,8 @@ Cinq cartes construites à partir de vrais articles, avec le détail de chaque v
 ```
 echantillon/
   echantillon-fr.jsonl         premier lot, articles FR les plus lus d'octobre 2026, à annoter
-  echantillon-en.jsonl         premier lot, articles EN les plus lus d'octobre 2026, à annoter
 scripts/
+  preparer_dumps.py            classe les articles par lectures à partir des dumps
   tirer_echantillon.py         tire les articles les plus lus pour l'échantillon annoté
 docs/
   differe.md                   travaux différés, à ne pas oublier
