@@ -7,4 +7,4 @@ Plus propres que les liens bruts (voir `gameplay/synergie/liens.md`), parce que 
 - `P737` influencé par, `P1066` élève de : "Maître et élève", l'un donne un bonus à l'autre
 - `P19` lieu de naissance : une créature est plus forte si son lieu de naissance est un de vos Lieux en jeu
 
-Les mécaniques correspondantes sont dans `gameplay/mecanique/creature.md` (terre-natale, participant).
+Les mécaniques correspondantes sont dans `gameplay/mecanique/condition.md` (terre-natale, lignee, maitre) et `gameplay/mecanique/declencheur.md` (quand une carte liée arrive en jeu).

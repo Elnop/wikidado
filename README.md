@@ -40,9 +40,12 @@ docs/
     duel.md                    règles d'une partie : deck, tour, combat, victoire
     collection.md              cartes disponibles et boosters
     mecanique/
-      index.md                 catalogue fermé des mécaniques : format, construction, noms
-      creature.md              mécaniques réservées aux Créatures : mots-clés de combat, stats
-      transversal.md           mécaniques ouvertes à tous les types : moments, dégâts, pioche, électricité...
+      index.md                 catalogue des mécaniques : capacités en briques, calcul du prix
+      mot-cle.md               mots-clés de combat des Créatures
+      declencheur.md           quand une capacité agit
+      effet.md                 ce que fait une capacité
+      cible.md                 sur qui elle agit, et les filtres
+      condition.md             ce qu'il faut en jeu, synergies tirées des données
     electricite.md             ressource du jeu
   produit/
     plateforme.md              site web, ordinateur et téléphone
@@ -63,6 +66,8 @@ docs/
       carte/type.md
       electricite.md
       mecanique/index.md
+      mecanique/creature.md
+      mecanique/transversal.md
       synergie/index.md
       synergie/liens.md
       collection.md

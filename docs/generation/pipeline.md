@@ -19,7 +19,7 @@ Le code s'occupe de :
 
 Le modèle s'occupe uniquement de ce qui demande de comprendre le sujet :
 
-- choisir des mécaniques dans le catalogue qui collent à l'article, dans la limite du budget effectif (une bataille éclair aura plutôt "Rapidité", un château plutôt "Fortification")
+- choisir des mécaniques dans le catalogue qui collent à l'article, en assemblant des briques (effet, cible, déclencheur), dans la limite du budget effectif (une bataille éclair aura plutôt "Rapidité", un château plutôt "Fortification")
 - choisir les paramètres d'une mécanique quand il y en a ("+1 aux créatures Militaires")
 - choisir la répartition des stats entre attaque et défense, à partir de la répartition par défaut du code (voir `gameplay/carte/stats.md`)
 
@@ -27,22 +27,12 @@ Le modèle s'occupe uniquement de ce qui demande de comprendre le sujet :
 
 1. Extraction : depuis les dumps, on construit une fiche par article retenu (titre, résumé, classe Wikidata, propriétés utiles, lectures, taille, contributeurs, liens de l'article).
 2. Calcul : le code ajoute le type, les sous-types, les familles, la rareté, le budget de base, le coût, le budget effectif et la liste des synergies possibles.
-3. Assignation : le modèle reçoit la fiche, le budget effectif et le catalogue des mécaniques autorisées pour ce type. Il répond en JSON contraint, avec uniquement des identifiants du catalogue.
-4. Validation : le code vérifie que les mécaniques existent, que les paramètres sont valides et que la somme des `cout_budget` ne dépasse pas le budget effectif. Une carte qui ne passe pas est régénérée.
+3. Assignation : le modèle reçoit la fiche, le budget effectif et le catalogue des mécaniques autorisées pour ce type. Il répond en JSON contraint, avec uniquement des identifiants du catalogue : mots-clés et briques des capacités (voir `gameplay/mecanique/index.md`).
+4. Validation : le code vérifie que les briques existent et vont ensemble, que les paramètres sont valides, calcule le prix de chaque capacité et vérifie que la somme ne dépasse pas le budget effectif. Une carte qui ne passe pas est régénérée.
 5. Stats : le code met le reste du budget effectif dans les stats, avec la répartition choisie par le modèle.
 6. Rendu : le texte des mécaniques, affiché dans la vue détaillée, est produit à partir des gabarits du catalogue, jamais par le modèle.
 
-Exemple de sortie attendue du modèle :
-
-```json
-{
-  "article": "Q517",
-  "mecaniques": [
-    { "id": "inspiration", "params": { "cible": "militaires" } },
-    { "id": "participant", "params": { "evenement": "Q134114" } }
-  ]
-}
-```
+Le format de sortie du modèle, avec des capacités composées de briques, est dans `gameplay/mecanique/index.md`.
 
 ## Traçabilité
 

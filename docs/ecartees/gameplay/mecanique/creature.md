@@ -1,5 +1,7 @@
 # Mécaniques des Créatures
 
+Écartée le 01/11/2026 : les capacités se composent de briques (déclencheur, effet, cible, filtre, condition) au lieu d'une liste de mécaniques fixes. Voir `gameplay/mecanique/index.md`. Les effets, les noms et les indices ci-dessous ont été repris dans les briques.
+
 Format et règles communes dans `gameplay/mecanique/index.md`. Ces mécaniques ne vont qu'aux Créatures, parce qu'elles touchent au combat ou aux stats de la carte, ou parce que leurs données n'existent que pour des personnes. Premier jet : les noms, les textes et les coûts sont des propositions.
 
 Les autres types peuvent donner ces mots-clés à des Créatures avec la mécanique transmission (voir `gameplay/mecanique/transversal.md`).
@@ -8,7 +10,7 @@ Les autres types peuvent donner ces mots-clés à des Créatures avec la mécani
 
 | id | texte | cout_budget | indice |
 |---|---|---|---|
-| depeche | "Dépêche : peut attaquer le tour où elle est jouée." | 1 | personnes rapides, réactives, sportifs, reporters, cavalerie |
+| prepare | "Préparé : peut attaquer le tour où elle est jouée." | 1 | personnes rapides, réactives, sportifs, reporters, cavalerie |
 | debordement | "Débordement : quand elle est bloquée, les dégâts en trop atteignent sa cible." | 1 | personnes ou animaux massifs, irrésistibles, chefs de guerre offensifs |
 | initiative | "Initiative : inflige ses dégâts de combat avant les autres Créatures." | 2 | duellistes, tireurs, stratèges, prédateurs |
 | insaisissable | "Insaisissable : ne peut être bloquée que par des Créatures insaisissables." | 2 | oiseaux, aviateurs, espions, fugitifs, personnes difficiles à saisir |

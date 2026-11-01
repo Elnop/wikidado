@@ -1,5 +1,7 @@
 # Mécaniques ouvertes à tous les types
 
+Écartée le 01/11/2026 : les capacités se composent de briques (déclencheur, effet, cible, filtre, condition) au lieu d'une liste de mécaniques fixes. Voir `gameplay/mecanique/index.md`. Les effets, les noms et les indices ci-dessous ont été repris dans les briques.
+
 Format et règles communes dans `gameplay/mecanique/index.md`. Premier jet : les noms, les textes et les coûts sont des propositions, rien n'est validé.
 
 Les coûts suivent l'étalon proposé dans `gameplay/mecanique/index.md` : 1 point de budget vaut 1 point de stat. `N` désigne un paramètre numérique, et le coût est donné en fonction de `N`. Une mécanique va à tous les types sauf mention contraire.

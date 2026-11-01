@@ -103,3 +103,39 @@ Les Créatures étaient le type le plus courant, et leurs mots-clés auraient se
 Écartée le 01/11/2026 : il y a des effets à l'arrivée en jeu (À la une) et à la destruction (Postérité).
 
 Seulement l'arrivée, plus simple à lire et à calculer pour l'IA. Ou aucun déclencheur, uniquement des effets permanents et des mots-clés.
+
+## Dépêche, nom du mot-clé qui permet d'attaquer tout de suite
+
+Écartée le 01/11/2026 : le mot-clé s'appelle Préparé.
+
+"Dépêche : peut attaquer le tour où elle est jouée", par référence aux dépêches de presse.
+
+## Autres prix des moments
+
+Écartées le 01/11/2026 : Postérité coûte 1 de moins qu'À la une, Chaque tour coûte 3 fois plus.
+
+Chaque tour à 2 fois le prix, pour voir plus souvent des effets récurrents. Postérité au même prix qu'À la une, sans réduction pour l'effet à la destruction.
+
+## Catalogue en liste de mécaniques fixes
+
+Écartée le 01/11/2026 : les capacités se composent de briques (déclencheur, effet, cible, filtre, condition), seuls les mots-clés restent une liste fixe.
+
+Chaque mécanique était une entrée complète du catalogue, avec son texte, ses paramètres et son prix. Le premier jet de cette liste est gardé dans `ecartees/gameplay/mecanique/transversal.md` et `ecartees/gameplay/mecanique/creature.md`. Une variante gardait les briques pour les capacités déclenchées seulement, et une liste fixe pour les passives.
+
+## Prix d'une capacité par additions ou par table
+
+Écartée le 01/11/2026 : le prix est le produit des facteurs des briques.
+
+Par additions : coût de l'effet + supplément de cible + supplément de déclencheur, plus simple à lire mais moins juste pour les gros effets. Par table : prix fixé à la main pour chaque combinaison autorisée, le plus précis mais avec beaucoup de chiffres.
+
+## Imblocable bloquée par les autres Imblocables
+
+Écartée le 01/11/2026 : une carte Imblocable ne peut pas être bloquée du tout.
+
+Comme le Vol de Magic, deux cartes Imblocables pouvaient se bloquer entre elles, pour un prix de 2.
+
+## Autres noms pour le mot-clé Imblocable
+
+Écartée le 01/11/2026 : le mot-clé s'appelle Imblocable.
+
+Insaisissable, Viral (saveur internet), Aérien (le plus proche du Vol), Clandestin (espions, fugitifs), Hors d'atteinte.
