@@ -25,10 +25,15 @@ docs/
       construction.md          construction de deck
     mecanique.md               catalogue fermé des mécaniques assignables
     tendance.md                bonus d'actualité
-    ecartees/                  idées écartées sur le gameplay
   generation/
     pipeline.md                partage entre code et petit modèle d'assignation
     article/
       selection.md             quels articles deviennent des cartes
-    ecartees/                  idées écartées sur la génération
+  ecartees/                    idées écartées, rangées comme le reste de docs/
+    gameplay/
+      carte/cout.md
+      carte/stats.md
+      duel.md
+    generation/
+      pipeline.md
 ```
