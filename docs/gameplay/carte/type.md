@@ -46,4 +46,4 @@ Un deck Paris joue des Lieux parisiens.
 
 ## Choix du type d'un article
 
-Un article a plusieurs classes Wikidata (`P31`). Son type est celui de la classe retenue la plus proche d'une de ses classes, en comptant les liens « sous-classe de » (`P279`). Les classes retenues sont la liste blanche de `generation/article/selection.md`. À distance égale, l'ordre Créature, Lieu, Événement, Objet, Savoir, Faction départage. Les éléments de fiction (armes, lieux, personnages inventés) ne sont pas des cartes.
+Un article a plusieurs classes Wikidata (`P31`). Son type est celui de la classe retenue la plus proche d'une de ses classes, en comptant les liens « sous-classe de » (`P279`). Les classes retenues sont la liste blanche de `generation/article/selection.md`. À distance égale, l'ordre Créature, Lieu, Événement, Objet, Savoir, Faction départage. Les éléments de fiction (armes, lieux, personnages inventés, divinités) sont des cartes comme les autres.

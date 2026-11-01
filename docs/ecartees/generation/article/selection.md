@@ -44,6 +44,12 @@ Un article sans image libre n'était pas une carte. Moins de cartes, mais toutes
 
 Les articles sur des crimes, des violences sexuelles, des attentats ou des sites pornographiques étaient retirés de la sélection, par catégories Wikipédia et par classes Wikidata.
 
+## Filtre de la fiction
+
+Écartée le 01/11/2026 : la fiction fait partie du jeu.
+
+Les éléments de fiction (armes, lieux, personnages inventés : l'Étoile de la mort) n'étaient pas des cartes. Un filtre transverse retirait tout élément qui descend d'« entité fictionnelle » (`Q14897293`), quelle que soit sa classe : un château fictif est un château, mais n'était pas une carte. Wikidata range aussi sous cette classe les divinités et les personnages mythologiques (divinités grecques, romaines, hindoues), qui étaient donc retirés.
+
 ## Racines larges et liste d'exclusions
 
 Écartée le 01/11/2026 : remplacée par une liste blanche de classes fines. Avec des racines larges, tout ce qu'on n'a pas prévu entre dans le jeu, et les exclusions ne voient que les intrus déjà croisés dans l'échantillon, alors que le pool est surtout fait de longue traîne.

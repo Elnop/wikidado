@@ -22,11 +22,12 @@ Une classe n'entre dans la liste que si elle est reliée à « entité » (`Q351
 
 ### Filtres transverses
 
-Quelques filtres coupent à travers tous les types et s'appliquent quelle que soit la classe retenue, avec une remontée complète :
+Deux filtres coupent à travers tous les types et s'appliquent quelle que soit la classe retenue, avec une remontée complète :
 
-- la fiction : tout élément qui descend d'« entité fictionnelle » (`Q14897293`). Un château fictif est un château, mais n'est pas une carte ;
 - les pages de liste (`Q13406463`) ;
 - les pages d'homonymie (`Q4167410`).
+
+La fiction n'est pas filtrée. Les éléments de fiction (personnages, lieux, armes inventés, et les divinités, que Wikidata range sous « entité fictionnelle ») deviennent des cartes quand leur classe est dans la liste blanche, avec le type de cette classe.
 
 ### Rapport de couverture
 
@@ -77,7 +78,6 @@ Un article sans image libre reste une carte, avec une illustration par défaut (
 Retirés par les filtres transverses :
 
 - listes et homonymies
-- éléments de fiction (armes, lieux, personnages inventés : l'Étoile de la mort)
 
 Absents de la liste blanche, donc jamais retenus :
 
