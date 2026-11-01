@@ -14,6 +14,8 @@ Par exemple sans type Technique. Plus simple, mais moins de variété.
 
 Par exemple en séparant Artefact et Enchantement, ou en ajoutant un type Œuvre. Plus de richesse, plus de règles.
 
+Reprise le 01/11/2026 : 5 types en séparant Objet (artefact) et Savoir (enchantement), voir `gameplay/carte/type.md`. Le type Œuvre reste écarté.
+
 ## Œuvres dans le type Technique
 
 Écartée le 01/11/2026 : les œuvres sont laissées de côté pour la première version.
@@ -61,3 +63,21 @@ Les lieux étaient des Terrains qui produisaient le mana. Variantes : Terrains g
 Écartée le 01/11/2026 : on ajoute les rangs de la classification (P171).
 
 Toutes les espèces partageaient le sous-type Taxon. Simple, mais les synergies comme "vos Mammifères" étaient impossibles.
+
+## Un seul type Technique
+
+Écartée le 01/11/2026 : trop large, il mélangeait objets fabriqués, connaissances et logiciels.
+
+Le type Technique couvrait inventions, outils, logiciels et disciplines. Une arme fictive ou un électroscope y côtoyaient les mathématiques.
+
+## Technique limité aux objets, ou limité au savoir
+
+Écartée le 01/11/2026 : on garde objets et savoirs, dans deux types distincts.
+
+Garder 4 types en retirant des cartes soit les objets, soit les connaissances et la technologie, pour l'instant.
+
+## Type le plus prioritaire ou classe directe seulement
+
+Écartée le 01/11/2026 : le type d'un article est celui de la classe racine la plus proche.
+
+Une liste ordonnée de types où le premier qui correspond gagne, ou le test des seules classes `P31` directes avant de remonter la hiérarchie.

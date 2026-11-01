@@ -6,11 +6,11 @@ Voir docs/generation/echantillon.md pour le format de sortie (JSON Lines).
 Étapes :
   1. API Pageviews : top des articles les plus lus du mois (1000 maximum).
   2. API Wikipédia : identifiant Wikidata (QID) de chaque article.
-  3. SPARQL Wikidata : type de carte déduit de la classe (P31/P279*), classes exclues écartées.
+  3. SPARQL Wikidata : type de carte = racine la plus proche des classes P31 (liens P279), classes exclues écartées.
   4. REST summary : résumé de l'article.
 
 Sources de candidats (--source) :
-  auto (défaut) : Événement et Technique viennent des classes Wikidata (les plus
+  auto (défaut) : Événement, Objet et Savoir viennent des classes Wikidata (les plus
                   présentes dans les langues, puis lectures du mois), ce qui donne
                   --par-type articles même si le type est rare dans le top. Créature et
                   Terrain, trop gros pour le SPARQL, viennent du top mensuel. Un type en
@@ -30,6 +30,7 @@ Usage :
 """
 
 import argparse
+import calendar
 import hashlib
 import json
 import os
@@ -41,21 +42,37 @@ import urllib.request
 from datetime import date
 
 CONTACT = "https://github.com/Elnop/wikidado"
-TYPES = ["creature", "terrain", "evenement", "technique"]
+TYPES = ["creature", "terrain", "evenement", "objet", "savoir"]
 
-# Classes racines par type de carte. Provisoire : voir gameplay/carte/type.md
-# et generation/article/selection.md. L'ordre fixe la priorité si plusieurs
-# types conviennent.
+# Classes racines par type de carte. Provisoire : voir gameplay/carte/type.md et
+# generation/article/selection.md. Le type d'un article est celui de la racine la
+# plus proche de ses classes P31, en comptant les liens "sous-classe de" (P279).
+# À distance égale, l'ordre de TYPES départage.
 RACINES = {
     "creature": ["Q5", "Q16521"],  # être humain, taxon
-    "evenement": ["Q1190554", "Q178561", "Q645883"],  # événement, bataille, opération militaire
-    "technique": ["Q39546", "Q11019", "Q9143", "Q11862829", "Q7397"],  # outil, machine, langage de programmation, discipline, logiciel
     "terrain": ["Q2221906", "Q41176", "Q811979"],  # lieu, bâtiment, structure architecturale
+    "evenement": ["Q1190554", "Q178561", "Q645883"],  # occurrence, bataille, opération militaire
+    "objet": [
+        "Q39546", "Q728", "Q42889", "Q11019", "Q34379", "Q11460", "Q1183543",
+        "Q8205328",  # outil, arme, véhicule, machine, instrument de musique, vêtement, dispositif, objet artificiel
+    ],
+    "savoir": [
+        "Q11862829", "Q336", "Q17737", "Q151885", "Q11016", "Q9143", "Q7397", "Q246672",
+        "Q7257", "Q968159",  # discipline, science, théorie, concept, technologie, langage de programmation,
+                             # logiciel, objet mathématique, idéologie, mouvement artistique
+    ],
 }
 
-# Types dont les classes sont assez petites pour que le SPARQL Wikidata réponde.
-# Créature et Terrain (humains, taxons, lieux) expirent toujours : ils passent par le top mensuel.
-TYPES_PAR_CLASSES = ("evenement", "technique")
+# Racines assez petites pour chercher les candidats par classe dans le SPARQL Wikidata.
+# Les racines trop larges (humains, taxons, lieux, objet artificiel, concept) expirent.
+RACINES_CANDIDATS = {
+    "evenement": ["Q178561", "Q645883"],
+    "objet": ["Q39546", "Q728", "Q42889", "Q11019", "Q34379", "Q11460", "Q1183543"],
+    "savoir": ["Q11862829", "Q336", "Q17737", "Q11016", "Q9143", "Q7397", "Q246672", "Q7257", "Q968159"],
+}
+
+# Types dont on cherche les candidats par classe. Créature et Terrain passent par le top mensuel.
+TYPES_PAR_CLASSES = tuple(RACINES_CANDIDATS)
 
 DOSSIER_CACHE = ".cache-echantillon"
 utiliser_cache = True
@@ -74,6 +91,7 @@ EXCLUSIONS = [
     "Q4182287",    # moteur de recherche
     "Q33120876",   # projet de contenu Wikimedia
     "Q7889",       # jeu vidéo
+    "Q14897293",   # entité fictionnelle (armes, lieux, personnages inventés)
 ]
 
 EXCLUS_PREFIXES = ("Liste_", "List_of_", "Liste_des_")
@@ -133,7 +151,7 @@ def top_articles(langue, annee, mois, contact):
 def candidats_par_classe(langue, type_carte, par_racine, contact):
     """Articles d'un type, triés par nombre de langues, depuis Wikidata. -> [(titre, qid)]"""
     trouves = {}
-    for racine in RACINES[type_carte]:
+    for racine in RACINES_CANDIDATS[type_carte]:
         requete = f"""
 SELECT ?item ?titre ?n WHERE {{
   ?item wdt:P31/wdt:P279* wd:{racine} ; wikibase:sitelinks ?n .
@@ -152,10 +170,11 @@ def lectures_mois(langue, titre, annee, mois, contact):
     """Lectures de l'article sur un mois (0 si inconnu)."""
     t = urllib.parse.quote(titre.replace(" ", "_"), safe="")
     url = (f"https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/"
-           f"{langue}.wikipedia/all-access/user/{t}/monthly/{annee}{mois:02d}01/{annee}{mois:02d}28")
+           f"{langue}.wikipedia/all-access/user/{t}/monthly/{annee}{mois:02d}01/{annee}{mois:02d}{calendar.monthrange(annee, mois)[1]}")
     try:
         rep = http_json(url, contact=contact, essais=2)
-    except urllib.error.HTTPError:  # titre que l'API refuse : on le compte à 0
+    except urllib.error.HTTPError as e:  # titre que l'API refuse : on le compte à 0
+        print(f"  lectures impossibles pour {titre!r} ({e.code})", file=sys.stderr)
         return 0
     time.sleep(0.05)
     return rep["items"][0]["views"] if rep and rep.get("items") else 0
@@ -183,49 +202,80 @@ def qids(langue, titres, contact):
     return res
 
 
+PARENTS = {}  # classe -> classes parentes (P279), mémoire du processus
+
+
+def parents_de(classes, contact):
+    a_chercher = [c for c in classes if c not in PARENTS]
+    for i in range(0, len(a_chercher), 80):
+        lot = a_chercher[i:i + 80]
+        valeurs = " ".join(f"wd:{c}" for c in lot)
+        requete = f"SELECT ?c ?p WHERE {{ VALUES ?c {{ {valeurs} }} ?c wdt:P279 ?p }}"
+        rep = http_json("https://query.wikidata.org/sparql",
+                        params={"format": "json", "query": requete}, contact=contact)
+        for c in lot:
+            PARENTS[c] = set()
+        for b in rep["results"]["bindings"]:
+            PARENTS[b["c"]["value"].rsplit("/", 1)[1]].add(b["p"]["value"].rsplit("/", 1)[1])
+        time.sleep(0.5)
+
+
+def type_le_plus_proche(p31_par_item, contact, profondeur_max=12):
+    """QID -> type de la racine la plus proche des classes P31 (None si aucune).
+
+    Recherche en largeur sur les liens P279, niveau par niveau pour tous les
+    articles du lot à la fois, avec les parents gardés en mémoire.
+    """
+    racine_type = {r: t for t, rs in RACINES.items() for r in rs}
+    ordre = {t: i for i, t in enumerate(TYPES)}
+    res = {q: None for q in p31_par_item}
+    front = {q: set(c) for q, c in p31_par_item.items()}
+    vus = {q: set(c) for q, c in p31_par_item.items()}
+    for _ in range(profondeur_max + 1):
+        for q in front:
+            if res[q] is None:
+                trouves = [racine_type[c] for c in front[q] if c in racine_type]
+                if trouves:
+                    res[q] = min(trouves, key=ordre.get)
+        actifs = [q for q in front if res[q] is None and front[q]]
+        if not actifs:
+            break
+        parents_de(set().union(*(front[q] for q in actifs)), contact)
+        for q in actifs:
+            suivants = set().union(*(PARENTS[c] for c in front[q])) - vus[q]
+            vus[q] |= suivants
+            front[q] = suivants
+    return res
+
+
 def types_wikidata(liste_qids, contact):
     """QID -> (type de carte, liste des P31), via SPARQL."""
     res = {}
-    toutes = {r: t for t, rs in RACINES.items() for r in rs}
-    racines_v = " ".join(f"wd:{r}" for r in toutes)
     for i in range(0, len(liste_qids), TAILLE_LOT):
         lot = liste_qids[i:i + TAILLE_LOT]
         items = " ".join(f"wd:{q}" for q in lot)
-        # Deux requêtes simples : un OPTIONAL autour du chemin P31/P279* est trop lent.
-        req_racines = f"""
-SELECT ?item ?racine WHERE {{
-  VALUES ?item {{ {items} }}
-  VALUES ?racine {{ {racines_v} }}
-  ?item wdt:P31/wdt:P279* ?racine
-}}"""
-        req_p31 = f"""
-SELECT ?item ?p31 WHERE {{
-  VALUES ?item {{ {items} }}
-  ?item wdt:P31 ?p31
-}}"""
         req_exclus = f"""
 SELECT DISTINCT ?item WHERE {{
   VALUES ?item {{ {items} }}
   VALUES ?exclu {{ {" ".join("wd:" + e for e in EXCLUSIONS)} }}
   ?item wdt:P31/wdt:P279* ?exclu
 }}"""
+        req_p31 = f"""
+SELECT ?item ?p31 WHERE {{
+  VALUES ?item {{ {items} }}
+  ?item wdt:P31 ?p31
+}}"""
         exclus = http_json("https://query.wikidata.org/sparql",
                            params={"format": "json", "query": req_exclus}, contact=contact)
-        a_exclure = {b["item"]["value"].rsplit("/", 1)[1] for b in exclus["results"]["bindings"]}
-        liens = http_json("https://query.wikidata.org/sparql",
-                          params={"format": "json", "query": req_racines}, contact=contact)
         natures = http_json("https://query.wikidata.org/sparql",
                             params={"format": "json", "query": req_p31}, contact=contact)
-        trouves, p31 = {}, {}
-        for b in liens["results"]["bindings"]:
-            q = b["item"]["value"].rsplit("/", 1)[1]
-            trouves.setdefault(q, set()).add(toutes[b["racine"]["value"].rsplit("/", 1)[1]])
+        a_exclure = {b["item"]["value"].rsplit("/", 1)[1] for b in exclus["results"]["bindings"]}
+        p31 = {}
         for b in natures["results"]["bindings"]:
-            q = b["item"]["value"].rsplit("/", 1)[1]
-            p31.setdefault(q, set()).add(b["p31"]["value"].rsplit("/", 1)[1])
+            p31.setdefault(b["item"]["value"].rsplit("/", 1)[1], set()).add(b["p31"]["value"].rsplit("/", 1)[1])
+        types = type_le_plus_proche({q: p31.get(q, set()) for q in lot if q not in a_exclure}, contact)
         for q in lot:
-            type_carte = None if q in a_exclure else next((t for t in TYPES if t in trouves.get(q, ())), None)
-            res[q] = (type_carte, sorted(p31.get(q, ())))
+            res[q] = (types.get(q), sorted(p31.get(q, ())))
         time.sleep(1)
     return res
 

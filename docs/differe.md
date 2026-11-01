@@ -25,7 +25,7 @@ Proposition : prendre la grande famille qui regroupe le plus de sous-types de la
 
 ## Œuvres comme cartes
 
-- Différé le 01/11/2026, jusqu'à ce que les 4 types soient vérifiés
+- Différé le 01/11/2026, jusqu'à ce que les 5 types soient vérifiés
 - Specs : `gameplay/carte/type.md`, `generation/article/selection.md`
 
 Les films, albums, livres, singles et jeux vidéo sont exclus pour la première version. Il faudra décider s'ils deviennent des cartes, et dans quel type. Il y a du volume : 29 427 albums et 10 664 singles sur la Wikipédia française, sans compter les films et les livres.
@@ -48,4 +48,4 @@ Pistes :
 - Différé le 01/11/2026, à décider
 - Specs : `gameplay/carte/type.md`, `generation/article/selection.md`
 
-Facebook, ChatGPT, Google, Wikipédia ou XNXX ne rentrent proprement dans aucun des 4 types : classés en Technique par la hiérarchie des logiciels de Wikidata, ils n'y ont pas leur place. Ils sont exclus pour l'instant. Il faudra décider s'ils forment un type de carte à part, ce qui demanderait aussi de filtrer les contenus sensibles.
+Facebook, ChatGPT, Google, Wikipédia ou XNXX ne rentrent proprement dans aucun des 5 types : la hiérarchie des logiciels de Wikidata les classe en Savoir, ils n'y ont pas leur place. Ils sont exclus pour l'instant. Il faudra décider s'ils forment un type de carte à part, ce qui demanderait aussi de filtrer les contenus sensibles.

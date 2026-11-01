@@ -35,7 +35,7 @@ Un fichier JSON par ligne (JSON Lines), un article par ligne. Les champs `fiche`
 ## Composition (piste)
 
 - 200 à 300 articles, moitié Wikipédia FR, moitié EN.
-- Réparti sur les 4 types de carte, avec au moins 40 articles par type, pour que chaque type soit mesurable.
+- Réparti sur les 5 types de carte, avec au moins 40 articles par type, pour que chaque type soit mesurable.
 - Mélange de rarités, y compris beaucoup d'articles pauvres en données, puisque ce sera la majorité du pool.
 - Premier lot : les articles les plus lus du mois, par type, avec `scripts/tirer_echantillon.py`. Ils sont connus de tout le monde, donc faciles à annoter. Les lots suivants doivent venir d'un tirage au hasard dans chaque classe retenue (voir `generation/article/selection.md`), sinon l'échantillon ne représente pas le pool.
 - Un tiers mis de côté pour tester, jamais utilisé comme exemples pour le kNN.
@@ -55,8 +55,8 @@ Limites connues :
 
 - le top mensuel est limité à 1000 articles, et un type peut rester incomplet
 - les plus lus sont dominés par l'actualité (personnalités politiques, sport, élections) et contiennent des articles sensibles (crimes, meurtriers). Le filtre des articles sensibles de `generation/article/selection.md` n'est pas encore appliqué
-- les racines de classes par type sont provisoires : un pays est classé Terrain, et une discipline comme les mathématiques, Technique
-- les sites web, plateformes et jeux vidéo sont exclus du tirage, ce qui laisse très peu d'articles Technique parmi les plus lus (1 en FR, 3 en EN sur 10 visés)
+- les racines de classes par type sont provisoires (un pays est classé Terrain)
+- Créature et Terrain, trop gros pour le SPARQL de Wikidata, viennent du top mensuel. Événement, Objet et Savoir viennent des classes, puis sont triés par lectures du mois
 
 ## Mesures
 
