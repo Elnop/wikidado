@@ -58,7 +58,7 @@ Avec un catalogue fermé, le modèle ne peut pas inventer une capacité cassée.
 
 ## Choix du modèle
 
-Contraintes : pas de budget, tout doit tourner gratuitement et sur CPU (pas de GPU). Le modèle est donc local, petit, et appelé en lot. Les cartes viennent de Wikipédia FR et EN, donc le modèle doit être multilingue et licencié pour un usage commercial (MIT ou Apache 2.0, pas de CC BY-NC).
+Contraintes : pas de budget, tout doit tourner gratuitement et sur CPU (pas de GPU). Le modèle est donc local, petit, et appelé en lot. Les cartes viennent de la Wikipédia française, donc le modèle doit bien traiter le français. Il doit aussi être licencié pour un usage commercial (MIT ou Apache 2.0, pas de CC BY-NC).
 
 L'assignation se pose comme des questions typées sur la fiche de l'article, dans le style des modèles de décision (Jev, OpenJev) :
 

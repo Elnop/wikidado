@@ -49,3 +49,16 @@ Pistes :
 - Specs : `gameplay/carte/type.md`, `generation/article/selection.md`
 
 Facebook, ChatGPT, Google, Wikipédia ou XNXX ne rentrent proprement dans aucun des 5 types : la hiérarchie des logiciels de Wikidata les classe en Savoir, ils n'y ont pas leur place. Ils sont exclus pour l'instant. Il faudra décider s'ils forment un type de carte à part, ce qui demanderait aussi de filtrer les contenus sensibles.
+
+## Internationalisation
+
+- Différé le 01/11/2026, jusqu'après la première version
+- Specs : `generation/pipeline.md`, `generation/echantillon.md`, `generation/article/selection.md`
+
+La première version ne prend que des articles de la Wikipédia française. Ensuite, il faudra ouvrir le jeu à d'autres langues, en commençant par l'anglais. Questions à trancher à ce moment-là :
+
+- une carte par élément Wikidata, ou une carte par article de chaque langue
+- le modèle d'assignation doit-il être multilingue, et faut-il un échantillon annoté par langue ? Les articles en anglais ont-ils les mêmes mécaniques que leur équivalent français ?
+- les classes retenues et les volumes de `generation/article/selection.md` sont mesurés sur fr seulement
+
+Le script `scripts/tirer_echantillon.py` accepte déjà `--langue en`.
