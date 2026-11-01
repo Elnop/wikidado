@@ -1,6 +1,6 @@
 # Types de cartes
 
-On ne garde que certaines natures d'articles, et chaque nature retenue donne un type de carte. Il y a 4 types. Le type Lieu est nommé, les noms des trois autres sont encore provisoires.
+On ne garde que certaines natures d'articles, et chaque nature retenue donne un type de carte. Il y a 4 types : Lieu, Créature, Événement et Technique.
 
 Le découpage en 4 est à vérifier sur ce que Wikipédia et Wikidata proposent : chaque type doit couvrir assez d'articles intéressants (voir les volumes dans `generation/article/selection.md`). Le choix des articles est décrit dans `generation/article/selection.md`.
 
@@ -9,9 +9,9 @@ Les œuvres (films, albums, livres) ne sont pas des cartes.
 | Type | Ce que ça couvre | Rôle en jeu |
 |---|---|---|
 | Lieu | lieux avec coordonnées : villes, montagnes, rivières, bâtiments | a une défense et peut être attaqué à la place du joueur. Certains produisent de l'électricité (voir `gameplay/electricite.md`) |
-| Créature (provisoire) | personnes, espèces animales et végétales | se bat, a une attaque et une défense |
-| Événement (provisoire) | batailles, opérations militaires, catastrophes | effet ponctuel, comme un éphémère ou un rituel |
-| Technique (provisoire) | inventions, outils, logiciels, disciplines | effet permanent, comme un artefact ou un enchantement |
+| Créature | personnes, espèces animales et végétales | se bat, a une attaque et une défense |
+| Événement | batailles, opérations militaires, catastrophes | effet ponctuel, comme un éphémère ou un rituel |
+| Technique | inventions, outils, logiciels, disciplines | effet permanent, comme un artefact ou un enchantement |
 
 ## Sous-types
 
