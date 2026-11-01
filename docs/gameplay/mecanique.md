@@ -9,8 +9,7 @@ Chaque mécanique doit préciser :
 - `id` : identifiant stable, utilisé dans le JSON du modèle
 - `texte` : gabarit du texte affiché sur la carte, avec ses paramètres entre accolades
 - `types` : types de cartes qui peuvent la recevoir
-- `cout_mana` : ce qu'elle ajoute au coût de la carte (voir `gameplay/carte/cout.md`)
-- `cout_budget` : points de budget de stats qu'elle consomme
+- `cout_budget` : points de budget qu'elle consomme. La somme de ces points fixe le coût de la carte (voir `gameplay/carte/cout.md`)
 - `params` : paramètres possibles et leurs valeurs autorisées
 - `condition` : données nécessaires dans la fiche de l'article (par exemple, la mécanique n'est proposée que si l'article a un lieu de naissance)
 - `indice` : une phrase pour aider le modèle à choisir (à quel genre d'article elle va bien)
@@ -21,7 +20,6 @@ Chaque mécanique doit préciser :
 
 - texte : "Les autres créatures {famille} que vous contrôlez gagnent +1 en attaque."
 - types : Créature
-- cout_mana : à définir
 - cout_budget : 2
 - params : famille parmi les familles du jeu
 - condition : aucune
@@ -31,7 +29,6 @@ Chaque mécanique doit préciser :
 
 - texte : "Tant que vous contrôlez {lieu}, cette créature gagne +1/+1."
 - types : Créature
-- cout_mana : à définir
 - cout_budget : 1
 - params : lieu, rempli par le code avec `P19` (lieu de naissance) s'il existe comme carte Terrain
 - condition : l'article a un `P19` qui correspond à une carte
@@ -41,7 +38,6 @@ Chaque mécanique doit préciser :
 
 - texte : "Quand vous jouez {evenement}, piochez une carte."
 - types : Créature
-- cout_mana : à définir
 - cout_budget : 1
 - params : événement, rempli par le code avec `P1344` (a participé à)
 - condition : l'article a un `P1344` qui correspond à une carte Événement

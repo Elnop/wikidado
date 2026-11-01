@@ -6,25 +6,27 @@ Le coût d'une carte découle des mécaniques qui lui sont assignées. Le modèl
 
 Le coût ne dépend pas de la popularité de l'article. La popularité fixe la rareté (voir `gameplay/carte/rarete.md`) et, à travers elle, la puissance par rapport au coût (voir `gameplay/carte/stats.md`).
 
-Comme dans Magic, une carte puissante coûte cher et une carte à 1 mana a sa place dans un deck.
+## Mana
+
+Un seul mana, générique. Toutes les cartes se paient avec le même mana, quelle que soit leur famille.
 
 ## Calcul
 
-Proposition de départ :
+Chaque mécanique du catalogue consomme des points de budget (`cout_budget`, voir `gameplay/mecanique.md`). Le coût de la carte est la somme de ces points, convertie en mana :
 
 ```
-cout = cout_de_base_du_type + somme(cout_mana des mécaniques assignées)
+cout = arrondi(somme(cout_budget des mécaniques) / points_par_mana)
 ```
 
-Chaque mécanique du catalogue a donc un `cout_mana` (voir `gameplay/mecanique.md`). Le coût de base du type permet à une carte sans mécanique d'avoir quand même un coût : une créature sans capacité coûterait 1 ou 2.
+`points_par_mana` vaut 2 pour commencer, à régler en partie de test.
 
-Le budget de stats se calcule ensuite à partir de ce coût et de la rareté (voir `gameplay/carte/stats.md`).
+Il n'y a pas de coût de base selon le type. Le coût minimum est 0 : une carte sans mécanique est gratuite. Il n'y a pas de coût maximum.
+
+Les stats prennent ensuite le budget du coût, multiplié par la rareté, moins ce que les mécaniques ont consommé (voir `gameplay/carte/stats.md`).
 
 ## Questions ouvertes
 
-- Faut-il un coût de base par type, et combien ?
-- Une mécanique ajoute-t-elle seulement du mana, ou consomme-t-elle aussi du budget de stats (`cout_budget`) ? Avec les deux, une capacité augmente le coût et donc le budget, puis en reprend une partie. Il faut vérifier que ça ne fait pas des cartes trop fortes ou trop faibles.
+- Une carte sans mécanique coûte 0 et n'a qu'un point de stats (avant rareté). Les grosses créatures sans capacité n'existent donc pas. Faut-il des mécaniques qui ne font qu'ajouter des stats, pour permettre ces cartes ?
 - Les paramètres d'une mécanique changent-ils son coût ? "+1 aux créatures Histoire" et "+1 à toutes vos créatures" ne valent pas la même chose.
 - Comment garder une courbe de mana équilibrée si le coût n'est pas choisi directement ?
-- Un seul type de mana générique, ou du mana coloré par famille (voir `gameplay/carte/famille.md`) ?
-- Coût de 1 à 7 ou plus large ?
+- Sans coût maximum, faut-il limiter le nombre de mécaniques par carte pour éviter des cartes injouables ?

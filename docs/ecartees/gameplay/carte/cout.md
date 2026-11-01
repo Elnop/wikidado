@@ -52,3 +52,39 @@ Le coût dépendait du type et de la nature Wikidata : une bataille coûte plus 
 Écartée le 01/11/2026 : le coût découle des mécaniques assignées.
 
 Le coût était tiré pour obtenir une courbe de mana équilibrée dans chaque famille, puis le reste de la carte s'adaptait.
+
+## Mana coloré par famille
+
+Écartée le 01/11/2026 : le mana est générique.
+
+Tout le coût d'une carte se payait avec le mana de sa famille. Contraignant, les decks à plusieurs familles devenaient durs à jouer.
+
+## Mana générique et mana coloré
+
+Écartée le 01/11/2026 : le mana est générique.
+
+Comme Magic : un coût mélangeait du mana générique et du mana de la famille de la carte (par exemple 2 + 1 Histoire). Les familles comptaient dans la construction de deck.
+
+## Coût de base selon le type
+
+Écartée le 01/11/2026 : pas de coût de base, le coût minimum est 0.
+
+Chaque type avait un coût de base (par exemple Créature 1, Événement 0), ajouté au coût des mécaniques, pour qu'une créature sans capacité coûte quand même quelque chose. Variante : un coût de base identique pour tous les types.
+
+## Plage de coûts fermée
+
+Écartée le 01/11/2026 : coût minimum 0, pas de maximum.
+
+Plages envisagées : 1 à 7 (lisible, pas de carte gratuite), 1 à 10 (plus de place pour les grosses cartes, comme Hearthstone), 0 à 7 et plus.
+
+## Coût à partir du budget total stats + mécaniques
+
+Écartée le 01/11/2026 : le coût est la somme des cout_budget des mécaniques, convertie en mana.
+
+Le code fixait d'abord les stats voulues à partir de l'article, ajoutait le cout_budget des mécaniques, et le coût était le plus petit coût dont le budget (multiplié par la rareté) couvrait ce total.
+
+## Coût égal à la somme directe des cout_budget
+
+Écartée le 01/11/2026 : le coût est la somme des cout_budget convertie en mana.
+
+Le coût était la somme des cout_budget des mécaniques sans conversion, et les stats venaient d'un budget séparé.

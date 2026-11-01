@@ -14,7 +14,7 @@ docs/
       cout.md                  coût
       rarete.md                rareté
       stats.md                 budget de stats, attaque et défense
-      famille.md               familles (couleurs)
+      famille.md               familles, utilisées pour les synergies
     synergie/
       index.md                 ce qu'est une synergie, questions générales
       liens.md                 les articles se citent entre eux
@@ -32,7 +32,10 @@ docs/
   ecartees/                    idées écartées, rangées comme le reste de docs/
     gameplay/
       carte/cout.md
+      carte/rarete.md
       carte/stats.md
+      carte/type.md
+      mecanique.md
       duel.md
     generation/
       pipeline.md

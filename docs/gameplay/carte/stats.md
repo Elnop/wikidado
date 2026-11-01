@@ -8,10 +8,11 @@ C'est le fonctionnement de Magic : les rares et mythiques y sont souvent plus ef
 
 ## Budget de stats
 
-Comme dans Magic où une créature à N mana a environ N+1 en force + endurance sans capacité, chaque coût donne un budget de base, multiplié selon la rareté :
+Comme dans Magic où une créature à N mana a environ N+1 en force + endurance sans capacité, chaque coût donne un budget, multiplié selon la rareté. Les mécaniques de la carte en consomment une partie (voir `gameplay/carte/cout.md`), le reste va aux stats :
 
 ```
 budget = (2 * cout + 1) * multiplicateur_rarete
+budget_stats = budget - somme(cout_budget des mécaniques)
 ```
 
 Multiplicateurs de départ, à régler en partie de test :
@@ -23,7 +24,7 @@ Multiplicateurs de départ, à régler en partie de test :
 | Rare | 1,25 |
 | Mythique | 1,4 |
 
-Une commune à 3 a 7 points à répartir, une mythique à 3 en a environ 10. Une capacité coûte des points de budget (voir `gameplay/mecanique.md`).
+Une commune à 3 a 7 points de budget, une mythique à 3 en a environ 10. Si leurs mécaniques consomment 6 points, la commune garde 1 point de stats et la mythique environ 4.
 
 ## Répartition attaque / défense
 

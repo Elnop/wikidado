@@ -4,11 +4,13 @@ La rareté d'une carte vient de la popularité de son article. Elle détermine l
 
 ## Mesure de la popularité
 
-On mesure la popularité avec les lectures sur 30 jours, en échelle log, éventuellement combinées au nombre de langues (plus stable que les lectures).
+On mesure la popularité avec les lectures sur 30 jours, additionnées sur toutes les éditions linguistiques de Wikipédia où l'article existe. Le nombre de langues lui-même n'entre pas dans le calcul.
+
+Les lectures de chaque édition s'obtiennent avec l'API Pageviews ou les dumps de pageviews (voir `wikipedia/donnees.md`). On passe d'un article fr à ses équivalents dans les autres langues avec les interwikis ou l'élément Wikidata.
 
 ## Paliers
 
-Paliers de départ pour la Wikipédia française, calés sur l'échantillon de `wikipedia/donnees.md` :
+Paliers provisoires, calés sur les lectures de la Wikipédia française seule (échantillon de `wikipedia/donnees.md`). Ils seront plus hauts une fois toutes les langues additionnées, il faudra les recalculer :
 
 | Rareté | Lectures sur 30 jours | Exemples mesurés |
 |---|---|---|
@@ -22,8 +24,3 @@ Il faudra recaler les paliers sur un vrai échantillon pour obtenir la répartit
 ## Saisons
 
 La rareté est figée au début d'une saison (instantané des lectures à une date), sinon les cartes changent de puissance toutes seules.
-
-## Questions ouvertes
-
-- Lectures de la Wikipédia française ou anglaise ? L'anglaise est plus stable statistiquement, la française colle mieux au public visé.
-- Le nombre de langues compte-t-il dans la popularité, ou seulement les lectures ?
