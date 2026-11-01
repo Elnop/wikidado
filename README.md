@@ -30,6 +30,7 @@ docs/
     tendance.md                bonus d'actualité
   generation/
     pipeline.md                partage entre code et petit modèle d'assignation
+    echantillon.md             articles annotés à la main pour comparer les moteurs d'assignation
     article/
       selection.md             quels articles deviennent des cartes
   ecartees/                    idées écartées, rangées comme le reste de docs/
