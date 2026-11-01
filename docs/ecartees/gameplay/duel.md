@@ -165,3 +165,19 @@ Un minimum de Créatures (10 par exemple) pour qu'un deck puisse toujours attaqu
 Écartée le 01/11/2026 : en première version, on joue contre des joueurs en ligne et contre une IA.
 
 Sans IA, il faut des joueurs connectés. Sans multijoueur, pas de serveur de match, comme WikiMasters.
+
+## Autres limites de temps
+
+Écartée le 01/11/2026 : réserve de 10 minutes par joueur, plus 10 secondes par tour.
+
+Un délai fixe de 75 secondes par tour comme Hearthstone, une réserve de 15 minutes sans ajout, 5 minutes plus 15 secondes par tour, ou pas de limite du tout. Quand la réserve était vide, une variante laissait le joueur continuer avec des tours de quelques secondes au lieu de perdre.
+
+## Le joueur actif perd en cas d'égalité
+
+Écartée le 01/11/2026 : partie nulle si les deux joueurs tombent à 0 en même temps.
+
+## Attaquer les Objets, Savoirs et Factions
+
+Écartée le 01/11/2026 : seule une mécanique les détruit.
+
+Comme les Lieux, ils devenaient des cibles d'attaque, avec une défense à leur donner.

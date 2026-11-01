@@ -12,7 +12,11 @@ Une partie oppose deux joueurs, chacun avec son deck. On joue contre un autre jo
 
 ## Victoire
 
-Un joueur perd quand ses points de vie tombent à 0, ou quand il doit piocher alors que son deck est vide.
+Un joueur perd quand ses points de vie tombent à 0, quand il doit piocher alors que son deck est vide, ou quand sa réserve de temps est épuisée. Si les deux joueurs tombent à 0 en même temps, la partie est nulle.
+
+## Temps de jeu
+
+En ligne, chaque joueur a une réserve de 10 minutes pour la partie, et gagne 10 secondes au début de chacun de ses tours, comme une pendule d'échecs. Sa réserve s'écoule pendant son tour et pendant qu'il choisit ses blocages au tour adverse.
 
 ## Déroulé d'un tour
 
@@ -24,6 +28,8 @@ Un joueur perd quand ses points de vie tombent à 0, ou quand il doit piocher al
 Le joueur dont ce n'est pas le tour ne joue aucune carte. Il ne décide que de ses blocages.
 
 Il n'y a pas de limite au nombre de cartes en jeu.
+
+Les Objets, Savoirs et Factions n'ont pas de défense et ne peuvent pas être attaqués. Seule une mécanique peut les détruire.
 
 ## Défausse
 
