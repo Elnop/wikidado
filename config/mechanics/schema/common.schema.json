@@ -1,29 +1,29 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Définitions communes du catalogue des mécaniques",
+  "title": "Shared definitions of the mechanics catalogue",
   "$defs": {
     "id": {
       "type": "string",
       "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
     },
-    "type": {
+    "card_type": {
       "enum": [
-        "lieu",
+        "place",
         "creature",
-        "evenement",
-        "objet",
-        "savoir",
+        "event",
+        "object",
+        "knowledge",
         "faction"
       ]
     },
-    "types": {
+    "card_types": {
       "type": "array",
       "items": {
-        "$ref": "#/$defs/type"
+        "$ref": "#/$defs/card_type"
       },
       "uniqueItems": true
     },
-    "texte": {
+    "text": {
       "type": "object",
       "properties": {
         "fr": {
@@ -37,17 +37,17 @@
         "type": "string"
       }
     },
-    "statut": {
+    "status": {
       "enum": [
-        "retenu",
-        "propose"
+        "accepted",
+        "proposed"
       ]
     },
-    "facteur": {
+    "factor": {
       "type": "number",
       "exclusiveMinimum": 0
     },
-    "n": {
+    "range": {
       "oneOf": [
         {
           "type": "null"
@@ -70,13 +70,13 @@
         }
       ]
     },
-    "rempli_par": {
+    "filled_by": {
       "enum": [
-        "modele",
+        "model",
         "code"
       ]
     },
-    "indice": {
+    "hint": {
       "type": "string",
       "minLength": 1
     }

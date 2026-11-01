@@ -1,45 +1,45 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Mécaniques assignées à une carte, sortie du modèle et des annotations",
+  "title": "Mechanics assigned to a card: model output and sample annotations",
   "type": "object",
   "properties": {
     "article": {
       "type": "string",
       "pattern": "^Q[0-9]+$"
     },
-    "mecaniques": {
+    "mechanics": {
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
-          "mot_cle": {
-            "$ref": "commun.schema.json#/$defs/id"
+          "keyword": {
+            "$ref": "common.schema.json#/$defs/id"
           },
-          "declencheur": {
-            "$ref": "commun.schema.json#/$defs/id"
+          "trigger": {
+            "$ref": "common.schema.json#/$defs/id"
           },
-          "effet": {
-            "$ref": "commun.schema.json#/$defs/id"
+          "effect": {
+            "$ref": "common.schema.json#/$defs/id"
           },
           "n": {
             "type": "integer"
           },
-          "duree": {
-            "$ref": "commun.schema.json#/$defs/id"
+          "duration": {
+            "$ref": "common.schema.json#/$defs/id"
           },
-          "cible": {
-            "$ref": "commun.schema.json#/$defs/id"
+          "target": {
+            "$ref": "common.schema.json#/$defs/id"
           },
-          "filtre": {
+          "filter": {
             "type": "object",
             "properties": {
               "type": {
-                "$ref": "commun.schema.json#/$defs/type"
+                "$ref": "common.schema.json#/$defs/card_type"
               },
-              "famille": {
+              "family": {
                 "type": "string"
               },
-              "carte": {
+              "card": {
                 "type": "string",
                 "pattern": "^Q[0-9]+$"
               }
@@ -48,23 +48,23 @@
             "maxProperties": 1,
             "additionalProperties": false
           },
-          "mot_cle_donne": {
-            "$ref": "commun.schema.json#/$defs/id"
+          "granted_keyword": {
+            "$ref": "common.schema.json#/$defs/id"
           },
           "condition": {
             "type": "object",
             "properties": {
               "id": {
-                "$ref": "commun.schema.json#/$defs/id"
+                "$ref": "common.schema.json#/$defs/id"
               },
               "n": {
                 "type": "integer"
               },
-              "carte": {
+              "card": {
                 "type": "string",
                 "pattern": "^Q[0-9]+$"
               },
-              "filtre": {
+              "filter": {
                 "type": "object"
               }
             },
@@ -77,18 +77,18 @@
         "oneOf": [
           {
             "required": [
-              "mot_cle"
+              "keyword"
             ],
             "maxProperties": 1
           },
           {
             "required": [
-              "effet",
-              "cible"
+              "effect",
+              "target"
             ],
             "not": {
               "required": [
-                "mot_cle"
+                "keyword"
               ]
             }
           }
@@ -99,7 +99,7 @@
   },
   "required": [
     "article",
-    "mecaniques"
+    "mechanics"
   ],
   "additionalProperties": false
 }

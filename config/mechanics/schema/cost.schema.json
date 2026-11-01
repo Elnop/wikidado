@@ -5,23 +5,23 @@
     "$schema": {
       "type": "string"
     },
-    "arrondi": {
+    "rounding": {
       "enum": [
-        "superieur"
+        "up"
       ]
     },
     "minimum": {
       "type": "integer",
       "minimum": 0
     },
-    "types": {
-      "$ref": "commun.schema.json#/$defs/types"
+    "card_types": {
+      "$ref": "common.schema.json#/$defs/card_types"
     }
   },
   "required": [
-    "arrondi",
+    "rounding",
     "minimum",
-    "types"
+    "card_types"
   ],
   "additionalProperties": false
 }

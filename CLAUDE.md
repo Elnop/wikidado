@@ -19,7 +19,9 @@ Toute la documentation est dans `docs/`. Le `README.md` à la racine sert d'inde
 
 ## Config
 
-Les valeurs que les programmes lisent (briques des mécaniques, prix, facteurs) sont dans `config/`, en JSON avec un JSON Schema par fichier. La config fait foi : la doc explique les règles et renvoie aux fichiers de config au lieu de recopier les valeurs. Après une modification de `config/mecanique/`, lancer `uv run verifier_mecaniques.py` depuis `generation/`.
+Les valeurs que les programmes lisent (briques des mécaniques, prix, facteurs) sont dans `config/`, en JSON avec un JSON Schema par fichier. La config fait foi : la doc explique les règles et renvoie aux fichiers de config au lieu de recopier les valeurs. Après une modification de `config/mechanics/`, lancer `uv run check_mechanics.py` depuis `generation/`.
+
+Tout ce qui est propre au code est en anglais : noms de fichiers et dossiers de code et de config, clés JSON, identifiants, fonctions, variables. La doc reste en français, comme les textes affichés au joueur et les indices destinés au modèle.
 
 ## Monorepo
 

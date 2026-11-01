@@ -1,0 +1,26 @@
+{
+  "$schema": "./schema/filter.schema.json",
+  "filters": [
+    {
+      "id": "type",
+      "factor": 0.75,
+      "filled_by": "model",
+      "values": "types",
+      "status": "accepted"
+    },
+    {
+      "id": "family",
+      "factor": 0.5,
+      "filled_by": "model",
+      "values": "families",
+      "status": "accepted"
+    },
+    {
+      "id": "linked-card",
+      "factor": 0.5,
+      "filled_by": "code",
+      "values": "cards",
+      "status": "accepted"
+    }
+  ]
+}

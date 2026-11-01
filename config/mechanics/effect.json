@@ -1,0 +1,674 @@
+{
+  "$schema": "./schema/effect.schema.json",
+  "effects": [
+    {
+      "id": "damage",
+      "kind": "triggered",
+      "text": {
+        "fr": "infligez {n} dégâts à {target}"
+      },
+      "n": {
+        "min": 1,
+        "max": 6
+      },
+      "cost": {
+        "per_n": 1,
+        "flat": 0,
+        "per_keyword_cost": 0,
+        "divisor": 1
+      },
+      "has_duration": false,
+      "targets": [
+        "one",
+        "all-opponents",
+        "all",
+        "opponent"
+      ],
+      "affected_types": [
+        "creature",
+        "place"
+      ],
+      "zone": "board",
+      "takes_keyword": false,
+      "hint": "conflits, scandales, attaques, catastrophes, armes, critiques, pamphlets",
+      "status": "accepted"
+    },
+    {
+      "id": "heal",
+      "kind": "triggered",
+      "text": {
+        "fr": "gagnez {n} points de vie"
+      },
+      "n": {
+        "min": 2,
+        "max": 8
+      },
+      "cost": {
+        "per_n": 1,
+        "flat": 0,
+        "per_keyword_cost": 0,
+        "divisor": 2
+      },
+      "has_duration": false,
+      "targets": [
+        "you"
+      ],
+      "affected_types": [],
+      "zone": "board",
+      "takes_keyword": false,
+      "hint": "personnalités aimées, fêtes, médecine",
+      "status": "accepted"
+    },
+    {
+      "id": "draw",
+      "kind": "triggered",
+      "text": {
+        "fr": "piochez {n} cartes"
+      },
+      "n": {
+        "min": 1,
+        "max": 3
+      },
+      "cost": {
+        "per_n": 2,
+        "flat": 0,
+        "per_keyword_cost": 0,
+        "divisor": 1
+      },
+      "has_duration": false,
+      "targets": [
+        "you"
+      ],
+      "affected_types": [],
+      "zone": "board",
+      "takes_keyword": false,
+      "hint": "savoir, encyclopédies, recherche, presse, bibliothèques",
+      "status": "accepted"
+    },
+    {
+      "id": "discard",
+      "kind": "triggered",
+      "text": {
+        "fr": "l'adversaire défausse {n} cartes au hasard"
+      },
+      "n": {
+        "min": 1,
+        "max": 2
+      },
+      "cost": {
+        "per_n": 3,
+        "flat": 0,
+        "per_keyword_cost": 0,
+        "divisor": 1
+      },
+      "has_duration": false,
+      "targets": [
+        "opponent"
+      ],
+      "affected_types": [],
+      "zone": "board",
+      "takes_keyword": false,
+      "hint": "censure, interdictions, autodafés, propagande",
+      "status": "accepted"
+    },
+    {
+      "id": "restore",
+      "kind": "triggered",
+      "text": {
+        "fr": "reprenez en main {target} de votre défausse"
+      },
+      "n": null,
+      "cost": {
+        "per_n": 0,
+        "flat": 3,
+        "per_keyword_cost": 0,
+        "divisor": 1
+      },
+      "has_duration": false,
+      "targets": [
+        "one"
+      ],
+      "affected_types": [
+        "place",
+        "creature",
+        "event",
+        "object",
+        "knowledge",
+        "faction"
+      ],
+      "zone": "discard",
+      "takes_keyword": false,
+      "hint": "restaurations, renaissances, retours",
+      "status": "accepted"
+    },
+    {
+      "id": "destroy",
+      "kind": "triggered",
+      "text": {
+        "fr": "détruisez {target} de coût {n} ou moins"
+      },
+      "n": {
+        "min": 1,
+        "max": 10
+      },
+      "cost": {
+        "per_n": 1,
+        "flat": 2,
+        "per_keyword_cost": 0,
+        "divisor": 1
+      },
+      "has_duration": false,
+      "targets": [
+        "one",
+        "all-opponents",
+        "all"
+      ],
+      "affected_types": [
+        "place",
+        "creature",
+        "object",
+        "knowledge",
+        "faction"
+      ],
+      "zone": "board",
+      "takes_keyword": false,
+      "hint": "destructions, démolitions, assassinats, interdictions",
+      "status": "accepted"
+    },
+    {
+      "id": "bounce",
+      "kind": "triggered",
+      "text": {
+        "fr": "renvoyez {target} dans la main de son propriétaire"
+      },
+      "n": null,
+      "cost": {
+        "per_n": 0,
+        "flat": 2,
+        "per_keyword_cost": 0,
+        "divisor": 1
+      },
+      "has_duration": false,
+      "targets": [
+        "one",
+        "all-opponents",
+        "all"
+      ],
+      "affected_types": [
+        "place",
+        "creature",
+        "object",
+        "knowledge",
+        "faction"
+      ],
+      "zone": "board",
+      "takes_keyword": false,
+      "hint": "retraites, exils, rappels, annulations",
+      "status": "accepted"
+    },
+    {
+      "id": "stub",
+      "kind": "triggered",
+      "text": {
+        "fr": "{target} perd toutes ses mécaniques"
+      },
+      "n": null,
+      "cost": {
+        "per_n": 0,
+        "flat": 1,
+        "per_keyword_cost": 0,
+        "divisor": 1
+      },
+      "has_duration": true,
+      "targets": [
+        "one",
+        "all-opponents",
+        "all"
+      ],
+      "affected_types": [
+        "place",
+        "creature",
+        "object",
+        "knowledge",
+        "faction"
+      ],
+      "zone": "board",
+      "takes_keyword": false,
+      "hint": "réformes, oublis, purges, réécritures",
+      "status": "accepted"
+    },
+    {
+      "id": "disable",
+      "kind": "triggered",
+      "text": {
+        "fr": "{target} ne peut ni attaquer ni bloquer"
+      },
+      "n": null,
+      "cost": {
+        "per_n": 0,
+        "flat": 1,
+        "per_keyword_cost": 0,
+        "divisor": 1
+      },
+      "has_duration": true,
+      "duration_text": {
+        "turn": {
+          "fr": "à son prochain tour"
+        }
+      },
+      "targets": [
+        "one",
+        "all-opponents"
+      ],
+      "affected_types": [
+        "creature"
+      ],
+      "zone": "board",
+      "takes_keyword": false,
+      "hint": "grèves, blocages, sièges, pannes",
+      "status": "accepted"
+    },
+    {
+      "id": "weaken",
+      "kind": "triggered",
+      "text": {
+        "fr": "{target} perd {n} en attaque"
+      },
+      "n": {
+        "min": 1,
+        "max": 4
+      },
+      "cost": {
+        "per_n": 1,
+        "flat": 0,
+        "per_keyword_cost": 0,
+        "divisor": 2
+      },
+      "has_duration": true,
+      "targets": [
+        "one",
+        "all-opponents"
+      ],
+      "affected_types": [
+        "creature"
+      ],
+      "zone": "board",
+      "takes_keyword": false,
+      "hint": "scandales, rumeurs, caricatures, désinformation",
+      "status": "accepted"
+    },
+    {
+      "id": "pump",
+      "kind": "triggered",
+      "text": {
+        "fr": "{target} gagne +{n}/+{n}"
+      },
+      "n": {
+        "min": 1,
+        "max": 3
+      },
+      "cost": {
+        "per_n": 1,
+        "flat": 0,
+        "per_keyword_cost": 0,
+        "divisor": 1
+      },
+      "has_duration": true,
+      "targets": [
+        "self",
+        "one",
+        "your-others"
+      ],
+      "affected_types": [
+        "creature"
+      ],
+      "zone": "board",
+      "takes_keyword": false,
+      "hint": "entraînements, renforts, harangues",
+      "status": "accepted"
+    },
+    {
+      "id": "grant-keyword",
+      "kind": "triggered",
+      "text": {
+        "fr": "{target} gagne {keyword}"
+      },
+      "n": null,
+      "cost": {
+        "per_n": 0,
+        "flat": 0,
+        "per_keyword_cost": 1,
+        "divisor": 3
+      },
+      "has_duration": true,
+      "targets": [
+        "self",
+        "one",
+        "your-others"
+      ],
+      "affected_types": [
+        "creature",
+        "place"
+      ],
+      "zone": "board",
+      "takes_keyword": true,
+      "hint": "équipements, ruses, inspirations passagères",
+      "status": "accepted"
+    },
+    {
+      "id": "surge",
+      "kind": "triggered",
+      "text": {
+        "fr": "gagnez {n} électricité ce tour-ci"
+      },
+      "n": {
+        "min": 1,
+        "max": 4
+      },
+      "cost": {
+        "per_n": 1,
+        "flat": 0,
+        "per_keyword_cost": 0,
+        "divisor": 1
+      },
+      "has_duration": false,
+      "targets": [
+        "you"
+      ],
+      "affected_types": [],
+      "zone": "board",
+      "takes_keyword": false,
+      "hint": "production d'énergie, inventions, révolutions industrielles",
+      "status": "accepted"
+    },
+    {
+      "id": "blackout",
+      "kind": "triggered",
+      "text": {
+        "fr": "l'adversaire a {n} électricité de moins à son prochain tour"
+      },
+      "n": {
+        "min": 1,
+        "max": 3
+      },
+      "cost": {
+        "per_n": 2,
+        "flat": 0,
+        "per_keyword_cost": 0,
+        "divisor": 1
+      },
+      "has_duration": false,
+      "targets": [
+        "opponent"
+      ],
+      "affected_types": [],
+      "zone": "board",
+      "takes_keyword": false,
+      "hint": "coupures, sabotages, blocus, sanctions",
+      "status": "accepted"
+    },
+    {
+      "id": "steal",
+      "kind": "triggered",
+      "text": {
+        "fr": "prenez le contrôle de {target} de coût {n} ou moins"
+      },
+      "n": {
+        "min": 1,
+        "max": 8
+      },
+      "cost": {
+        "per_n": 1,
+        "flat": 4,
+        "per_keyword_cost": 0,
+        "divisor": 3
+      },
+      "has_duration": true,
+      "targets": [
+        "one"
+      ],
+      "affected_types": [
+        "creature"
+      ],
+      "zone": "board",
+      "takes_keyword": false,
+      "hint": "annexions, conquêtes, débauchages, transferts",
+      "status": "accepted"
+    },
+    {
+      "id": "attack-bonus",
+      "kind": "static",
+      "text": {
+        "fr": "{target} gagne +{n} en attaque"
+      },
+      "n": {
+        "min": 1,
+        "max": 3
+      },
+      "cost": {
+        "per_n": 1,
+        "flat": 0,
+        "per_keyword_cost": 0,
+        "divisor": 1
+      },
+      "has_duration": false,
+      "targets": [
+        "self",
+        "your-others"
+      ],
+      "affected_types": [
+        "creature"
+      ],
+      "zone": "board",
+      "takes_keyword": false,
+      "hint": "sujets agressifs, chefs qui galvanisent",
+      "status": "accepted"
+    },
+    {
+      "id": "defense-bonus",
+      "kind": "static",
+      "text": {
+        "fr": "{target} gagne +{n} en défense"
+      },
+      "n": {
+        "min": 1,
+        "max": 3
+      },
+      "cost": {
+        "per_n": 1,
+        "flat": 0,
+        "per_keyword_cost": 0,
+        "divisor": 1
+      },
+      "has_duration": false,
+      "targets": [
+        "self",
+        "your-others"
+      ],
+      "affected_types": [
+        "creature",
+        "place"
+      ],
+      "zone": "board",
+      "takes_keyword": false,
+      "hint": "sujets solides, protecteurs, syndicats, alliances",
+      "status": "accepted"
+    },
+    {
+      "id": "keyword-aura",
+      "kind": "static",
+      "text": {
+        "fr": "{target} a {keyword}"
+      },
+      "n": null,
+      "cost": {
+        "per_n": 0,
+        "flat": 0,
+        "per_keyword_cost": 1,
+        "divisor": 1
+      },
+      "has_duration": false,
+      "targets": [
+        "your-others"
+      ],
+      "affected_types": [
+        "creature",
+        "place"
+      ],
+      "zone": "board",
+      "takes_keyword": true,
+      "hint": "écoles, doctrines, techniques, équipements",
+      "status": "accepted"
+    },
+    {
+      "id": "cost-reduction",
+      "kind": "static",
+      "text": {
+        "fr": "{target} coûte 1 électricité de moins (minimum 1)"
+      },
+      "n": null,
+      "cost": {
+        "per_n": 0,
+        "flat": 1,
+        "per_keyword_cost": 0,
+        "divisor": 1
+      },
+      "has_duration": false,
+      "targets": [
+        "your-others"
+      ],
+      "affected_types": [
+        "place",
+        "creature",
+        "event",
+        "object",
+        "knowledge",
+        "faction"
+      ],
+      "zone": "hand",
+      "takes_keyword": false,
+      "hint": "enseignement, médias, popularisation d'un domaine",
+      "status": "accepted"
+    },
+    {
+      "id": "cost-increase",
+      "kind": "static",
+      "text": {
+        "fr": "{target} coûte 1 électricité de plus"
+      },
+      "n": null,
+      "cost": {
+        "per_n": 0,
+        "flat": 1,
+        "per_keyword_cost": 0,
+        "divisor": 1
+      },
+      "has_duration": false,
+      "targets": [
+        "all-opponents"
+      ],
+      "affected_types": [
+        "place",
+        "creature",
+        "event",
+        "object",
+        "knowledge",
+        "faction"
+      ],
+      "zone": "hand",
+      "takes_keyword": false,
+      "hint": "embargos, taxes, réglementations, monopoles",
+      "status": "accepted"
+    },
+    {
+      "id": "protection",
+      "kind": "static",
+      "text": {
+        "fr": "{target} ne peut pas être ciblée par les mécaniques adverses"
+      },
+      "n": null,
+      "cost": {
+        "per_n": 0,
+        "flat": 3,
+        "per_keyword_cost": 0,
+        "divisor": 1
+      },
+      "has_duration": false,
+      "targets": [
+        "self",
+        "your-others"
+      ],
+      "affected_types": [
+        "place",
+        "creature",
+        "object",
+        "knowledge",
+        "faction"
+      ],
+      "zone": "board",
+      "takes_keyword": false,
+      "hint": "sujets intouchables, sacrés",
+      "status": "accepted"
+    },
+    {
+      "id": "semi-protection",
+      "kind": "static",
+      "text": {
+        "fr": "les mécaniques adverses qui ciblent {target} coûtent 2 électricité de plus"
+      },
+      "n": null,
+      "cost": {
+        "per_n": 0,
+        "flat": 1,
+        "per_keyword_cost": 0,
+        "divisor": 1
+      },
+      "has_duration": false,
+      "targets": [
+        "self",
+        "your-others"
+      ],
+      "affected_types": [
+        "place",
+        "creature",
+        "object",
+        "knowledge",
+        "faction"
+      ],
+      "zone": "board",
+      "takes_keyword": false,
+      "hint": "sujets surveillés, gardés",
+      "status": "accepted"
+    },
+    {
+      "id": "heritage",
+      "kind": "static",
+      "text": {
+        "fr": "{target} ne peut pas être détruite par une mécanique, seulement au combat"
+      },
+      "n": null,
+      "cost": {
+        "per_n": 0,
+        "flat": 3,
+        "per_keyword_cost": 0,
+        "divisor": 1
+      },
+      "has_duration": false,
+      "targets": [
+        "self",
+        "your-others"
+      ],
+      "affected_types": [
+        "place",
+        "creature",
+        "object",
+        "knowledge",
+        "faction"
+      ],
+      "zone": "board",
+      "takes_keyword": false,
+      "hint": "patrimoine, monuments historiques, institutions anciennes",
+      "status": "accepted"
+    }
+  ]
+}

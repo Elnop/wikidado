@@ -10,11 +10,11 @@ Cinq cartes construites à partir de vrais articles, avec le détail de chaque v
 
 ```
 config/
-  mecanique/                   briques des capacités en JSON, lues par la génération et le jeu ; fait foi sur la doc
+  mechanics/                   briques des capacités en JSON, lues par la génération et le jeu ; fait foi sur la doc
     schema/                    JSON Schema de chaque fichier, et des mécaniques d'une carte
 generation/                    projet Python de génération des cartes, géré par uv (uv run ...)
   pyproject.toml               dépendances
-  verifier_mecaniques.py       valide la config des mécaniques et les mécaniques des cartes
+  check_mechanics.py           valide la config des mécaniques et les mécaniques des cartes
 echantillon/
   echantillon-fr.jsonl         premier lot, articles FR les plus lus d'octobre 2026, à annoter
 scripts/

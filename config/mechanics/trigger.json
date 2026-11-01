@@ -1,0 +1,189 @@
+{
+  "$schema": "./schema/trigger.schema.json",
+  "triggers": [
+    {
+      "id": "on-play",
+      "text": {
+        "fr": "À la une"
+      },
+      "types": [
+        "place",
+        "creature",
+        "event",
+        "object",
+        "knowledge",
+        "faction"
+      ],
+      "factor": 1,
+      "offset": 0,
+      "takes_filter": false,
+      "hint": "effet marquant au moment où le sujet apparaît",
+      "status": "accepted"
+    },
+    {
+      "id": "on-death",
+      "text": {
+        "fr": "Postérité"
+      },
+      "types": [
+        "place",
+        "creature",
+        "object",
+        "knowledge",
+        "faction"
+      ],
+      "factor": 1,
+      "offset": -1,
+      "takes_filter": false,
+      "hint": "sujets dont l'héritage compte plus que la vie : martyrs, figures posthumes, ruines",
+      "status": "accepted"
+    },
+    {
+      "id": "turn-start",
+      "text": {
+        "fr": "Au début de votre tour"
+      },
+      "types": [
+        "place",
+        "creature",
+        "object",
+        "knowledge",
+        "faction"
+      ],
+      "factor": 3,
+      "offset": 0,
+      "takes_filter": false,
+      "hint": "sujets qui produisent ou agissent en continu : usines, centrales, institutions",
+      "status": "accepted"
+    },
+    {
+      "id": "on-attack",
+      "text": {
+        "fr": "Quand elle attaque"
+      },
+      "types": [
+        "creature"
+      ],
+      "factor": 2,
+      "offset": 0,
+      "takes_filter": false,
+      "hint": "conquérants, sportifs offensifs, prédateurs",
+      "status": "accepted"
+    },
+    {
+      "id": "on-block",
+      "text": {
+        "fr": "Quand elle bloque"
+      },
+      "types": [
+        "creature"
+      ],
+      "factor": 1.5,
+      "offset": 0,
+      "takes_filter": false,
+      "hint": "défenseurs, gardiens, résistants",
+      "status": "accepted"
+    },
+    {
+      "id": "on-damaged",
+      "text": {
+        "fr": "Quand elle subit des dégâts"
+      },
+      "types": [
+        "creature",
+        "place"
+      ],
+      "factor": 1.5,
+      "offset": 0,
+      "takes_filter": false,
+      "hint": "sujets qui se renforcent dans l'adversité, forteresses",
+      "status": "accepted"
+    },
+    {
+      "id": "other-enters",
+      "text": {
+        "fr": "Quand une carte {filter} arrive en jeu de votre côté"
+      },
+      "types": [
+        "place",
+        "creature",
+        "object",
+        "knowledge",
+        "faction"
+      ],
+      "factor": 2,
+      "offset": 0,
+      "takes_filter": true,
+      "hint": "chefs, mentors, lieux de rassemblement",
+      "status": "accepted"
+    },
+    {
+      "id": "other-destroyed",
+      "text": {
+        "fr": "Quand une carte {filter} est détruite"
+      },
+      "types": [
+        "place",
+        "creature",
+        "object",
+        "knowledge",
+        "faction"
+      ],
+      "factor": 2,
+      "offset": 0,
+      "takes_filter": true,
+      "hint": "charognards, héritiers, mémoriaux",
+      "status": "accepted"
+    },
+    {
+      "id": "turn-end",
+      "text": {
+        "fr": "À la fin de votre tour"
+      },
+      "types": [
+        "place",
+        "creature",
+        "object",
+        "knowledge",
+        "faction"
+      ],
+      "factor": 3,
+      "offset": 0,
+      "takes_filter": false,
+      "hint": "sujets qui agissent après coup : bilans, récoltes, veilles",
+      "status": "proposed"
+    },
+    {
+      "id": "on-assign",
+      "text": {
+        "fr": "Quand une Créature est affectée à cette Faction"
+      },
+      "types": [
+        "faction"
+      ],
+      "factor": 2,
+      "offset": 0,
+      "takes_filter": false,
+      "hint": "partis, clubs, mouvements qui recrutent",
+      "status": "proposed"
+    },
+    {
+      "id": "opponent-plays",
+      "text": {
+        "fr": "Quand l'adversaire joue une carte {filter}"
+      },
+      "types": [
+        "place",
+        "creature",
+        "object",
+        "knowledge",
+        "faction"
+      ],
+      "factor": 2,
+      "offset": 0,
+      "takes_filter": true,
+      "hint": "contre-pouvoirs, rivaux, opposants, services de renseignement",
+      "status": "proposed"
+    }
+  ]
+}

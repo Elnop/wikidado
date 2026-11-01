@@ -5,52 +5,52 @@
     "$schema": {
       "type": "string"
     },
-    "declencheurs": {
+    "triggers": {
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
           "id": {
-            "$ref": "commun.schema.json#/$defs/id"
+            "$ref": "common.schema.json#/$defs/id"
           },
-          "texte": {
-            "$ref": "commun.schema.json#/$defs/texte"
+          "text": {
+            "$ref": "common.schema.json#/$defs/text"
           },
           "types": {
-            "$ref": "commun.schema.json#/$defs/types"
+            "$ref": "common.schema.json#/$defs/card_types"
           },
-          "facteur": {
-            "$ref": "commun.schema.json#/$defs/facteur"
+          "factor": {
+            "$ref": "common.schema.json#/$defs/factor"
           },
-          "ajout": {
+          "offset": {
             "type": "integer"
           },
-          "filtre": {
+          "takes_filter": {
             "type": "boolean"
           },
-          "indice": {
-            "$ref": "commun.schema.json#/$defs/indice"
+          "hint": {
+            "$ref": "common.schema.json#/$defs/hint"
           },
-          "statut": {
-            "$ref": "commun.schema.json#/$defs/statut"
+          "status": {
+            "$ref": "common.schema.json#/$defs/status"
           }
         },
         "required": [
           "id",
-          "texte",
+          "text",
           "types",
-          "facteur",
-          "ajout",
-          "filtre",
-          "indice",
-          "statut"
+          "factor",
+          "offset",
+          "takes_filter",
+          "hint",
+          "status"
         ],
         "additionalProperties": false
       }
     }
   },
   "required": [
-    "declencheurs"
+    "triggers"
   ],
   "additionalProperties": false
 }

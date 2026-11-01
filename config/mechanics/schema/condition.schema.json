@@ -11,42 +11,42 @@
         "type": "object",
         "properties": {
           "id": {
-            "$ref": "commun.schema.json#/$defs/id"
+            "$ref": "common.schema.json#/$defs/id"
           },
-          "texte": {
-            "$ref": "commun.schema.json#/$defs/texte"
+          "text": {
+            "$ref": "common.schema.json#/$defs/text"
           },
-          "facteur": {
-            "$ref": "commun.schema.json#/$defs/facteur"
+          "factor": {
+            "$ref": "common.schema.json#/$defs/factor"
           },
-          "rempli_par": {
-            "$ref": "commun.schema.json#/$defs/rempli_par"
+          "filled_by": {
+            "$ref": "common.schema.json#/$defs/filled_by"
           },
-          "donnees": {
+          "data": {
             "type": "array",
             "items": {
               "type": "string"
             }
           },
           "n": {
-            "$ref": "commun.schema.json#/$defs/n"
+            "$ref": "common.schema.json#/$defs/range"
           },
-          "symetrique": {
+          "symmetric": {
             "type": "boolean"
           },
-          "statut": {
-            "$ref": "commun.schema.json#/$defs/statut"
+          "status": {
+            "$ref": "common.schema.json#/$defs/status"
           }
         },
         "required": [
           "id",
-          "texte",
-          "facteur",
-          "rempli_par",
-          "donnees",
+          "text",
+          "factor",
+          "filled_by",
+          "data",
           "n",
-          "symetrique",
-          "statut"
+          "symmetric",
+          "status"
         ],
         "additionalProperties": false
       }

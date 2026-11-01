@@ -1,0 +1,126 @@
+{
+  "$schema": "./schema/keyword.schema.json",
+  "keywords": [
+    {
+      "id": "ready",
+      "name": {
+        "fr": "Préparé"
+      },
+      "text": {
+        "fr": "peut attaquer le tour où elle est jouée."
+      },
+      "types": [
+        "creature"
+      ],
+      "cost": 1,
+      "hint": "personnes rapides, réactives, sportifs, reporters, cavalerie",
+      "status": "accepted"
+    },
+    {
+      "id": "trample",
+      "name": {
+        "fr": "Débordement"
+      },
+      "text": {
+        "fr": "quand elle est bloquée, les dégâts en trop atteignent sa cible."
+      },
+      "types": [
+        "creature"
+      ],
+      "cost": 1,
+      "hint": "personnes ou animaux massifs, irrésistibles, chefs de guerre offensifs",
+      "status": "accepted"
+    },
+    {
+      "id": "first-strike",
+      "name": {
+        "fr": "Initiative"
+      },
+      "text": {
+        "fr": "inflige ses dégâts de combat avant les autres Créatures."
+      },
+      "types": [
+        "creature"
+      ],
+      "cost": 2,
+      "hint": "duellistes, tireurs, stratèges, prédateurs",
+      "status": "accepted"
+    },
+    {
+      "id": "unblockable",
+      "name": {
+        "fr": "Imblocable"
+      },
+      "text": {
+        "fr": "ne peut pas être bloquée."
+      },
+      "types": [
+        "creature"
+      ],
+      "cost": 3,
+      "hint": "oiseaux, aviateurs, espions, fugitifs, personnes difficiles à saisir",
+      "status": "accepted"
+    },
+    {
+      "id": "plunder",
+      "name": {
+        "fr": "Pillage"
+      },
+      "text": {
+        "fr": "quand elle inflige des dégâts, vous gagnez autant de points de vie."
+      },
+      "types": [
+        "creature"
+      ],
+      "cost": 2,
+      "hint": "conquérants, pillards, prédateurs, personnes qui s'enrichissent sur les autres",
+      "status": "accepted"
+    },
+    {
+      "id": "sentinel",
+      "name": {
+        "fr": "Sentinelle"
+      },
+      "text": {
+        "fr": "peut bloquer deux attaquants."
+      },
+      "types": [
+        "creature"
+      ],
+      "cost": 1,
+      "hint": "gardiens, défenseurs, policiers, gardiens de but",
+      "status": "accepted"
+    },
+    {
+      "id": "toxic",
+      "name": {
+        "fr": "Toxique"
+      },
+      "text": {
+        "fr": "toute Créature qui subit des dégâts de combat de sa part est détruite."
+      },
+      "types": [
+        "creature"
+      ],
+      "cost": 2,
+      "hint": "espèces venimeuses, poisons, maladies",
+      "status": "accepted"
+    },
+    {
+      "id": "scapegoat",
+      "name": {
+        "fr": "Bouc émissaire"
+      },
+      "text": {
+        "fr": "les attaquants adverses doivent la viser en priorité, et les mécaniques adverses qui ciblent une seule carte doivent la cibler."
+      },
+      "types": [
+        "creature",
+        "place"
+      ],
+      "cost": 2,
+      "hint": "sujets très exposés, controversés, qui prennent les coups à la place des autres",
+      "status": "proposed"
+    }
+  ]
+}

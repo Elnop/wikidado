@@ -1,0 +1,139 @@
+{
+  "$schema": "./schema/condition.schema.json",
+  "conditions": [
+    {
+      "id": "controls-type",
+      "text": {
+        "fr": "tant que vous contrôlez un {filter}"
+      },
+      "factor": 0.75,
+      "filled_by": "model",
+      "data": [],
+      "n": null,
+      "symmetric": false,
+      "status": "accepted"
+    },
+    {
+      "id": "birthplace",
+      "text": {
+        "fr": "tant que vous contrôlez {card}"
+      },
+      "factor": 0.5,
+      "filled_by": "code",
+      "data": [
+        "P19"
+      ],
+      "n": null,
+      "symmetric": false,
+      "status": "accepted"
+    },
+    {
+      "id": "kin",
+      "text": {
+        "fr": "tant que vous contrôlez {card}"
+      },
+      "factor": 0.5,
+      "filled_by": "code",
+      "data": [
+        "P26",
+        "P40",
+        "P22",
+        "P25"
+      ],
+      "n": null,
+      "symmetric": false,
+      "status": "accepted"
+    },
+    {
+      "id": "mentor",
+      "text": {
+        "fr": "tant que vous contrôlez {card}"
+      },
+      "factor": 0.5,
+      "filled_by": "code",
+      "data": [
+        "P1066",
+        "P737"
+      ],
+      "n": null,
+      "symmetric": false,
+      "status": "accepted"
+    },
+    {
+      "id": "reference",
+      "text": {
+        "fr": "tant que vous contrôlez {card}"
+      },
+      "factor": 0.5,
+      "filled_by": "code",
+      "data": [
+        "links"
+      ],
+      "n": null,
+      "symmetric": false,
+      "status": "accepted"
+    },
+    {
+      "id": "alliance",
+      "text": {
+        "fr": "tant que vous contrôlez {card}"
+      },
+      "factor": 0.75,
+      "filled_by": "code",
+      "data": [
+        "mutual-links"
+      ],
+      "n": null,
+      "symmetric": true,
+      "status": "accepted"
+    },
+    {
+      "id": "contemporary",
+      "text": {
+        "fr": "tant que vous contrôlez une carte de la même époque"
+      },
+      "factor": 0.75,
+      "filled_by": "code",
+      "data": [
+        "P569",
+        "P570",
+        "P585",
+        "P580",
+        "P582"
+      ],
+      "n": null,
+      "symmetric": false,
+      "status": "accepted"
+    },
+    {
+      "id": "low-life",
+      "text": {
+        "fr": "si vous avez {n} points de vie ou moins"
+      },
+      "factor": 0.5,
+      "filled_by": "model",
+      "data": [],
+      "n": {
+        "min": 5,
+        "max": 15
+      },
+      "symmetric": false,
+      "status": "proposed"
+    },
+    {
+      "id": "discard-size",
+      "text": {
+        "fr": "si votre défausse contient {n} cartes ou plus"
+      },
+      "factor": 0.75,
+      "filled_by": "model",
+      "data": [],
+      "n": {
+        "min": 3,
+        "max": 10
+      },
+      "symmetric": false,
+      "status": "proposed"
+    }
+  ]
+}

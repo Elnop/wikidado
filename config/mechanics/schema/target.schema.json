@@ -5,36 +5,40 @@
     "$schema": {
       "type": "string"
     },
-    "durees": {
+    "targets": {
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
           "id": {
-            "$ref": "commun.schema.json#/$defs/id"
+            "$ref": "common.schema.json#/$defs/id"
           },
-          "texte": {
-            "$ref": "commun.schema.json#/$defs/texte"
+          "text": {
+            "$ref": "common.schema.json#/$defs/text"
           },
-          "facteur": {
-            "$ref": "commun.schema.json#/$defs/facteur"
+          "factor": {
+            "$ref": "common.schema.json#/$defs/factor"
           },
-          "statut": {
-            "$ref": "commun.schema.json#/$defs/statut"
+          "is_player": {
+            "type": "boolean"
+          },
+          "status": {
+            "$ref": "common.schema.json#/$defs/status"
           }
         },
         "required": [
           "id",
-          "texte",
-          "facteur",
-          "statut"
+          "text",
+          "factor",
+          "is_player",
+          "status"
         ],
         "additionalProperties": false
       }
     }
   },
   "required": [
-    "durees"
+    "targets"
   ],
   "additionalProperties": false
 }

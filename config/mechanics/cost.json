@@ -1,0 +1,13 @@
+{
+  "$schema": "./schema/cost.schema.json",
+  "rounding": "up",
+  "minimum": 1,
+  "card_types": [
+    "place",
+    "creature",
+    "event",
+    "object",
+    "knowledge",
+    "faction"
+  ]
+}

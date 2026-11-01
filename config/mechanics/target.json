@@ -1,0 +1,68 @@
+{
+  "$schema": "./schema/target.schema.json",
+  "targets": [
+    {
+      "id": "self",
+      "text": {
+        "fr": "cette carte"
+      },
+      "factor": 1,
+      "is_player": false,
+      "status": "accepted"
+    },
+    {
+      "id": "one",
+      "text": {
+        "fr": "une carte"
+      },
+      "factor": 1,
+      "is_player": false,
+      "status": "accepted"
+    },
+    {
+      "id": "you",
+      "text": {
+        "fr": "vous"
+      },
+      "factor": 1,
+      "is_player": true,
+      "status": "accepted"
+    },
+    {
+      "id": "opponent",
+      "text": {
+        "fr": "l'adversaire"
+      },
+      "factor": 1,
+      "is_player": true,
+      "status": "accepted"
+    },
+    {
+      "id": "your-others",
+      "text": {
+        "fr": "vos autres cartes"
+      },
+      "factor": 3,
+      "is_player": false,
+      "status": "accepted"
+    },
+    {
+      "id": "all-opponents",
+      "text": {
+        "fr": "toutes les cartes adverses"
+      },
+      "factor": 3,
+      "is_player": false,
+      "status": "accepted"
+    },
+    {
+      "id": "all",
+      "text": {
+        "fr": "toutes les cartes"
+      },
+      "factor": 2,
+      "is_player": false,
+      "status": "accepted"
+    }
+  ]
+}

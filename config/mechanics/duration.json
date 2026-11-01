@@ -1,0 +1,21 @@
+{
+  "$schema": "./schema/duration.schema.json",
+  "durations": [
+    {
+      "id": "turn",
+      "text": {
+        "fr": "jusqu'à la fin du tour"
+      },
+      "factor": 1,
+      "status": "accepted"
+    },
+    {
+      "id": "permanent",
+      "text": {
+        "fr": ""
+      },
+      "factor": 3,
+      "status": "accepted"
+    }
+  ]
+}

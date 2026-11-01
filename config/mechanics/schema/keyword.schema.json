@@ -5,49 +5,49 @@
     "$schema": {
       "type": "string"
     },
-    "mots_cles": {
+    "keywords": {
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
           "id": {
-            "$ref": "commun.schema.json#/$defs/id"
+            "$ref": "common.schema.json#/$defs/id"
           },
-          "nom": {
-            "$ref": "commun.schema.json#/$defs/texte"
+          "name": {
+            "$ref": "common.schema.json#/$defs/text"
           },
-          "texte": {
-            "$ref": "commun.schema.json#/$defs/texte"
+          "text": {
+            "$ref": "common.schema.json#/$defs/text"
           },
           "types": {
-            "$ref": "commun.schema.json#/$defs/types"
+            "$ref": "common.schema.json#/$defs/card_types"
           },
-          "prix": {
+          "cost": {
             "type": "integer",
             "minimum": 1
           },
-          "indice": {
-            "$ref": "commun.schema.json#/$defs/indice"
+          "hint": {
+            "$ref": "common.schema.json#/$defs/hint"
           },
-          "statut": {
-            "$ref": "commun.schema.json#/$defs/statut"
+          "status": {
+            "$ref": "common.schema.json#/$defs/status"
           }
         },
         "required": [
           "id",
-          "nom",
-          "texte",
+          "name",
+          "text",
           "types",
-          "prix",
-          "indice",
-          "statut"
+          "cost",
+          "hint",
+          "status"
         ],
         "additionalProperties": false
       }
     }
   },
   "required": [
-    "mots_cles"
+    "keywords"
   ],
   "additionalProperties": false
 }

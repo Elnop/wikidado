@@ -5,108 +5,108 @@
     "$schema": {
       "type": "string"
     },
-    "effets": {
+    "effects": {
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
           "id": {
-            "$ref": "commun.schema.json#/$defs/id"
+            "$ref": "common.schema.json#/$defs/id"
           },
-          "sorte": {
+          "kind": {
             "enum": [
-              "ponctuel",
-              "continu"
+              "triggered",
+              "static"
             ]
           },
-          "texte": {
-            "$ref": "commun.schema.json#/$defs/texte"
+          "text": {
+            "$ref": "common.schema.json#/$defs/text"
           },
           "n": {
-            "$ref": "commun.schema.json#/$defs/n"
+            "$ref": "common.schema.json#/$defs/range"
           },
-          "prix": {
+          "cost": {
             "type": "object",
             "properties": {
-              "par_n": {
+              "per_n": {
                 "type": "number"
               },
-              "fixe": {
+              "flat": {
                 "type": "number"
               },
-              "par_prix_mot_cle": {
+              "per_keyword_cost": {
                 "type": "number"
               },
-              "diviseur": {
+              "divisor": {
                 "type": "number",
                 "exclusiveMinimum": 0
               }
             },
             "required": [
-              "par_n",
-              "fixe",
-              "par_prix_mot_cle",
-              "diviseur"
+              "per_n",
+              "flat",
+              "per_keyword_cost",
+              "divisor"
             ],
             "additionalProperties": false
           },
-          "duree": {
+          "has_duration": {
             "type": "boolean"
           },
-          "texte_duree": {
+          "duration_text": {
             "type": "object",
             "additionalProperties": {
-              "$ref": "commun.schema.json#/$defs/texte"
+              "$ref": "common.schema.json#/$defs/text"
             }
           },
-          "cibles": {
+          "targets": {
             "type": "array",
             "items": {
-              "$ref": "commun.schema.json#/$defs/id"
+              "$ref": "common.schema.json#/$defs/id"
             },
             "minItems": 1,
             "uniqueItems": true
           },
-          "cartes_visees": {
-            "$ref": "commun.schema.json#/$defs/types"
+          "affected_types": {
+            "$ref": "common.schema.json#/$defs/card_types"
           },
           "zone": {
             "enum": [
-              "jeu",
-              "main",
-              "defausse"
+              "board",
+              "hand",
+              "discard"
             ]
           },
-          "mot_cle": {
+          "takes_keyword": {
             "type": "boolean"
           },
-          "indice": {
-            "$ref": "commun.schema.json#/$defs/indice"
+          "hint": {
+            "$ref": "common.schema.json#/$defs/hint"
           },
-          "statut": {
-            "$ref": "commun.schema.json#/$defs/statut"
+          "status": {
+            "$ref": "common.schema.json#/$defs/status"
           }
         },
         "required": [
           "id",
-          "sorte",
-          "texte",
+          "kind",
+          "text",
           "n",
-          "prix",
-          "duree",
-          "cibles",
-          "cartes_visees",
+          "cost",
+          "has_duration",
+          "targets",
+          "affected_types",
           "zone",
-          "mot_cle",
-          "indice",
-          "statut"
+          "takes_keyword",
+          "hint",
+          "status"
         ],
         "additionalProperties": false
       }
     }
   },
   "required": [
-    "effets"
+    "effects"
   ],
   "additionalProperties": false
 }
