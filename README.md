@@ -37,7 +37,10 @@ docs/
       categories.md            catégories Wikipédia
     duel.md                    règles d'une partie : deck, tour, combat, victoire
     collection.md              cartes disponibles et boosters
-    mecanique.md               catalogue fermé des mécaniques assignables
+    mecanique/
+      index.md                 catalogue fermé des mécaniques : format, construction, noms
+      creature.md              mécaniques des Créatures
+      transversal.md           mécaniques ouvertes à plusieurs types (électricité)
     electricite.md             ressource du jeu
   produit/
     plateforme.md              site web, ordinateur et téléphone
@@ -57,7 +60,7 @@ docs/
       carte/stats.md
       carte/type.md
       electricite.md
-      mecanique.md
+      mecanique/index.md
       synergie/index.md
       synergie/liens.md
       collection.md

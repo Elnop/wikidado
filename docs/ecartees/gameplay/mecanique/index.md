@@ -1,6 +1,6 @@
 # Idées écartées : mécaniques
 
-Idées écartées liées à `gameplay/mecanique.md`.
+Idées écartées liées à `gameplay/mecanique/index.md`.
 
 ## Mécanique qui ajoute du mana (cout_mana)
 
@@ -55,3 +55,33 @@ La mécanique centrale ne pouvait être donnée qu'à un Lieu (centrale, barrage
 Écartée le 01/11/2026 : tous les types peuvent produire de l'électricité.
 
 Une centrale (Lieu) ou une machine (Technique) pouvait produire, mais pas une Créature ni un Événement.
+
+## Catalogue construit seulement à partir des articles
+
+Écartée le 01/11/2026 : on part des actions de base du jeu, puis on teste sur les articles de l'échantillon.
+
+On prenait chaque article de l'échantillon, on imaginait ses mécaniques, puis on regroupait le tout en catalogue. Risque : des mécaniques taillées pour les articles les plus lus, qui couvrent mal le reste du pool.
+
+## Catalogue construit seulement à partir des règles
+
+Écartée le 01/11/2026 : on part des actions de base du jeu, puis on teste sur les articles de l'échantillon.
+
+On listait les actions possibles par type de carte sans regarder les articles. Risque : un Magic générique, sans lien avec Wikipédia.
+
+## Catalogue de 20 ou 40 mécaniques en première version
+
+Écartée le 01/11/2026 : la première version vise environ 80 mécaniques.
+
+20 mécaniques suffisaient pour lancer l'annotation et un prototype. 40 donnaient six à huit mécaniques par type, plus faciles à équilibrer et à choisir pour un petit modèle.
+
+## Noms de mots-clés repris de Magic et Hearthstone
+
+Écartée le 01/11/2026 : les mots-clés ont des noms propres au jeu.
+
+Célérité, Piétinement, Provocation... Les joueurs de Magic comprenaient tout de suite.
+
+## Catalogue dans un seul fichier
+
+Écartée le 01/11/2026 : un dossier `gameplay/mecanique/`, avec un fichier par type de carte.
+
+On gardait `gameplay/mecanique.md` avec une section par type.

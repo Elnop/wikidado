@@ -1,6 +1,6 @@
 # Budget des cartes
 
-Le budget est la quantité de puissance d'une carte. Il fixe le coût de la carte (voir `gameplay/carte/cout.md`), puis il est dépensé en mécaniques (voir `gameplay/mecanique.md`) et en stats (voir `gameplay/carte/stats.md`).
+Le budget est la quantité de puissance d'une carte. Il fixe le coût de la carte (voir `gameplay/carte/cout.md`), puis il est dépensé en mécaniques (voir `gameplay/mecanique/index.md`) et en stats (voir `gameplay/carte/stats.md`).
 
 ## Budget de base
 

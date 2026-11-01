@@ -20,6 +20,6 @@ Exemple de lore, Napoléon Ier : "Napoléon Bonaparte, né le 15 août 1769 à A
 
 Un clic ou un survol sur la carte ouvre une vue détaillée qui montre tout le reste :
 
-- les mécaniques, avec leur texte complet (voir `gameplay/mecanique.md`)
+- les mécaniques, avec leur texte complet (voir `gameplay/mecanique/index.md`)
 - les sous-types et les familles (voir `gameplay/carte/famille.md`)
 - les crédits : lien vers l'article et ses auteurs (CC BY-SA 4.0), auteur et licence de l'image
