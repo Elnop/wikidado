@@ -1,6 +1,6 @@
 # Catalogue des mécaniques
 
-Liste fermée de ce que le modèle peut assigner aux cartes (voir `generation/pipeline.md`). Les briques et leurs prix sont retenus pour la première version, sauf celles qui ont le statut `proposed` dans la config. Tous les prix restent à régler en partie de test.
+Liste fermée de ce que le modèle peut assigner aux cartes (voir `generation/pipeline.md`). Les briques et leurs prix sont retenus pour la première version. Une brique ajoutée plus tard a le statut `proposed` dans la config tant qu'elle n'est pas tranchée. Tous les prix restent à régler en partie de test.
 
 Une mécanique est soit un mot-clé, soit une capacité composée de briques. Le catalogue fermé est celui des briques : le modèle ne peut assembler que des briques qui existent, et le code calcule le prix et le texte de l'assemblage.
 
@@ -87,7 +87,7 @@ Exemple de sortie pour Napoléon Ier :
 
 On commence par les briques ouvertes à tous les types, puis les briques réservées. On part des actions de base du jeu (dégâts, pioche, bonus de stats, destruction, protection, électricité, défausse, affectation aux Factions). On teste ensuite sur les articles de l'échantillon (voir `generation/echantillon.md`) : pour chaque article, on cherche les capacités qu'on lui donnerait. Un article qui ne trouve rien de juste montre un trou dans le catalogue, une brique que personne ne prend est à revoir.
 
-La première version visait environ 80 mécaniques, quand le catalogue était une liste fixe. Il reste à dire ce que ce chiffre devient avec les briques.
+Le nombre de briques n'est pas un objectif : on en ajoute quand le test sur l'échantillon montre un trou.
 
 ## Noms
 
@@ -102,6 +102,5 @@ Les mots-clés ont des noms propres au jeu, avec une saveur Wikipédia ou élect
 
 ## À faire
 
-- trancher les briques au statut `proposed`
 - tester le catalogue sur les articles de l'échantillon
 - fixer les prix et les facteurs après des parties de test

@@ -151,7 +151,7 @@
       "offset": 0,
       "takes_filter": false,
       "hint": "sujets qui agissent après coup : bilans, récoltes, veilles",
-      "status": "proposed"
+      "status": "accepted"
     },
     {
       "id": "on-assign",
@@ -165,7 +165,7 @@
       "offset": 0,
       "takes_filter": false,
       "hint": "partis, clubs, mouvements qui recrutent",
-      "status": "proposed"
+      "status": "accepted"
     },
     {
       "id": "opponent-plays",
@@ -183,7 +183,7 @@
       "offset": 0,
       "takes_filter": true,
       "hint": "contre-pouvoirs, rivaux, opposants, services de renseignement",
-      "status": "proposed"
+      "status": "accepted"
     }
   ]
 }

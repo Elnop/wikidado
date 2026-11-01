@@ -118,7 +118,7 @@
         "max": 15
       },
       "symmetric": false,
-      "status": "proposed"
+      "status": "accepted"
     },
     {
       "id": "discard-size",
@@ -133,7 +133,7 @@
         "max": 10
       },
       "symmetric": false,
-      "status": "proposed"
+      "status": "accepted"
     }
   ]
 }

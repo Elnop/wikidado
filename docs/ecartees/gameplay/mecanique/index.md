@@ -203,3 +203,15 @@ Un seul `config/mecanique.json` avec toutes les briques, plus simple à charger 
 Écartée le 01/11/2026 : une capacité coûte au moins 1 point de budget.
 
 Avec un minimum à 0, les capacités Postérité dont l'effet coûte 1 devenaient gratuites ("Postérité : infligez 1 dégât"). Comme une carte n'a pas de nombre maximum de mécaniques, elle aurait pu en empiler sans limite. Variante : autoriser une seule capacité à prix 0 par carte.
+
+## Objectif d'environ 80 mécaniques
+
+Écartée le 01/11/2026 : le nombre de briques n'est plus un objectif, on en ajoute quand le test sur l'échantillon montre un trou.
+
+L'objectif datait de la liste fixe. Avec les briques, il pouvait devenir environ 80 briques, ou 80 effets.
+
+## Autres prix pour les dernières briques proposées
+
+Écartées le 01/11/2026 : Bouc émissaire à 2, À la fin de votre tour × 3, Affectation × 2, Quand l'adversaire joue × 2, points de vie bas × 0,5, défausse remplie × 0,75.
+
+Bouc émissaire à 1, parce qu'il expose surtout la carte, ou à 3, parce qu'il protège tout le reste. Affectation à × 3, parce qu'on affecte souvent une Créature par tour. Quand l'adversaire joue à × 3, parce que l'adversaire joue plusieurs cartes par tour. Pour les conditions, un facteur qui dépend du seuil N (15 points de vie est souvent vrai, 5 presque jamais).
