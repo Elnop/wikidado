@@ -23,6 +23,7 @@ docs/
       stats.md                 budget de stats, attaque et défense
       famille.md               familles, utilisées pour les synergies
       illustration.md          image de la carte
+      face.md                  ce qui est sur la carte, et la vue détaillée
     synergie/
       index.md                 ce qu'est une synergie, questions générales
       liens.md                 les articles se citent entre eux
@@ -39,6 +40,7 @@ docs/
     gameplay/
       carte/budget.md
       carte/cout.md
+      carte/face.md
       carte/famille.md
       carte/illustration.md
       carte/rarete.md

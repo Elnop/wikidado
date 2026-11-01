@@ -15,13 +15,13 @@ Le code s'occupe de :
 - après l'assignation, répartir le reste du budget dans les stats (voir `gameplay/carte/stats.md`)
 - calculer les sous-types et les familles à partir de Wikidata (voir `gameplay/carte/type.md` et `gameplay/carte/famille.md`)
 - trouver les cibles des synergies : liens réciproques, relations Wikidata, époque, lieu de naissance
+- extraire le texte de lore, la première phrase du résumé (voir `gameplay/carte/face.md`)
 
 Le modèle s'occupe uniquement de ce qui demande de comprendre le sujet :
 
 - choisir des mécaniques dans le catalogue qui collent à l'article, dans la limite du budget effectif (une bataille éclair aura plutôt "Rapidité", un château plutôt "Fortification")
 - choisir les paramètres d'une mécanique quand il y en a ("+1 aux créatures Militaires")
 - choisir la répartition des stats entre attaque et défense, à partir de la répartition par défaut du code (voir `gameplay/carte/stats.md`)
-- éventuellement, choisir la phrase du résumé à afficher comme texte d'ambiance
 
 ## Pipeline
 
@@ -30,7 +30,7 @@ Le modèle s'occupe uniquement de ce qui demande de comprendre le sujet :
 3. Assignation : le modèle reçoit la fiche, le budget effectif et le catalogue des mécaniques autorisées pour ce type. Il répond en JSON contraint, avec uniquement des identifiants du catalogue.
 4. Validation : le code vérifie que les mécaniques existent, que les paramètres sont valides et que la somme des `cout_budget` ne dépasse pas le budget effectif. Une carte qui ne passe pas est régénérée.
 5. Stats : le code met le reste du budget effectif dans les stats, avec la répartition choisie par le modèle.
-6. Rendu : le texte de la carte est produit à partir des gabarits du catalogue, jamais par le modèle.
+6. Rendu : le texte des mécaniques, affiché dans la vue détaillée, est produit à partir des gabarits du catalogue, jamais par le modèle.
 
 Exemple de sortie attendue du modèle :
 
