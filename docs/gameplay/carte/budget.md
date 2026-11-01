@@ -7,10 +7,10 @@ Le budget est la quantité de puissance d'une carte. Il fixe le coût de la cart
 Le budget de base se calcule à partir de deux données de l'article qui n'ont rien à voir avec sa popularité : sa taille et son nombre de contributeurs. Les lectures et le nombre de langues n'y entrent pas.
 
 ```
-budget_base = max(0, arrondi(log2(taille_ko) + log2(contributeurs + 1) / 2))
+budget_base = max(1, arrondi(log2(taille_ko) + log2(contributeurs + 1) / 2))
 ```
 
-Le logarithme évite qu'un article énorme donne une carte démesurée. Un article de moins de 1 Ko donnerait un logarithme négatif, d'où le minimum à 0. Les coefficients sont à régler sur un vrai échantillon.
+Le logarithme évite qu'un article énorme donne une carte démesurée. Un article de moins de 1 Ko donnerait un logarithme négatif. Le budget de base vaut au moins 1 : toute carte a quelque chose à dépenser, et une Créature ou un Lieu peut garder son point de défense (voir `gameplay/carte/stats.md`). Les coefficients sont à régler sur un vrai échantillon.
 
 | Article | Taille | Contributeurs | Budget de base | Coût |
 |---|---|---|---|---|
@@ -43,10 +43,7 @@ L'arrondi se fait au plus proche : 13 × 1,25 = 16,25 donne 16, et 2 × 1,25 = 2
 1. Le modèle choisit des mécaniques dans le catalogue. Chacune consomme son `cout_budget`. La somme ne peut pas dépasser le budget effectif.
 2. Ce qui reste du budget effectif va aux stats, pour les Créatures et les Lieux (voir `gameplay/carte/stats.md`). Ils gardent toujours au moins 1 point pour la défense. Pour les Événements, les Objets, les Savoirs et les Factions, qui n'ont pas de stats, tout le budget doit être dépensé en mécaniques.
 
-Une Faction a aussi un coût d'affectation (voir `gameplay/duel.md`). Il part d'une valeur de départ élevée, et le modèle peut dépenser du budget pour le baisser, jusqu'à 0. Une Faction puissante a donc des effets forts ou une affectation bon marché, rarement les deux. La valeur de départ et le prix en budget d'une électricité retirée sont à régler en partie de test.
+Une Faction a aussi un coût d'affectation (voir `gameplay/duel.md`). Sa valeur de départ dépend du budget de la Faction : une petite Faction a des effets faibles mais une affectation bon marché, une grosse Faction part d'une affectation chère. Le modèle peut ensuite dépenser du budget pour la baisser, jusqu'à 0. Une Faction puissante a donc des effets forts ou une affectation bon marché, rarement les deux. La formule de la valeur de départ et le prix en budget d'une électricité retirée sont à régler en partie de test. Piste : partir du coût de la Faction (budget de base / 1,5, voir `gameplay/carte/cout.md`).
 
 Il n'y a pas de nombre maximum de mécaniques par carte, ni de synergies : seul le budget limite. Un Lieu doit avoir au moins une capacité : sans elle, il ne bloque pas, n'attaque pas, et l'adversaire n'a aucune raison de le viser.
 
-## Questions ouvertes
-
-- Une carte à budget effectif 0 (article de moins de 1 Ko presque sans contributeur) n'a rien à dépenser : un Événement, un Objet, un Savoir ou une Faction serait vide, et une Créature ne pourrait pas avoir sa défense de 1. Piste : un budget de base minimum de 1.

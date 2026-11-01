@@ -118,3 +118,9 @@ Un seul mana générique, produit à la manière de Magic par des Terrains.
 Écartée le 01/11/2026 : `points_par_electricite` passe de 2 à 1,5 pour que les coûts aillent jusqu'à 10.
 
 Avec 2 points par électricité, le coût ne dépassait jamais 8 alors que la réserve monte à 10. Une option plafonnait la réserve d'électricité à 8. Une autre ne changeait rien avant les parties de test.
+
+## Arrondi du coût au supérieur ou à l'inférieur
+
+Écartée le 01/11/2026 : le coût s'arrondit au plus proche.
+
+Au supérieur, les cartes coûtaient un peu plus cher (budget 2 donnait 2). À l'inférieur, elles coûtaient un peu moins cher et les plus petites devenaient gratuites (budget 1 donnait 0, Napoléon 8).

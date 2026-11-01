@@ -49,3 +49,15 @@ Arrondi au plus proche, mais une carte au-dessus de commune gagnait toujours au 
 Écartée le 01/11/2026 : un Lieu doit avoir au moins une capacité.
 
 Un Lieu sans capacité n'avait pas de rôle. Une option lui permettait de bloquer comme une Créature, sans infliger de dégâts. Une autre lui donnait Bouc émissaire gratuitement quand il n'avait aucune capacité.
+
+## Cartes à budget 0 exclues ou avec un point offert
+
+Écartée le 01/11/2026 : le budget de base vaut au moins 1.
+
+Une carte à budget effectif 0 n'avait rien à dépenser. Une option excluait ces articles du jeu. Une autre gardait le budget de base à 0, donc un coût de 0, et offrait 1 point pour que la carte existe (une Créature 0/1 gratuite).
+
+## Factions exclues sous un seuil de budget
+
+Écartée le 01/11/2026 : le coût d'affectation de départ dépend du budget de la Faction.
+
+Le coût d'affectation partait d'une valeur fixe et élevée, ce qui rendait injouables les Factions à petit budget. Une option ne gardait comme Factions que les organisations dont le budget de base atteint un seuil, par exemple 4.

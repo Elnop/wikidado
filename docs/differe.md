@@ -55,3 +55,15 @@ En première version, tout le monde a toutes les cartes et les boosters ne sont 
 Les mots-clés ont un prix fixe, alors qu'Imblocable, Pillage et Débordement valent plus sur une Créature qui a une grosse attaque (Imblocable sur une 9/9, c'est 9 dégâts garantis par tour). Toxique fait l'inverse : il vaut plus sur une petite attaque.
 
 Piste : prix = prix de base + attaque / 3, arrondi au supérieur. Imblocable sur une 9/9 coûterait 6, sur une 2/2 coûterait 4.
+
+## Prix des effets répétés à chaque tour
+
+- Différé le 01/11/2026, à voir en partie de test
+- Spec : `gameplay/mecanique/declencheur.md`
+
+"Au début de votre tour : piochez 1 carte" coûte 6 de budget (pioche 2 × 3), soit une carte à environ 4 électricité qui donne une carte en plus à chaque tour. Le facteur × 3 des déclencheurs Au début et À la fin de votre tour est peut-être trop bas pour la pioche.
+
+Pistes :
+
+- facteur × 4 pour la pioche avec ces déclencheurs, soit 8 pour 1 carte par tour
+- facteur × 4 pour tous les effets avec ces déclencheurs
