@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Mécaniques assignées à une carte, sortie du modèle et des annotations",
+  "type": "object",
+  "properties": {
+    "article": {
+      "type": "string",
+      "pattern": "^Q[0-9]+$"
+    },
+    "mecaniques": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "mot_cle": {
+            "$ref": "commun.schema.json#/$defs/id"
+          },
+          "declencheur": {
+            "$ref": "commun.schema.json#/$defs/id"
+          },
+          "effet": {
+            "$ref": "commun.schema.json#/$defs/id"
+          },
+          "n": {
+            "type": "integer"
+          },
+          "duree": {
+            "$ref": "commun.schema.json#/$defs/id"
+          },
+          "cible": {
+            "$ref": "commun.schema.json#/$defs/id"
+          },
+          "filtre": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "$ref": "commun.schema.json#/$defs/type"
+              },
+              "famille": {
+                "type": "string"
+              },
+              "carte": {
+                "type": "string",
+                "pattern": "^Q[0-9]+$"
+              }
+            },
+            "minProperties": 1,
+            "maxProperties": 1,
+            "additionalProperties": false
+          },
+          "mot_cle_donne": {
+            "$ref": "commun.schema.json#/$defs/id"
+          },
+          "condition": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "$ref": "commun.schema.json#/$defs/id"
+              },
+              "n": {
+                "type": "integer"
+              },
+              "carte": {
+                "type": "string",
+                "pattern": "^Q[0-9]+$"
+              },
+              "filtre": {
+                "type": "object"
+              }
+            },
+            "required": [
+              "id"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "oneOf": [
+          {
+            "required": [
+              "mot_cle"
+            ],
+            "maxProperties": 1
+          },
+          {
+            "required": [
+              "effet",
+              "cible"
+            ],
+            "not": {
+              "required": [
+                "mot_cle"
+              ]
+            }
+          }
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "article",
+    "mecaniques"
+  ],
+  "additionalProperties": false
+}

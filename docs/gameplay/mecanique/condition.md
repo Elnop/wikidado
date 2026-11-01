@@ -1,17 +1,7 @@
 # Conditions
 
-La condition dit ce qu'il faut pour que la capacité marche : une carte en jeu, ou un état de la partie. Les conditions sont retenues avec leurs facteurs, sauf celles marquées "proposé". Elle est facultative, et sert surtout aux synergies (voir `gameplay/synergie/index.md`). Une condition remplie par le code ne demande rien au modèle.
+La condition dit ce qu'il faut pour que la capacité marche : une carte en jeu, ou un état de la partie. Elle est facultative, et sert surtout aux synergies (voir `gameplay/synergie/index.md`). Une condition remplie par le code ne demande rien au modèle.
 
-| id | texte | facteur | rempli par | données |
-|---|---|---|---|---|
-| controle-type | "tant que vous contrôlez un {type ou famille}" | × 0,75 | le modèle | aucune |
-| terre-natale | "tant que vous contrôlez {lieu}" | × 0,5 | le code | `P19` (lieu de naissance) qui existe comme carte Lieu |
-| lignee | "tant que vous contrôlez {proche}" | × 0,5 | le code | `P26` (conjoint), `P40` (enfant), `P22` / `P25` (parents) vers une carte Créature |
-| maitre | "tant que vous contrôlez {maître}" | × 0,5 | le code | `P1066` (élève de) ou `P737` (influencé par) vers une carte Créature |
-| reference | "tant que vous contrôlez {carte}" | × 0,5 | le code | un article cité par l'article (voir `gameplay/synergie/liens.md`) |
-| alliance | "tant que vous contrôlez {carte}", et la même capacité est donnée à l'autre carte | × 0,75 | le code | les deux articles se citent l'un l'autre |
-| contemporain | "tant que vous contrôlez une carte de la même époque" | × 0,75 | le code | l'article a des dates (voir `gameplay/synergie/epoques.md`) |
-| points-de-vie | "si vous avez {N} points de vie ou moins", N de 5 à 15 | × 0,5 (proposé) | le modèle | aucune |
-| defausse | "si votre défausse contient {N} cartes ou plus", N de 3 à 10 | × 0,75 (proposé) | le modèle | aucune |
+La liste des conditions est dans `config/mecanique/condition.json`, avec leur texte, leur facteur, ce qui les remplit (le modèle ou le code), les données Wikidata utilisées et leur statut. Les conditions remplies par le code viennent des relations de l'article : lieu de naissance (`P19`), famille (`P26`, `P40`, `P22`, `P25`), maître (`P1066`, `P737`), liens entre articles, liens réciproques (alliance, la capacité va aussi à l'autre carte), dates (contemporain).
 
 Exemple, Napoléon Ier né à Ajaccio : "Tant que vous contrôlez Ajaccio, cette Créature gagne +2 en attaque." Effet bonus-attaque 2, cible cette-carte, condition terre-natale : 2 × 1 × 0,5 = 1.

@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "mots_cles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "commun.schema.json#/$defs/id"
+          },
+          "nom": {
+            "$ref": "commun.schema.json#/$defs/texte"
+          },
+          "texte": {
+            "$ref": "commun.schema.json#/$defs/texte"
+          },
+          "types": {
+            "$ref": "commun.schema.json#/$defs/types"
+          },
+          "prix": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "indice": {
+            "$ref": "commun.schema.json#/$defs/indice"
+          },
+          "statut": {
+            "$ref": "commun.schema.json#/$defs/statut"
+          }
+        },
+        "required": [
+          "id",
+          "nom",
+          "texte",
+          "types",
+          "prix",
+          "indice",
+          "statut"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "mots_cles"
+  ],
+  "additionalProperties": false
+}

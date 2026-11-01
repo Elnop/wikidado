@@ -1,0 +1,21 @@
+{
+  "$schema": "./schema/duree.schema.json",
+  "durees": [
+    {
+      "id": "tour",
+      "texte": {
+        "fr": "jusqu'à la fin du tour"
+      },
+      "facteur": 1,
+      "statut": "retenu"
+    },
+    {
+      "id": "permanent",
+      "texte": {
+        "fr": ""
+      },
+      "facteur": 3,
+      "statut": "retenu"
+    }
+  ]
+}

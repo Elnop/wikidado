@@ -1,0 +1,139 @@
+{
+  "$schema": "./schema/condition.schema.json",
+  "conditions": [
+    {
+      "id": "controle-type",
+      "texte": {
+        "fr": "tant que vous contrôlez un {filtre}"
+      },
+      "facteur": 0.75,
+      "rempli_par": "modele",
+      "donnees": [],
+      "n": null,
+      "symetrique": false,
+      "statut": "retenu"
+    },
+    {
+      "id": "terre-natale",
+      "texte": {
+        "fr": "tant que vous contrôlez {carte}"
+      },
+      "facteur": 0.5,
+      "rempli_par": "code",
+      "donnees": [
+        "P19"
+      ],
+      "n": null,
+      "symetrique": false,
+      "statut": "retenu"
+    },
+    {
+      "id": "lignee",
+      "texte": {
+        "fr": "tant que vous contrôlez {carte}"
+      },
+      "facteur": 0.5,
+      "rempli_par": "code",
+      "donnees": [
+        "P26",
+        "P40",
+        "P22",
+        "P25"
+      ],
+      "n": null,
+      "symetrique": false,
+      "statut": "retenu"
+    },
+    {
+      "id": "maitre",
+      "texte": {
+        "fr": "tant que vous contrôlez {carte}"
+      },
+      "facteur": 0.5,
+      "rempli_par": "code",
+      "donnees": [
+        "P1066",
+        "P737"
+      ],
+      "n": null,
+      "symetrique": false,
+      "statut": "retenu"
+    },
+    {
+      "id": "reference",
+      "texte": {
+        "fr": "tant que vous contrôlez {carte}"
+      },
+      "facteur": 0.5,
+      "rempli_par": "code",
+      "donnees": [
+        "liens"
+      ],
+      "n": null,
+      "symetrique": false,
+      "statut": "retenu"
+    },
+    {
+      "id": "alliance",
+      "texte": {
+        "fr": "tant que vous contrôlez {carte}"
+      },
+      "facteur": 0.75,
+      "rempli_par": "code",
+      "donnees": [
+        "liens-reciproques"
+      ],
+      "n": null,
+      "symetrique": true,
+      "statut": "retenu"
+    },
+    {
+      "id": "contemporain",
+      "texte": {
+        "fr": "tant que vous contrôlez une carte de la même époque"
+      },
+      "facteur": 0.75,
+      "rempli_par": "code",
+      "donnees": [
+        "P569",
+        "P570",
+        "P585",
+        "P580",
+        "P582"
+      ],
+      "n": null,
+      "symetrique": false,
+      "statut": "retenu"
+    },
+    {
+      "id": "points-de-vie",
+      "texte": {
+        "fr": "si vous avez {n} points de vie ou moins"
+      },
+      "facteur": 0.5,
+      "rempli_par": "modele",
+      "donnees": [],
+      "n": {
+        "min": 5,
+        "max": 15
+      },
+      "symetrique": false,
+      "statut": "propose"
+    },
+    {
+      "id": "defausse",
+      "texte": {
+        "fr": "si votre défausse contient {n} cartes ou plus"
+      },
+      "facteur": 0.75,
+      "rempli_par": "modele",
+      "donnees": [],
+      "n": {
+        "min": 3,
+        "max": 10
+      },
+      "symetrique": false,
+      "statut": "propose"
+    }
+  ]
+}

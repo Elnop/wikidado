@@ -1,6 +1,6 @@
 # Catalogue des mécaniques
 
-Liste fermée de ce que le modèle peut assigner aux cartes (voir `generation/pipeline.md`). Les briques et leurs prix sont retenus pour la première version, sauf celles marquées "proposé" dans leur fichier. Tous les prix restent à régler en partie de test.
+Liste fermée de ce que le modèle peut assigner aux cartes (voir `generation/pipeline.md`). Les briques et leurs prix sont retenus pour la première version, sauf celles qui ont le statut `propose` dans la config. Tous les prix restent à régler en partie de test.
 
 Une mécanique est soit un mot-clé, soit une capacité composée de briques. Le catalogue fermé est celui des briques : le modèle ne peut assembler que des briques qui existent, et le code calcule le prix et le texte de l'assemblage.
 
@@ -9,6 +9,18 @@ Une mécanique est soit un mot-clé, soit une capacité composée de briques. Le
 - `gameplay/mecanique/effet.md` : ce que fait la capacité, effets ponctuels et effets continus
 - `gameplay/mecanique/cible.md` : sur qui l'effet porte, et les filtres qui restreignent la cible
 - `gameplay/mecanique/condition.md` : ce qu'il faut avoir en jeu pour que la capacité marche, dont les synergies tirées des données
+
+## Config
+
+La liste des briques, leurs textes, leurs prix et leurs facteurs sont dans `config/mecanique/`, en JSON. C'est la config qui fait foi : la doc explique les règles, la config donne les valeurs. Le pipeline de génération et le jeu lisent les mêmes fichiers.
+
+- un fichier par brique : `mot-cle.json`, `declencheur.json`, `effet.json`, `duree.json`, `cible.json`, `filtre.json`, `condition.json`
+- `prix.json` : arrondi, minimum, liste des types de cartes
+- `schema/` : un JSON Schema par fichier, plus `capacite.schema.json` pour les mécaniques assignées à une carte (sortie du modèle, annotations de l'échantillon)
+
+Les textes sont rangés par langue (`"texte": { "fr": "..." }`). Chaque brique a un statut, `retenu` ou `propose`.
+
+`scripts/verifier_mecaniques.py` valide la config contre les schémas, vérifie les renvois entre fichiers et recalcule les exemples de prix de cette doc. Avec des fichiers JSON Lines en argument, il vérifie aussi les mécaniques de chaque carte : briques connues, cibles et valeurs autorisées, type de carte compatible.
 
 ## Deux sortes de capacités
 
@@ -35,14 +47,14 @@ Un Événement ne reste pas en jeu : il n'a que des capacités déclenchées, av
 Chaque brique a un prix ou un facteur. Le prix d'une capacité est le produit :
 
 ```
-cout_budget = arrondi_superieur(cout_effet × facteur_cible × facteur_filtre × facteur_declencheur × facteur_condition)
+cout_budget = arrondi_superieur(cout_effet × facteur_duree × facteur_cible × facteur_filtre × facteur_declencheur × facteur_condition) + ajout_declencheur
 ```
 
-Le résultat vaut au moins 1. Les capacités passives n'ont pas de facteur de déclencheur. Postérité fait exception à la multiplication : elle retire 1 au prix (voir `gameplay/mecanique/declencheur.md`).
+Le résultat vaut au moins 1. Les capacités passives n'ont pas de facteur de déclencheur. Postérité fait exception à la multiplication : elle retire 1 au prix, c'est son `ajout` (voir `gameplay/mecanique/declencheur.md`).
 
 Étalon : 1 point de budget vaut 1 point de stat. Le prix d'un effet se fixe en le comparant aux stats que la carte aurait reçues à la place.
 
-Un mot-clé a un prix fixe, donné dans `gameplay/mecanique/mot-cle.md`.
+Un mot-clé a un prix fixe, donné dans `config/mecanique/mot-cle.json`.
 
 ## Application selon le type
 
@@ -86,6 +98,6 @@ Les mots-clés ont des noms propres au jeu, avec une saveur Wikipédia ou élect
 
 ## À faire
 
-- trancher les briques marquées "proposé"
+- trancher les briques au statut `propose`
 - tester le catalogue sur les articles de l'échantillon
 - fixer les prix et les facteurs après des parties de test

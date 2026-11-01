@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "filtres": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "commun.schema.json#/$defs/id"
+          },
+          "facteur": {
+            "$ref": "commun.schema.json#/$defs/facteur"
+          },
+          "rempli_par": {
+            "$ref": "commun.schema.json#/$defs/rempli_par"
+          },
+          "valeurs": {
+            "enum": [
+              "types",
+              "familles",
+              "cartes"
+            ]
+          },
+          "statut": {
+            "$ref": "commun.schema.json#/$defs/statut"
+          }
+        },
+        "required": [
+          "id",
+          "facteur",
+          "rempli_par",
+          "valeurs",
+          "statut"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "filtres"
+  ],
+  "additionalProperties": false
+}

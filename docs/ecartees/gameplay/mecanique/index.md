@@ -179,3 +179,21 @@ Vigilance ("peut attaquer puis bloquer au tour adverse") est déjà vrai pour to
 Écartées le 01/11/2026 : Quand elle attaque × 2, Quand elle bloque × 1,5, Quand elle subit des dégâts × 1,5, Quand une carte arrive en jeu ou est détruite × 2.
 
 Quand elle attaque à × 2,5, parce qu'elle attaque presque à chaque tour. Quand elle bloque à × 1, ou retiré comme trop rare. Quand elle subit des dégâts à × 1, ou retiré. Pour les déclencheurs sur les autres cartes : filtre obligatoire, ou × 3 quand il n'y a pas de filtre.
+
+## Config en YAML ou en TypeScript
+
+Écartée le 01/11/2026 : la config des mécaniques est en JSON, avec un JSON Schema par fichier.
+
+YAML, plus agréable à éditer à la main, mais il faut une bibliothèque côté JS et côté Python, et le format a des pièges (indentation, types implicites). TypeScript, typé directement dans le projet Next, mais illisible pour un pipeline Python sans étape d'export.
+
+## Doc qui fait foi sur la config
+
+Écartée le 01/11/2026 : la config fait foi, la doc explique les règles et renvoie aux fichiers.
+
+Les tableaux Markdown restaient la référence et la config était recopiée à la main. Variante : la config fait foi et un script régénère les tableaux Markdown à partir d'elle.
+
+## Config des mécaniques dans un seul fichier
+
+Écartée le 01/11/2026 : un fichier par brique dans `config/mecanique/`.
+
+Un seul `config/mecanique.json` avec toutes les briques, plus simple à charger mais plus long à relire.

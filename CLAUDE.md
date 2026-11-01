@@ -1,6 +1,6 @@
 # wikidado
 
-Jeu de cartes construit à partir des articles Wikipédia, avec un gameplay de duel inspiré de Magic: The Gathering. Projet de Leon et Dani. Pour l'instant le dépôt ne contient que de la documentation de conception, en français.
+Jeu de cartes construit à partir des articles Wikipédia, avec un gameplay de duel inspiré de Magic: The Gathering. Projet de Leon et Dani. Le dépôt contient surtout de la documentation de conception, en français, plus des scripts de préparation des données et la config du jeu.
 
 ## Organisation
 
@@ -16,6 +16,10 @@ Toute la documentation est dans `docs/`. Le `README.md` à la racine sert d'inde
 - Un concept qui ne se rattache à aucun objet reste à la racine du domaine, avec un nom simple : `gameplay/electricite.md`, `generation/pipeline.md`.
 - Les idées écartées vont dans `docs/ecartees/`, qui reproduit l'arborescence de `docs/` : `gameplay/carte/cout.md` a ses idées écartées dans `ecartees/gameplay/carte/cout.md`.
 - Les renvois entre fichiers s'écrivent entre backticks, avec le chemin depuis `docs/` : `gameplay/carte/rarete.md`.
+
+## Config
+
+Les valeurs que les programmes lisent (briques des mécaniques, prix, facteurs) sont dans `config/`, en JSON avec un JSON Schema par fichier. La config fait foi : la doc explique les règles et renvoie aux fichiers de config au lieu de recopier les valeurs. Après une modification de `config/mecanique/`, lancer `scripts/verifier_mecaniques.py`.
 
 ## Règle des idées
 

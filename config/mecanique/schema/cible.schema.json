@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "cibles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "commun.schema.json#/$defs/id"
+          },
+          "texte": {
+            "$ref": "commun.schema.json#/$defs/texte"
+          },
+          "facteur": {
+            "$ref": "commun.schema.json#/$defs/facteur"
+          },
+          "joueur": {
+            "type": "boolean"
+          },
+          "statut": {
+            "$ref": "commun.schema.json#/$defs/statut"
+          }
+        },
+        "required": [
+          "id",
+          "texte",
+          "facteur",
+          "joueur",
+          "statut"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "cibles"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "effets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "commun.schema.json#/$defs/id"
+          },
+          "sorte": {
+            "enum": [
+              "ponctuel",
+              "continu"
+            ]
+          },
+          "texte": {
+            "$ref": "commun.schema.json#/$defs/texte"
+          },
+          "n": {
+            "$ref": "commun.schema.json#/$defs/n"
+          },
+          "prix": {
+            "type": "object",
+            "properties": {
+              "par_n": {
+                "type": "number"
+              },
+              "fixe": {
+                "type": "number"
+              },
+              "par_prix_mot_cle": {
+                "type": "number"
+              },
+              "diviseur": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              }
+            },
+            "required": [
+              "par_n",
+              "fixe",
+              "par_prix_mot_cle",
+              "diviseur"
+            ],
+            "additionalProperties": false
+          },
+          "duree": {
+            "type": "boolean"
+          },
+          "texte_duree": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "commun.schema.json#/$defs/texte"
+            }
+          },
+          "cibles": {
+            "type": "array",
+            "items": {
+              "$ref": "commun.schema.json#/$defs/id"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "cartes_visees": {
+            "$ref": "commun.schema.json#/$defs/types"
+          },
+          "zone": {
+            "enum": [
+              "jeu",
+              "main",
+              "defausse"
+            ]
+          },
+          "mot_cle": {
+            "type": "boolean"
+          },
+          "indice": {
+            "$ref": "commun.schema.json#/$defs/indice"
+          },
+          "statut": {
+            "$ref": "commun.schema.json#/$defs/statut"
+          }
+        },
+        "required": [
+          "id",
+          "sorte",
+          "texte",
+          "n",
+          "prix",
+          "duree",
+          "cibles",
+          "cartes_visees",
+          "zone",
+          "mot_cle",
+          "indice",
+          "statut"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "effets"
+  ],
+  "additionalProperties": false
+}

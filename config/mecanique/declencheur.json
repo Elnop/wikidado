@@ -1,0 +1,189 @@
+{
+  "$schema": "./schema/declencheur.schema.json",
+  "declencheurs": [
+    {
+      "id": "a-la-une",
+      "texte": {
+        "fr": "À la une"
+      },
+      "types": [
+        "lieu",
+        "creature",
+        "evenement",
+        "objet",
+        "savoir",
+        "faction"
+      ],
+      "facteur": 1,
+      "ajout": 0,
+      "filtre": false,
+      "indice": "effet marquant au moment où le sujet apparaît",
+      "statut": "retenu"
+    },
+    {
+      "id": "posterite",
+      "texte": {
+        "fr": "Postérité"
+      },
+      "types": [
+        "lieu",
+        "creature",
+        "objet",
+        "savoir",
+        "faction"
+      ],
+      "facteur": 1,
+      "ajout": -1,
+      "filtre": false,
+      "indice": "sujets dont l'héritage compte plus que la vie : martyrs, figures posthumes, ruines",
+      "statut": "retenu"
+    },
+    {
+      "id": "debut-de-tour",
+      "texte": {
+        "fr": "Au début de votre tour"
+      },
+      "types": [
+        "lieu",
+        "creature",
+        "objet",
+        "savoir",
+        "faction"
+      ],
+      "facteur": 3,
+      "ajout": 0,
+      "filtre": false,
+      "indice": "sujets qui produisent ou agissent en continu : usines, centrales, institutions",
+      "statut": "retenu"
+    },
+    {
+      "id": "attaque",
+      "texte": {
+        "fr": "Quand elle attaque"
+      },
+      "types": [
+        "creature"
+      ],
+      "facteur": 2,
+      "ajout": 0,
+      "filtre": false,
+      "indice": "conquérants, sportifs offensifs, prédateurs",
+      "statut": "retenu"
+    },
+    {
+      "id": "bloque",
+      "texte": {
+        "fr": "Quand elle bloque"
+      },
+      "types": [
+        "creature"
+      ],
+      "facteur": 1.5,
+      "ajout": 0,
+      "filtre": false,
+      "indice": "défenseurs, gardiens, résistants",
+      "statut": "retenu"
+    },
+    {
+      "id": "subit-degats",
+      "texte": {
+        "fr": "Quand elle subit des dégâts"
+      },
+      "types": [
+        "creature",
+        "lieu"
+      ],
+      "facteur": 1.5,
+      "ajout": 0,
+      "filtre": false,
+      "indice": "sujets qui se renforcent dans l'adversité, forteresses",
+      "statut": "retenu"
+    },
+    {
+      "id": "arrivee-autre",
+      "texte": {
+        "fr": "Quand une carte {filtre} arrive en jeu de votre côté"
+      },
+      "types": [
+        "lieu",
+        "creature",
+        "objet",
+        "savoir",
+        "faction"
+      ],
+      "facteur": 2,
+      "ajout": 0,
+      "filtre": true,
+      "indice": "chefs, mentors, lieux de rassemblement",
+      "statut": "retenu"
+    },
+    {
+      "id": "destruction-autre",
+      "texte": {
+        "fr": "Quand une carte {filtre} est détruite"
+      },
+      "types": [
+        "lieu",
+        "creature",
+        "objet",
+        "savoir",
+        "faction"
+      ],
+      "facteur": 2,
+      "ajout": 0,
+      "filtre": true,
+      "indice": "charognards, héritiers, mémoriaux",
+      "statut": "retenu"
+    },
+    {
+      "id": "fin-de-tour",
+      "texte": {
+        "fr": "À la fin de votre tour"
+      },
+      "types": [
+        "lieu",
+        "creature",
+        "objet",
+        "savoir",
+        "faction"
+      ],
+      "facteur": 3,
+      "ajout": 0,
+      "filtre": false,
+      "indice": "sujets qui agissent après coup : bilans, récoltes, veilles",
+      "statut": "propose"
+    },
+    {
+      "id": "affectation",
+      "texte": {
+        "fr": "Quand une Créature est affectée à cette Faction"
+      },
+      "types": [
+        "faction"
+      ],
+      "facteur": 2,
+      "ajout": 0,
+      "filtre": false,
+      "indice": "partis, clubs, mouvements qui recrutent",
+      "statut": "propose"
+    },
+    {
+      "id": "adversaire-joue",
+      "texte": {
+        "fr": "Quand l'adversaire joue une carte {filtre}"
+      },
+      "types": [
+        "lieu",
+        "creature",
+        "objet",
+        "savoir",
+        "faction"
+      ],
+      "facteur": 2,
+      "ajout": 0,
+      "filtre": true,
+      "indice": "contre-pouvoirs, rivaux, opposants, services de renseignement",
+      "statut": "propose"
+    }
+  ]
+}

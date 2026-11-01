@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Définitions communes du catalogue des mécaniques",
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "type": {
+      "enum": [
+        "lieu",
+        "creature",
+        "evenement",
+        "objet",
+        "savoir",
+        "faction"
+      ]
+    },
+    "types": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/type"
+      },
+      "uniqueItems": true
+    },
+    "texte": {
+      "type": "object",
+      "properties": {
+        "fr": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "fr"
+      ],
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "statut": {
+      "enum": [
+        "retenu",
+        "propose"
+      ]
+    },
+    "facteur": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "n": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "min": {
+              "type": "integer"
+            },
+            "max": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "min",
+            "max"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "rempli_par": {
+      "enum": [
+        "modele",
+        "code"
+      ]
+    },
+    "indice": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

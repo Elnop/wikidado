@@ -1,0 +1,13 @@
+{
+  "$schema": "./schema/prix.schema.json",
+  "arrondi": "superieur",
+  "minimum": 1,
+  "types": [
+    "lieu",
+    "creature",
+    "evenement",
+    "objet",
+    "savoir",
+    "faction"
+  ]
+}

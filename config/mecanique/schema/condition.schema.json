@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "conditions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "commun.schema.json#/$defs/id"
+          },
+          "texte": {
+            "$ref": "commun.schema.json#/$defs/texte"
+          },
+          "facteur": {
+            "$ref": "commun.schema.json#/$defs/facteur"
+          },
+          "rempli_par": {
+            "$ref": "commun.schema.json#/$defs/rempli_par"
+          },
+          "donnees": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "n": {
+            "$ref": "commun.schema.json#/$defs/n"
+          },
+          "symetrique": {
+            "type": "boolean"
+          },
+          "statut": {
+            "$ref": "commun.schema.json#/$defs/statut"
+          }
+        },
+        "required": [
+          "id",
+          "texte",
+          "facteur",
+          "rempli_par",
+          "donnees",
+          "n",
+          "symetrique",
+          "statut"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "conditions"
+  ],
+  "additionalProperties": false
+}
