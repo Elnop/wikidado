@@ -4,12 +4,12 @@ Jeu de cartes construit à partir des articles Wikipédia, avec un gameplay de d
 
 ## Organisation
 
-- `Wikimaster/` : analyse de WikiMasters, le jeu existant le plus proche
-- `Wikipedia/` : ce que Wikipédia et Wikidata mettent à disposition, mesuré sur de vrais articles
-- `Gameplay/` : pistes de game design
+- `docs/Wikimaster/` : analyse de WikiMasters, le jeu existant le plus proche
+- `docs/Wikipedia/` : ce que Wikipédia et Wikidata mettent à disposition, mesuré sur de vrais articles
+- `docs/Gameplay/` : pistes de game design
   - `cardcost.md` : coût des cartes et statistiques
   - `cardsynergie.md` : synergies entre cartes
   - `types-de-cartes.md` : quels articles on garde et quel type de carte ils donnent
   - `mecaniques.md` : catalogue fermé des mécaniques assignables
-- `Generation/` : génération automatique des cartes
+- `docs/Generation/` : génération automatique des cartes
   - `pipeline.md` : partage entre code et petit modèle d'assignation
