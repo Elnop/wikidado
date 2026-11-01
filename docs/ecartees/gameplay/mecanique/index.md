@@ -197,3 +197,9 @@ Les tableaux Markdown restaient la référence et la config était recopiée à 
 Écartée le 01/11/2026 : un fichier par brique dans `config/mecanique/`.
 
 Un seul `config/mecanique.json` avec toutes les briques, plus simple à charger mais plus long à relire.
+
+## Capacités gratuites (prix minimum 0)
+
+Écartée le 01/11/2026 : une capacité coûte au moins 1 point de budget.
+
+Avec un minimum à 0, les capacités Postérité dont l'effet coûte 1 devenaient gratuites ("Postérité : infligez 1 dégât"). Comme une carte n'a pas de nombre maximum de mécaniques, elle aurait pu en empiler sans limite. Variante : autoriser une seule capacité à prix 0 par carte.

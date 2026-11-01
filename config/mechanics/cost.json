@@ -1,5 +1,5 @@
 {
   "$schema": "./schema/cost.schema.json",
   "rounding": "up",
-  "minimum": 0
+  "minimum": 1
 }
