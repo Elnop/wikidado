@@ -1,15 +1,8 @@
-# Types de cartes
+# Sélection des articles
 
-On ne garde que certaines natures d'articles, et chaque nature retenue donne un type de carte. Les noms des types ne sont pas encore choisis, ceux ci-dessous sont des exemples.
+Quels articles Wikipédia deviennent des cartes. Le type de carte que donne chaque nature d'article est décrit dans `Gameplay/cardtype.md`.
 
-| Type (provisoire) | Ce que ça couvre | Rôle en jeu (à définir) |
-|---|---|---|
-| Terrain | lieux avec coordonnées : villes, montagnes, rivières, bâtiments | produit des ressources |
-| Créature | personnes, animaux | se bat sur le terrain |
-| Événement | batailles, opérations militaires, catastrophes | effet ponctuel, comme un éphémère ou un rituel |
-| Technique | inventions, outils, logiciels, disciplines | effet permanent, comme un artefact ou un enchantement |
-
-## Comment reconnaître la nature d'un article
+## Reconnaître la nature d'un article
 
 Wikidata donne la nature d'un élément avec la propriété `P31` ("nature de l'élément"). La Tour Eiffel est une tour, Napoléon est un être humain (Q5).
 
@@ -54,7 +47,11 @@ Nombre d'articles fr dont l'élément Wikidata a directement cette classe en `P3
 
 Les très grosses classes (être humain, film, commune de France, œuvre littéraire) ont dépassé le délai du service de requête. Il faudra les compter à partir du dump Wikidata. Pour les humains, on parle de plusieurs centaines de milliers d'articles.
 
-Ce qui en ressort : il y a largement assez d'articles pour chaque type. Le problème sera de réduire. Les taxons à eux seuls pèsent 150 000 articles, dont la plupart sont des ébauches sur des insectes ou des araignées. On peut fixer un seuil (nombre de langues, taille, lectures) pour ne garder que les articles qui ont assez de matière pour faire une carte intéressante.
+Il y a largement assez d'articles pour chaque type. Le problème sera de réduire. Les taxons à eux seuls pèsent 150 000 articles, dont la plupart sont des ébauches sur des insectes ou des araignées.
+
+## Seuil minimal
+
+On peut fixer un seuil (nombre de langues, taille, lectures) pour ne garder que les articles qui ont assez de matière pour faire une carte intéressante.
 
 ## Articles à exclure d'office
 
@@ -64,7 +61,5 @@ Ce qui en ressort : il y a largement assez d'articles pour chaque type. Le probl
 
 ## Questions ouvertes
 
-- Combien de types au total ? Quatre comme Magic (sans compter les planeswalkers), ou plus ?
-- Les œuvres (films, albums, livres) entrent-elles dans un type, ou on les laisse de côté au début ?
-- Les espèces sont-elles des Créatures, comme les humains, ou un type à part ?
 - Les personnes vivantes posent un problème d'image et de droit de la personnalité. On les garde ?
+- Que faire des articles à 0 langue et 0 lecture (des milliers d'espèces et de communes) : communes, ou on les exclut ?

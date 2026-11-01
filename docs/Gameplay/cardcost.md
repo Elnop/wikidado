@@ -2,7 +2,7 @@
 
 ## Principe
 
-Le coût d'une carte ne dépend pas de la popularité de son article. La popularité fixe la rareté et la puissance par rapport au coût, ce qui est décrit dans `cardstats.md`.
+Le coût d'une carte ne dépend pas de la popularité de son article. La popularité fixe la rareté (voir `cardrarete.md`) et, à travers elle, la puissance par rapport au coût (voir `cardstats.md`).
 
 Comme dans Magic, une carte puissante coûte cher et une carte à 1 mana a sa place dans un deck.
 
@@ -20,5 +20,5 @@ Si la taille de l'article fixe le coût, elle ne peut plus servir pour l'attaque
 ## Questions ouvertes
 
 - Qu'est-ce qui fixe le coût ?
-- Un seul type de mana générique, ou du mana coloré par famille de portails ?
+- Un seul type de mana générique, ou du mana coloré par famille (voir `cardfamille.md`) ?
 - Coût de 1 à 7 ou plus large ?

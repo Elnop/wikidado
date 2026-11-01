@@ -45,6 +45,13 @@ Chaque mécanique doit préciser :
 
 Les mécaniques dont les paramètres viennent des données (terre-natale, participant) peuvent se passer du modèle. Le modèle sert surtout pour les mécaniques "de saveur" comme inspiration, où il faut comprendre le sujet.
 
+## Données exploitables pour des capacités
+
+- label "Article de qualité" ou "Bon article" : mot-clé de rareté ou capacité bonus (6 600 articles sur fr, assez rare pour être spécial)
+- âge de l'article (création en 2003 pour Napoléon) : mot-clé "Ancien" ?
+- coordonnées GPS : l'article est un lieu, voir `cardtype.md` pour les terrains
+- importance "maximum" dans un projet : carte iconique de sa famille
+
 ## À faire
 
 - lister les mécaniques par type de carte
