@@ -9,14 +9,16 @@ Voir docs/generation/echantillon.md pour le format de sortie (JSON Lines).
   3. SPARQL Wikidata : type de carte déduit de la classe (P31/P279*), classes exclues écartées.
   4. REST summary : résumé de l'article.
 
-Deux sources de candidats (--source) :
-  classes          : pour chaque type, les articles des classes Wikidata du type
-                     les plus présents dans les langues (--candidats par racine),
-                     puis lectures du mois article par article. Donne --par-type
-                     articles pour chaque type, même rares dans le top mensuel. Lent (plusieurs minutes) et
-                     souvent coupé par le SPARQL Wikidata : un type en échec
-                     retombe sur le top mensuel.
-  top (défaut)     : top mensuel de l'API Pageviews (1000 articles au plus).
+Sources de candidats (--source) :
+  auto (défaut) : Événement et Technique viennent des classes Wikidata (les plus
+                  présentes dans les langues, puis lectures du mois), ce qui donne
+                  --par-type articles même si le type est rare dans le top. Créature et
+                  Terrain, trop gros pour le SPARQL, viennent du top mensuel. Un type en
+                  échec retombe sur le top mensuel.
+  top           : tout vient du top mensuel de l'API Pageviews (1000 articles au plus).
+
+Les réponses des API sont gardées dans .cache-echantillon/ : une relance est
+quasi instantanée. --sans-cache pour tout redemander.
 
 On garde les articles dans l'ordre de lecture, jusqu'à avoir --par-type
 articles de chaque type de carte. Les articles sans type reconnu (listes,
@@ -28,7 +30,9 @@ Usage :
 """
 
 import argparse
+import hashlib
 import json
+import os
 import sys
 import time
 import urllib.error
@@ -44,10 +48,17 @@ TYPES = ["creature", "terrain", "evenement", "technique"]
 # types conviennent.
 RACINES = {
     "creature": ["Q5", "Q16521"],  # être humain, taxon
-    "evenement": ["Q1656682", "Q178561", "Q645883"],  # événement, bataille, opération militaire
-    "technique": ["Q39546", "Q7397", "Q11862829", "Q11019"],  # outil, logiciel, discipline, machine
+    "evenement": ["Q1190554", "Q178561", "Q645883"],  # événement, bataille, opération militaire
+    "technique": ["Q39546", "Q11019", "Q9143", "Q11862829", "Q7397"],  # outil, machine, langage de programmation, discipline, logiciel
     "terrain": ["Q2221906", "Q41176", "Q811979"],  # lieu, bâtiment, structure architecturale
 }
+
+# Types dont les classes sont assez petites pour que le SPARQL Wikidata réponde.
+# Créature et Terrain (humains, taxons, lieux) expirent toujours : ils passent par le top mensuel.
+TYPES_PAR_CLASSES = ("evenement", "technique")
+
+DOSSIER_CACHE = ".cache-echantillon"
+utiliser_cache = True
 
 TAILLE_LOT = 25  # petits lots : le SPARQL Wikidata coupe les requêtes longues
 
@@ -76,10 +87,22 @@ def http_json(url, params=None, data=None, contact=CONTACT, essais=4):
         "User-Agent": f"wikidado-echantillon/0.1 ({contact})",
         "Accept": "application/json",
     })
+    fichier = None
+    if utiliser_cache:
+        cle = hashlib.sha1(f"{url}\n{corps}".encode()).hexdigest()
+        fichier = os.path.join(DOSSIER_CACHE, cle + ".json")
+        if os.path.exists(fichier):
+            with open(fichier, encoding="utf-8") as f:
+                return json.load(f)
     for essai in range(essais):
         try:
             with urllib.request.urlopen(req, timeout=60) as r:
-                return json.load(r)
+                rep = json.load(r)
+            if fichier:
+                os.makedirs(DOSSIER_CACHE, exist_ok=True)
+                with open(fichier, "w", encoding="utf-8") as f:
+                    json.dump(rep, f, ensure_ascii=False)
+            return rep
         except (urllib.error.URLError, json.JSONDecodeError) as e:
             if isinstance(e, urllib.error.HTTPError) and e.code == 404:
                 return None
@@ -228,7 +251,8 @@ def main():
     p = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     p.add_argument("--langue", choices=["fr", "en"], required=True)
     p.add_argument("--mois", help="AAAA-MM, par défaut le mois précédent")
-    p.add_argument("--source", choices=["classes", "top"], default="top")
+    p.add_argument("--source", choices=["auto", "top"], default="auto")
+    p.add_argument("--sans-cache", action="store_true", help="ignore le cache disque (.cache-echantillon/)")
     p.add_argument("--candidats", type=int, default=150, help="source classes : candidats par classe racine")
     p.add_argument("--par-type", type=int, default=10, help="articles à garder par type de carte")
     p.add_argument("--exclure", nargs="*", default=[], help="fichiers JSONL dont on ignore les articles")
@@ -236,6 +260,8 @@ def main():
     p.add_argument("--contact", default=CONTACT, help="contact mis dans le User-Agent")
     a = p.parse_args()
 
+    global utiliser_cache
+    utiliser_cache = not a.sans_cache
     annee, mois = map(int, a.mois.split("-")) if a.mois else mois_precedent()
     vus = deja_tires(a.exclure)
 
@@ -270,7 +296,7 @@ def main():
 
     for type_carte in TYPES:
         avec = None
-        if a.source == "classes":
+        if a.source == "auto" and type_carte in TYPES_PAR_CLASSES:
             print(f"{type_carte} : recherche des candidats par classe...", file=sys.stderr)
             try:
                 cands = [(t, q) for t, q in candidats_par_classe(a.langue, type_carte, a.candidats, a.contact)
