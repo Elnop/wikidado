@@ -25,3 +25,9 @@ Une carte était générée la première fois qu'un joueur la tirait, puis gard�
 Écartée le 01/11/2026 : chaque carte garde la version du catalogue, du modèle et des formules.
 
 On régénérait tout le pool à chaque changement.
+
+## Assignation par une API payante (Jev hébergé, API de LLM)
+
+Écartée le 01/11/2026 : pas de budget, on veut une solution gratuite.
+
+Appeler une API payante (Jev de TypeSafe, ou un LLM hébergé) une fois par article donnerait la meilleure qualité sans infrastructure, mais le coût d'un lot de dizaines de milliers de cartes et la dépendance à un fournisseur ne sont pas acceptables pour l'instant. Le format de questions étant le nôtre, on pourra y revenir sans changer le reste.
