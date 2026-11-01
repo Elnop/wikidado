@@ -17,6 +17,7 @@ Une classe n'entre dans la liste que si elle est reliée à « entité » (`Q351
 - Un article est retenu si une de ses classes `P31` est dans la liste, ou en descend par une remontée courte : quelques liens « sous-classe de » (`P279`) au plus. Le nombre de sauts reste à fixer (piste : 3).
 - Tout ce que la liste n'atteint pas reste dehors. Une classe oubliée coûte quelques cartes, un intrus ne passe pas.
 - Le type de l'article vient de la classe retenue la plus proche (voir `gameplay/carte/type.md`).
+- Une classe peut aussi être marquée « dehors ». Elle sert d'exception sous une classe retenue : la classe choisie la plus proche gagne, même si c'est « dehors », et l'article n'est alors pas une carte. Saison sportive est dehors alors que compétition sportive, plus haut, donne Événement. Question ouverte : que faire quand une classe dehors et une classe retenue sont à la même distance ?
 - La liste sert aussi à fixer la famille de chaque classe (voir `gameplay/carte/famille.md`).
 - Elle compte sans doute plusieurs centaines de classes, et se maintient quand on ajoute des types d'articles.
 - Elle se remplit sur une page de validation partagée (https://claude.ai/artifact/QMRMjTfwfJW4nZ9LTfqTMH), puis est exportée dans `scripts/liste-blanche.json`, avec pour chaque classe son type ou « dehors », qui l'a choisie et quand.
