@@ -9,6 +9,8 @@ Cinq cartes construites à partir de vrais articles, avec le détail de chaque v
 ## Organisation
 
 ```
+scripts/
+  tirer_echantillon.py         tire les articles les plus lus pour l'échantillon annoté
 docs/
   differe.md                   travaux différés, à ne pas oublier
   wikimaster/analyse.md        analyse de WikiMasters, le jeu existant le plus proche

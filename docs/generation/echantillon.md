@@ -37,8 +37,25 @@ Un fichier JSON par ligne (JSON Lines), un article par ligne. Les champs `fiche`
 - 200 à 300 articles, moitié Wikipédia FR, moitié EN.
 - Réparti sur les 4 types de carte, avec au moins 40 articles par type, pour que chaque type soit mesurable.
 - Mélange de rarités, y compris beaucoup d'articles pauvres en données, puisque ce sera la majorité du pool.
-- Tirage au hasard dans chaque classe retenue (voir `generation/article/selection.md`), pas les articles célèbres seulement.
+- Premier lot : les articles les plus lus du mois, par type, avec `scripts/tirer_echantillon.py`. Ils sont connus de tout le monde, donc faciles à annoter. Les lots suivants doivent venir d'un tirage au hasard dans chaque classe retenue (voir `generation/article/selection.md`), sinon l'échantillon ne représente pas le pool.
 - Un tiers mis de côté pour tester, jamais utilisé comme exemples pour le kNN.
+
+## Script de tirage
+
+`scripts/tirer_echantillon.py` produit le format ci-dessus (champs `attendu` vides) :
+
+```
+python3 scripts/tirer_echantillon.py --langue fr --par-type 10 --sortie echantillon-fr.jsonl
+python3 scripts/tirer_echantillon.py --langue en --par-type 10 --exclure echantillon-fr.jsonl --sortie echantillon-en.jsonl
+```
+
+Il prend le top mensuel de l'API Pageviews, déduit le type de carte de la classe Wikidata (`P31/P279*`, racines provisoires) et garde les articles dans l'ordre de lecture jusqu'à `--par-type` par type. `--exclure` évite de retirer des articles déjà tirés.
+
+Limites connues :
+
+- le top mensuel est limité à 1000 articles, et un type peut rester incomplet
+- les plus lus sont dominés par l'actualité (personnalités politiques, sport, élections) et contiennent des articles sensibles (site pour adultes). Le filtre des articles sensibles de `generation/article/selection.md` n'est pas encore appliqué
+- les racines de classes par type sont provisoires : un pays est classé Terrain, et un réseau social ou un site Web, Technique
 
 ## Mesures
 
