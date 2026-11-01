@@ -19,3 +19,9 @@ Plus de trafic et des statistiques plus stables, comme WikiMasters. Mais certain
 Écartée le 01/11/2026 : la popularité ne compte que les lectures.
 
 Le nombre de langues était combiné aux lectures pour lisser les pics d'actualité : un sujet traduit en 200 langues restait important même s'il était peu lu ce mois-là.
+
+## Paliers de la planche d'exemples dans la spec
+
+Écartée le 01/11/2026 : on attend un vrai échantillon pour fixer les paliers.
+
+La planche utilisait les paliers provisoires multipliés par 10 (commune sous 1 000 lectures toutes langues, peu commune à partir de 1 000, rare à partir de 50 000, mythique à partir de 500 000). On aurait pu les reprendre comme paliers provisoires de la spec.

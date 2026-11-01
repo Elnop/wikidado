@@ -33,11 +33,11 @@ Le catalogue contient des mécaniques qui ne font qu'ajouter des stats. Le reste
 ### centrale
 
 - texte : "Au début de votre tour, gagnez {quantite} électricité."
-- types : Lieu
+- types : tous
 - cout_budget : à définir, selon la quantité
 - params : quantite
 - condition : aucune
-- indice : lieux qui produisent de l'énergie (centrale, barrage, mine, port industriel)
+- indice : sujets liés à la production d'énergie (centrale, barrage, machine à vapeur, ingénieur, découverte scientifique)
 
 ## Exemples
 

@@ -8,7 +8,7 @@ Les œuvres (films, albums, livres) ne sont pas des cartes.
 
 | Type | Ce que ça couvre | Rôle en jeu |
 |---|---|---|
-| Lieu | lieux avec coordonnées : villes, montagnes, rivières, bâtiments | a une défense et peut être attaqué à la place du joueur. Certains produisent de l'électricité (voir `gameplay/electricite.md`) |
+| Lieu | lieux avec coordonnées : villes, montagnes, rivières, bâtiments | a une défense et peut être attaqué à la place du joueur |
 | Créature | personnes, espèces animales et végétales | se bat, a une attaque et une défense |
 | Événement | batailles, opérations militaires, catastrophes | effet ponctuel, comme un éphémère ou un rituel |
 | Technique | inventions, outils, logiciels, disciplines | effet permanent, comme un artefact ou un enchantement |
@@ -19,6 +19,7 @@ Comme dans Magic, chaque carte a un type (un des 4) et des sous-types, en nombre
 
 - la nature de l'élément (`P31`) : Église, Château, Bataille, Cheval
 - pour les personnes, les occupations (`P106`) : Militaire, Homme politique, Peintre
+- pour les espèces, la classification : on remonte les taxons parents (`P171`) jusqu'à quelques rangs choisis, comme la classe et l'ordre. La Musaraigne sombre, que `P31` décrit seulement comme Taxon, devient aussi Mammifère et Eulipotyphle
 
 Napoléon serait une Créature avec les sous-types Humain, Homme politique, Militaire, Monarque. Il y a autant de sous-types possibles que de classes et d'occupations dans Wikidata.
 

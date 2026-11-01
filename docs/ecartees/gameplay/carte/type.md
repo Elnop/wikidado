@@ -55,3 +55,9 @@ Le modèle choisissait des sous-types dans une liste fermée, comme il choisit l
 Écartée le 01/11/2026 : le type s'appelle Lieu et la ressource est l'électricité, reçue à chaque tour comme dans Hearthstone.
 
 Les lieux étaient des Terrains qui produisaient le mana. Variantes : Terrains gratuits, un par tour, comme dans Magic, ou Terrains au coût normal qui produisent plus de mana.
+
+## Espèces avec le seul sous-type Taxon
+
+Écartée le 01/11/2026 : on ajoute les rangs de la classification (P171).
+
+Toutes les espèces partageaient le sous-type Taxon. Simple, mais les synergies comme "vos Mammifères" étaient impossibles.

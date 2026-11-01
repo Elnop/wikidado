@@ -43,3 +43,15 @@ Même limite pour toutes les cartes, par exemple 3.
 Écartée le 01/11/2026 : elles restent, pour orienter une carte vers l'attaque ou la défense.
 
 Elles ne servaient qu'à permettre les grosses cartes sans capacité, ce que le budget fait maintenant tout seul.
+
+## Production d'électricité réservée aux Lieux
+
+Écartée le 01/11/2026 : tous les types peuvent produire de l'électricité.
+
+La mécanique centrale ne pouvait être donnée qu'à un Lieu (centrale, barrage, mine).
+
+## Production d'électricité pour les Lieux et les Techniques
+
+Écartée le 01/11/2026 : tous les types peuvent produire de l'électricité.
+
+Une centrale (Lieu) ou une machine (Technique) pouvait produire, mais pas une Créature ni un Événement.

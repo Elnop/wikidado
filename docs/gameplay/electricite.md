@@ -6,4 +6,4 @@ Chaque joueur reçoit de l'électricité à chaque tour, comme le mana dans Hear
 
 Le coût d'une carte n'a pas de maximum (voir `gameplay/carte/cout.md`). Une carte qui coûte plus de 10 ne peut se jouer qu'avec l'électricité en plus produite par des Lieux.
 
-Certains Lieux produisent de l'électricité en plus (une centrale, un barrage), d'autres non (voir `gameplay/carte/type.md`). La production d'électricité est une mécanique du catalogue, qui consomme du budget comme les autres (voir `gameplay/mecanique.md`).
+Certaines cartes produisent de l'électricité en plus, quel que soit leur type : un Lieu (une centrale, un barrage), une Technique (la machine à vapeur), une Créature (un ingénieur), un Événement (une découverte). La production d'électricité est une mécanique du catalogue, qui consomme du budget comme les autres (voir `gameplay/mecanique.md`).
