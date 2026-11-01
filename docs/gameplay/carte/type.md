@@ -6,13 +6,15 @@ Le découpage en 5 est à vérifier sur ce que Wikipédia et Wikidata proposent 
 
 Les œuvres (films, albums, livres, jeux vidéo) ne sont pas des cartes. Les sites web, plateformes en ligne et réseaux sociaux non plus.
 
+Les règles de la partie sont dans `gameplay/duel.md`.
+
 | Type | Ce que ça couvre | Rôle en jeu |
 |---|---|---|
-| Lieu | lieux avec coordonnées : villes, montagnes, rivières, bâtiments | a une défense et peut être attaqué à la place du joueur |
+| Lieu | lieux avec coordonnées : villes, montagnes, rivières, bâtiments | a une défense et peut être attaqué à la place du joueur, ne bloque pas |
 | Créature | personnes, espèces animales et végétales | se bat, a une attaque et une défense |
-| Événement | batailles, opérations militaires, catastrophes | effet ponctuel, comme un éphémère ou un rituel |
-| Objet | outils, armes, véhicules, machines, instruments, vêtements | effet permanent, comme un artefact |
-| Savoir | disciplines, sciences, théories, technologies, logiciels, langages, idéologies, mouvements artistiques | effet permanent, comme un enchantement |
+| Événement | batailles, opérations militaires, catastrophes | effet ponctuel joué à son tour, comme un rituel |
+| Objet | outils, armes, véhicules, machines, instruments, vêtements | reste en jeu avec ses propres mécaniques, peut s'attacher à une Créature, comme un artefact |
+| Savoir | disciplines, sciences, théories, technologies, logiciels, langages, idéologies, mouvements artistiques | reste en jeu sans capacité propre, agit sur les autres cartes et sur les règles, comme un enchantement |
 
 ## Sous-types
 

@@ -35,6 +35,7 @@ docs/
       relations.md             relations typées de Wikidata
       epoques.md               dates de vie et d'événements
       categories.md            catégories Wikipédia
+    duel.md                    règles d'une partie : deck, tour, combat, victoire
     mecanique.md               catalogue fermé des mécaniques assignables
     electricite.md             ressource du jeu
   generation/
