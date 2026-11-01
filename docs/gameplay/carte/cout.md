@@ -21,7 +21,3 @@ cout = arrondi(budget_base / points_par_mana)
 Le coût se calcule sur le budget de base, avant le bonus de rareté. Deux cartes de même budget de base ont le même coût, même si l'une est mythique et l'autre commune.
 
 Il n'y a pas de coût de base selon le type. Le coût minimum est 0. Il n'y a pas de coût maximum.
-
-## Après la première version
-
-- Comment garder une courbe de mana équilibrée ? Pistes : mesurer la répartition des coûts puis ajuster la formule du budget de base et `points_par_mana`, ou imposer des quotas par coût à la validation.

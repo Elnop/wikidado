@@ -6,6 +6,7 @@ Jeu de cartes construit à partir des articles Wikipédia, avec un gameplay de d
 
 ```
 docs/
+  differe.md                   travaux différés, à ne pas oublier
   wikimaster/analyse.md        analyse de WikiMasters, le jeu existant le plus proche
   wikipedia/donnees.md         ce que Wikipédia et Wikidata mettent à disposition, mesuré sur de vrais articles
   gameplay/
