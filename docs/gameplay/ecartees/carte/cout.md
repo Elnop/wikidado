@@ -1,6 +1,6 @@
 # Idées écartées : coût
 
-Idées écartées liées à `../carte-cout.md`. On les garde pour savoir ce qui a déjà été envisagé et pourquoi on l'a abandonné.
+Idées écartées liées à `gameplay/carte/cout.md`. On les garde pour savoir ce qui a déjà été envisagé et pourquoi on l'a abandonné.
 
 ## Coût fixé par la notoriété
 
@@ -27,10 +27,10 @@ cout = clamp(round(notoriete * 0.75), 1, 7)
 | Irène Jacob | 18 353 | 37 | 6,9 | 5 |
 | Napoléon Ier | ~76 000 | 221 | 8,8 | 7 |
 
-La formule de notoriété peut resservir pour la rareté (voir `../carte-rarete.md`).
+La formule de notoriété peut resservir pour la rareté (voir `gameplay/carte/rarete.md`).
 
 ## Coûts figés pour une saison
 
-Écartée le 01/11/2026 : sans objet depuis que le coût ne dépend plus des lectures. Remplacée par "rareté figée pour une saison", dans `../carte-rarete.md`.
+Écartée le 01/11/2026 : sans objet depuis que le coût ne dépend plus des lectures. Remplacée par "rareté figée pour une saison", dans `gameplay/carte/rarete.md`.
 
 L'idée était de prendre un instantané des lectures au début de chaque saison pour calculer les coûts, pour éviter que les decks changent tout seuls d'un jour à l'autre.

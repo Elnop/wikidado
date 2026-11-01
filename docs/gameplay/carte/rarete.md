@@ -1,6 +1,6 @@
 # Rareté des cartes
 
-La rareté d'une carte vient de la popularité de son article. Elle détermine la puissance de la carte par rapport à son coût (multiplicateur de budget, voir `carte-stats.md`).
+La rareté d'une carte vient de la popularité de son article. Elle détermine la puissance de la carte par rapport à son coût (multiplicateur de budget, voir `gameplay/carte/stats.md`).
 
 ## Mesure de la popularité
 

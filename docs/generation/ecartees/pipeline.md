@@ -1,6 +1,6 @@
 # Idées écartées : génération des cartes
 
-Idées écartées liées à `../pipeline.md`.
+Idées écartées liées à `generation/pipeline.md`.
 
 ## Le modèle rédige lui-même le texte des capacités
 

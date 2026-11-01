@@ -4,11 +4,11 @@ WikiMasters n'a aucune synergie, c'est la partie où on peut le plus se démarqu
 
 Une synergie est un effet qui se déclenche selon les autres cartes en jeu. Les sources de synergie sont décrites chacune dans leur fichier :
 
-- `synergie-liens.md` : les articles se citent entre eux
-- `synergie-relations.md` : relations typées de Wikidata (famille, maître et élève, participation, lieu de naissance)
-- `synergie-epoques.md` : dates de vie et d'événements
-- `synergie-categories.md` : catégories Wikipédia
-- `carte-famille.md` : effets tribaux par famille
+- `gameplay/synergie/liens.md` : les articles se citent entre eux
+- `gameplay/synergie/relations.md` : relations typées de Wikidata (famille, maître et élève, participation, lieu de naissance)
+- `gameplay/synergie/epoques.md` : dates de vie et d'événements
+- `gameplay/synergie/categories.md` : catégories Wikipédia
+- `gameplay/carte/famille.md` : effets tribaux par famille
 
 ## Questions ouvertes
 

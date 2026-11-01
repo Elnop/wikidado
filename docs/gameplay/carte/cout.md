@@ -2,7 +2,7 @@
 
 ## Principe
 
-Le coût d'une carte ne dépend pas de la popularité de son article. La popularité fixe la rareté (voir `carte-rarete.md`) et, à travers elle, la puissance par rapport au coût (voir `carte-stats.md`).
+Le coût d'une carte ne dépend pas de la popularité de son article. La popularité fixe la rareté (voir `gameplay/carte/rarete.md`) et, à travers elle, la puissance par rapport au coût (voir `gameplay/carte/stats.md`).
 
 Comme dans Magic, une carte puissante coûte cher et une carte à 1 mana a sa place dans un deck.
 
@@ -15,10 +15,10 @@ Pistes :
 - le coût dépend du type et de la nature Wikidata : une bataille coûte plus qu'une escarmouche, une capitale plus qu'un village
 - le coût est tiré pour obtenir une courbe de mana équilibrée dans chaque famille, puis le reste s'adapte
 
-Si la taille de l'article fixe le coût, elle ne peut plus servir pour l'attaque (voir `carte-stats.md`).
+Si la taille de l'article fixe le coût, elle ne peut plus servir pour l'attaque (voir `gameplay/carte/stats.md`).
 
 ## Questions ouvertes
 
 - Qu'est-ce qui fixe le coût ?
-- Un seul type de mana générique, ou du mana coloré par famille (voir `carte-famille.md`) ?
+- Un seul type de mana générique, ou du mana coloré par famille (voir `gameplay/carte/famille.md`) ?
 - Coût de 1 à 7 ou plus large ?
