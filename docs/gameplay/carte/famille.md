@@ -24,7 +24,7 @@ Première idée de grandes familles :
 
 Les sous-types d'une carte viennent de Wikidata, donc ses familles aussi. Quand les sous-types d'une carte tombent dans plusieurs familles, on compte les sous-types par famille et on garde les deux familles les plus représentées.
 
-Napoléon a les sous-types Homme politique, Militaire et Monarque (occupations Wikidata). Militaire va dans le groupe Militaires, les deux autres dans un groupe Dirigeants. Les deux groupes sont dans la grande famille Histoire et politique.
+Napoléon a les sous-types Humain (`P31`), Homme politique, Militaire et Monarque (occupations `P106`). Humain ne compte dans aucune famille. Militaire va dans le groupe Militaires, les deux autres dans un groupe Dirigeants. Les deux groupes sont dans la grande famille Histoire et politique.
 
 ## Travail à faire
 

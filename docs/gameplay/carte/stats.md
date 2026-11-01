@@ -10,7 +10,7 @@ budget_stats = budget_effectif - somme(cout_budget des mécaniques)
 
 Une carte sans mécanique met tout son budget dans ses stats.
 
-Le budget effectif inclut le bonus de rareté, pas le coût. C'est le fonctionnement de Magic : les rares et mythiques y sont souvent plus efficaces que les communes au même coût. Une Napoléon à 4 mana sera meilleure qu'une araignée inconnue à 4 mana, mais elle reste une carte à 4 mana qu'on ne joue pas au tour 1.
+Le budget effectif inclut le bonus de rareté, pas le coût. C'est le fonctionnement de Magic : les rares et mythiques y sont souvent plus efficaces que les communes au même coût. Une carte mythique à 4 mana sera meilleure qu'une commune à 4 mana, mais elle reste une carte à 4 mana qu'on ne joue pas au tour 1.
 
 ## Répartition attaque / défense
 

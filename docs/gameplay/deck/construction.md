@@ -2,7 +2,7 @@
 
 ## Garde-fou sur les rares
 
-Les rares sont plus fortes à coût égal (voir `gameplay/carte/stats.md`), donc un deck rempli de mythiques écrase tout. Pistes :
+Les rares sont plus fortes à coût égal (voir `gameplay/carte/budget.md`), donc un deck rempli de mythiques écrase tout. Pistes :
 
 - limite d'exemplaires par rareté dans un deck (Hearthstone autorise une seule copie d'une légendaire)
 - limite du nombre total de rares et mythiques par deck

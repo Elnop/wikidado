@@ -33,7 +33,7 @@ Wikidata dit ce qu'est l'article (`P31`). Ça colle bien aux types de Magic :
 | être humain, animal, espèce | Créature | Napoléon Ier, Musaraigne sombre |
 | lieu, ville, bâtiment (avec coordonnées GPS) | Terrain, produit du mana | Tour Eiffel, District de Koraput |
 | bataille, événement, catastrophe | Éphémère ou rituel | Bataille d'Austerlitz |
-| invention, objet | Artefact | une machine |
-| mouvement, idéologie, courant artistique | Enchantement | Romantisme |
+| invention, objet | Artefact (type Technique) | une machine |
+| mouvement, idéologie, courant artistique | Enchantement (type Technique) | Romantisme |
 
-Les lieux comme terrains me plaisent beaucoup : un deck Paris joue des terrains parisiens, et on ne sort pas les terrains d'un chapeau.
+Un deck Paris joue des terrains parisiens : les terrains viennent de vrais lieux.

@@ -8,7 +8,7 @@ Tout ce qui se calcule à partir des données doit être fait par du code, pas p
 
 Le code s'occupe de :
 
-- sélectionner les articles (classes Wikidata, seuils, exclusions, voir `generation/article/selection.md`)
+- sélectionner les articles (classes Wikidata, exclusions, voir `generation/article/selection.md`)
 - fixer le type de carte à partir de la classe Wikidata (voir `gameplay/carte/type.md`)
 - calculer la rareté (voir `gameplay/carte/rarete.md`)
 - calculer le budget de base, le coût et le budget effectif (voir `gameplay/carte/budget.md` et `gameplay/carte/cout.md`)
@@ -19,7 +19,7 @@ Le code s'occupe de :
 Le modèle s'occupe uniquement de ce qui demande de comprendre le sujet :
 
 - choisir des mécaniques dans le catalogue qui collent à l'article, dans la limite du budget effectif (une bataille éclair aura plutôt "Rapidité", un château plutôt "Fortification")
-- choisir les paramètres d'une mécanique quand il y en a ("+1 aux créatures de famille X")
+- choisir les paramètres d'une mécanique quand il y en a ("+1 aux créatures Militaires")
 - choisir la répartition des stats entre attaque et défense, à partir de la répartition par défaut du code (voir `gameplay/carte/stats.md`)
 - éventuellement, choisir la phrase du résumé à afficher comme texte d'ambiance
 
@@ -38,8 +38,8 @@ Exemple de sortie attendue du modèle :
 {
   "article": "Q517",
   "mecaniques": [
-    { "id": "inspiration", "params": { "famille": "histoire" } },
-    { "id": "maitre-de-guerre" }
+    { "id": "inspiration", "params": { "cible": "militaires" } },
+    { "id": "participant", "params": { "evenement": "Q134114" } }
   ]
 }
 ```
@@ -54,7 +54,7 @@ Génération mixte. Un pool de base est généré et validé avant chaque saison
 
 ## Pourquoi un catalogue fermé
 
-Avec un catalogue fermé, le modèle ne peut pas inventer une capacité cassée. Il peut seulement mal choisir, et une mauvaise assignation se repère et se corrige. Le texte de règles reste homogène sur des dizaines de milliers de cartes, et chaque mécanique a un coût en mana et en budget défini une fois pour toutes. Un petit modèle suffit aussi, parce que choisir dans une liste est beaucoup plus simple que rédiger.
+Avec un catalogue fermé, le modèle ne peut pas inventer une capacité cassée. Il peut seulement mal choisir, et une mauvaise assignation se repère et se corrige. Le texte de règles reste homogène sur des dizaines de milliers de cartes, et chaque mécanique a un coût en budget défini une fois pour toutes. Un petit modèle suffit aussi, parce que choisir dans une liste est beaucoup plus simple que rédiger.
 
 ## Choix du modèle
 

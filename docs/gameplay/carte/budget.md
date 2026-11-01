@@ -7,10 +7,10 @@ Le budget est la quantité de puissance d'une carte. Il fixe le coût de la cart
 Le budget de base se calcule à partir de deux données de l'article qui n'ont rien à voir avec sa popularité : sa taille et son nombre de contributeurs. Les lectures et le nombre de langues n'y entrent pas.
 
 ```
-budget_base = arrondi(log2(taille_ko) + log2(contributeurs + 1) / 2)
+budget_base = max(0, arrondi(log2(taille_ko) + log2(contributeurs + 1) / 2))
 ```
 
-Le logarithme évite qu'un article énorme donne une carte démesurée. Les coefficients sont à régler sur un vrai échantillon.
+Le logarithme évite qu'un article énorme donne une carte démesurée. Un article de moins de 1 Ko donnerait un logarithme négatif, d'où le minimum à 0. Les coefficients sont à régler sur un vrai échantillon.
 
 | Article | Taille | Contributeurs | Budget de base | Coût |
 |---|---|---|---|---|
