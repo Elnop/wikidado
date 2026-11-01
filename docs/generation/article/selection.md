@@ -12,6 +12,8 @@ Attention : `P31` pointe vers la classe la plus précise. Une église est `P31` 
 
 Les classes Wikidata qui donnent des cartes sont choisies à la main, une par une, avec pour chacune le type de carte qu'elle donne. Ce sont des classes fines : église, château, musée, tour pour Lieu ; parti politique, club de football pour Faction ; discipline, théorie, idéologie pour Savoir. Les classes larges et abstraites (concept, occurrence, organisation, objet artificiel physique) n'y figurent pas.
 
+Une classe n'entre dans la liste que si elle est reliée à « entité » (`Q35120`), la classe la plus haute de Wikidata, par une chaîne complète de liens « sous-classe de » (`P279`). Certaines classes n'ont aucun « sous-classe de » et restent isolées (Web 2.0, orbite de la Lune, régime monarchique) : elles ne sont pas retenues.
+
 - Un article est retenu si une de ses classes `P31` est dans la liste, ou en descend par une remontée courte : quelques liens « sous-classe de » (`P279`) au plus. Le nombre de sauts reste à fixer (piste : 3).
 - Tout ce que la liste n'atteint pas reste dehors. Une classe oubliée coûte quelques cartes, un intrus ne passe pas.
 - Le type de l'article vient de la classe retenue la plus proche (voir `gameplay/carte/type.md`).
