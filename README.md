@@ -5,6 +5,9 @@ Jeu de cartes construit à partir des articles Wikipédia, avec un gameplay de d
 ## Organisation
 
 ```
+echantillon/
+  echantillon-fr.jsonl         premier lot, articles FR les plus lus d'octobre 2026, à annoter
+  echantillon-en.jsonl         premier lot, articles EN les plus lus d'octobre 2026, à annoter
 scripts/
   tirer_echantillon.py         tire les articles les plus lus pour l'échantillon annoté
 docs/
