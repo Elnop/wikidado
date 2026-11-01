@@ -34,13 +34,6 @@ Pistes :
 - limite du nombre total de rares et mythiques par deck
 - formats de jeu par rareté, comme le Pauper de Magic où seules les communes sont autorisées
 
-## Sites web, plateformes et réseaux sociaux
-
-- Différé le 01/11/2026, à décider
-- Specs : `gameplay/carte/type.md`, `generation/article/selection.md`
-
-Facebook, ChatGPT, Google, Wikipédia ou XNXX ne rentrent proprement dans aucun des 6 types : la hiérarchie des logiciels de Wikidata les classe en Savoir, ils n'y ont pas leur place. Ils sont exclus pour l'instant. Il faudra décider s'ils forment un type de carte à part, ce qui demanderait aussi de filtrer les contenus sensibles.
-
 ## Internationalisation
 
 - Différé le 01/11/2026, jusqu'après la première version

@@ -4,13 +4,13 @@ On ne garde que certaines natures d'articles, et chaque nature retenue donne un 
 
 Le découpage en 6 est à vérifier sur ce que Wikipédia et Wikidata proposent : chaque type doit couvrir assez d'articles intéressants (voir les volumes dans `generation/article/selection.md`). Le choix des articles est décrit dans `generation/article/selection.md`.
 
-Les œuvres (films, albums, livres, jeux vidéo) ne sont pas des cartes. Les sites web, plateformes en ligne et réseaux sociaux non plus.
+Les œuvres (films, albums, livres, jeux vidéo) ne sont pas des cartes.
 
 Les règles de la partie sont dans `gameplay/duel.md`.
 
 | Type | Ce que ça couvre | Rôle en jeu |
 |---|---|---|
-| Lieu | lieux avec coordonnées : villes, montagnes, rivières, bâtiments | a une défense et peut être attaqué à la place du joueur, ne bloque pas |
+| Lieu | lieux avec coordonnées : villes, montagnes, rivières, bâtiments. Aussi les lieux virtuels : sites web, plateformes en ligne, réseaux sociaux | a une défense et peut être attaqué à la place du joueur, ne bloque pas |
 | Créature | personnes, espèces animales et végétales | se bat, a une attaque et une défense |
 | Événement | batailles, opérations militaires, catastrophes | effet ponctuel joué à son tour, comme un rituel |
 | Objet | outils, armes, véhicules, machines, instruments, vêtements | reste en jeu avec ses propres mécaniques, peut s'attacher à une Créature, comme un artefact |
@@ -36,7 +36,7 @@ Wikidata dit ce qu'est l'article (`P31`). Ça colle bien aux types de Magic :
 | Nature Wikidata | Type Magic | Exemple |
 |---|---|---|
 | être humain, animal, espèce | Créature | Napoléon Ier, Musaraigne sombre |
-| lieu, ville, bâtiment (avec coordonnées GPS) | proche d'un Terrain, mais ne sert pas de ressource de base | Tour Eiffel, District de Koraput |
+| lieu, ville, bâtiment (avec coordonnées GPS), site web, réseau social | proche d'un Terrain, mais ne sert pas de ressource de base | Tour Eiffel, District de Koraput, Wikipédia |
 | bataille, événement, catastrophe | Éphémère ou rituel | Bataille d'Austerlitz |
 | outil, arme, véhicule, machine, objet fabriqué | Artefact (type Objet) | une machine |
 | discipline, théorie, technologie, idéologie, courant artistique | Enchantement (type Savoir) | Romantisme |

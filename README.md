@@ -39,6 +39,8 @@ docs/
     collection.md              cartes disponibles et boosters
     mecanique.md               catalogue fermé des mécaniques assignables
     electricite.md             ressource du jeu
+  produit/
+    plateforme.md              site web, ordinateur et téléphone
   generation/
     pipeline.md                partage entre code et petit modèle d'assignation
     echantillon.md             articles annotés à la main pour comparer les moteurs d'assignation
@@ -64,4 +66,6 @@ docs/
     generation/
       pipeline.md
       article/selection.md
+    produit/
+      plateforme.md
 ```

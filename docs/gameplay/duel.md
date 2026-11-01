@@ -14,6 +14,10 @@ Une partie oppose deux joueurs, chacun avec son deck. On joue contre un autre jo
 
 Un joueur perd quand ses points de vie tombent à 0, quand il doit piocher alors que son deck est vide, ou quand sa réserve de temps est épuisée. Si les deux joueurs tombent à 0 en même temps, la partie est nulle.
 
+## Adversaire IA
+
+L'IA de la première version a un seul niveau et suit des règles simples : elle joue la carte la plus chère qu'elle peut payer, attaque quand l'échange lui est favorable et bloque pour ne pas mourir.
+
 ## Temps de jeu
 
 En ligne, chaque joueur a une réserve de 10 minutes pour la partie, et gagne 10 secondes au début de chacun de ses tours, comme une pendule d'échecs. Sa réserve s'écoule pendant son tour et pendant qu'il choisit ses blocages au tour adverse.

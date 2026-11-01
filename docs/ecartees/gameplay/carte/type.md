@@ -88,3 +88,9 @@ Une liste ordonnée de types où le premier qui correspond gagne, ou le test des
 
 Les partis, entreprises, clubs et groupes de musique devenaient des Créatures (acteurs collectifs qui se battent) ou restaient hors du jeu pour la première version.
 
+
+## Sites web exclus, Savoirs ou Factions
+
+Écartée le 01/11/2026 : les sites web, plateformes et réseaux sociaux sont des Lieux virtuels.
+
+Ils étaient exclus en attendant de décider. Autres variantes : des Savoirs comme les logiciels, ou des Factions parce qu'une plateforme rassemble des gens.

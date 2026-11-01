@@ -187,3 +187,9 @@ Comme les Lieux, ils devenaient des cibles d'attaque, avec une défense à leur 
 Écartée le 01/11/2026 : le coût d'affectation se paie sur le budget de la Faction.
 
 1 électricité pour toutes les Factions, ou un coût déduit du nombre de membres dans Wikidata.
+
+## IA à plusieurs niveaux, ou decks préconstruits
+
+Écartée le 01/11/2026 : une IA à règles simples, un seul niveau.
+
+Facile, moyen et difficile avec une recherche plus profonde pour le niveau difficile, ou des decks préconstruits par thème (Empire napoléonien, Paris, Football) pour découvrir les synergies.
