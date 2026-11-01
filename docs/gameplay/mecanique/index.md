@@ -1,6 +1,6 @@
 # Catalogue des mécaniques
 
-Liste fermée de ce que le modèle peut assigner aux cartes (voir `generation/pipeline.md`). Aucune mécanique n'est validée pour l'instant : les noms, les textes et les prix sont des propositions, sauf mention contraire.
+Liste fermée de ce que le modèle peut assigner aux cartes (voir `generation/pipeline.md`). Les briques et leurs prix sont retenus pour la première version, sauf celles marquées "proposé" dans leur fichier. Tous les prix restent à régler en partie de test.
 
 Une mécanique est soit un mot-clé, soit une capacité composée de briques. Le catalogue fermé est celui des briques : le modèle ne peut assembler que des briques qui existent, et le code calcule le prix et le texte de l'assemblage.
 
@@ -86,5 +86,6 @@ Les mots-clés ont des noms propres au jeu, avec une saveur Wikipédia ou élect
 
 ## À faire
 
-- passer chaque brique en revue
+- trancher les briques marquées "proposé"
+- tester le catalogue sur les articles de l'échantillon
 - fixer les prix et les facteurs après des parties de test
