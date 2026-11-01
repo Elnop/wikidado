@@ -10,7 +10,8 @@ Le code s'occupe de :
 
 - sélectionner les articles (classes Wikidata, seuils, exclusions, voir `generation/article/selection.md`)
 - fixer le type de carte à partir de la classe Wikidata (voir `gameplay/carte/type.md`)
-- calculer le coût (voir `gameplay/carte/cout.md`), la rareté (voir `gameplay/carte/rarete.md`), le budget et les stats (voir `gameplay/carte/stats.md`)
+- calculer la rareté (voir `gameplay/carte/rarete.md`)
+- après l'assignation, calculer le coût à partir des mécaniques choisies (voir `gameplay/carte/cout.md`), puis le budget et les stats (voir `gameplay/carte/stats.md`)
 - calculer la famille à partir des portails
 - trouver les cibles des synergies : liens réciproques, relations Wikidata, époque, lieu de naissance
 
@@ -23,10 +24,11 @@ Le modèle s'occupe uniquement de ce qui demande de comprendre le sujet :
 ## Pipeline
 
 1. Extraction : depuis les dumps, on construit une fiche par article retenu (titre, résumé, classe Wikidata, propriétés utiles, portails, lectures, langues, taille, contributeurs, liens du résumé).
-2. Calcul : le code ajoute le type, le coût, les stats, la famille et la liste des synergies possibles.
-3. Assignation : le modèle reçoit la fiche et le catalogue des mécaniques autorisées pour ce type et ce coût. Il répond en JSON contraint, avec uniquement des identifiants du catalogue.
-4. Validation : le code vérifie que les mécaniques existent, que leur coût en budget rentre dans celui de la carte, et que les paramètres sont valides. Une carte qui ne passe pas est régénérée ou reçoit une mécanique par défaut.
-5. Rendu : le texte de la carte est produit à partir des gabarits du catalogue, jamais par le modèle.
+2. Calcul : le code ajoute le type, la rareté, la famille et la liste des synergies possibles.
+3. Assignation : le modèle reçoit la fiche et le catalogue des mécaniques autorisées pour ce type. Il répond en JSON contraint, avec uniquement des identifiants du catalogue.
+4. Validation : le code vérifie que les mécaniques existent, que les paramètres sont valides et que le coût obtenu reste dans la plage autorisée. Une carte qui ne passe pas est régénérée ou reçoit une mécanique par défaut.
+5. Coût et stats : le code calcule le coût à partir des mécaniques, puis le budget et les stats à partir du coût et de la rareté.
+6. Rendu : le texte de la carte est produit à partir des gabarits du catalogue, jamais par le modèle.
 
 Exemple de sortie attendue du modèle :
 
@@ -42,7 +44,7 @@ Exemple de sortie attendue du modèle :
 
 ## Pourquoi un catalogue fermé
 
-Avec un catalogue fermé, le modèle ne peut pas inventer une capacité cassée. Il peut seulement mal choisir, et une mauvaise assignation se repère et se corrige. Le texte de règles reste homogène sur des dizaines de milliers de cartes, et chaque mécanique a un coût en budget défini une fois pour toutes. Un petit modèle suffit aussi, parce que choisir dans une liste est beaucoup plus simple que rédiger.
+Avec un catalogue fermé, le modèle ne peut pas inventer une capacité cassée. Il peut seulement mal choisir, et une mauvaise assignation se repère et se corrige. Le texte de règles reste homogène sur des dizaines de milliers de cartes, et chaque mécanique a un coût en mana et en budget défini une fois pour toutes. Un petit modèle suffit aussi, parce que choisir dans une liste est beaucoup plus simple que rédiger.
 
 ## Choix du modèle
 

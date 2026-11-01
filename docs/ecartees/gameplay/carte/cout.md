@@ -34,3 +34,21 @@ La formule de notoriété peut resservir pour la rareté (voir `gameplay/carte/r
 Écartée le 01/11/2026 : sans objet depuis que le coût ne dépend plus des lectures. Remplacée par "rareté figée pour une saison", dans `gameplay/carte/rarete.md`.
 
 L'idée était de prendre un instantané des lectures au début de chaque saison pour calculer les coûts, pour éviter que les decks changent tout seuls d'un jour à l'autre.
+
+## Coût tiré d'une donnée de l'article
+
+Écartée le 01/11/2026 : le coût découle des mécaniques assignées.
+
+Le coût venait d'une donnée de l'article sans lien avec la popularité, par exemple la taille de l'article (un sujet "lourd" coûte cher) ou le nombre de liens sortants. Si la taille de l'article fixait le coût, elle ne pouvait plus servir pour l'attaque.
+
+## Coût selon le type et la nature Wikidata
+
+Écartée le 01/11/2026 : le coût découle des mécaniques assignées.
+
+Le coût dépendait du type et de la nature Wikidata : une bataille coûte plus qu'une escarmouche, une capitale plus qu'un village.
+
+## Coût tiré pour équilibrer la courbe de mana
+
+Écartée le 01/11/2026 : le coût découle des mécaniques assignées.
+
+Le coût était tiré pour obtenir une courbe de mana équilibrée dans chaque famille, puis le reste de la carte s'adaptait.
