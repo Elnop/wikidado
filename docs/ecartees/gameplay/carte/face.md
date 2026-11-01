@@ -37,3 +37,9 @@ Toujours courte ("tour de fer puddlé de 330 mètres à Paris, France"), mais pa
 Écartée le 01/11/2026 : le lore est la première phrase du résumé, extraite par le code.
 
 Le modèle choisissait une phrase marquante du résumé.
+
+## Lore sans retouche
+
+Écartée le 01/11/2026 : le code retire les transcriptions phonétiques.
+
+La première phrase était gardée exactement comme dans Wikipédia, prononciation comprise.

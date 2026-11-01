@@ -9,7 +9,7 @@ Une carte peut avoir un nombre illimité de mécaniques, donc leur texte ne tien
 - le coût en électricité (voir `gameplay/carte/cout.md`)
 - les stats : attaque et défense pour une Créature, défense pour un Lieu (voir `gameplay/carte/stats.md`)
 - l'illustration (voir `gameplay/carte/illustration.md`), en grand
-- un court texte de lore : la première phrase du résumé de l'article Wikipédia
+- un court texte de lore : la première phrase du résumé de l'article Wikipédia. Le code retire les transcriptions phonétiques entre crochets et les parenthèses de prononciation ("La tour Eiffel [tuʁɛfɛl] est..." devient "La tour Eiffel est..."), le reste de la phrase est gardé tel quel.
 
 La rareté n'est pas écrite : elle se voit au style de la carte (cadre, couleurs). Voir `gameplay/carte/rarete.md`.
 
