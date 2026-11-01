@@ -58,4 +58,18 @@ Avec un catalogue fermé, le modèle ne peut pas inventer une capacité cassée.
 
 ## Choix du modèle
 
-À tester sur un échantillon de 200 à 300 articles qu'on annote nous-mêmes. On compare plusieurs modèles sur le taux d'accord avec nos choix et le coût par carte. Pour 50 000 cartes, même un modèle léger appelé une fois par carte reste peu cher. On pourra aussi regrouper plusieurs fiches par appel.
+Contrainte : pas de budget, tout doit tourner gratuitement et sur CPU (pas de GPU). Le modèle est donc local, petit, et appelé en lot.
+
+L'assignation se pose comme des questions typées sur la fiche de l'article, dans le style des modèles de décision (Jev, OpenJev) :
+
+- choix unique : une mécanique parmi celles autorisées pour le type de carte (le catalogue est découpé pour rester sous une cinquantaine d'options par question, si besoin en chaînant plusieurs questions)
+- oui/non : une mécanique précise convient-elle à l'article ?
+- score : intensité d'une dimension, sur des niveaux décrits par des situations
+
+Chaque réponse garde sa probabilité. Une réponse peu confiante part en relecture humaine au lieu d'être acceptée. Le format des questions et des réponses est le nôtre (JSON), indépendant du modèle derrière, pour pouvoir changer de moteur sans toucher au catalogue.
+
+Moteurs possibles, à comparer sur un échantillon de 200 à 300 articles qu'on annote nous-mêmes (taux d'accord avec nos choix) :
+
+- embeddings sur CPU : similarité entre la fiche et la description de chaque mécanique, plus kNN sur des cartes annotées
+- petit LLM quantifié sur CPU (llama.cpp) avec sortie JSON contrainte, en lot
+- modèle de décision ouvert type OpenJev, trop lourd pour du CPU seul (27 milliards de paramètres, licence non commerciale)
