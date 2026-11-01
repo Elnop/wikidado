@@ -20,7 +20,7 @@ La liste des briques, leurs textes, leurs prix et leurs facteurs sont dans `conf
 
 Les textes sont rangés par langue (`"texte": { "fr": "..." }`). Chaque brique a un statut, `retenu` ou `propose`.
 
-`scripts/verifier_mecaniques.py` valide la config contre les schémas, vérifie les renvois entre fichiers et recalcule les exemples de prix de cette doc. Avec des fichiers JSON Lines en argument, il vérifie aussi les mécaniques de chaque carte : briques connues, cibles et valeurs autorisées, type de carte compatible.
+`generation/verifier_mecaniques.py` (`uv run verifier_mecaniques.py` depuis `generation/`) valide la config contre les schémas, vérifie les renvois entre fichiers et recalcule les exemples de prix de cette doc. Avec des fichiers JSON Lines en argument, il vérifie aussi les mécaniques de chaque carte : briques connues, cibles et valeurs autorisées, type de carte compatible.
 
 ## Deux sortes de capacités
 

@@ -19,7 +19,11 @@ Toute la documentation est dans `docs/`. Le `README.md` à la racine sert d'inde
 
 ## Config
 
-Les valeurs que les programmes lisent (briques des mécaniques, prix, facteurs) sont dans `config/`, en JSON avec un JSON Schema par fichier. La config fait foi : la doc explique les règles et renvoie aux fichiers de config au lieu de recopier les valeurs. Après une modification de `config/mecanique/`, lancer `scripts/verifier_mecaniques.py`.
+Les valeurs que les programmes lisent (briques des mécaniques, prix, facteurs) sont dans `config/`, en JSON avec un JSON Schema par fichier. La config fait foi : la doc explique les règles et renvoie aux fichiers de config au lieu de recopier les valeurs. Après une modification de `config/mecanique/`, lancer `uv run verifier_mecaniques.py` depuis `generation/`.
+
+## Monorepo
+
+Chaque projet a son dossier à la racine : `generation/` pour le projet Python de génération des cartes (géré par uv, dépendances dans `generation/pyproject.toml`), et plus tard un dossier pour le jeu en Next. `config/` est partagé entre les deux.
 
 ## Règle des idées
 
