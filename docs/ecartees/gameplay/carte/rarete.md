@@ -25,3 +25,9 @@ Le nombre de langues était combiné aux lectures pour lisser les pics d'actuali
 Écartée le 01/11/2026 : on attend un vrai échantillon pour fixer les paliers.
 
 La planche utilisait les paliers provisoires multipliés par 10 (commune sous 1 000 lectures toutes langues, peu commune à partir de 1 000, rare à partir de 50 000, mythique à partir de 500 000). On aurait pu les reprendre comme paliers provisoires de la spec.
+
+## Saisons d'un mois ou d'un an
+
+Écartée le 01/11/2026 : une saison dure 3 mois.
+
+Un mois suivait l'actualité de près mais changeait trop souvent les decks. Un an était très stable, mais une personnalité qui monte attendait longtemps avant de changer de rareté.

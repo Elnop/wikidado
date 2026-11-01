@@ -52,7 +52,7 @@ Pendant son tour, avant d'attaquer, un joueur peut affecter une de ses Créature
 - Une Créature n'a qu'une Faction à la fois.
 - Si la Faction quitte le jeu, ses Créatures restent en jeu sans affectation. On peut les affecter à une autre Faction en payant à nouveau.
 
-Le calcul du coût d'affectation à partir de l'article reste à définir.
+Le coût d'affectation se paie sur le budget de la Faction (voir `gameplay/carte/budget.md`).
 
 ## Combat
 

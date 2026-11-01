@@ -43,4 +43,6 @@ L'arrondi se fait au plus proche : 13 × 1,25 = 16,25 donne 16, et 2 × 1,25 = 2
 1. Le modèle choisit des mécaniques dans le catalogue. Chacune consomme son `cout_budget`. La somme ne peut pas dépasser le budget effectif.
 2. Ce qui reste du budget effectif va aux stats, pour les Créatures et les Lieux (voir `gameplay/carte/stats.md`). Pour les Événements, les Objets, les Savoirs et les Factions, qui n'ont pas de stats, tout le budget doit être dépensé en mécaniques.
 
+Une Faction a aussi un coût d'affectation (voir `gameplay/duel.md`). Il part d'une valeur de départ élevée, et le modèle peut dépenser du budget pour le baisser, jusqu'à 0. Une Faction puissante a donc des effets forts ou une affectation bon marché, rarement les deux. La valeur de départ et le prix en budget d'une électricité retirée sont à régler en partie de test.
+
 Il n'y a pas de nombre maximum de mécaniques par carte, ni de synergies : seul le budget limite.

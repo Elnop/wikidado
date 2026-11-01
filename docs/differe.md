@@ -14,15 +14,6 @@ Pistes :
 - mesurer la répartition des coûts sur un pool généré, puis ajuster la formule du budget de base et `points_par_electricite`
 - imposer des quotas par coût à la validation, et régénérer les cartes d'un coût trop représenté
 
-## Illustration par défaut d'une carte à plusieurs grandes familles
-
-- Différé le 01/11/2026, à décider
-- Spec : `gameplay/carte/illustration.md`
-
-L'illustration par défaut dépend du type et de la grande famille, mais une carte appartient à toutes les grandes familles de ses sous-types, sans limite (voir `gameplay/carte/famille.md`). Il faut choisir laquelle sert pour l'illustration.
-
-Proposition : prendre la grande famille qui regroupe le plus de sous-types de la carte.
-
 ## Œuvres comme cartes
 
 - Différé le 01/11/2026, jusqu'à ce que les 6 types soient vérifiés
@@ -62,13 +53,6 @@ La première version ne prend que des articles de la Wikipédia française. Ensu
 - les classes retenues et les volumes de `generation/article/selection.md` sont mesurés sur fr seulement
 
 Le script `scripts/tirer_echantillon.py` accepte déjà `--langue en`.
-
-## Famille des cartes Faction
-
-- Différé le 01/11/2026, à décider
-- Specs : `gameplay/carte/famille.md`, `gameplay/carte/type.md`
-
-Les organisations (partis politiques, entreprises, clubs de sport, groupes de musique) forment le type Faction. Leur rôle en jeu est fixé dans `gameplay/duel.md`, mais pas encore leur grande famille, ni la façon de calculer leur coût d'affectation.
 
 ## Collection persistante
 

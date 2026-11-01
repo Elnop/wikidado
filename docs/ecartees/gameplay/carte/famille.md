@@ -85,3 +85,9 @@ On comptait les sous-types par famille et on gardait les deux familles les plus 
 Écartée le 01/11/2026 : tous les sous-types sont des familles, Humain compris.
 
 Humain restait un sous-type mais n'entrait dans aucune famille, pour éviter que toutes les personnes aient la même famille.
+
+## Grande famille Organisations
+
+Écartée le 01/11/2026 : une Faction prend les familles de ses sous-types, comme les autres cartes.
+
+Une 7e grande famille réservée aux Factions.

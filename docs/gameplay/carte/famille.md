@@ -25,6 +25,8 @@ Une carte appartient à toutes les familles de ses sous-types, à tous les nivea
 
 Napoléon a les sous-types Humain (`P31`), Homme politique, Militaire et Monarque (occupations `P106`). Il appartient donc aux familles Humain, Homme politique, Militaire et Monarque, aux groupes Militaires et Dirigeants, et à la grande famille Histoire et politique.
 
+Une Faction suit la même règle : ses sous-types fixent ses familles. Un parti politique va dans Histoire et politique, un club dans Sport et loisirs, un groupe de musique dans Arts et culture.
+
 ## Travail à faire
 
 Ranger les sous-types (classes `P31` retenues et occupations `P106`) dans les groupes fins, puis les groupes fins dans les grandes familles. La liste des classes est déjà tenue à la main pour la sélection des articles (voir `generation/article/selection.md`).

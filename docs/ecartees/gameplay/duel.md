@@ -181,3 +181,9 @@ Un délai fixe de 75 secondes par tour comme Hearthstone, une réserve de 15 min
 Écartée le 01/11/2026 : seule une mécanique les détruit.
 
 Comme les Lieux, ils devenaient des cibles d'attaque, avec une défense à leur donner.
+
+## Coût d'affectation fixe, ou selon la taille de la Faction
+
+Écartée le 01/11/2026 : le coût d'affectation se paie sur le budget de la Faction.
+
+1 électricité pour toutes les Factions, ou un coût déduit du nombre de membres dans Wikidata.

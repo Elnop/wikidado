@@ -23,4 +23,4 @@ Il faudra recaler les paliers sur un vrai échantillon pour obtenir la répartit
 
 ## Saisons
 
-La rareté est figée au début d'une saison (instantané des lectures à une date), sinon les cartes changent de puissance toutes seules.
+Une saison dure 3 mois. La rareté est figée au début de chaque saison (instantané des lectures à une date), sinon les cartes changent de puissance toutes seules.
