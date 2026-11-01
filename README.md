@@ -27,7 +27,7 @@ docs/
     deck/
       construction.md          construction de deck
     mecanique.md               catalogue fermé des mécaniques assignables
-    tendance.md                bonus d'actualité
+    electricite.md             ressource du jeu
   generation/
     pipeline.md                partage entre code et petit modèle d'assignation
     article/
@@ -43,7 +43,9 @@ docs/
       carte/type.md
       mecanique.md
       synergie/index.md
+      synergie/liens.md
       duel.md
+      tendance.md
     generation/
       pipeline.md
       article/selection.md

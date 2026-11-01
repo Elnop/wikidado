@@ -106,3 +106,9 @@ Le modèle choisissait les mécaniques, puis le code en déduisait le coût, com
 Écartée le 01/11/2026 : le budget, calculé à partir de l'article, définit le coût et les mécaniques.
 
 Le coût était la somme des cout_budget des mécaniques convertie en mana (2 points = 1 mana). Les stats prenaient ensuite le budget du coût multiplié par la rareté, moins ce que les mécaniques avaient consommé. Une carte sans mécanique coûtait 0.
+
+## Mana générique
+
+Écartée le 01/11/2026 : la ressource est l'électricité, reçue à chaque tour comme le mana de Hearthstone.
+
+Un seul mana générique, produit à la manière de Magic par des Terrains.

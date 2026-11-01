@@ -1,6 +1,6 @@
 # Familles
 
-Une famille est un groupe de sous-types (voir `gameplay/carte/type.md`). Le mana est générique (voir `gameplay/carte/cout.md`), donc les familles ne servent pas à payer les cartes : elles servent aux synergies, avec des effets tribaux ("vos Animaux gagnent +1 en attaque", "vos cartes Histoire et politique gagnent +1 en défense").
+Une famille est un groupe de sous-types (voir `gameplay/carte/type.md`). Il n'y a qu'une ressource, l'électricité (voir `gameplay/electricite.md`), donc les familles ne servent pas à payer les cartes : elles servent aux synergies, avec des effets tribaux ("vos Animaux gagnent +1 en attaque", "vos cartes Histoire et politique gagnent +1 en défense").
 
 ## Deux niveaux
 

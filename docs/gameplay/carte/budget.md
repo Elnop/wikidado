@@ -39,6 +39,6 @@ budget_effectif = budget_base * multiplicateur_rarete
 ## Dépense du budget
 
 1. Le modèle choisit des mécaniques dans le catalogue. Chacune consomme son `cout_budget`. La somme ne peut pas dépasser le budget effectif.
-2. Ce qui reste du budget effectif va aux stats.
+2. Ce qui reste du budget effectif va aux stats, pour les Créatures et les Lieux (voir `gameplay/carte/stats.md`). Pour les Événements et les Techniques, qui n'ont pas de stats, tout le budget doit être dépensé en mécaniques.
 
 Il n'y a pas de nombre maximum de mécaniques par carte, ni de synergies : seul le budget limite.

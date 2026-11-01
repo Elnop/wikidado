@@ -49,3 +49,9 @@ Seulement la nature de l'élément, et les personnes étaient toutes Humain.
 Écartée le 01/11/2026 : les sous-types sont calculés par le code depuis Wikidata.
 
 Le modèle choisissait des sous-types dans une liste fermée, comme il choisit les mécaniques.
+
+## Terrains comme ressource, à la Magic
+
+Écartée le 01/11/2026 : le type s'appelle Lieu et la ressource est l'électricité, reçue à chaque tour comme dans Hearthstone.
+
+Les lieux étaient des Terrains qui produisaient le mana. Variantes : Terrains gratuits, un par tour, comme dans Magic, ou Terrains au coût normal qui produisent plus de mana.

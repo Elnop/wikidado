@@ -2,7 +2,7 @@
 
 Sujets mis de côté volontairement, à reprendre plus tard. Chaque entrée dit quand elle a été différée, jusqu'à quand, et quelle spec elle concerne.
 
-## Équilibre de la courbe de mana
+## Équilibre de la courbe de coûts
 
 - Différé le 01/11/2026, jusqu'après la première version
 - Spec : `gameplay/carte/cout.md`
@@ -11,7 +11,7 @@ Le coût d'une carte se déduit de son budget de base, calculé à partir de l'a
 
 Pistes :
 
-- mesurer la répartition des coûts sur un pool généré, puis ajuster la formule du budget de base et `points_par_mana`
+- mesurer la répartition des coûts sur un pool généré, puis ajuster la formule du budget de base et `points_par_electricite`
 - imposer des quotas par coût à la validation, et régénérer les cartes d'un coût trop représenté
 
 ## Illustration par défaut d'une carte à deux grandes familles

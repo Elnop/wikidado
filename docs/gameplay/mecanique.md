@@ -28,6 +28,17 @@ Le catalogue contient des mécaniques qui ne font qu'ajouter des stats. Le reste
 - condition : aucune
 - indice : sujets solides, durables, difficiles à abattre
 
+## Production d'électricité
+
+### centrale
+
+- texte : "Au début de votre tour, gagnez {quantite} électricité."
+- types : Lieu
+- cout_budget : à définir, selon la quantité
+- params : quantite
+- condition : aucune
+- indice : lieux qui produisent de l'énergie (centrale, barrage, mine, port industriel)
+
 ## Exemples
 
 ### inspiration
@@ -44,7 +55,7 @@ Le catalogue contient des mécaniques qui ne font qu'ajouter des stats. Le reste
 - texte : "Tant que vous contrôlez {lieu}, cette créature gagne +1/+1."
 - types : Créature
 - cout_budget : 1
-- params : lieu, rempli par le code avec `P19` (lieu de naissance) s'il existe comme carte Terrain
+- params : lieu, rempli par le code avec `P19` (lieu de naissance) s'il existe comme carte Lieu
 - condition : l'article a un `P19` qui correspond à une carte
 - indice : s'applique automatiquement, le modèle n'a pas besoin de juger
 
@@ -63,7 +74,7 @@ Les mécaniques dont les paramètres viennent des données (terre-natale, partic
 
 - label "Article de qualité" ou "Bon article" : mot-clé de rareté ou capacité bonus (6 600 articles sur fr, assez rare pour être spécial)
 - âge de l'article (création en 2003 pour Napoléon) : mot-clé "Ancien" ?
-- coordonnées GPS : l'article est un lieu, voir `gameplay/carte/type.md` pour les terrains
+- coordonnées GPS : l'article est un lieu, voir `gameplay/carte/type.md` pour les Lieux
 - importance "maximum" dans un projet : carte iconique de sa famille
 
 ## À faire

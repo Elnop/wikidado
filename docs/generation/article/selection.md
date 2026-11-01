@@ -10,7 +10,7 @@ Attention : `P31` pointe vers la classe la plus précise. Une église est `P31` 
 
 ## Liste des classes retenues
 
-Les classes Wikidata qui donnent des cartes sont choisies à la main, avec pour chacune le type de carte qu'elle donne (église, château, musée, tour... pour Terrain). On contrôle ce qui entre dans le jeu, et la liste sert aussi à fixer la famille de chaque classe (voir `gameplay/carte/famille.md`). Il faut la maintenir quand on ajoute des types d'articles.
+Les classes Wikidata qui donnent des cartes sont choisies à la main, avec pour chacune le type de carte qu'elle donne (église, château, musée, tour... pour Lieu). On contrôle ce qui entre dans le jeu, et la liste sert aussi à fixer la famille de chaque classe (voir `gameplay/carte/famille.md`). Il faut la maintenir quand on ajoute des types d'articles.
 
 ## Volumes sur la Wikipédia française
 
