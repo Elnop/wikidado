@@ -9,6 +9,15 @@ Voir docs/generation/echantillon.md pour le format de sortie (JSON Lines).
   3. SPARQL Wikidata : type de carte déduit de la classe (P31/P279*), classes exclues écartées.
   4. REST summary : résumé de l'article.
 
+Deux sources de candidats (--source) :
+  classes          : pour chaque type, les articles des classes Wikidata du type
+                     les plus présents dans les langues (--candidats par racine),
+                     puis lectures du mois article par article. Donne --par-type
+                     articles pour chaque type, même rares dans le top mensuel. Lent (plusieurs minutes) et
+                     souvent coupé par le SPARQL Wikidata : un type en échec
+                     retombe sur le top mensuel.
+  top (défaut)     : top mensuel de l'API Pageviews (1000 articles au plus).
+
 On garde les articles dans l'ordre de lecture, jusqu'à avoir --par-type
 articles de chaque type de carte. Les articles sans type reconnu (listes,
 œuvres, pages spéciales...) sont ignorés.
@@ -96,6 +105,37 @@ def top_articles(langue, annee, mois, contact):
             continue
         gardes.append({"titre": titre.replace("_", " "), "lectures": a["views"]})
     return gardes
+
+
+def candidats_par_classe(langue, type_carte, par_racine, contact):
+    """Articles d'un type, triés par nombre de langues, depuis Wikidata. -> [(titre, qid)]"""
+    trouves = {}
+    for racine in RACINES[type_carte]:
+        requete = f"""
+SELECT ?item ?titre ?n WHERE {{
+  ?item wdt:P31/wdt:P279* wd:{racine} ; wikibase:sitelinks ?n .
+  ?a schema:about ?item ; schema:isPartOf <https://{langue}.wikipedia.org/> ; schema:name ?titre .
+}} ORDER BY DESC(?n) LIMIT {par_racine}"""
+        rep = http_json("https://query.wikidata.org/sparql",
+                        params={"format": "json", "query": requete}, contact=contact, essais=1)
+        for b in rep["results"]["bindings"]:
+            q = b["item"]["value"].rsplit("/", 1)[1]
+            trouves[q] = b["titre"]["value"]
+        time.sleep(1)
+    return [(t, q) for q, t in trouves.items()]
+
+
+def lectures_mois(langue, titre, annee, mois, contact):
+    """Lectures de l'article sur un mois (0 si inconnu)."""
+    t = urllib.parse.quote(titre.replace(" ", "_"), safe="")
+    url = (f"https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/"
+           f"{langue}.wikipedia/all-access/user/{t}/monthly/{annee}{mois:02d}01/{annee}{mois:02d}28")
+    try:
+        rep = http_json(url, contact=contact, essais=2)
+    except urllib.error.HTTPError:  # titre que l'API refuse : on le compte à 0
+        return 0
+    time.sleep(0.05)
+    return rep["items"][0]["views"] if rep and rep.get("items") else 0
 
 
 def qids(langue, titres, contact):
@@ -188,6 +228,8 @@ def main():
     p = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     p.add_argument("--langue", choices=["fr", "en"], required=True)
     p.add_argument("--mois", help="AAAA-MM, par défaut le mois précédent")
+    p.add_argument("--source", choices=["classes", "top"], default="top")
+    p.add_argument("--candidats", type=int, default=150, help="source classes : candidats par classe racine")
     p.add_argument("--par-type", type=int, default=10, help="articles à garder par type de carte")
     p.add_argument("--exclure", nargs="*", default=[], help="fichiers JSONL dont on ignore les articles")
     p.add_argument("--sortie", required=True)
@@ -197,33 +239,54 @@ def main():
     annee, mois = map(int, a.mois.split("-")) if a.mois else mois_precedent()
     vus = deja_tires(a.exclure)
 
-    print(f"Top des articles {a.langue} pour {annee}-{mois:02d}...", file=sys.stderr)
-    top = top_articles(a.langue, annee, mois, a.contact)
-    print(f"{len(top)} candidats, recherche des QID...", file=sys.stderr)
-    q_par_titre = qids(a.langue, [t["titre"] for t in top], a.contact)
-    candidats = [(t, q_par_titre[t["titre"]]) for t in top if q_par_titre.get(t["titre"])]
-
-    print(f"{len(candidats)} avec QID, classification Wikidata par lots...", file=sys.stderr)
     compte = {t: 0 for t in TYPES}
     sortie = []
-    for debut in range(0, len(candidats), TAILLE_LOT):
-        lot = candidats[debut:debut + TAILLE_LOT]
-        info = types_wikidata([q for _, q in lot], a.contact)
-        for t, q in lot:  # déjà trié par lectures décroissantes
-            type_carte, p31 = info[q]
-            if type_carte is None or q in vus or compte[type_carte] >= a.par_type:
-                continue
-            compte[type_carte] += 1
-            sortie.append({
-                "article": q, "langue": a.langue, "titre": t["titre"], "type": type_carte,
-                "fiche": {"resume": resume(a.langue, t["titre"], a.contact),
-                          "p31": p31, "lectures": t["lectures"]},
-                "attendu": [], "annotateur": None, "difficile": False,
-            })
-            time.sleep(0.1)
-        print(f"  {debut + len(lot)} classés : {compte}", file=sys.stderr)
-        if all(c >= a.par_type for c in compte.values()):
-            break
+
+    def garder(t, q, type_carte, p31, lectures):
+        compte[type_carte] += 1
+        sortie.append({
+            "article": q, "langue": a.langue, "titre": t, "type": type_carte,
+            "fiche": {"resume": resume(a.langue, t, a.contact), "p31": p31, "lectures": lectures},
+            "attendu": [], "annotateur": None, "difficile": False,
+        })
+        time.sleep(0.1)
+
+    top_cache = []
+
+    def depuis_top(type_carte):
+        """Articles du top mensuel qui ont ce type -> [(lectures, titre, qid, p31)]"""
+        if not top_cache:
+            print(f"Top des articles {a.langue} pour {annee}-{mois:02d}...", file=sys.stderr)
+            top = top_articles(a.langue, annee, mois, a.contact)
+            q_par_titre = qids(a.langue, [t["titre"] for t in top], a.contact)
+            cands = [(t, q_par_titre[t["titre"]]) for t in top if q_par_titre.get(t["titre"])]
+            for debut in range(0, len(cands), TAILLE_LOT):
+                lot = cands[debut:debut + TAILLE_LOT]
+                info = types_wikidata([q for _, q in lot], a.contact)
+                top_cache.extend((t["lectures"], t["titre"], q, info[q][0], info[q][1]) for t, q in lot)
+                if len(top_cache) % 100 == 0:
+                    print(f"  {len(top_cache)} classés", file=sys.stderr)
+        return [(l, t, q, p31) for l, t, q, ty, p31 in top_cache if ty == type_carte and q not in vus]
+
+    for type_carte in TYPES:
+        avec = None
+        if a.source == "classes":
+            print(f"{type_carte} : recherche des candidats par classe...", file=sys.stderr)
+            try:
+                cands = [(t, q) for t, q in candidats_par_classe(a.langue, type_carte, a.candidats, a.contact)
+                         if q not in vus]
+                info = types_wikidata([q for _, q in cands], a.contact)
+                cands = [(t, q) for t, q in cands if info[q][0] == type_carte]
+                print(f"  {len(cands)} candidats retenus, lectures du mois...", file=sys.stderr)
+                avec = sorted(((lectures_mois(a.langue, t, annee, mois, a.contact), t, q, info[q][1])
+                               for t, q in cands), reverse=True)
+            except OSError as e:
+                print(f"  requête impossible ({e}), repli sur le top mensuel", file=sys.stderr)
+        if avec is None:
+            avec = sorted(depuis_top(type_carte), reverse=True)
+        for lectures, t, q, p31 in avec[:a.par_type]:
+            garder(t, q, type_carte, p31, lectures)
+        print(f"  {compte[type_carte]} gardés", file=sys.stderr)
 
     with open(a.sortie, "w", encoding="utf-8") as f:
         for ligne in sortie:
@@ -231,7 +294,7 @@ def main():
     print(f"{len(sortie)} articles écrits dans {a.sortie} : {compte}", file=sys.stderr)
     manquants = [t for t, c in compte.items() if c < a.par_type]
     if manquants:
-        print(f"Types incomplets (le top mensuel est limité à 1000 articles) : {manquants}", file=sys.stderr)
+        print(f"Types incomplets (pas assez de candidats) : {manquants}", file=sys.stderr)
 
 
 if __name__ == "__main__":
