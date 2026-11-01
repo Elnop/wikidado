@@ -215,3 +215,9 @@ L'objectif datait de la liste fixe. Avec les briques, il pouvait devenir environ
 Écartées le 01/11/2026 : Bouc émissaire à 2, À la fin de votre tour × 3, Affectation × 2, Quand l'adversaire joue × 2, points de vie bas × 0,5, défausse remplie × 0,75.
 
 Bouc émissaire à 1, parce qu'il expose surtout la carte, ou à 3, parce qu'il protège tout le reste. Affectation à × 3, parce qu'on affecte souvent une Créature par tour. Quand l'adversaire joue à × 3, parce que l'adversaire joue plusieurs cartes par tour. Pour les conditions, un facteur qui dépend du seuil N (15 points de vie est souvent vrai, 5 presque jamais).
+
+## Statut des briques dans la config
+
+Écartée le 01/11/2026 : tout ce qui est dans la config est retenu, une brique pas encore tranchée reste dans la doc comme piste.
+
+Chaque brique avait un champ `status`, `accepted` ou `proposed`. Variantes : la génération ignorait les briques `proposed`, ou le champ restait un simple marqueur sans effet sur les programmes.

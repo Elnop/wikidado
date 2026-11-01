@@ -7,8 +7,7 @@
         "fr": "cette carte"
       },
       "factor": 1,
-      "is_player": false,
-      "status": "accepted"
+      "is_player": false
     },
     {
       "id": "one",
@@ -16,8 +15,7 @@
         "fr": "une carte"
       },
       "factor": 1,
-      "is_player": false,
-      "status": "accepted"
+      "is_player": false
     },
     {
       "id": "you",
@@ -25,8 +23,7 @@
         "fr": "vous"
       },
       "factor": 1,
-      "is_player": true,
-      "status": "accepted"
+      "is_player": true
     },
     {
       "id": "opponent",
@@ -34,8 +31,7 @@
         "fr": "l'adversaire"
       },
       "factor": 1,
-      "is_player": true,
-      "status": "accepted"
+      "is_player": true
     },
     {
       "id": "your-others",
@@ -43,8 +39,7 @@
         "fr": "vos autres cartes"
       },
       "factor": 3,
-      "is_player": false,
-      "status": "accepted"
+      "is_player": false
     },
     {
       "id": "all-opponents",
@@ -52,8 +47,7 @@
         "fr": "toutes les cartes adverses"
       },
       "factor": 3,
-      "is_player": false,
-      "status": "accepted"
+      "is_player": false
     },
     {
       "id": "all",
@@ -61,8 +55,7 @@
         "fr": "toutes les cartes"
       },
       "factor": 2,
-      "is_player": false,
-      "status": "accepted"
+      "is_player": false
     }
   ]
 }

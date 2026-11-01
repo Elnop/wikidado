@@ -30,8 +30,7 @@
       ],
       "zone": "board",
       "takes_keyword": false,
-      "hint": "conflits, scandales, attaques, catastrophes, armes, critiques, pamphlets",
-      "status": "accepted"
+      "hint": "conflits, scandales, attaques, catastrophes, armes, critiques, pamphlets"
     },
     {
       "id": "heal",
@@ -56,8 +55,7 @@
       "affected_types": [],
       "zone": "board",
       "takes_keyword": false,
-      "hint": "personnalités aimées, fêtes, médecine",
-      "status": "accepted"
+      "hint": "personnalités aimées, fêtes, médecine"
     },
     {
       "id": "draw",
@@ -82,8 +80,7 @@
       "affected_types": [],
       "zone": "board",
       "takes_keyword": false,
-      "hint": "savoir, encyclopédies, recherche, presse, bibliothèques",
-      "status": "accepted"
+      "hint": "savoir, encyclopédies, recherche, presse, bibliothèques"
     },
     {
       "id": "discard",
@@ -108,8 +105,7 @@
       "affected_types": [],
       "zone": "board",
       "takes_keyword": false,
-      "hint": "censure, interdictions, autodafés, propagande",
-      "status": "accepted"
+      "hint": "censure, interdictions, autodafés, propagande"
     },
     {
       "id": "restore",
@@ -138,8 +134,7 @@
       ],
       "zone": "discard",
       "takes_keyword": false,
-      "hint": "restaurations, renaissances, retours",
-      "status": "accepted"
+      "hint": "restaurations, renaissances, retours"
     },
     {
       "id": "destroy",
@@ -172,8 +167,7 @@
       ],
       "zone": "board",
       "takes_keyword": false,
-      "hint": "destructions, démolitions, assassinats, interdictions",
-      "status": "accepted"
+      "hint": "destructions, démolitions, assassinats, interdictions"
     },
     {
       "id": "bounce",
@@ -203,8 +197,7 @@
       ],
       "zone": "board",
       "takes_keyword": false,
-      "hint": "retraites, exils, rappels, annulations",
-      "status": "accepted"
+      "hint": "retraites, exils, rappels, annulations"
     },
     {
       "id": "stub",
@@ -234,8 +227,7 @@
       ],
       "zone": "board",
       "takes_keyword": false,
-      "hint": "réformes, oublis, purges, réécritures",
-      "status": "accepted"
+      "hint": "réformes, oublis, purges, réécritures"
     },
     {
       "id": "disable",
@@ -265,8 +257,7 @@
       ],
       "zone": "board",
       "takes_keyword": false,
-      "hint": "grèves, blocages, sièges, pannes",
-      "status": "accepted"
+      "hint": "grèves, blocages, sièges, pannes"
     },
     {
       "id": "weaken",
@@ -294,8 +285,7 @@
       ],
       "zone": "board",
       "takes_keyword": false,
-      "hint": "scandales, rumeurs, caricatures, désinformation",
-      "status": "accepted"
+      "hint": "scandales, rumeurs, caricatures, désinformation"
     },
     {
       "id": "pump",
@@ -324,8 +314,7 @@
       ],
       "zone": "board",
       "takes_keyword": false,
-      "hint": "entraînements, renforts, harangues",
-      "status": "accepted"
+      "hint": "entraînements, renforts, harangues"
     },
     {
       "id": "grant-keyword",
@@ -352,8 +341,7 @@
       ],
       "zone": "board",
       "takes_keyword": true,
-      "hint": "équipements, ruses, inspirations passagères",
-      "status": "accepted"
+      "hint": "équipements, ruses, inspirations passagères"
     },
     {
       "id": "surge",
@@ -378,8 +366,7 @@
       "affected_types": [],
       "zone": "board",
       "takes_keyword": false,
-      "hint": "production d'énergie, inventions, révolutions industrielles",
-      "status": "accepted"
+      "hint": "production d'énergie, inventions, révolutions industrielles"
     },
     {
       "id": "blackout",
@@ -404,8 +391,7 @@
       "affected_types": [],
       "zone": "board",
       "takes_keyword": false,
-      "hint": "coupures, sabotages, blocus, sanctions",
-      "status": "accepted"
+      "hint": "coupures, sabotages, blocus, sanctions"
     },
     {
       "id": "steal",
@@ -432,8 +418,7 @@
       ],
       "zone": "board",
       "takes_keyword": false,
-      "hint": "annexions, conquêtes, débauchages, transferts",
-      "status": "accepted"
+      "hint": "annexions, conquêtes, débauchages, transferts"
     },
     {
       "id": "attack-bonus",
@@ -461,8 +446,7 @@
       ],
       "zone": "board",
       "takes_keyword": false,
-      "hint": "sujets agressifs, chefs qui galvanisent",
-      "status": "accepted"
+      "hint": "sujets agressifs, chefs qui galvanisent"
     },
     {
       "id": "defense-bonus",
@@ -491,8 +475,7 @@
       ],
       "zone": "board",
       "takes_keyword": false,
-      "hint": "sujets solides, protecteurs, syndicats, alliances",
-      "status": "accepted"
+      "hint": "sujets solides, protecteurs, syndicats, alliances"
     },
     {
       "id": "keyword-aura",
@@ -517,8 +500,7 @@
       ],
       "zone": "board",
       "takes_keyword": true,
-      "hint": "écoles, doctrines, techniques, équipements",
-      "status": "accepted"
+      "hint": "écoles, doctrines, techniques, équipements"
     },
     {
       "id": "cost-reduction",
@@ -547,8 +529,7 @@
       ],
       "zone": "hand",
       "takes_keyword": false,
-      "hint": "enseignement, médias, popularisation d'un domaine",
-      "status": "accepted"
+      "hint": "enseignement, médias, popularisation d'un domaine"
     },
     {
       "id": "cost-increase",
@@ -577,8 +558,7 @@
       ],
       "zone": "hand",
       "takes_keyword": false,
-      "hint": "embargos, taxes, réglementations, monopoles",
-      "status": "accepted"
+      "hint": "embargos, taxes, réglementations, monopoles"
     },
     {
       "id": "protection",
@@ -607,8 +587,7 @@
       ],
       "zone": "board",
       "takes_keyword": false,
-      "hint": "sujets intouchables, sacrés",
-      "status": "accepted"
+      "hint": "sujets intouchables, sacrés"
     },
     {
       "id": "semi-protection",
@@ -637,8 +616,7 @@
       ],
       "zone": "board",
       "takes_keyword": false,
-      "hint": "sujets surveillés, gardés",
-      "status": "accepted"
+      "hint": "sujets surveillés, gardés"
     },
     {
       "id": "heritage",
@@ -667,8 +645,7 @@
       ],
       "zone": "board",
       "takes_keyword": false,
-      "hint": "patrimoine, monuments historiques, institutions anciennes",
-      "status": "accepted"
+      "hint": "patrimoine, monuments historiques, institutions anciennes"
     }
   ]
 }

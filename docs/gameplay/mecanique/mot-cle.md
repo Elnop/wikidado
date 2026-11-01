@@ -2,7 +2,7 @@
 
 Capacités de combat à prix fixe. La plupart sont réservées aux Créatures, Bouc émissaire va aussi aux Lieux. Les autres types peuvent donner ces mots-clés avec l'effet continu `keyword-aura` (voir `gameplay/mecanique/effet.md`).
 
-La liste des mots-clés, avec leur texte, les types qui peuvent les recevoir, leur prix, leur indice et leur statut (retenu ou proposé), est dans `config/mechanics/keyword.json`. Mots-clés actuels : Préparé, Débordement, Initiative, Imblocable, Pillage, Sentinelle, Toxique, Bouc émissaire.
+La liste des mots-clés, avec leur texte, les types qui peuvent les recevoir, leur prix, et leur indice, est dans `config/mechanics/keyword.json`. Mots-clés actuels : Préparé, Débordement, Initiative, Imblocable, Pillage, Sentinelle, Toxique, Bouc émissaire.
 
 ## Bouc émissaire
 

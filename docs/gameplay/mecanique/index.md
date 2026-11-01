@@ -1,6 +1,6 @@
 # Catalogue des mécaniques
 
-Liste fermée de ce que le modèle peut assigner aux cartes (voir `generation/pipeline.md`). Les briques et leurs prix sont retenus pour la première version. Une brique ajoutée plus tard a le statut `proposed` dans la config tant qu'elle n'est pas tranchée. Tous les prix restent à régler en partie de test.
+Liste fermée de ce que le modèle peut assigner aux cartes (voir `generation/pipeline.md`). Les briques et leurs prix sont retenus pour la première version. Tout ce qui est dans la config est retenu : une brique pas encore tranchée reste dans la doc comme piste, et n'entre dans la config qu'une fois validée. Tous les prix restent à régler en partie de test.
 
 Une mécanique est soit un mot-clé, soit une capacité composée de briques. Le catalogue fermé est celui des briques : le modèle ne peut assembler que des briques qui existent, et le code calcule le prix et le texte de l'assemblage.
 
@@ -20,7 +20,7 @@ La liste des briques, leurs textes, leurs prix et leurs facteurs sont dans `conf
 La liste des types de cartes est dans `config/card/type.json`. Son schéma définit l'énumération des types, que tous les autres schémas réutilisent.
 - `schema/` : un JSON Schema par fichier, plus `card-mechanics.schema.json` pour les mécaniques assignées à une carte (sortie du modèle, annotations de l'échantillon)
 
-Les textes sont rangés par langue (`"text": { "fr": "..." }`). Chaque brique a un statut, `accepted` ou `proposed`. Tout ce qui est propre au code (noms de fichiers, clés, identifiants des briques) est en anglais ; les textes affichés au joueur et les indices pour le modèle sont en français.
+Les textes sont rangés par langue (`"text": { "fr": "..." }`). Tout ce qui est propre au code (noms de fichiers, clés, identifiants des briques) est en anglais ; les textes affichés au joueur et les indices pour le modèle sont en français.
 
 `generation/check_mechanics.py` (`uv run check_mechanics.py` depuis `generation/`) valide la config contre les schémas, vérifie les renvois entre fichiers et recalcule les exemples de prix de cette doc. Avec des fichiers JSON Lines en argument, il vérifie aussi les mécaniques de chaque carte : briques connues, cibles et valeurs autorisées, type de carte compatible.
 

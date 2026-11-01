@@ -26,12 +26,6 @@
         "type": "string"
       }
     },
-    "status": {
-      "enum": [
-        "accepted",
-        "proposed"
-      ]
-    },
     "factor": {
       "type": "number",
       "exclusiveMinimum": 0

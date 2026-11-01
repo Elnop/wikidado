@@ -10,8 +10,7 @@
       "filled_by": "model",
       "data": [],
       "n": null,
-      "symmetric": false,
-      "status": "accepted"
+      "symmetric": false
     },
     {
       "id": "birthplace",
@@ -24,8 +23,7 @@
         "P19"
       ],
       "n": null,
-      "symmetric": false,
-      "status": "accepted"
+      "symmetric": false
     },
     {
       "id": "kin",
@@ -41,8 +39,7 @@
         "P25"
       ],
       "n": null,
-      "symmetric": false,
-      "status": "accepted"
+      "symmetric": false
     },
     {
       "id": "mentor",
@@ -56,8 +53,7 @@
         "P737"
       ],
       "n": null,
-      "symmetric": false,
-      "status": "accepted"
+      "symmetric": false
     },
     {
       "id": "reference",
@@ -70,8 +66,7 @@
         "links"
       ],
       "n": null,
-      "symmetric": false,
-      "status": "accepted"
+      "symmetric": false
     },
     {
       "id": "alliance",
@@ -84,8 +79,7 @@
         "mutual-links"
       ],
       "n": null,
-      "symmetric": true,
-      "status": "accepted"
+      "symmetric": true
     },
     {
       "id": "contemporary",
@@ -102,8 +96,7 @@
         "P582"
       ],
       "n": null,
-      "symmetric": false,
-      "status": "accepted"
+      "symmetric": false
     },
     {
       "id": "low-life",
@@ -117,8 +110,7 @@
         "min": 5,
         "max": 15
       },
-      "symmetric": false,
-      "status": "accepted"
+      "symmetric": false
     },
     {
       "id": "discard-size",
@@ -132,8 +124,7 @@
         "min": 3,
         "max": 10
       },
-      "symmetric": false,
-      "status": "accepted"
+      "symmetric": false
     }
   ]
 }

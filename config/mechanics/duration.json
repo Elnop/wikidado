@@ -6,16 +6,14 @@
       "text": {
         "fr": "jusqu'à la fin du tour"
       },
-      "factor": 1,
-      "status": "accepted"
+      "factor": 1
     },
     {
       "id": "permanent",
       "text": {
         "fr": ""
       },
-      "factor": 3,
-      "status": "accepted"
+      "factor": 3
     }
   ]
 }

@@ -28,9 +28,6 @@
           },
           "hint": {
             "$ref": "common.schema.json#/$defs/hint"
-          },
-          "status": {
-            "$ref": "common.schema.json#/$defs/status"
           }
         },
         "required": [
@@ -39,8 +36,7 @@
           "text",
           "types",
           "cost",
-          "hint",
-          "status"
+          "hint"
         ],
         "additionalProperties": false
       }

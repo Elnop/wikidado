@@ -33,9 +33,6 @@
           },
           "symmetric": {
             "type": "boolean"
-          },
-          "status": {
-            "$ref": "common.schema.json#/$defs/status"
           }
         },
         "required": [
@@ -45,8 +42,7 @@
           "filled_by",
           "data",
           "n",
-          "symmetric",
-          "status"
+          "symmetric"
         ],
         "additionalProperties": false
       }

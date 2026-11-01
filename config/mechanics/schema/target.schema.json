@@ -21,17 +21,13 @@
           },
           "is_player": {
             "type": "boolean"
-          },
-          "status": {
-            "$ref": "common.schema.json#/$defs/status"
           }
         },
         "required": [
           "id",
           "text",
           "factor",
-          "is_player",
-          "status"
+          "is_player"
         ],
         "additionalProperties": false
       }

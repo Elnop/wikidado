@@ -13,8 +13,7 @@
         "creature"
       ],
       "cost": 1,
-      "hint": "personnes rapides, réactives, sportifs, reporters, cavalerie",
-      "status": "accepted"
+      "hint": "personnes rapides, réactives, sportifs, reporters, cavalerie"
     },
     {
       "id": "trample",
@@ -28,8 +27,7 @@
         "creature"
       ],
       "cost": 1,
-      "hint": "personnes ou animaux massifs, irrésistibles, chefs de guerre offensifs",
-      "status": "accepted"
+      "hint": "personnes ou animaux massifs, irrésistibles, chefs de guerre offensifs"
     },
     {
       "id": "first-strike",
@@ -43,8 +41,7 @@
         "creature"
       ],
       "cost": 2,
-      "hint": "duellistes, tireurs, stratèges, prédateurs",
-      "status": "accepted"
+      "hint": "duellistes, tireurs, stratèges, prédateurs"
     },
     {
       "id": "unblockable",
@@ -58,8 +55,7 @@
         "creature"
       ],
       "cost": 3,
-      "hint": "oiseaux, aviateurs, espions, fugitifs, personnes difficiles à saisir",
-      "status": "accepted"
+      "hint": "oiseaux, aviateurs, espions, fugitifs, personnes difficiles à saisir"
     },
     {
       "id": "plunder",
@@ -73,8 +69,7 @@
         "creature"
       ],
       "cost": 2,
-      "hint": "conquérants, pillards, prédateurs, personnes qui s'enrichissent sur les autres",
-      "status": "accepted"
+      "hint": "conquérants, pillards, prédateurs, personnes qui s'enrichissent sur les autres"
     },
     {
       "id": "sentinel",
@@ -88,8 +83,7 @@
         "creature"
       ],
       "cost": 1,
-      "hint": "gardiens, défenseurs, policiers, gardiens de but",
-      "status": "accepted"
+      "hint": "gardiens, défenseurs, policiers, gardiens de but"
     },
     {
       "id": "toxic",
@@ -103,8 +97,7 @@
         "creature"
       ],
       "cost": 2,
-      "hint": "espèces venimeuses, poisons, maladies",
-      "status": "accepted"
+      "hint": "espèces venimeuses, poisons, maladies"
     },
     {
       "id": "scapegoat",
@@ -119,8 +112,7 @@
         "place"
       ],
       "cost": 2,
-      "hint": "sujets très exposés, controversés, qui prennent les coups à la place des autres",
-      "status": "accepted"
+      "hint": "sujets très exposés, controversés, qui prennent les coups à la place des autres"
     }
   ]
 }

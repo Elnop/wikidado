@@ -5,22 +5,19 @@
       "id": "type",
       "factor": 0.75,
       "filled_by": "model",
-      "values": "types",
-      "status": "accepted"
+      "values": "types"
     },
     {
       "id": "family",
       "factor": 0.5,
       "filled_by": "model",
-      "values": "families",
-      "status": "accepted"
+      "values": "families"
     },
     {
       "id": "linked-card",
       "factor": 0.5,
       "filled_by": "code",
-      "values": "cards",
-      "status": "accepted"
+      "values": "cards"
     }
   ]
 }

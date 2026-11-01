@@ -25,17 +25,13 @@
               "families",
               "cards"
             ]
-          },
-          "status": {
-            "$ref": "common.schema.json#/$defs/status"
           }
         },
         "required": [
           "id",
           "factor",
           "filled_by",
-          "values",
-          "status"
+          "values"
         ],
         "additionalProperties": false
       }

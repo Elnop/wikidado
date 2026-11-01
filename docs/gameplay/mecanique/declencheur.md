@@ -2,7 +2,7 @@
 
 Le déclencheur dit quand une capacité déclenchée agit. Une capacité passive n'en a pas : elle agit tant que la carte est en jeu (voir `gameplay/mecanique/index.md`).
 
-La liste des déclencheurs, avec leur texte, les types qui peuvent les porter, leur facteur de prix et leur statut, est dans `config/mechanics/trigger.json`. Les plus courants : À la une (quand la carte est jouée), Postérité (quand elle est détruite, retire 1 au prix au lieu de le multiplier), Au début de votre tour (× 3).
+La liste des déclencheurs, avec leur texte, les types qui peuvent les porter et leur facteur de prix, est dans `config/mechanics/trigger.json`. Les plus courants : À la une (quand la carte est jouée), Postérité (quand elle est détruite, retire 1 au prix au lieu de le multiplier), Au début de votre tour (× 3).
 
 Les déclencheurs `other-enters`, `other-destroyed` et `opponent-plays` prennent un filtre (voir `gameplay/mecanique/cible.md`), qui peut être une carte liée remplie par le code : "Quand vous jouez Bataille d'Austerlitz, piochez 1 carte."
 
