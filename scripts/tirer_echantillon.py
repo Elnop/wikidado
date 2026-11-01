@@ -45,6 +45,9 @@ RACINES = {
     "lieu": [
         "Q2221906", "Q41176", "Q811979",  # lieu, bâtiment, structure architecturale
         "Q6256", "Q3624078", "Q56061", "Q486972",  # pays, État souverain, entité territoriale, établissement humain
+        "Q35127", "Q19967801", "Q118140435", "Q3220391", "Q122759350", "Q4182287", "Q33120876",
+        # lieux virtuels : site web, service en ligne, grande plateforme, réseau social,
+        # plateforme de contenu, moteur de recherche, projet Wikimedia
     ],
     "evenement": ["Q1190554", "Q178561", "Q645883"],  # occurrence, bataille, opération militaire
     "objet": [
@@ -59,17 +62,9 @@ RACINES = {
     "faction": ["Q43229", "Q16334295"],  # organisation (parti, entreprise, club, groupe de musique), groupe d'humains
 }
 
-# Classes exclues (voir generation/article/selection.md) : œuvres, sites web et
-# plateformes, éléments de fiction, pages qui ne sont pas des articles.
+# Classes exclues (voir generation/article/selection.md) : œuvres, éléments de fiction,
+# pages qui ne sont pas des articles. Les sites web sont des Lieux virtuels.
 EXCLUSIONS = {
-    "Q35127",      # site web
-    "Q19967801",   # service en ligne
-    "Q118140435",  # très grande plateforme en ligne
-    "Q3220391",    # réseau social
-    "Q122759350",  # plateforme de contenu généré par les utilisateurs
-    "Q6576792",    # communauté en ligne
-    "Q4182287",    # moteur de recherche
-    "Q33120876",   # projet de contenu Wikimedia
     "Q14897293",   # entité fictionnelle (armes, lieux, personnages inventés)
     "Q7889",       # jeu vidéo
     "Q11424",      # film
