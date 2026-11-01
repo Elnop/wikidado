@@ -24,8 +24,6 @@ Pour les capacités déclenchées. Tous sont retenus, avec leur texte et leur pr
 | delestage | "l'adversaire a {N} électricité de moins à son prochain tour" | 1 à 3 | N × 2 | non | adversaire | coupures, sabotages, blocus, sanctions |
 | annexion | "prenez le contrôle de {cible} de coût {N} ou moins" | 1 à 8 | (N + 4) / 3 | oui | Créatures adverses | annexions, conquêtes, débauchages, transferts |
 
-gain-mot-cle est une proposition.
-
 ## Durée
 
 Les effets marqués "oui" dans la colonne durée prennent une durée :
@@ -41,7 +39,7 @@ Le prix de la colonne cout_effet est celui de la version pour le tour. Exemples 
 
 ## Effets continus
 
-Pour les capacités passives.
+Pour les capacités passives. Tous sont retenus, avec leur texte et leur prix.
 
 | id | texte | N | cout_effet | cibles possibles | indice |
 |---|---|---|---|---|---|

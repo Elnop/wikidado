@@ -70,6 +70,7 @@ docs/
       mecanique/creature.md
       mecanique/transversal.md
       mecanique/effet.md
+      mecanique/cible.md
       synergie/index.md
       synergie/liens.md
       collection.md

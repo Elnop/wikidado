@@ -29,3 +29,9 @@ Restauration qui remet la carte directement en jeu (5), seule ou en plus du reto
 Écartée le 01/11/2026 : un effet permanent coûte 3 fois la version pour le tour.
 
 Permanent à 2 fois la version pour le tour, au risque d'une panne permanente trop rentable. Ou un prix fixé à la main pour chaque effet, sans règle générale.
+
+## Autres versions des effets continus
+
+Écartées le 01/11/2026 : bonus-attaque, bonus-defense, mot-cle-donne, cout-reduit, cout-augmente, protection, semi-protection et patrimoine sont gardés tels quels, ainsi que gain-mot-cle.
+
+Bonus d'attaque et de défense fusionnés en "+{A}/+{D}", ou interdits sur la carte elle-même. Imblocable interdit avec la cible "vos autres cartes", ou mot-cle-donne retiré. Réduction et hausse de coût à 2, ou de N électricité. Protection et patrimoine fusionnés, ou semi-protection retirée. gain-mot-cle limité au tour, ou retiré.

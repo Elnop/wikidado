@@ -2,7 +2,7 @@
 
 ## Cibles
 
-La cible dit sur qui porte l'effet. Chaque effet indique les cibles qu'il accepte (voir `gameplay/mecanique/effet.md`).
+La cible dit sur qui porte l'effet. Chaque effet indique les cibles qu'il accepte (voir `gameplay/mecanique/effet.md`). Les cibles et les filtres ci-dessous sont retenus, avec leurs facteurs.
 
 | id | texte | facteur |
 |---|---|---|
