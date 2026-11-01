@@ -173,3 +173,9 @@ Bloque en premier : tant qu'elle peut bloquer, le défenseur doit l'assigner à 
 Écartés le 01/11/2026 : pas retenus pour la première version.
 
 Vigilance ("peut attaquer puis bloquer au tour adverse") est déjà vrai pour toutes les Créatures dans les règles du duel. Résistant : la première fois qu'elle devrait être détruite, elle survit avec 1 en défense (survivants, phénix, institutions qui renaissent).
+
+## Autres facteurs pour les déclencheurs
+
+Écartées le 01/11/2026 : Quand elle attaque × 2, Quand elle bloque × 1,5, Quand elle subit des dégâts × 1,5, Quand une carte arrive en jeu ou est détruite × 2.
+
+Quand elle attaque à × 2,5, parce qu'elle attaque presque à chaque tour. Quand elle bloque à × 1, ou retiré comme trop rare. Quand elle subit des dégâts à × 1, ou retiré. Pour les déclencheurs sur les autres cartes : filtre obligatoire, ou × 3 quand il n'y a pas de filtre.
