@@ -41,7 +41,7 @@ docs/
     collection.md              cartes disponibles et boosters
     mecanique/
       index.md                 catalogue des mécaniques : capacités en briques, calcul du prix
-      mot-cle.md               mots-clés de combat des Créatures
+      mot-cle.md               mots-clés de combat (Préparé, Imblocable, Bouc émissaire...)
       declencheur.md           quand une capacité agit
       effet.md                 ce que fait une capacité
       cible.md                 sur qui elle agit, et les filtres

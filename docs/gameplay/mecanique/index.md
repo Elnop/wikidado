@@ -4,7 +4,7 @@ Liste fermée de ce que le modèle peut assigner aux cartes (voir `generation/pi
 
 Une mécanique est soit un mot-clé, soit une capacité composée de briques. Le catalogue fermé est celui des briques : le modèle ne peut assembler que des briques qui existent, et le code calcule le prix et le texte de l'assemblage.
 
-- `gameplay/mecanique/mot-cle.md` : mots-clés de combat des Créatures (Préparé, Imblocable...)
+- `gameplay/mecanique/mot-cle.md` : mots-clés de combat (Préparé, Imblocable, Bouc émissaire...)
 - `gameplay/mecanique/declencheur.md` : quand une capacité déclenchée agit
 - `gameplay/mecanique/effet.md` : ce que fait la capacité, effets ponctuels et effets continus
 - `gameplay/mecanique/cible.md` : sur qui l'effet porte, et les filtres qui restreignent la cible

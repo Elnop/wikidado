@@ -60,7 +60,7 @@ Le coût d'affectation se paie sur le budget de la Faction (voir `gameplay/carte
 
 ## Combat
 
-1. L'attaquant déclare ses Créatures attaquantes, et pour chacune sa cible : le joueur adverse ou un de ses Lieux.
+1. L'attaquant déclare ses Créatures attaquantes, et pour chacune sa cible : le joueur adverse ou un de ses Lieux. Si l'adversaire contrôle une carte Bouc émissaire, Créature ou Lieu, les attaquants doivent la viser (voir `gameplay/mecanique/mot-cle.md`).
 2. Le défenseur choisit ses bloqueurs parmi ses Créatures. Chaque bloqueur arrête un seul attaquant, mais plusieurs bloqueurs peuvent arrêter le même. Une Créature qui a attaqué à son propre tour peut bloquer au tour adverse suivant.
 3. Les dégâts sont simultanés. Chaque bloqueur inflige son attaque à l'attaquant qu'il bloque. Un attaquant bloqué répartit son attaque entre ses bloqueurs comme il veut, et n'atteint pas sa cible même s'il lui reste des dégâts, sauf mécanique de piétinement. Une Créature non bloquée inflige son attaque à sa cible.
 4. Une Créature ou un Lieu dont les dégâts subis atteignent sa défense est détruit. Comme les dégâts s'effacent en fin de tour, il faut détruire un Lieu en un seul tour.

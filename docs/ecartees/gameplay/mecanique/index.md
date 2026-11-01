@@ -139,3 +139,37 @@ Comme le Vol de Magic, deux cartes Imblocables pouvaient se bloquer entre elles,
 Écartée le 01/11/2026 : le mot-clé s'appelle Imblocable.
 
 Insaisissable, Viral (saveur internet), Aérien (le plus proche du Vol), Clandestin (espions, fugitifs), Hors d'atteinte.
+
+## Autres prix pour les mots-clés
+
+Écartées le 01/11/2026 : Préparé 1, Débordement 1, Initiative 2, Imblocable 3, Pillage 2, Sentinelle 1, Toxique 2.
+
+Préparé à 2, parce qu'attaquer tout de suite surprend l'adversaire. Initiative à 1, parce que sans dégâts persistants entre les tours l'effet compte surtout en défense. Imblocable à 4, ou réservé aux Créatures qui ont 3 ou moins en attaque. Pillage à 1, parce que les points de vie pèsent peu avec 30 au départ. Toxique à 1 ou 3.
+
+## Prestige, et autres noms pour Pillage
+
+Écartée le 01/11/2026 : le mot-clé qui rend des points de vie s'appelle Pillage.
+
+Prestige, Ferveur, Rayonnement, Ovation, Charisme.
+
+## Autres noms pour Bouc émissaire
+
+Écartée le 01/11/2026 : le mot-clé s'appelle Bouc émissaire.
+
+Paratonnerre (thème électrique), Point de mire, Provocation (le nom de Hearthstone).
+
+## Bouc émissaire limité au blocage ou aux mécaniques
+
+Écartée le 01/11/2026 : une Créature Bouc émissaire est à la fois une cible d'attaque prioritaire et la cible obligée des mécaniques adverses à cible unique.
+
+Bloque en premier : tant qu'elle peut bloquer, le défenseur doit l'assigner à un attaquant avant tout autre bloqueur. Attire les mécaniques : seules les mécaniques adverses à cible unique doivent la cibler.
+
+## Sentinelle remplacée par la Provocation
+
+Écartée le 01/11/2026 : Sentinelle reste, et Bouc émissaire s'ajoute à côté.
+
+## Vigilance et Résistant
+
+Écartés le 01/11/2026 : pas retenus pour la première version.
+
+Vigilance ("peut attaquer puis bloquer au tour adverse") est déjà vrai pour toutes les Créatures dans les règles du duel. Résistant : la première fois qu'elle devrait être détruite, elle survit avec 1 en défense (survivants, phénix, institutions qui renaissent).
