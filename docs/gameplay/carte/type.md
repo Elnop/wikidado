@@ -13,7 +13,7 @@ Les règles de la partie sont dans `gameplay/duel.md`.
 | Lieu | lieux avec coordonnées : villes, montagnes, rivières, bâtiments. Aussi les lieux virtuels : sites web, plateformes en ligne, réseaux sociaux | a une défense et peut être attaqué à la place du joueur, ne bloque pas |
 | Créature | personnes, espèces animales et végétales | se bat, a une attaque et une défense |
 | Événement | batailles, opérations militaires, catastrophes | effet ponctuel joué à son tour, comme un rituel |
-| Objet | outils, armes, véhicules, machines, instruments, vêtements, trophées et distinctions (Ballon d'or, Oscar, prix Nobel), œuvres (films, séries, albums, livres, jeux vidéo, peintures, statues) | reste en jeu avec ses propres mécaniques, peut s'attacher à une Créature, comme un artefact |
+| Objet | outils, armes, véhicules, machines, instruments, vêtements, trophées et distinctions (Ballon d'or, Oscar, prix Nobel), fonctions et titres (président, pape, ministre, roi : sous-type Titre, qui s'attache à la Créature qui porte la fonction), œuvres (films, séries, albums, livres, jeux vidéo, peintures, statues) | reste en jeu avec ses propres mécaniques, peut s'attacher à une Créature, comme un artefact |
 | Savoir | disciplines, sciences, théories, technologies, logiciels, langages, idéologies, mouvements artistiques | reste en jeu sans capacité propre, agit sur les autres cartes et sur les règles, comme un enchantement |
 | Faction | organisations : partis politiques, entreprises, clubs de sport, groupes de musique, groupes d'humains | reste en jeu sans capacité propre, ses effets ne touchent que les Créatures qu'on lui affecte |
 
@@ -24,6 +24,8 @@ Comme dans Magic, chaque carte a un type (un des 6) et des sous-types, en nombre
 - la nature de l'élément (`P31`) : Église, Château, Bataille, Cheval
 - pour les personnes, les occupations (`P106`) : Militaire, Homme politique, Peintre
 - pour les espèces, la classification : on remonte les taxons parents (`P171`) jusqu'à quelques rangs choisis, comme la classe et l'ordre. La Musaraigne sombre, que `P31` décrit seulement comme Taxon, devient aussi Mammifère et Eulipotyphle
+
+Les fonctions (classes Wikidata fonction et fonction publique) reçoivent le sous-type Titre. Président de la République est un Objet Titre, qu'on attache à une Créature comme Emmanuel Macron.
 
 Napoléon serait une Créature avec les sous-types Humain, Homme politique, Militaire, Monarque. Il y a autant de sous-types possibles que de classes et d'occupations dans Wikidata.
 

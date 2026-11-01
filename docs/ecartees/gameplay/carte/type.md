@@ -107,3 +107,21 @@ Les distinctions restaient hors du jeu pour la première version, ou devenaient 
 Écartée le 01/11/2026 : les œuvres sont des Objets.
 
 Les films, albums, livres, singles et jeux vidéo n'étaient pas des cartes en première version, en attendant de vérifier les 6 types. Il y a du volume : 29 427 albums et 10 664 singles sur la Wikipédia française, sans compter les films et les livres.
+
+## Fonctions dans un type Titre
+
+Écartée le 01/11/2026 : les fonctions sont des Objets de sous-type Titre.
+
+Un 7e type de carte pour les fonctions (président, pape, ministre, roi), avec ses propres règles, par exemple une seule Créature par Titre en jeu. Plus riche, mais il fallait l'écrire et l'équilibrer.
+
+## Fonctions en Faction
+
+Écartée le 01/11/2026 : les fonctions sont des Objets de sous-type Titre.
+
+La fonction vue comme une institution (la Présidence, la Papauté), dont les effets touchent les Créatures qu'on lui affecte.
+
+## Fonctions hors du jeu
+
+Écartée le 01/11/2026 : les fonctions sont des Objets de sous-type Titre.
+
+Les articles sur les fonctions n'étaient pas des cartes.
