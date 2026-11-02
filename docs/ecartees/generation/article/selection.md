@@ -82,6 +82,18 @@ On choisissait le type de chaque classe `P31` de l'échantillon une par une (928
 
 Une classe marquée dehors servait d'exception sous une classe retenue : la classe choisie la plus proche gagnait, même si c'était dehors. Saison sportive était dehors alors que compétition sportive, plus haut, donnait Événement. De même, une classe choisie à la main gagnait sur la racine au-dessus d'elle.
 
+## Héritage multiple réglé par le parent le plus proche
+
+Écartée le 02/11/2026 : aucune contradiction ne doit exister, même entre deux parents séparés. Une classe au-dessus d'une contradiction n'a pas de type.
+
+Une classe qui descendait de deux classes choisies de types différents par deux chemins séparés (journal en ligne : site web en Lieu, périodique en Objet) prenait le type du parent choisi le plus proche, puis l'ordre des types. Variante : on gardait les classes larges (objet géographique, entreprise, site web) et on n'acceptait que ce cas-là.
+
+## Choisir à la main quel parent perd son type
+
+Écartée le 02/11/2026 : on retire d'un coup le type des 22 classes impliquées dans les contradictions, en commençant par celle qui en cause le plus.
+
+Pour chaque paire de classes choisies en contradiction, on décidait à la main laquelle gardait son type (par exemple garder objet géographique et retirer entreprise).
+
 ## Racines pures à 90 %
 
 Écartée le 02/11/2026 : aucune exception, une racine doit être pure à 100 %.
