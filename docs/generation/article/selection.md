@@ -15,14 +15,15 @@ La liste dit quelles classes Wikidata donnent des cartes, avec pour chacune un t
 - des classes choisies à la main : église, château pour Lieu ; parti politique, club de football pour Faction ; discipline, idéologie pour Savoir ;
 - des racines apprises : les classes les plus hautes sous lesquelles toutes les classes déjà choisies ont le même type (voir plus bas). Elles classent d'un coup les classes qu'on n'a pas encore vues.
 
-Une classe large n'entre dans la liste que si elle est pure sur l'échantillon et validée à la main. Entité cartographiable donne Lieu sans exception notable ; organisation et concept mélangent les types et restent dehors.
+Une classe large n'entre dans la liste que si elle est pure sur l'échantillon et validée à la main. Organisation et concept mélangent les types et restent dehors.
 
 Une classe n'entre dans la liste que si elle est reliée à « entité » (`Q35120`), la classe la plus haute de Wikidata, par une chaîne complète de liens « sous-classe de » (`P279`). Certaines classes n'ont aucun « sous-classe de » et restent isolées (Web 2.0, orbite de la Lune, régime monarchique) : elles ne sont pas retenues.
 
 - Un article est retenu si une de ses classes `P31` est dans la liste, ou en descend par les liens « sous-classe de » (`P279`), sans limite de sauts.
 - Tout ce que la liste n'atteint pas reste dehors. Une classe oubliée coûte quelques cartes, un intrus ne passe pas.
-- Le type de l'article vient de la classe retenue la plus proche (voir `gameplay/carte/type.md`). Une classe choisie à la main est plus proche que la racine au-dessus d'elle, donc elle gagne.
-- Une classe peut aussi être marquée « dehors ». Elle sert d'exception sous une classe retenue : la classe choisie la plus proche gagne, même si c'est « dehors », et l'article n'est alors pas une carte. Saison sportive est dehors alors que compétition sportive, plus haut, donne Événement. Question ouverte : que faire quand une classe dehors et une classe retenue sont à la même distance ?
+- Pas d'exception : une classe choisie donne son type, ou « dehors », à toutes ses sous-classes, quelle que soit la profondeur. Aucune classe plus bas ne peut la contredire.
+- La liste doit donc être cohérente : une classe choisie ne peut pas descendre d'une autre classe choisie d'un autre type. Un contrôle liste ces contradictions, et chacune se règle en changeant ou en retirant l'une des deux classes. Les erreurs de Wikidata comptent aussi : commune française descend de compagnie, État communiste de parti politique.
+- Un article qui a plusieurs classes `P31` de types différents prend le type de la plus proche, et à distance égale l'ordre de `gameplay/carte/type.md` départage. Question ouverte : que faire si l'une de ses classes est dehors et l'autre a un type ?
 - La liste sert aussi à fixer la famille de chaque classe (voir `gameplay/carte/famille.md`).
 - Les classes choisies sont exportées dans `scripts/liste-blanche.json`, avec pour chaque classe son type ou « dehors », qui l'a choisie et quand.
 
@@ -31,8 +32,8 @@ Une classe n'entre dans la liste que si elle est reliée à « entité » (`Q351
 On ne choisit pas toutes les classes une par une : la longue traîne en compte des milliers. On procède en trois temps.
 
 1. On choisit à la main les classes les plus fréquentes de l'échantillon, sur une page partagée (https://claude.ai/artifact/QMRMjTfwfJW4nZ9LTfqTMH).
-2. Un script remonte la hiérarchie de toutes ces classes et cherche les ancêtres les plus hauts qui sont purs : au moins 2 classes choisies sous eux, et au moins 90 % d'entre elles du même type. Il les prend dans l'ordre où ils expliquent le plus de choix encore non expliqués.
-3. Chaque racine candidate est validée ou rejetée à la main, sur une page qui montre les classes choisies qu'elle explique, ses exceptions (classes choisies d'un autre type sous elle, qui restent dans la liste et gagnent), et les classes pas encore vues qu'elle classerait.
+2. Un script remonte la hiérarchie de toutes ces classes et cherche les ancêtres les plus hauts qui sont purs : au moins 2 classes choisies sous eux, et toutes du même type, sans exception. Il les prend dans l'ordre où ils expliquent le plus de choix encore non expliqués.
+3. Chaque racine candidate est validée ou rejetée à la main, sur une page qui montre les classes choisies qu'elle explique et les classes pas encore vues qu'elle classerait.
 
 Mesuré le 2 novembre 2026 sur l'échantillon de 2 963 articles, avec 342 classes choisies : 30 racines typent 74 % des articles, et 98 % des articles déjà choisis qu'elles atteignent reçoivent le bon type. Au-delà, chaque racine de plus ne gagne que quelques articles.
 

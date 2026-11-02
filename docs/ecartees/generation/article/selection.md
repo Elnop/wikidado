@@ -75,3 +75,15 @@ Un article n'était retenu que si sa classe était dans la liste ou en descendai
 Écartée le 02/11/2026 : trop long, la longue traîne compte des milliers de classes. Remplacée par les racines apprises à partir des classes déjà choisies.
 
 On choisissait le type de chaque classe `P31` de l'échantillon une par une (928 classes pour 2 963 articles), en partant des plus fréquentes.
+
+## « Dehors » comme exception sous une classe retenue
+
+Écartée le 02/11/2026 : aucune exception, une classe choisie donne son type à toutes ses sous-classes.
+
+Une classe marquée dehors servait d'exception sous une classe retenue : la classe choisie la plus proche gagnait, même si c'était dehors. Saison sportive était dehors alors que compétition sportive, plus haut, donnait Événement. De même, une classe choisie à la main gagnait sur la racine au-dessus d'elle.
+
+## Racines pures à 90 %
+
+Écartée le 02/11/2026 : aucune exception, une racine doit être pure à 100 %.
+
+Une racine était proposée si au moins 90 % des classes choisies sous elle avaient son type. Les autres restaient dans la liste comme exceptions et gagnaient sur la racine.
