@@ -63,3 +63,15 @@ Erreurs relevées : le Pape classé Objet (titre honorifique, puis distinction),
 Écartée le 01/11/2026 : la classe choisie la plus proche gagne, même si elle est marquée dehors.
 
 Dès qu'une classe retenue était atteinte, l'article devenait une carte. Les classes marquées dehors servaient seulement à noter les classes examinées et laissées de côté.
+
+## Remontée courte
+
+Écartée le 02/11/2026 : les racines apprises sont hautes, et leur pureté est vérifiée sur toute la remontée.
+
+Un article n'était retenu que si sa classe était dans la liste ou en descendait par quelques liens « sous-classe de » au plus (piste : 3 sauts), pour moins dépendre du désordre de la hiérarchie de Wikidata.
+
+## Liste blanche remplie classe par classe
+
+Écartée le 02/11/2026 : trop long, la longue traîne compte des milliers de classes. Remplacée par les racines apprises à partir des classes déjà choisies.
+
+On choisissait le type de chaque classe `P31` de l'échantillon une par une (928 classes pour 2 963 articles), en partant des plus fréquentes.

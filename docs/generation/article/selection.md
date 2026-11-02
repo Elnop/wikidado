@@ -10,17 +10,33 @@ Attention : `P31` pointe vers la classe la plus précise. Une église est `P31` 
 
 ## Liste blanche des classes retenues
 
-Les classes Wikidata qui donnent des cartes sont choisies à la main, une par une, avec pour chacune le type de carte qu'elle donne. Ce sont des classes fines : église, château, musée, tour pour Lieu ; parti politique, club de football pour Faction ; discipline, théorie, idéologie pour Savoir. Les classes larges et abstraites (concept, occurrence, organisation, objet artificiel physique) n'y figurent pas.
+La liste dit quelles classes Wikidata donnent des cartes, avec pour chacune un type de carte ou « dehors ». Elle contient deux sortes d'entrées :
+
+- des classes choisies à la main : église, château pour Lieu ; parti politique, club de football pour Faction ; discipline, idéologie pour Savoir ;
+- des racines apprises : les classes les plus hautes sous lesquelles toutes les classes déjà choisies ont le même type (voir plus bas). Elles classent d'un coup les classes qu'on n'a pas encore vues.
+
+Une classe large n'entre dans la liste que si elle est pure sur l'échantillon et validée à la main. Entité cartographiable donne Lieu sans exception notable ; organisation et concept mélangent les types et restent dehors.
 
 Une classe n'entre dans la liste que si elle est reliée à « entité » (`Q35120`), la classe la plus haute de Wikidata, par une chaîne complète de liens « sous-classe de » (`P279`). Certaines classes n'ont aucun « sous-classe de » et restent isolées (Web 2.0, orbite de la Lune, régime monarchique) : elles ne sont pas retenues.
 
-- Un article est retenu si une de ses classes `P31` est dans la liste, ou en descend par une remontée courte : quelques liens « sous-classe de » (`P279`) au plus. Le nombre de sauts reste à fixer (piste : 3).
+- Un article est retenu si une de ses classes `P31` est dans la liste, ou en descend par les liens « sous-classe de » (`P279`), sans limite de sauts.
 - Tout ce que la liste n'atteint pas reste dehors. Une classe oubliée coûte quelques cartes, un intrus ne passe pas.
-- Le type de l'article vient de la classe retenue la plus proche (voir `gameplay/carte/type.md`).
+- Le type de l'article vient de la classe retenue la plus proche (voir `gameplay/carte/type.md`). Une classe choisie à la main est plus proche que la racine au-dessus d'elle, donc elle gagne.
 - Une classe peut aussi être marquée « dehors ». Elle sert d'exception sous une classe retenue : la classe choisie la plus proche gagne, même si c'est « dehors », et l'article n'est alors pas une carte. Saison sportive est dehors alors que compétition sportive, plus haut, donne Événement. Question ouverte : que faire quand une classe dehors et une classe retenue sont à la même distance ?
 - La liste sert aussi à fixer la famille de chaque classe (voir `gameplay/carte/famille.md`).
-- Elle compte sans doute plusieurs centaines de classes, et se maintient quand on ajoute des types d'articles.
-- Elle se remplit sur une page de validation partagée (https://claude.ai/artifact/QMRMjTfwfJW4nZ9LTfqTMH), puis est exportée dans `scripts/liste-blanche.json`, avec pour chaque classe son type ou « dehors », qui l'a choisie et quand.
+- Les classes choisies sont exportées dans `scripts/liste-blanche.json`, avec pour chaque classe son type ou « dehors », qui l'a choisie et quand.
+
+### Racines apprises
+
+On ne choisit pas toutes les classes une par une : la longue traîne en compte des milliers. On procède en trois temps.
+
+1. On choisit à la main les classes les plus fréquentes de l'échantillon, sur une page partagée (https://claude.ai/artifact/QMRMjTfwfJW4nZ9LTfqTMH).
+2. Un script remonte la hiérarchie de toutes ces classes et cherche les ancêtres les plus hauts qui sont purs : au moins 2 classes choisies sous eux, et au moins 90 % d'entre elles du même type. Il les prend dans l'ordre où ils expliquent le plus de choix encore non expliqués.
+3. Chaque racine candidate est validée ou rejetée à la main, sur une page qui montre les classes choisies qu'elle explique, ses exceptions (classes choisies d'un autre type sous elle, qui restent dans la liste et gagnent), et les classes pas encore vues qu'elle classerait.
+
+Mesuré le 2 novembre 2026 sur l'échantillon de 2 963 articles, avec 342 classes choisies : 30 racines typent 74 % des articles, et 98 % des articles déjà choisis qu'elles atteignent reçoivent le bon type. Au-delà, chaque racine de plus ne gagne que quelques articles.
+
+Certaines racines pures ont un nom sans rapport avec le jeu (« physical property value » pour des Créatures) : la pureté est mesurée, mais la validation à la main reste nécessaire.
 
 ### Filtres transverses
 
@@ -33,7 +49,7 @@ La fiction n'est pas filtrée. Les éléments de fiction (personnages, lieux, ar
 
 ### Rapport de couverture
 
-Un outil liste les classes `P31` des articles non retenus, triées par nombre d'articles, sur un échantillon qui mélange les plus lus et un tirage au hasard dans la longue traîne. On parcourt ce rapport de haut en bas et on décide, classe par classe : l'ajouter à la liste avec un type, ou la laisser dehors. On relance pour voir la couverture monter.
+Un outil liste les classes `P31` des articles non retenus, triées par nombre d'articles, sur un échantillon qui mélange les plus lus et un tirage au hasard dans la longue traîne. On choisit les plus fréquentes, puis on recalcule les racines apprises et on relance pour voir la couverture monter.
 
 ## Volumes sur la Wikipédia française
 
